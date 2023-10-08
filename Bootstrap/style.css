@@ -1,0 +1,90 @@
+.cart{
+	background-color: #ffffff;
+}
+
+.col-md-8,.col-md-4{
+	height: 510px;
+}
+
+.col-md-4{
+	color: white;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.items{
+  	box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08);
+}
+
+.spec {
+  font-size: 11px;
+}
+
+.payment {
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+label.radio {
+  cursor: pointer;
+}
+
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+label.radio span {
+  padding: 1px 12px;
+  border: 2px solid #ada9a9;
+  display: inline-block;
+  color: #8f37aa;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+label.radio input:checked + span {
+  border-color: #fff;
+  background-color: blue;
+  color: #fff;
+}
+
+.credit-inputs {
+  background: rgb(102,102,221);
+  color: #fff !important;
+  border-color: rgb(102,102,221);
+}
+
+.credit-inputs::placeholder {
+  color: #fff;
+  font-size: 13px;
+}
+
+.credit-card-label {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.form-control.credit-inputs:focus {
+  background: rgb(102,102,221);
+  border: rgb(102,102,221);
+}
+
+.information span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.information {
+  margin-bottom: 5px;
+}
+
+.sort{
+	/*margin-right: 50px;*/
+	margin-left: 480px;
+}

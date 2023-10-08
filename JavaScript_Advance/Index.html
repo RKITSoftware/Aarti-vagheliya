@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Management System</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Employee Management System</h1>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody id="employee-list"></tbody>
+    </table>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+    >Add Employee</button>
+    <button type="button" class="btn btn-danger" id="delete-employee-button">Delete Employee</button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="add-employee-form" method="post"> 
+              <div class="mb-3">
+                <label for="name" class="col-form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+                <div id="name-error" class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="text" class="form-control" id="email" name="email">
+                <div id="email-error" class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label for="salary" class="col-form-label">Salary:</label>
+                <input type="text" class="form-control" id="salary" name="salary">
+                <div id="salary-error" class="error"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" >Submit</button>
+              </div>
+            </form>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- Sweet Alert JavaScript -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="employee.js" type="module"></script>
+  <script src="validation.js" type="module"></script>
+
+  </body>
+</html>
