@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo</title>
+</head>
+<body>
+	<button id="btn" onclick="click()">Click me!</button>
+	<p id="data"></p>
+</body>
+</html>
+
+<script type="text/javascript">
+	function click(){
+		alert("Button is clicked by onclick event.");
+		//document.getElementById("data").innerHTML = 'Tag';
+		document.body.style.backgroundColor = 'blue';
+		console.log("Tag imbeded function");
+	}
+
+	let btn = document.querySelector("#btn");
+
+	btn.addEventListener("click",() => {
+		document.body.style.backgroundColor = 'red';
+		//document.querySelector("#data").innerHTML = 'Event';
+		console.log("Event Listener");
+	});
+
+	btn.onclick = () => {
+		document.body.style.backgroundColor = 'green';
+		//document.querySelector("#data").innerHTML = 'on click';
+		console.log("on Click");
+	};
+
+	
+</script>
+

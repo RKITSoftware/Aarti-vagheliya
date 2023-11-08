@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods Demo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1> Array Methods Demo</h1>
+        <p>Array: <span id="arrayOutput"></span></p>
+        <p>Result: <span id="resultOutput"></span></p>
+        
+        <!-- Buttons to demonstrate array methods -->
+        <button class="btn btn-success" onclick="pushFruit()">Push</button>
+        <button class="btn btn-success" onclick="popFruit()">Pop</button>
+        <button class="btn btn-success" onclick="shiftFruit()">Shift</button>
+        <button class="btn btn-success" onclick="unshiftFruit()">Unshift</button>
+    </div>
+
+    <script>
+        // Initialize an array of fruits
+        let fruits = ['apple', 'banana', 'kiwi','mango', 'chery'];
+
+        // Function to display the array on the web page 
+        function displayArray() {
+            document.getElementById("arrayOutput").textContent = JSON.stringify(fruits);
+        }
+
+        // Function to update the result output
+        function displayResult(result) {
+            document.getElementById("resultOutput").textContent = result;
+        }
+
+        // Push a fruit to the end of the array
+        function pushFruit() {
+            var f = prompt("Enter fruit name: ");
+            fruits.push(f);
+            displayArray();
+            displayResult(`Pushed ${f} to the end of the array.`);
+        }
+
+        // Pop a fruit from the end of the array
+        function popFruit() {
+            const popped = fruits.pop();
+            displayArray();
+            displayResult(`Popped ${popped} from the end of the array.`);
+        }
+
+        // Shift a fruit from the beginning of the array
+        function shiftFruit() {
+            const shifted = fruits.shift();
+            displayArray();
+            displayResult(`Shifted ${shifted} from the beginning of the array.`);
+        }
+
+        // Unshift a fruit to the beginning of the array
+        function unshiftFruit() {
+            var a = prompt("Enter fruit name: ");
+            fruits.unshift(a);
+            displayArray();
+            displayResult(`Unshifted ${a} to the beginning of the array.`);
+        }
+
+        // Initial display of the array
+        displayArray();
+    </script>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    var arr1 = [1, 2, 4, 7, 94, 2, 4];
+    var arr2 = [4, 5, 6];
+    arr2.reverse();
+
+    arr2.forEach(function(key) {
+        arr1.splice(key, 1); 
+        console.log(arr1); 
+    });
+
+  console.log(arr1);
+</script>

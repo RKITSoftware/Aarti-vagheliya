@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Async/Await and Promise Demo</title>
+</head>
+<body>
+
+<button id="fetchButton">Fetch Employee Data</button>
+<div id="data"></div>
+<script>
+
+  const api = 'https://jsonplaceholder.typicode.com/users/1'; 
+  
+  // Function to fetch data from the API using Promise
+  function fetchData() {
+    return new Promise((resolve, reject) => {
+      fetch(api)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch data');
+          }
+          return response.json();
+        })
+        .then(data => resolve(data))
+        .catch(error => reject(error));
+    });
+  }
+  
+  // Using async/await to call the function getData
+  async function getData() {
+    try {
+      document.querySelector('#data').innerHTML ='Fetching employee data...'
+
+      // Call the Promise-based function
+      const data = await fetchData();
+      document.querySelector('#data').innerHTML =`Employee Data: </br>Name :  ${data.name} </br>Email : ${data.email}`
+    } catch (error) {
+      console.error('Error fetching employee data:', error);
+    }
+  }
+  
+  // Attach an event listener to the button
+  document.getElementById('fetchButton').addEventListener('click', () => {
+    getData();
+  });
+  
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Functions Demo</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>jQuery Functions Demo</h1>
+    
+    <div class="section">
+      <h2>1. $.map()</h2>
+      <p>Using $.map() to double the values in an array:</p>
+      <div id="map-example"></div>
+    </div>
+
+    <div class="section">
+      <h2>2. $.grep()</h2>
+      <p>Using $.grep() to filter even numbers from an array:</p>
+      <div id="grep-example"></div>
+    </div>
+
+    <div class="section">
+      <h2>3. $.extend()</h2>
+      <p>Using $.extend() to merge two objects:</p>
+      <div id="extend-example"></div>
+    </div>
+
+    <div class="section">
+      <h2>4. $.each()</h2>
+      <p>Using $.each() to iterate through an array and display its values:</p>
+      <div id="each-example"></div>
+    </div>
+
+    <div class="section">
+      <h2>5. $.merge()</h2>
+      <p>Using $.merge() to merge two arrays:</p>
+      <div id="merge-example"></div>
+    </div>
+  </div>
+
+  <script>
+$(document).ready(function() {
+  // 1. $.map() - Doubles the values in an array
+  var originalArray = [1, 2, 3, 4, 5];
+  var doubledArray = $.map(originalArray, function(value) {
+    return value * 2;
+  });
+  $('#map-example').text('Original Array: ' + originalArray.join(', ') + '\nDoubled Array: ' + doubledArray.join(', '));
+
+  // 2. $.grep() - Filters even numbers from an array
+  var numbers = [1, 2, 3, 4, 5, 6];
+  var evenNumbers = $.grep(numbers, function(value) {
+    return value % 2 === 0;
+  });
+  $('#grep-example').text('Original Numbers: ' + numbers.join(', ') + '\nEven Numbers: ' + evenNumbers.join(', '));
+
+  // 3. $.extend() - Merges two objects
+  var object1 = { a: 1, b: 2 };
+  var object2 = { b: 3, c: 4 };
+  var mergedObject = $.extend({}, object1, object2);
+  $('#extend-example').text('Merged Object: ' + JSON.stringify(mergedObject));
+
+  // 4. $.each() - Iterates through an array
+  var fruits = ['apple', 'banana', 'cherry'];
+  var displayFruits = '';
+  $.each(fruits, function(index, value) {
+    displayFruits += index + ': ' + value + '<br>';
+  });
+  $('#each-example').html(displayFruits);
+
+  // 5. $.merge() - Merges two arrays
+  var array1 = [1, 2, 3];
+  var array2 = [4, 5, 6];
+  var mergedArray = $.merge(array1, array2);
+  $('#merge-example').text('Merged Array: ' + mergedArray.join(', '));
+});
+
+
+
+
+//$.grep() and $.map() both in o(n) 
+$(function() {
+  var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  var multiple = $.grep(array, function(element) {
+    return element % 3 === 0;
+  });
+
+  var cube = $.map(multiple, function(element) {
+    return element * element * element;
+  });
+
+  console.log(cube);
+});
+
+  </script>
+</body>
+</html>

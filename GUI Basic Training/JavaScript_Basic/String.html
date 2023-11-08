@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>javaScript String methods demo</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 style="margin-bottom:25px ;">String Methods</h1>
+      <div class="container">
+        <label for="string">Enter any String: </label>
+        <input type="text" name="string" id="string">
+      </div>
+      <div class="container mt-5" >
+        <button type="button" class="btn btn-info" id="length">Length</button>
+        <button type="button" class="btn btn-info" id="upper">Upper-case</button>
+        <button type="button" class="btn btn-info" id="lower">Lower-case</button>
+        <button type="button" class="btn btn-info" id="concat">Concat</button>
+      </div>
+    </div>
+
+
+<!-- Script for string methods -->
+    <script>
+    var str = document.querySelector("#string");
+    var buttons = document.querySelectorAll("button");
+
+    buttons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        var operation = button.id;
+        var value = str.value;
+
+        console.log(value);
+
+        switch (operation) {
+          case "length":
+            alert(value.length);
+            break;
+          case "upper":
+            alert(value.toUpperCase());
+            break;
+          case "lower":
+            alert(value.toLowerCase());
+            break;
+          case "concat":
+            var str2 = prompt("Enter another string: ");
+            alert(value + " " + str2);
+            break;
+        }
+      });
+    });
+    </script>
+
+<hr><br>
+
+
+<!-- Key event demo  -->
+    <div class="container">
+      <h1>Key Event Demo</h1>
+      <label for="txt-box">Type here.... :</label>
+      <input type="text" id="txt-box">
+      
+    <script>
+      const txtBox = document.getElementById("txt-box");
+
+      // Add event listeners to the textbox
+      txtBox.addEventListener("keydown", function(event) {
+        console.log("keydown: ",event.key)
+      txtBox.style.color = "red";
+      });
+
+      txtBox.addEventListener("keyup", function(event) {
+        console.log("keyup: ",event.key);
+      txtBox.style.color = "green";
+      txtBox.style.fontStyle = "italic";
+      });
+
+      txtBox.addEventListener("keypress", function(event) {
+        console.log("keypress: ", event.key )
+      txtBox.style.color = "blue";
+      txtBox.style.fontFamily = "georgia";
+      });
+    </script>
+    </div>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+

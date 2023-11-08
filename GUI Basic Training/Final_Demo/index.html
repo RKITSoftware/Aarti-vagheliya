@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Book</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Directory</h1>
+        <div id="user-info" class="alert alert-info"></div>
+
+        <!-- Login form -->
+        <div id="login-form">
+            <h2>Login</h2>
+            <form id="login">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirm password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <a href="#" id="create-account-link">Create New Account</a>
+            </form>
+        </div>
+
+        <!-- Create new Account -->
+        <div id="create-account-form" style="display: none;">
+            <h2>Create New Account</h2>
+            <form id="create-account">
+                <div class="form-group">
+                    <input type="text" id="new-username" name="new-username" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="new-password" name="new-password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="new-confirm-password" name="new-confirm-password" class="form-control" placeholder="Confirm password">
+                </div>
+                <button type="submit" class="btn btn-success">Create Account</button>
+                <a href="#" id="login-link">Back to Login</a>
+            </form>
+        </div>
+
+        <!-- Contact table displayed here-->
+        <div id="address-book" style="display: none;">
+            <button class="btn btn-success" id="add-data-button" data-toggle="modal" data-target="#add-data-modal">Add Contact</button>
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="contacts">
+                    <!-- List of contacts will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+
+        <button id="logout" class="btn btn-danger mt-2" >Logout</button>
+    </div>
+
+        <!-- Bootstrap modal for adding contact data -->
+        <div id="add-data-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Contact</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="contact-form">
+                    <div class="modal-body">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="email" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="city" name="city" class="form-control" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="state" name="state" class="form-control" placeholder="State">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="country" name="country" class="form-control" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Save Contact</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap modal for editing contacts -->
+        <div id="edit-data-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit Contact</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="edit-contact-form">
+                        <div class="modal-body">
+                        
+                            <input type="hidden" id="edit-contact-id" value="">
+
+                            <div class="form-group">
+                                <input type="text" id="edit-name" name="edit-name" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="edit-email" name="edit-email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="edit-phone" name="edit-phone" class="form-control" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="edit-city" name="edit-city" class="form-control" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="edit-state" name="edit-state" class="form-control" placeholder="State">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="edit-country" name="edit-country" class="form-control" placeholder="Country">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit"  class="btn btn-success">Save Contact</button>
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+
+    <!-- Add Script file here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="userManagement.js"></script>
+    <script src="script.js"></script>
+    <script src="validation.js"></script>
+
+</body>
+</html>

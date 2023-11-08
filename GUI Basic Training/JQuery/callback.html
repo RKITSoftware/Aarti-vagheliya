@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Callback Demo</h1>
+        <button id="showButton" class="btn btn-primary">Show</button>
+        <button id="hideButton" class ="btn btn-primary">Hide</button>
+        <button id="fadeInButton" class="btn btn-primary">Fade In</button>
+        <button id="fadeOutButton" class="btn btn-primary">Fade Out</button>
+        <button id="fadeToButton" class="btn btn-primary">Fade To</button>
+        <br>
+        <div id="demoDiv" class="alert alert-success" style="display: none;">
+            This is a callback demonstration.
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+          //Show method with callback
+            $("#showButton").click(() => {
+                $("#demoDiv").show(1000, () => {
+                    alert("Element has been shown.");
+                });
+            });
+
+
+            //Hide method with callback
+            $("#hideButton").click(() => {
+                $("#demoDiv").hide(2000, () => {
+                    alert("Element has been hidden.");
+                });
+            });
+
+
+            //FadeIN method with callback
+            $("#fadeInButton").click(() => {
+                $("#demoDiv").fadeIn(1000, () => {
+                    alert("Element has been faded in.");
+                });
+            });
+
+
+            //FadeOut method with callback
+            $("#fadeOutButton").click( function(){
+                $("#demoDiv").fadeOut(1000, () => {
+                    alert("Element has been faded out.");
+                });
+            });
+
+
+            //FadeTo method with callback
+            $("#fadeToButton").click(() => {
+                $("#demoDiv").fadeTo(1000, 0.5, () => {
+                    alert("Element opacity has been changed.");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

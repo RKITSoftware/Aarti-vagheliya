@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Selector Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="my-container">
+            <h2>jQuery Selector Demo</h2>
+            
+            <ul>
+                <li>Parent element: <span id="parentSelection">Click Me</span></li>
+                <li>Descendant element: <span class="descendant">Click Me</span></li>
+                <li>Sibling elements: <span class="sibling">Click Me</span></li>
+                <li>First of type: <span>Click Me</span></li>
+                <li>Anchor tags: <a href="#">Link 1</a> | <a href="#">Link 2</a> | <a href="#">Link 3</a> | <a href="#">Link 4</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <table class="table table-bordered mt-4">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Parent selection
+            $("#parentSelection").click(function() {
+                alert("You clicked the parent element.");
+            });
+
+            // Descendant selection
+            $(".descendant").click(function() {
+                alert("You clicked a descendant element.");
+            });
+
+            // Sibling selection
+            $(".sibling").click(function() {
+                alert("You clicked a sibling element.");
+            });
+
+            // First of type selection
+            $("li:first-of-type").click(function() {
+                alert("You clicked the first of type.");
+            });
+
+        
+            // Select the last anchor tag
+            $("li a:last").click(function() {
+                alert("You clicked the last anchor tag.");
+            });
+
+            // Select anchor tags starting from the third anchor tag and onwards
+            $("li a:gt(1)").click(function() {
+                alert("You clicked an anchor tag starting from the third and onwards.");
+            });
+
+            // Select the second anchor tag
+            $("li a:eq(1)").click(function() {
+                alert("You clicked the second anchor tag.");
+            });
+
+             // Select a td inside a tr
+             $("table tbody tr:first td").click(function() {
+                alert("You clicked a table cell within the first row.");
+            });
+        });
+    </script>
+</body>
+</html>

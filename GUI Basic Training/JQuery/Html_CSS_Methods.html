@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery HTML/CSS Methods Demo</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>jQuery HTML/CSS Methods Demo</h1>
+    
+    <!-- Initial HTML Element -->
+    <div id="myDiv" class="alert alert-primary">
+        This is a sample div.
+    </div>
+
+    <button id="changeColorBtn" class="btn btn-primary">Change Color</button>
+    <button id="prependTextBtn" class="btn btn-primary">Prepend Text</button>
+    <button id="appendTextBtn" class="btn btn-primary">Append Text</button>
+    <button id="appendToBtn" class="btn btn-primary">Append To</button>
+    <button id="innerOuterWidthBtn" class="btn btn-primary">Inner/Outer Width</button>
+    <button id="addHtmlBtn" class="btn btn-primary">Add HTML</button>
+    <button id="addClassBtn" class="btn btn-primary">Add Class</button>
+    <button id="clearBtn" class="btn btn-danger">Clear</button>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Change the color of the div
+    $('#changeColorBtn').click(function() {
+        $('#myDiv').css('background-color', 'yellow');
+    });
+
+    // Prepend text to the div
+    $('#prependTextBtn').click(function() {
+        $('#myDiv').prepend('Prepended Text: ');
+    });
+
+    // Append text to the div
+    $('#appendTextBtn').click(function() {
+        $('#myDiv').append(' Appended Text');
+    });
+
+    // Append the div to another container
+    $('#appendToBtn').click(function() {
+        $('#myDiv').appendTo('#container2');
+    });
+
+    // Get and display inner and outer width of the div
+    $('#innerOuterWidthBtn').click(function() {
+        var innerWidth = $('#myDiv').innerWidth();
+        var outerWidth = $('#myDiv').outerWidth();
+        $('#myDiv').html('Inner Width: ' + innerWidth + 'px, Outer Width: ' + outerWidth + 'px');
+    });
+
+    // Add HTML content to the div
+    $('#addHtmlBtn').click(function() {
+        $('#myDiv').html('<strong>New HTML Content</strong>');
+    });
+
+    // Add a class to the div
+    $('#addClassBtn').click(function() {
+        $('#myDiv').addClass('alert-success');
+    });
+
+    // Clear the content and reset the color
+    $('#clearBtn').click(function() {
+        $('#myDiv').html('This is a sample div.');
+        $('#myDiv').css('background-color', 'lightblue');
+        $('#myDiv').removeClass('alert-success');
+    });
+});
+</script>
+
+<div id="container2" class="container">
+    <!-- Container for appendTo method -->
+</div>
+
+</body>
+</html>

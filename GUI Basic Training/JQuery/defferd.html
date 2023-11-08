@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deferred Object Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Deferred Object Demo</h1>
+    <p id="status">Status: Pending</p>
+    <button id="startButton">Start Task</button>
+    <button id="resolveButton">Resolve</button>
+    <button id="rejectButton">Reject</button>
+
+    <script>
+        const deferred = $.Deferred();
+
+        deferred.done(function (result) {
+            $("#status").text("Status: Resolved with result: " + result);
+        });
+
+        deferred.fail(function (error) {
+            $("#status").text("Status: Rejected with error: " + error);
+        });
+
+
+        //Successfully resolved
+        $("#startButton").click(function () {
+            $("#status").text("Status: Pending");
+            setTimeout(function () {
+                if (deferred.state() === "pending") {
+                    deferred.resolve("Task completed successfully!");
+                }
+            }, 2000);
+        });
+
+
+        //Manually resolved
+        $("#resolveButton").click(function () {
+            if (deferred.state() === "pending") {
+                deferred.resolve("Manually resolved the task.");
+            }
+        });
+
+
+        //Manually reject
+        $("#rejectButton").click(function () {
+            if (deferred.state() === "pending") {
+                deferred.reject("Manually rejected the task.");
+            }
+        });
+    </script>
+</body>
+</html>

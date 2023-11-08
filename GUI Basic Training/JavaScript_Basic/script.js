@@ -15,7 +15,7 @@ form.addEventListener("submit", function(event) {
   if (!/\S+@\S+\.\S+/.test(email)) {
     alert("Please enter a valid email address.");
     return;
-  }
+  } 
 
   // Validate the password field
   var password = document.querySelector("input[name='password']").value;
@@ -23,6 +23,15 @@ form.addEventListener("submit", function(event) {
     alert("Please enter a password with at least 6 characters.");
     return;
   }
+
+  //Validate the select box
+  var select = document.querySelector("select[name='country']").value;
+    console.log(select)
+    if(select === ""){
+      alert("Please select country.");
+      return;
+  }
+
 
   // Submit the form
   form.submit();
@@ -38,7 +47,10 @@ var countries = ["United States", "Canada", "United Kingdom", "India", "China"];
 // Add the countries to the dropdown box
 for (var i = 0; i < countries.length; i++) {
   var option = document.createElement("option");
+  option.style.color = "red" ;
   option.value = countries[i];
   option.textContent = countries[i];
   countrySelect.appendChild(option);
 }
+
+
