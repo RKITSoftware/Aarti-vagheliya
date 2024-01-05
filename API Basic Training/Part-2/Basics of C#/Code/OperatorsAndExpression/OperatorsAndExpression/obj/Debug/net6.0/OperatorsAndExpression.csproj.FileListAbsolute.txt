@@ -1,0 +1,15 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\bin\Debug\net6.0\OperatorsAndExpression.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\bin\Debug\net6.0\OperatorsAndExpression.deps.json
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\bin\Debug\net6.0\OperatorsAndExpression.runtimeconfig.json
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\bin\Debug\net6.0\OperatorsAndExpression.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\bin\Debug\net6.0\OperatorsAndExpression.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\OperatorsAndExpression.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\OperatorsAndExpression.GeneratedMSBuildEditorConfig.editorconfig
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\OperatorsAndExpression.AssemblyInfoInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\OperatorsAndExpression.AssemblyInfo.cs
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\OperatorsAndExpression.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\OperatorsAndExpression.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\refint\OperatorsAndExpression.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\OperatorsAndExpression.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\OperatorsAndExpression.genruntimeconfig.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OperatorsAndExpression\OperatorsAndExpression\obj\Debug\net6.0\ref\OperatorsAndExpression.dll

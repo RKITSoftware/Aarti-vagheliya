@@ -1,0 +1,15 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.deps.json
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.runtimeconfig.json
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.GeneratedMSBuildEditorConfig.editorconfig
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.AssemblyInfoInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.AssemblyInfo.cs
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\refint\DataTypesAndVariables.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.genruntimeconfig.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\ref\DataTypesAndVariables.dll
