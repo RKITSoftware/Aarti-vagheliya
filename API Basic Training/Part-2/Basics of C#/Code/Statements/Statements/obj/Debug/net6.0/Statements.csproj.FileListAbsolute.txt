@@ -1,0 +1,15 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\bin\Debug\net6.0\Statements.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\bin\Debug\net6.0\Statements.deps.json
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\bin\Debug\net6.0\Statements.runtimeconfig.json
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\bin\Debug\net6.0\Statements.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\bin\Debug\net6.0\Statements.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\Statements.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\Statements.GeneratedMSBuildEditorConfig.editorconfig
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\Statements.AssemblyInfoInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\Statements.AssemblyInfo.cs
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\Statements.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\Statements.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\refint\Statements.dll
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\Statements.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\Statements.genruntimeconfig.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Statements\Statements\obj\Debug\net6.0\ref\Statements.dll
