@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\AbstractClass\AbstractClass\bin\Debug\AbstractClass.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\AbstractClass\AbstractClass\bin\Debug\AbstractClass.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\AbstractClass\AbstractClass\bin\Debug\AbstractClass.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\AbstractClass\AbstractClass\obj\Debug\AbstractClass.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\AbstractClass\AbstractClass\obj\Debug\AbstractClass.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\AbstractClass\AbstractClass\obj\Debug\AbstractClass.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\AbstractClass\AbstractClass\obj\Debug\AbstractClass.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\AbstractClass\AbstractClass\obj\Debug\AbstractClass.pdb

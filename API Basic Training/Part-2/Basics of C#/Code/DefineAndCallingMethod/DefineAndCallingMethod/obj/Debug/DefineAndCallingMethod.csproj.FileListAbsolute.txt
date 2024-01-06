@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DefineAndCallingMethod\DefineAndCallingMethod\bin\Debug\DefineAndCallingMethod.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DefineAndCallingMethod\DefineAndCallingMethod\bin\Debug\DefineAndCallingMethod.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DefineAndCallingMethod\DefineAndCallingMethod\bin\Debug\DefineAndCallingMethod.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DefineAndCallingMethod\DefineAndCallingMethod\obj\Debug\DefineAndCallingMethod.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DefineAndCallingMethod\DefineAndCallingMethod\obj\Debug\DefineAndCallingMethod.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DefineAndCallingMethod\DefineAndCallingMethod\obj\Debug\DefineAndCallingMethod.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DefineAndCallingMethod\DefineAndCallingMethod\obj\Debug\DefineAndCallingMethod.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DefineAndCallingMethod\DefineAndCallingMethod\obj\Debug\DefineAndCallingMethod.pdb
