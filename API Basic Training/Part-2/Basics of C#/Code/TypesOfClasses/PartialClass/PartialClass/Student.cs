@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace PartialClass
 {
-    class Program
+    internal class Student
     {
-        static void Main(string[] args)
-        {
-            Student s = new Student;
-        }
     }
 }

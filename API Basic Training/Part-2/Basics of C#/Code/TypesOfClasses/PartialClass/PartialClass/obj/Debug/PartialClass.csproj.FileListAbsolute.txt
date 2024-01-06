@@ -1,0 +1,3 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\PartialClass\PartialClass\obj\Debug\PartialClass.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\PartialClass\PartialClass\obj\Debug\PartialClass.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\PartialClass\PartialClass\obj\Debug\PartialClass.csproj.CoreCompileInputs.cache

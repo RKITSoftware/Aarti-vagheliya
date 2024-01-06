@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\StaticClass\StaticClass\obj\Debug\StaticClass.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\StaticClass\StaticClass\obj\Debug\StaticClass.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\StaticClass\StaticClass\obj\Debug\StaticClass.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\StaticClass\StaticClass\bin\Debug\StaticClass.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\StaticClass\StaticClass\bin\Debug\StaticClass.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\StaticClass\StaticClass\bin\Debug\StaticClass.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\StaticClass\StaticClass\obj\Debug\StaticClass.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\TypesOfClasses\StaticClass\StaticClass\obj\Debug\StaticClass.pdb

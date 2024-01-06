@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace PartialClass
 {
-    internal class PartialClass2
+    public partial class Student
     {
+        public int Age { get; set; };
+        public int RollNo { get; set; };
+
+
+        public void DisplayInformation2()
+        {
+            Console.WriteLine($"Age = {Age}");
+            Console.WriteLine($"RollNo = {RollNo}");
+        }
     }
 }
