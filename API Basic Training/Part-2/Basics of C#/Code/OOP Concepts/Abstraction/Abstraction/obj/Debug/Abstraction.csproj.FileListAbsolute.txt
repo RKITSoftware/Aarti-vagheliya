@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Abstraction\Abstraction\obj\Debug\Abstraction.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Abstraction\Abstraction\obj\Debug\Abstraction.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Abstraction\Abstraction\obj\Debug\Abstraction.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Abstraction\Abstraction\bin\Debug\Abstraction.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Abstraction\Abstraction\bin\Debug\Abstraction.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Abstraction\Abstraction\bin\Debug\Abstraction.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Abstraction\Abstraction\obj\Debug\Abstraction.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Abstraction\Abstraction\obj\Debug\Abstraction.pdb
