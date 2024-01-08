@@ -8,9 +8,18 @@ namespace PartialClass
 {
     partial class Student
     {
-        public static void Method1()
+        string FirstName = "Arti";
+        string LastName = "Vagheliya";
+
+        public void Method1()
         {
             Console.WriteLine("Hello from method -1 ");
+            
+        }
+        public void DisplayData()
+        {
+            Console.WriteLine($"FirstName = {FirstName}");
+            Console.WriteLine($"LastName = {LastName}");
         }
     }
 }
