@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Interface\Interface\bin\Debug\Interface.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Interface\Interface\bin\Debug\Interface.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Interface\Interface\bin\Debug\Interface.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Interface\Interface\obj\Debug\Interface.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Interface\Interface\obj\Debug\Interface.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Interface\Interface\obj\Debug\Interface.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Interface\Interface\obj\Debug\Interface.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Interface\Interface\obj\Debug\Interface.pdb
