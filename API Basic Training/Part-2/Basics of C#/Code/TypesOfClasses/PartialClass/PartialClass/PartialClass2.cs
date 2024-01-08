@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace PartialClass
 {
-    public partial class Student
+    partial class Student
     {
-        public int Age { get; set; };
-        public int RollNo { get; set; };
-
-
-        public void DisplayInformation2()
+        public static void Method2()
         {
-            Console.WriteLine($"Age = {Age}");
-            Console.WriteLine($"RollNo = {RollNo}");
+            Console.WriteLine("Hello from Method -2 ");
         }
     }
 }

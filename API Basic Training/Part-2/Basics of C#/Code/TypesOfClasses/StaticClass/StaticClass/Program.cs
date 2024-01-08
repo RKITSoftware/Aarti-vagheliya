@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace StaticClass
 {
-    public static class MyCollege
+    static class MyCollege
     {
-        static string CollegeName;
-        static string City;
+        public static string CollegeName;
+        public static string City;
 
         static MyCollege()
         {
@@ -22,13 +22,13 @@ namespace StaticClass
             return a + b;
         }
     }
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine($"College = {MyCollege.CollegeName}");
-            Console.WriteLine(MyCollege.City);
-            Console.WriteLine(MyCollege.Add(5, 6));
+            Console.WriteLine($"City = {MyCollege.City}");
+            Console.WriteLine($"Calling Static method: {MyCollege.Add(5, 6)}");
         }
     }
 }

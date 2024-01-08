@@ -10,7 +10,9 @@ namespace PartialClass
     {
         static void Main(string[] args)
         {
-            Student s = new Student;
+           Student s = new Student();
+            s.Method1();
+            s.Method2();
         }
     }
 }
