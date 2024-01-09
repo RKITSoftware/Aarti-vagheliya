@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Student>
+    <ID>1</ID>
+    <Name>John</Name>
+    <Age>26</Age>
+  </Student>
+  <Student>
+    <ID>3</ID>
+    <Name>Bob</Name>
+    <Age>28</Age>
+  </Student>
+  <Student>
+    <ID>4</ID>
+    <Name>Eva</Name>
+    <Age>23</Age>
+  </Student>
+</DocumentElement>

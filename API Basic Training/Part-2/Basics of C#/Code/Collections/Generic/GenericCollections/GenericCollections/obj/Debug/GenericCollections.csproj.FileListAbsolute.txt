@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Generic\GenericCollections\GenericCollections\bin\Debug\GenericCollections.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Generic\GenericCollections\GenericCollections\bin\Debug\GenericCollections.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Generic\GenericCollections\GenericCollections\bin\Debug\GenericCollections.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Generic\GenericCollections\GenericCollections\obj\Debug\GenericCollections.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Generic\GenericCollections\GenericCollections\obj\Debug\GenericCollections.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Generic\GenericCollections\GenericCollections\obj\Debug\GenericCollections.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Generic\GenericCollections\GenericCollections\obj\Debug\GenericCollections.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Generic\GenericCollections\GenericCollections\obj\Debug\GenericCollections.pdb

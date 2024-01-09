@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Enumeration\Enumeration\Enumeration\bin\Debug\Enumeration.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Enumeration\Enumeration\Enumeration\bin\Debug\Enumeration.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Enumeration\Enumeration\Enumeration\bin\Debug\Enumeration.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Enumeration\Enumeration\Enumeration\obj\Debug\Enumeration.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Enumeration\Enumeration\Enumeration\obj\Debug\Enumeration.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Enumeration\Enumeration\Enumeration\obj\Debug\Enumeration.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Enumeration\Enumeration\Enumeration\obj\Debug\Enumeration.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Enumeration\Enumeration\Enumeration\obj\Debug\Enumeration.pdb

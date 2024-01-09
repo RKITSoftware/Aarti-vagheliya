@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\ExceptionHandling\ExceptionHandling\ExceptionHandling\bin\Debug\ExceptionHandling.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\ExceptionHandling\ExceptionHandling\ExceptionHandling\bin\Debug\ExceptionHandling.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\ExceptionHandling\ExceptionHandling\ExceptionHandling\bin\Debug\ExceptionHandling.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\ExceptionHandling\ExceptionHandling\ExceptionHandling\obj\Debug\ExceptionHandling.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\ExceptionHandling\ExceptionHandling\ExceptionHandling\obj\Debug\ExceptionHandling.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\ExceptionHandling\ExceptionHandling\ExceptionHandling\obj\Debug\ExceptionHandling.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\ExceptionHandling\ExceptionHandling\ExceptionHandling\obj\Debug\ExceptionHandling.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\ExceptionHandling\ExceptionHandling\ExceptionHandling\obj\Debug\ExceptionHandling.pdb

@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTable\DAtaTable\DAtaTable\bin\Debug\DAtaTable.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTable\DAtaTable\DAtaTable\bin\Debug\DAtaTable.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTable\DAtaTable\DAtaTable\bin\Debug\DAtaTable.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTable\DAtaTable\DAtaTable\obj\Debug\DAtaTable.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTable\DAtaTable\DAtaTable\obj\Debug\DAtaTable.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTable\DAtaTable\DAtaTable\obj\Debug\DAtaTable.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTable\DAtaTable\DAtaTable\obj\Debug\DAtaTable.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DataTable\DAtaTable\DAtaTable\obj\Debug\DAtaTable.pdb

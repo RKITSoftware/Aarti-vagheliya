@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AccessibilityModifier\AccessibilityModifier\bin\Debug\AccessibilityModifier.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AccessibilityModifier\AccessibilityModifier\bin\Debug\AccessibilityModifier.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AccessibilityModifier\AccessibilityModifier\bin\Debug\AccessibilityModifier.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AccessibilityModifier\AccessibilityModifier\obj\Debug\AccessibilityModifier.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AccessibilityModifier\AccessibilityModifier\obj\Debug\AccessibilityModifier.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AccessibilityModifier\AccessibilityModifier\obj\Debug\AccessibilityModifier.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AccessibilityModifier\AccessibilityModifier\obj\Debug\AccessibilityModifier.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AccessibilityModifier\AccessibilityModifier\obj\Debug\AccessibilityModifier.pdb
