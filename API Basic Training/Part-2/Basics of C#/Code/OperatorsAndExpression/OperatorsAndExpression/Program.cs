@@ -1,8 +1,12 @@
 ﻿using System;
+
 namespace OperatorsAndExpression;
 
 class OperatorsAndExpression
 {
+    /// <summary>
+    /// Class demonstrating various operators and expressions in C#.
+    /// </summary>
     static void Main(string[] args)
     {
         //Arithmetic Operators
@@ -15,6 +19,7 @@ class OperatorsAndExpression
         Console.WriteLine("a * b = " + (a * b));
         Console.WriteLine("a / b = " + (a / b));
         Console.WriteLine("a % b = " + (a % b));
+        Console.WriteLine();
 
 
 
@@ -32,7 +37,7 @@ class OperatorsAndExpression
         Console.WriteLine("c^=5 =>" + (c ^= 5));
         Console.WriteLine("c>>=5 =>" + (c >>= 5));
         Console.WriteLine("c<<=5 =>" + (c <<= 5));
-
+        Console.WriteLine();
 
 
         //Comparision Operators
@@ -44,12 +49,15 @@ class OperatorsAndExpression
         Console.WriteLine("{0} <= {1} = {2} ", i, j, (i <= j));
         Console.WriteLine("{0} == {1} = {2} ", i, j, (i == j));
         Console.WriteLine("{0} != {1} = {2} ", i, j, (i != j));
+        Console.WriteLine();
 
         //Logical Operators
         Console.WriteLine("Logical Operators.....");
         Console.WriteLine("i>6 && i <10 = " + (i > 6 && i < 10));
         Console.WriteLine("i>6 || i <10 = " + (i > 6 || i < 10));
         Console.WriteLine("!(i>6 && i <10) = " +!(i > 6 && i< 10));
+        Console.WriteLine();
+
 
         //Unary Operators
         Console.WriteLine("Unary Operators.....");
@@ -59,6 +67,7 @@ class OperatorsAndExpression
         Console.WriteLine("++{0} = {1} ", a, (++a));
         Console.WriteLine("{0}-- = {1} ", b, (b--));
         Console.WriteLine("--{0} = {1} " ,b, (--b));
+        Console.WriteLine();
 
 
         //Ternary Operator
@@ -68,6 +77,7 @@ class OperatorsAndExpression
         Console.WriteLine("Ternary Operator....");
         result = (number % 2 == 0) ? "Even Number" : "Odd Number";
         Console.WriteLine("{0} is {1}", number, result);
+        Console.WriteLine();
 
 
 
@@ -80,6 +90,7 @@ class OperatorsAndExpression
         Console.WriteLine("{0} ^ {1} = {2}", p, r, p ^ r);
         Console.WriteLine("{0} << {1} = {2}", p, r, p << r);
         Console.WriteLine("{0} >> {1} = {2}", p, r, p >> r);
+        Console.WriteLine();
 
 
     }

@@ -1,6 +1,9 @@
 ﻿using System;
 namespace Statements;
 
+/// <summary>
+/// Class demonstrating various C# statements including selection, iterative, and jump statements.
+/// </summary>
 class Statements
 {
     static void Main(string[] args)

@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PartialClass
 {
+    /// <summary>
+    /// Partial class representing a Student.
+    /// </summary>
     partial class Student
     {
         string FirstName = "Arti";
@@ -16,6 +15,10 @@ namespace PartialClass
             Console.WriteLine("Hello from method -1 ");
             
         }
+
+        /// <summary>
+        /// Method to display personal data.
+        /// </summary>
         public void DisplayData()
         {
             Console.WriteLine($"FirstName = {FirstName}");

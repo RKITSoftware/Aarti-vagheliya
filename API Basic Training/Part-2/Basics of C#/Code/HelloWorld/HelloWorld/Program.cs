@@ -1,19 +1,17 @@
 ﻿
 
 using System;
-using HelloWorld2;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace HelloWorld;
 
+/// <summary>
+/// Hello World Program in c#.
+/// </summary>
 class HelloWorld
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello RKITians...!");
-        DataTypes_Variables obj1 = new DataTypes_Variables();
-        Console.WriteLine(obj1.test);
-
+        Console.WriteLine("Hello RKITians...! Welcome to the world of RKIT.");
     }
 }
 

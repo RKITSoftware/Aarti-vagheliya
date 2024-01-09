@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PartialClass
 {
+    /// <summary>
+    /// Second part of the partial class representing a Student.
+    /// </summary>
     partial class Student
     {
         int Age = 20;

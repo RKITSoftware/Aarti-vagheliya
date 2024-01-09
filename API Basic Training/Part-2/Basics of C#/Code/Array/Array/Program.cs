@@ -2,10 +2,14 @@
 
 namespace Array
 {
-    internal class Program
+    /// <summary>
+    /// This program demonstrates different types of arrays and array methods in C#.
+    /// </summary>
+    class Program
     {
         static void Main(string[] args)
         {
+            #region Single-Dimentional Array
             //Single-dimensional Array
             string[] cars = { "Volvo", "BMW", "Ford", "KIA" };
             Console.WriteLine("Output of 1D Array..");
@@ -13,9 +17,12 @@ namespace Array
             Console.WriteLine(cars[1]);
             Console.WriteLine(cars[2]);
             Console.WriteLine(cars[3]);
+            Console.WriteLine();
+            #endregion
 
+            #region Two-Dimentional Array
             //Two-dimensional Array
-            int [,] a = new int[3, 4] 
+            int[,] a = new int[3, 4] 
             {   {1,2,3,4 },
                 {2,3,4,5},
                 {3,4,5,6},
@@ -25,8 +32,10 @@ namespace Array
             Console.WriteLine(a[0,0]);
             Console.WriteLine(a[2,0]);
             Console.WriteLine(a[2,3]);
+            Console.WriteLine();
+            #endregion
 
-
+            #region Three-Dimentional Array
             //Three-dimensional array
             int[,,] b = new int[3, 3, 2]
             {
@@ -40,8 +49,10 @@ namespace Array
             Console.WriteLine(b[1,1,1]);
             Console.WriteLine(b[2,2,1]);
             Console.WriteLine(b[2,1,0]);
+            Console.WriteLine();
+            #endregion
 
-
+            #region Jagged Array
             //Jagged array
             int[][] c = new int[3][];
 
@@ -54,9 +65,10 @@ namespace Array
             Console.WriteLine(ele1);
             Console.WriteLine(c[0][3]);
             Console.WriteLine(c[2][1]);
+            Console.WriteLine();
+            #endregion
 
-
-
+            #region Array Methods
             //Array methods
 
             //length method
@@ -95,7 +107,7 @@ namespace Array
             {
                 Console.WriteLine(i);
             }
-
+            #endregion
         }
     }
 }

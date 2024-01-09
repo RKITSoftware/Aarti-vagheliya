@@ -1,37 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AbstractClass
 {
-    //Abstract class
+    /// <summary>
+    /// Abstract class representing a shape.
+    /// </summary>
     abstract class Shape
     {
-
-        //Abstract method
+        /// <summary>
+        /// Abstract method for drawing a shape.
+        /// </summary>
         public abstract void Draw();
 
-        //Non abstact Method
+        /// <summary>
+        /// Non-abstract method for displaying information about a shape.
+        /// </summary>
         public void Display()
         {
             Console.WriteLine("This is a shape.");
         }
     }
 
+    /// <summary>
+    /// Derived class representing a circle.
+    /// </summary>
     class Circle : Shape
     {
-        //Override abstract method
+        /// <summary>
+        /// Override of the abstract method to draw a circle.
+        /// </summary>
         public override void Draw()
         {
             Console.WriteLine("Drawing a circle.");
         }
     }
 
+    /// <summary>
+    /// Derived class representing a square.
+    /// </summary>
     class Square : Shape
     {
-        //Override Absract method
+        /// <summary>
+        /// Override of the abstract method to draw a square.
+        /// </summary>
         public override void Draw()
         {
             Console.WriteLine("Drawing a Square");

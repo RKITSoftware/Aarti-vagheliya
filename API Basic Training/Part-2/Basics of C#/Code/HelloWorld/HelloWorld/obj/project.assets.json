@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Arti-368\\New folder\\API Basic Training\\Part-2\\Basics of C#\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
+      "projectUniqueName": "F:\\Arti-368\\New folder\\API Basic Training\\Part-2\\Basics of C#\\Code\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "F:\\Arti-368\\New folder\\API Basic Training\\Part-2\\Basics of C#\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
+      "projectPath": "F:\\Arti-368\\New folder\\API Basic Training\\Part-2\\Basics of C#\\Code\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
       "packagesPath": "C:\\Users\\aarti.v\\.nuget\\packages\\",
-      "outputPath": "F:\\Arti-368\\New folder\\API Basic Training\\Part-2\\Basics of C#\\HelloWorld\\HelloWorld\\obj\\",
+      "outputPath": "F:\\Arti-368\\New folder\\API Basic Training\\Part-2\\Basics of C#\\Code\\HelloWorld\\HelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aarti.v\\AppData\\Roaming\\NuGet\\NuGet.Config",
