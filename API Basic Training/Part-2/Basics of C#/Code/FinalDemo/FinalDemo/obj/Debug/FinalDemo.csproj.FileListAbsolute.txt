@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FinalDemo\FinalDemo\bin\Debug\FinalDemo.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FinalDemo\FinalDemo\bin\Debug\FinalDemo.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FinalDemo\FinalDemo\bin\Debug\FinalDemo.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FinalDemo\FinalDemo\obj\Debug\FinalDemo.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FinalDemo\FinalDemo\obj\Debug\FinalDemo.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FinalDemo\FinalDemo\obj\Debug\FinalDemo.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FinalDemo\FinalDemo\obj\Debug\FinalDemo.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FinalDemo\FinalDemo\obj\Debug\FinalDemo.pdb
