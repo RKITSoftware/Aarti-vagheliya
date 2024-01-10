@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\BasicFileOperation\BasicFileOperation\bin\Debug\BasicFileOperation.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\BasicFileOperation\BasicFileOperation\bin\Debug\BasicFileOperation.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\BasicFileOperation\BasicFileOperation\bin\Debug\BasicFileOperation.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\BasicFileOperation\BasicFileOperation\obj\Debug\BasicFileOperation.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\BasicFileOperation\BasicFileOperation\obj\Debug\BasicFileOperation.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\BasicFileOperation\BasicFileOperation\obj\Debug\BasicFileOperation.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\BasicFileOperation\BasicFileOperation\obj\Debug\BasicFileOperation.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\BasicFileOperation\BasicFileOperation\obj\Debug\BasicFileOperation.pdb

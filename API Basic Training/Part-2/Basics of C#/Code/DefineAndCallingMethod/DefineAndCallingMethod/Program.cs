@@ -39,6 +39,32 @@ namespace DefineAndCallingMethod
         }
         #endregion
 
+        #region DisplayInfo method with one optional parameter
+        /// <summary>
+        /// Method with one optional parameter.
+        /// </summary>
+        /// <param name="name">Name of the person.</param>
+        /// <param name="age">Age of the person (optional).</param>
+        static void DisplayInfo(string name, int age = 21)
+        {
+            Console.WriteLine($"Name: {name}, Age: {age}");
+        }
+
+        #endregion
+
+        #region DisplayInfo method with two optional parameter
+        /// <summary>
+        /// Method with two optional parameters.
+        /// </summary>
+        /// <param name="lastName">Last name of the person.</param>
+        /// <param name="age">Age of the person (optional).</param>
+        /// <param name="city">City of residence (optional).</param>
+        static void DisplayInfo(string lastName, int age = 21, string city = "Unknown")
+        {
+            Console.WriteLine($"Last Name: {lastName}, Age: {age}, City: {city}");
+        }
+        #endregion
+
         #region Main method
         /// <summary>
         /// The entry point of the program.
@@ -55,7 +81,14 @@ namespace DefineAndCallingMethod
             Console.Write("Enter number for find factorial: ");
             int num = int.Parse(Console.ReadLine());
             Console.WriteLine("factorial = {0}",Factorial(num));
+
+            // Calling methods with optional parameters
+           
+            DisplayInfo("Jane", 25);
+            DisplayInfo("Doe", 30, "New York");
         }
         #endregion
+
+
     }
 }

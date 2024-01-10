@@ -61,10 +61,17 @@ namespace AccessibilityModifier
     }
 
 
-    // Derived class inheriting from BaseClass
+    /// <summary>
+    /// Derived class inheriting from BaseClass
+    /// </summary>
+
     public class DerivedClass : BaseClass
     {
-        // Example method in the derived class
+        #region Access BaseClass Members
+        /// <summary>
+        /// Example method in the derived class
+        /// </summary>
+
         public void AccessBaseClassMembers()
         {
             // Accessing public member from the base class
@@ -85,11 +92,22 @@ namespace AccessibilityModifier
             // Accessing private protected member from the base class
             Console.WriteLine($"Private Protected Field: {PrivateProtectedField}");
         }
+        #endregion
     }
-    internal class Program
+
+    /// <summary>
+    /// Main class Program
+    /// </summary>
+   public class Program
     {
+        #region Main method
+        /// <summary>
+        /// Main method for calling base class and derived class's method
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
+            #region methods call of BaseClass 
             // Creating an instance of the base class
             BaseClass baseObject = new BaseClass();
 
@@ -99,8 +117,8 @@ namespace AccessibilityModifier
             // Private method is not accessible from outside the class
             //baseObject.PrivateMethod(); // Uncommenting this line will result in a compilation error
 
-            // Accessing protected method from the base class
-            baseObject.ProtectedMethod();
+            //// Accessing protected method from the base class
+            //baseObject.ProtectedMethod();
 
             // Accessing internal method from the base class
             baseObject.InternalMethod();
@@ -111,8 +129,11 @@ namespace AccessibilityModifier
             // Private protected method is not accessible from outside the class
             // baseObject.PrivateProtectedMethod(); // Uncommenting this line will result in a compilation error
 
+            #endregion
+
             Console.WriteLine();
 
+            #region Methods call of Derived Class
             // Creating an instance of the derived class
             DerivedClass derivedObject = new DerivedClass();
 
@@ -122,8 +143,8 @@ namespace AccessibilityModifier
             // Private method is not accessible from outside the class
             // derivedObject.PrivateMethod(); // Uncommenting this line will result in a compilation error
 
-            // Accessing protected method from the base class using the derived class object
-            derivedObject.ProtectedMethod();
+            //// Accessing protected method from the base class using the derived class object
+            //derivedObject.ProtectedMethod();
 
             // Accessing internal method from the base class using the derived class object
             derivedObject.InternalMethod();
@@ -138,7 +159,12 @@ namespace AccessibilityModifier
 
             // Using the derived class method to access members of the base class
             derivedObject.AccessBaseClassMembers();
+
+            #endregion
         }
+
+        #endregion
+
     }
 }
 

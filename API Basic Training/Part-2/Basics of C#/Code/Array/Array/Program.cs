@@ -107,6 +107,19 @@ namespace Array
             {
                 Console.WriteLine(i);
             }
+
+            //GetValue Method
+            // One-dimensional array
+            int[] numbers = { 10, 20, 30, 40, 50 };
+
+            Console.WriteLine("Array Values:");
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                // Using GetValue method to retrieve values
+                int value = (int)numbers.GetValue(i);
+                Console.WriteLine($"Index {i}: {value}");
+            }
             #endregion
         }
     }

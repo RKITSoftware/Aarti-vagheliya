@@ -8,8 +8,8 @@ class ExceptionHandlingDemo
         {
             // Uncomment and test each method individually
 
-            // DivideByZeroException
-            // DivideByZeroExceptionDemo();
+            //DivideByZeroException
+             //DivideByZeroExceptionDemo();
 
             // FormatException
             // FormatExceptionDemo();

@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\StringClass\StringClass\bin\Debug\StringClass.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\StringClass\StringClass\bin\Debug\StringClass.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\StringClass\StringClass\bin\Debug\StringClass.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\StringClass\StringClass\obj\Debug\StringClass.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\StringClass\StringClass\obj\Debug\StringClass.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\StringClass\StringClass\obj\Debug\StringClass.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\StringClass\StringClass\obj\Debug\StringClass.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\StringClass\StringClass\obj\Debug\StringClass.pdb

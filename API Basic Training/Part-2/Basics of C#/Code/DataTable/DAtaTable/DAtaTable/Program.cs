@@ -1,8 +1,16 @@
 ﻿using System;
 using System.Data;
 
+/// <summary>
+/// Demonstrate datatable in c#
+/// </summary>
 class Program
 {
+    #region Create DataTable
+    /// <summary>
+    /// Crteate Datatable and add some data
+    /// </summary>
+    /// <returns>DataTable</returns>
     static DataTable CreateDataTable()
     {
         DataTable dataTable = new DataTable("Student");
@@ -23,18 +31,26 @@ class Program
 
         return dataTable;
     }
+    #endregion
 
+    #region Display DataTable
+    /// <summary>
+    /// This method displays datatable' data
+    /// </summary>
+    /// <param name="dataTable"></param>
     static void DisplayDataTable(DataTable dataTable)
     {
         Console.WriteLine("Student Table:");
         Console.WriteLine("ID\tName\tAge");
 
+        //loop iterate over table
         foreach (DataRow row in dataTable.Rows)
         {
             Console.WriteLine($"{row["ID"]}\t{row["Name"]}\t{row["Age"]}");
         }
         Console.WriteLine();
     }
+    #endregion
 
     static void Main()
     {
