@@ -1,0 +1,20 @@
+-- Database name
+use schoolmanagement ;
+
+-- CREATE NON-UNIQUE INDEX ON FIRSTNAME COLUMN
+CREATE INDEX idx_FirstName
+ON std01 (d01f02);
+
+
+-- CREATYE UNIOQUE INDEX ON EMAIL FIELD
+CREATE UNIQUE INDEX idx_UniqueEmail
+ON std01 (d01f06);
+
+
+-- SELECT DATA AFTER INDEX CREATING
+SELECT 
+	*
+FROM 
+	std01
+WHERE 
+	d01f02 = 'Arti';
