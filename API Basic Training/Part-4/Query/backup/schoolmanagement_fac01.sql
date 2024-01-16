@@ -1,0 +1,59 @@
+CREATE DATABASE  IF NOT EXISTS `schoolmanagement` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `schoolmanagement`;
+-- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: schoolmanagement
+-- ------------------------------------------------------
+-- Server version	8.0.27
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `fac01`
+--
+
+DROP TABLE IF EXISTS `fac01`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `fac01` (
+  `c01f01` int NOT NULL AUTO_INCREMENT COMMENT 'FacultyID',
+  `c01f02` varchar(50) DEFAULT NULL COMMENT 'FirstName',
+  `c01f03` varchar(50) DEFAULT NULL COMMENT 'LastName',
+  `c01f04` date DEFAULT NULL COMMENT 'DateOfBirth',
+  `c01f05` varchar(10) DEFAULT NULL COMMENT 'Gender',
+  `c01f06` varchar(30) DEFAULT NULL COMMENT 'Email',
+  `c01f07` varchar(30) DEFAULT NULL COMMENT 'ContactNumber',
+  `c01f08` varchar(20) DEFAULT NULL COMMENT 'Department',
+  PRIMARY KEY (`c01f01`)
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fac01`
+--
+
+LOCK TABLES `fac01` WRITE;
+/*!40000 ALTER TABLE `fac01` DISABLE KEYS */;
+INSERT INTO `fac01` VALUES (1,'John','Doe','1995-07-25','Male','john.doe@example.com','+91 7896541235','CE'),(2,'Alice','Smith','1996-06-15','Male','alice.smith@example.com','+91 7853641235','ME'),(101,'ABC','Doe','1985-07-18','FEmale','abc.doe@example.com','+91 7896541235','CIVIL');
+/*!40000 ALTER TABLE `fac01` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-01-15 18:25:36
