@@ -20,7 +20,7 @@ namespace Inheritance
     /// <summary>
     /// Derived class (Dog) inheriting from a single base class (Animal).
     /// </summary>
-    class Dog : Animal
+    class Dog : Animal 
     {
         /// <summary>
         /// Method representing barking behavior of a dog.

@@ -77,18 +77,20 @@ namespace Inheritance
         /// </summary>
         public static void HybridInheritanceRun()
         {
-            D d = new D();
-            d.MethodOfD();
-            d.MethodOfC();
-            d.MethodOfA();
+            // Creating an instance of class D and calling its methods
+            D objD = new D();
+            objD.MethodOfD();  // Calls the MethodOfD in class D
+            objD.MethodOfC();  // Calls the MethodOfC in class C (base class of D)
+            objD.MethodOfA();  // Calls the MethodOfA in class A (base class of C)
 
-            Console.WriteLine();    
+            Console.WriteLine();  // Adding a line break for better readability
 
-            B b = new B();  
-            b.MethodOfB();
-            b.MethodOfF();
+            // Creating an instance of class B and calling its methods
+            B objB = new B();
+            objB.MethodOfB();  // Calls the MethodOfB in class B
+            objB.MethodOfF();  // Calls the MethodOfF in class F (derived class of B)
+            Console.WriteLine();  // Adding a line break for better readability
 
-            Console.WriteLine();
         }
     }
 }

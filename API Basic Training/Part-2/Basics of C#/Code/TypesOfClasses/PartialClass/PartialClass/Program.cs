@@ -11,13 +11,13 @@ namespace PartialClass
         static void Main(string[] args)
         {
             // Creating an instance of the partial class
-            Student s = new Student();
+            Student objStudent = new Student();
 
             // Calling methods from different parts of the partial class
-            s.Method1();
+            objStudent.Method1();
             Student.Method2();
-            s.DisplayData();
-            s.Display();
+            objStudent.DisplayData();
+            objStudent.Display();
         }
     }
 }

@@ -41,11 +41,11 @@ namespace Overloading
         /// <param name="args">Command-line arguments.</param>
         static void Main(string[] args)
         {
-            MathOperations math = new MathOperations();
+            MathOperations objMath = new MathOperations();
 
             // Using overloaded methods to perform addition
-            int resultInt = math.Add(5, 3);
-            double resultDouble = math.Add(2.5, 3.7);
+            int resultInt = objMath.Add(5, 3);
+            double resultDouble = objMath.Add(2.5, 3.7);
 
             Console.WriteLine($"Result (int): {resultInt}");
             Console.WriteLine($"Result (double): {resultDouble}");

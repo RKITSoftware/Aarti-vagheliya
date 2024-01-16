@@ -55,21 +55,21 @@ namespace Encapsulation
         static void Main(string[] args)
         {
             // Creating an instance of the Student class
-            Student student = new Student();
+            Student objStudent = new Student();
 
             // Taking input from the user
             Console.Write("Enter student's Name : ");
-            student.Name = Console.ReadLine();
+            objStudent.Name = Console.ReadLine();
             Console.Write("Enter student's Email : ");
-            student.Email = Console.ReadLine();
+            objStudent.Email = Console.ReadLine();
             Console.Write("Enter student's Age : ");
-            student.Age = Convert.ToInt32(Console.ReadLine());
+            objStudent.Age = Convert.ToInt32(Console.ReadLine());
 
             // Displaying student information
             Console.WriteLine();
-            Console.WriteLine($"Name : {student.Name}");
-            Console.WriteLine($"Email : {student.Email}");
-            Console.WriteLine($"Age : {student.Age}");
+            Console.WriteLine($"Name : {objStudent.Name}");
+            Console.WriteLine($"Email : {objStudent.Email}");
+            Console.WriteLine($"Age : {objStudent.Age}");
         }
         #endregion
     }

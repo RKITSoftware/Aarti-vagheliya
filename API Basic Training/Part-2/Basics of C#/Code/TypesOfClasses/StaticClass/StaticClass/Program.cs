@@ -8,17 +8,19 @@ namespace StaticClass
     /// </summary>
     static class MyCollege
     {
-        public static string CollegeName;
-        public static string City;
+        public static string collegeName;
+        public static string city;
 
         /// <summary>
         /// Static constructor initializes static properties.
         /// </summary>
         static MyCollege()
         {
-            CollegeName = "Darshan";
-            City = "Rajkot";
+            collegeName = "Darshan";
+            city = "Rajkot";
         }
+
+       
 
         /// <summary>
         /// Adds two integers and returns the result.
@@ -45,8 +47,8 @@ namespace StaticClass
         static void Main(string[] args)
         {
             // Displaying college information and calling static method.
-            Console.WriteLine($"College = {MyCollege.CollegeName}");
-            Console.WriteLine($"City = {MyCollege.City}");
+            Console.WriteLine($"College = {MyCollege.collegeName}");
+            Console.WriteLine($"City = {MyCollege.city}");
             Console.WriteLine($"Calling Static method: {MyCollege.Add(5, 6)}");
         }
     }

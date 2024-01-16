@@ -55,11 +55,11 @@ namespace Overriding
         /// <param name="args">Command-line arguments.</param>
         static void Main(string[] args)
         {
-            Shape shape1 = new Circle();
-            Shape shape2 = new Rectangle();
+            Shape objShape1 = new Circle();
+            Shape objShape2 = new Rectangle();
 
-            shape1.Draw(); // Calls Draw method in Circle class
-            shape2.Draw(); // Calls Draw method in Rectangle class
+            objShape1.Draw(); // Calls Draw method in Circle class
+            objShape2.Draw(); // Calls Draw method in Rectangle class
         }
     }
 }

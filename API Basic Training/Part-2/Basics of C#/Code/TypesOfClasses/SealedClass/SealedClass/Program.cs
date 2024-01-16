@@ -27,9 +27,9 @@ namespace SealedClass
     {
         static void Main(string[] args)
         {
-            Demo demo = new Demo();
+            Demo objdemo = new Demo();
       
-            int ans = demo.Add(1, 2);
+            int ans = objdemo.Add(1, 2);
             Console.WriteLine(ans);
         }
     }

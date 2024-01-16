@@ -96,22 +96,22 @@ namespace Inheritance
         public static void HierarchicalInheritanceRun()
         {
             // Creating an instance of the FirstChild class
-            FirstChild firstChild = new FirstChild();
+            FirstChild objFirstChild = new FirstChild();
 
             // Calling methods to display names
-            firstChild.FirstChildName();
-            firstChild.FatherName();
-            firstChild.GrandFatherName();
+            objFirstChild.FirstChildName();
+            objFirstChild.FatherName();
+            objFirstChild.GrandFatherName();
 
             Console.WriteLine();
 
             // Creating an instance of the SecondChild class
-            SecondChild secondChild = new SecondChild();
+            SecondChild objSecondChild = new SecondChild();
 
             // Calling methods to display names
-            secondChild.GrandFatherName();
-            secondChild.UncleName();
-            secondChild.SecondChildName();
+            objSecondChild.GrandFatherName();
+            objSecondChild.UncleName();
+            objSecondChild.SecondChildName();
 
             Console.WriteLine() ;
         }

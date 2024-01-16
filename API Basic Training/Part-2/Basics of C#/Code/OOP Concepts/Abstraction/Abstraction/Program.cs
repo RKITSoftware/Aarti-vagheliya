@@ -73,17 +73,17 @@ namespace Abstraction
         static void Main(string[] args)
         {
             // Creating instances of shapes
-            Shape circle = new Circle();
-            Shape rectangle = new Rectangle();
+            Shape objcircle = new Circle();
+            Shape objrectangle = new Rectangle();
 
             // Calling methods on objects
-            circle.Draw();        // Calls the Draw method in the Circle class
-            circle.DisplayInfo(); // Calls the DisplayInfo method in the base class
+            objcircle.Draw();        // Calls the Draw method in the Circle class
+            objcircle.DisplayInfo(); // Calls the DisplayInfo method in the base class
 
-            rectangle.Draw();        // Calls the Draw method in the Rectangle class
-            rectangle.DisplayInfo(); // Calls the DisplayInfo method in the base class
+            objrectangle.Draw();        // Calls the Draw method in the Rectangle class
+            objrectangle.DisplayInfo(); // Calls the DisplayInfo method in the base class
         }
-#endregion
+        #endregion
     }
 }
 

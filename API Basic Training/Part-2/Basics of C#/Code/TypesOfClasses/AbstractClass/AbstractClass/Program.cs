@@ -53,14 +53,14 @@ namespace AbstractClass
     {
         static void Main(string[] args)
         {
-            Circle c = new Circle();    
-            Square s = new Square();
+            Circle objCircle = new Circle();    
+            Square oblSquare = new Square();
 
-            c.Draw();
-            c.Display();
+            objCircle.Draw();
+            objCircle.Display();
 
-            s.Draw();
-            s.Display();    
+            oblSquare.Draw();
+            oblSquare.Display();    
         }
     }
 }

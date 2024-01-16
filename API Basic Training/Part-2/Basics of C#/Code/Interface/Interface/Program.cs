@@ -131,25 +131,25 @@ namespace Interface
         static void Main(string[] args)
         {
             // Creating instances of vehicles
-            IVehicle car = new Car();
-            IVehicle bike = new Bike();
+            IVehicle objCar = new Car();
+            IVehicle objBike = new Bike();
 
             // Using methods and properties of the interface
-            car.Start();
-            car.Stop();
-            car.Drive();
+            objCar.Start();
+            objCar.Stop();
+            objCar.Drive();
             Console.Write("Enter model of car: ");
-            car.model = Console.ReadLine();
-            Console.WriteLine($"Model : {car.model}");
+            objCar.model = Console.ReadLine();
+            Console.WriteLine($"Model : {objCar.model}");
 
             Console.WriteLine();
 
-            bike.Start();
-            bike.Drive();
-            bike.Stop();
+            objBike.Start();
+            objBike.Drive();
+            objBike.Stop();
             Console.Write("Enter model of Bike: ");
-            car.model = Console.ReadLine();
-            Console.WriteLine($"Model : {bike.model}");
+            objBike.model = Console.ReadLine();
+            Console.WriteLine($"Model : {objBike.model}");
 
         }
         #endregion

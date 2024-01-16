@@ -25,38 +25,54 @@ namespace AccessibilityModifier
         #endregion
 
         #region Methods
+        /// <summary>
+        /// PublicMethod: Accessible from anywhere.
+        /// </summary>
         public void PublicMethod()
         {
             Console.WriteLine("Public Method");
         }
 
-
+        /// <summary>
+        /// PrivateMethod: Accessible only within the same class.
+        /// </summary>
         private void PrivateMethod()
         {
             Console.WriteLine("Private Method");
         }
 
-
+        /// <summary>
+        /// ProtectedMethod: Accessible within the same class and its derived classes.
+        /// </summary>
         protected void ProtectedMethod()
         {
             Console.WriteLine("Protected Method");
         }
 
-
+        /// <summary>
+        /// InternalMethod: Accessible within the same assembly (project).
+        /// </summary>
         internal void InternalMethod()
         {
             Console.WriteLine("Internal Method");
         }
 
+        /// <summary>
+        /// ProtectedInternalMethod: Accessible within the same assembly and its derived classes.
+        /// </summary>
         protected internal void ProtectedInternalMethod()
         {
             Console.WriteLine("Protected Internal Method");
         }
 
+        /// <summary>
+        /// PrivateProtectedMethod: Accessible within the same assembly and its derived classes, but not in other assemblies.
+        /// </summary>
         private protected void PrivateProtectedMethod()
         {
             Console.WriteLine("Private Protected Method");
         }
+
         #endregion
     }
 
