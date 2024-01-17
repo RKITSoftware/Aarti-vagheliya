@@ -1,0 +1,3 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AddReference\AddReference\obj\Debug\AddReference.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AddReference\AddReference\obj\Debug\AddReference.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\AddReference\AddReference\obj\Debug\AddReference.csproj.CoreCompileInputs.cache

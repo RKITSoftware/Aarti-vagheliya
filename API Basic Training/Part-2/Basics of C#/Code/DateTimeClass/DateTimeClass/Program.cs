@@ -3,7 +3,9 @@
 
 namespace DateTimeClass
 {
-
+    /// <summary>
+    /// This program demonstrates the basic usage, formatting, arithmetic, and additional methods of the DateTime class.
+    /// </summary>
     class Program
     {
         #region DateTime Basics Demo

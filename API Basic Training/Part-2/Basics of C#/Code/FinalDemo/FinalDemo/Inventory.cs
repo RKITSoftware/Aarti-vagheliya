@@ -76,7 +76,7 @@ namespace FinalDemo
                     throw new ArgumentNullException(nameof(updatedProduct), "Updated product cannot be null.");
                 }
 
-                ValidateProduct(updatedProduct); // Validate product before updating
+                /*ValidateProduct(updatedProduct); */// Validate product before updating
 
                 Product existingProduct = products.Find(p => p.ProductId == updatedProduct.ProductId);
 
@@ -178,7 +178,7 @@ namespace FinalDemo
                     throw new ArgumentNullException(nameof(updatedCategory), "Updated category cannot be null.");
                 }
 
-                ValidateCategory(updatedCategory); // Validate category before updating
+                /*ValidateCategory(updatedCategory); */// Validate category before updating
 
                 Category existingCategory = categories.Find(c => c.CategoryId == updatedCategory.CategoryId);
 
@@ -382,6 +382,32 @@ namespace FinalDemo
         #endregion
 
         #endregion
+
+        //#region DisplayStock
+
+        ///// <summary>
+        ///// Displays the current stock quantity for a specific product in the inventory.
+        ///// </summary>
+        ///// <param name="productId">The unique identifier of the product.</param>
+        //public void DisplayStock(int productId)
+        //{
+        //    // Find the product in the inventory based on the provided productId
+        //    Product product = products.Find(p => p.ProductId == productId);
+
+        //    // Check if the product exists in the inventory
+        //    if (product != null)
+        //    {
+        //        // Display the stock quantity for the found product
+        //        Console.WriteLine($"Stock for Product ID {productId}: {product.QuantityInStock}");
+        //    }
+        //    else
+        //    {
+        //        // If the product is not found, inform the user
+        //        Console.WriteLine("Product not found in inventory.");
+        //    }
+        //}
+        //#endregion
+
     }
 
 

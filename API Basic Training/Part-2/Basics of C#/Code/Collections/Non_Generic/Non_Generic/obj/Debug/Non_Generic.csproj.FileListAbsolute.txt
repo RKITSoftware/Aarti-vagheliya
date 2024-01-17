@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Non_Generic\Non_Generic\bin\Debug\Non_Generic.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Non_Generic\Non_Generic\bin\Debug\Non_Generic.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Non_Generic\Non_Generic\bin\Debug\Non_Generic.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Non_Generic\Non_Generic\obj\Debug\Non_Generic.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Non_Generic\Non_Generic\obj\Debug\Non_Generic.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Non_Generic\Non_Generic\obj\Debug\Non_Generic.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Non_Generic\Non_Generic\obj\Debug\Non_Generic.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\Collections\Non_Generic\Non_Generic\obj\Debug\Non_Generic.pdb

@@ -15,6 +15,11 @@ namespace EnumDemo
         Windy
     }
 
+
+    /// <summary>
+    /// This program demonstrates the usage of enums in C# with a creative twist,
+    /// showcasing different types of weather scenarios represented by the CreativeWeather enum.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

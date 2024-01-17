@@ -3,6 +3,25 @@
 
 namespace DefineAndCallingMethod
 {
+    #region class for reference
+    /// <summary>
+    /// Helper class containing utility methods for greeting users.
+    /// </summary>
+    public class Helper
+    {
+        /// <summary>
+        /// Greets the user with a "Good Morning" message.
+        /// </summary>
+        /// <param name="name">The name of the user to greet.</param>
+        public static void GreetUser(string name)
+        {
+            // Display a greeting message to the user
+            Console.WriteLine($"Good Morning {name}...");
+        }
+    }
+    #endregion
+
+
     /// <summary>
     /// This program demonstrates the definition and calling of methods.
     /// </summary>
@@ -27,7 +46,7 @@ namespace DefineAndCallingMethod
         /// <param name="num">The number for which to calculate the factorial.</param>
         /// <returns>The factorial of the input number.</returns>
         //define a method with return type
-        static int Factorial(int num)
+       public static int Factorial(int num)
         {
             int fact = 1;
             for(int i = 1; i <= num; i++)
@@ -91,4 +110,6 @@ namespace DefineAndCallingMethod
 
 
     }
+
+    
 }

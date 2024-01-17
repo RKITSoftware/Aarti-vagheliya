@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace GenericCollectionsDemo
 {
+    /// <summary>
+    /// This program demonstrates the usage of various generic collections in C#.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -38,7 +41,7 @@ namespace GenericCollectionsDemo
         /// <summary>
         /// Demonstrates the usage of List<T>.
         /// </summary>
-        private static void ListDemo()
+        static void ListDemo()
         {
             Console.WriteLine("List<T> Demo:");
 
@@ -68,7 +71,7 @@ namespace GenericCollectionsDemo
         /// <summary>
         /// Demonstrates the usage of Dictionary<TKey, TValue>.
         /// </summary>
-        private static void DictionaryDemo()
+        static void DictionaryDemo()
         {
             Console.WriteLine("Dictionary<TKey, TValue> Demo:");
 
@@ -103,7 +106,7 @@ namespace GenericCollectionsDemo
         /// <summary>
         /// Demonstrates the usage of HashSet<T>.
         /// </summary>
-        private static void HashSetDemo()
+        static void HashSetDemo()
         {
             Console.WriteLine("HashSet<T> Demo:");
 
@@ -133,7 +136,7 @@ namespace GenericCollectionsDemo
         /// <summary>
         /// Demonstrates the usage of Queue<T>.
         /// </summary>
-        private static void QueueDemo()
+        static void QueueDemo()
         {
             Console.WriteLine("Queue<T> Demo:");
 
@@ -185,7 +188,7 @@ namespace GenericCollectionsDemo
         /// <summary>
         /// Demonstrates the usage of LinkedList<T>.
         /// </summary>
-        private static void LinkedListDemo()
+        static void LinkedListDemo()
         {
             Console.WriteLine("LinkedList<T> Demo:");
 
@@ -223,7 +226,7 @@ namespace GenericCollectionsDemo
         /// <summary>
         /// Demonstrates the usage of SortedDictionary<TKey, TValue>.
         /// </summary>
-        private static void SortedDictionaryDemo()
+        static void SortedDictionaryDemo()
         {
             Console.WriteLine("SortedDictionary<TKey, TValue> Demo:");
 
