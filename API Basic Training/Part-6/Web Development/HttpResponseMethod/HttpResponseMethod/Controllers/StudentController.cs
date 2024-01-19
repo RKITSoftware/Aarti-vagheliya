@@ -88,7 +88,7 @@ namespace HttpResponseMethod.Controllers
             {
                 student.Id = Generator.GetNextStudentId();
                 _students.Add(student);
-                return Request.CreateResponse(HttpStatusCode.OK, student);
+                return Request.CreateResponse(HttpStatusCode.Created, student);
             }
             else
             {
