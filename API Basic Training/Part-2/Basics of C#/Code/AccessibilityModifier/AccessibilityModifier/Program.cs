@@ -2,187 +2,126 @@
 
 namespace AccessibilityModifier
 {
-    public class BaseClass
+    #region Base Class
+
+    /// <summary>
+    /// Base class with different access modifiers.
+    /// </summary>
+    public class MyClass
     {
-        #region All Fields
-        // Public field can be accessed from anywhere
-        public int PublicField = 10;
+        // Public field
+        public string PublicField = "I am public!";
 
-        // Private field can only be accessed within the same class
-        private int _privateField = 20;
+        // Private field
+        private string _privateField = "I am private!";
 
-        // Protected field can be accessed within the same class or its derived classes
-        protected int ProtectedField = 30;
+        // Protected field
+        protected string protectedField = "I am protected!";
 
-        // Internal field can be accessed within the same assembly (project)
-        internal int InternalField = 40;
+        // Internal field
+        internal string internalField = "I am internal!";
 
-        // Protected internal field can be accessed within the same assembly or its derived classes
-        protected internal int ProtectedInternalField = 50;
-
-        // Private protected field can be accessed within the same assembly and its derived classes
-        private protected int PrivateProtectedField = 60;
-        #endregion
-
-        #region Methods
         /// <summary>
-        /// PublicMethod: Accessible from anywhere.
+        /// Public method of the base class.
         /// </summary>
         public void PublicMethod()
         {
-            Console.WriteLine("Public Method");
+            Console.WriteLine("Public method: " + PublicField);
+            AccessPrivateField();
+            AccessProtectedField();
+            AccessInternalField();
         }
 
         /// <summary>
-        /// PrivateMethod: Accessible only within the same class.
+        /// Private method to access and print the value of the private field.
         /// </summary>
-        private void PrivateMethod()
+        private void AccessPrivateField()
         {
-            Console.WriteLine("Private Method");
+            Console.WriteLine("Accessing private field: " + _privateField);
         }
 
         /// <summary>
-        /// ProtectedMethod: Accessible within the same class and its derived classes.
+        /// Protected method to access and print the value of the protected field.
         /// </summary>
-        protected void ProtectedMethod()
+        protected void AccessProtectedField()
         {
-            Console.WriteLine("Protected Method");
+            Console.WriteLine("Accessing protected field: " + protectedField);
         }
 
         /// <summary>
-        /// InternalMethod: Accessible within the same assembly (project).
+        /// Internal method to access and print the value of the internal field.
         /// </summary>
-        internal void InternalMethod()
+        internal void AccessInternalField()
         {
-            Console.WriteLine("Internal Method");
+            Console.WriteLine("Accessing internal field: " + internalField);
         }
-
-        /// <summary>
-        /// ProtectedInternalMethod: Accessible within the same assembly and its derived classes.
-        /// </summary>
-        protected internal void ProtectedInternalMethod()
-        {
-            Console.WriteLine("Protected Internal Method");
-        }
-
-        /// <summary>
-        /// PrivateProtectedMethod: Accessible within the same assembly and its derived classes, but not in other assemblies.
-        /// </summary>
-        private protected void PrivateProtectedMethod()
-        {
-            Console.WriteLine("Private Protected Method");
-        }
-
-        #endregion
     }
+
+    #endregion
+
+    #region Derived Class
+
+    /// <summary>
+    /// Derived class extending MyClass.
+    /// </summary>
+    public class DerivedClass : MyClass
+    {
+        /// <summary>
+        /// Constructor of the derived class.
+        /// </summary>
+        public DerivedClass()
+        {
+            // Access protected field from the base class
+            Console.WriteLine("Derived class accessing protected field: " + protectedField);
+        }
+
+        /// <summary>
+        /// Public method in the derived class.
+        /// </summary>
+        public void DerivedMethod()
+        {
+            Console.WriteLine("Derived method in the derived class");
+            AccessProtectedField(); // Accessing protected field from the base class
+        }
+    }
+
+    #endregion
 
 
     /// <summary>
-    /// Derived class inheriting from BaseClass
+    /// Main program to demonstrate access modifiers.
     /// </summary>
-
-    public class DerivedClass : BaseClass
+    class Program
     {
-        #region Access BaseClass Members
         /// <summary>
-        /// Example method in the derived class
+        /// Main method to execute the program.
         /// </summary>
-
-        public void AccessBaseClassMembers()
+        static void Main()
         {
-            // Accessing public member from the base class
-            Console.WriteLine($"Public Field: {PublicField}");
+            // Create an instance of MyClass
+            MyClass objMyClass = new MyClass();
 
-            // Private members are not accessible in the derived class
-            //Console.WriteLine($"Private Field: {_privateField}"); // Uncommenting this line will result in a compilation error
+            // Access public members
+            Console.WriteLine("Accessing public field: " + objMyClass.PublicField);
+            objMyClass.PublicMethod();
 
-            // Accessing protected member from the base class
-            Console.WriteLine($"Protected Field: {ProtectedField}");
+            // Create an instance of DerivedClass
+            DerivedClass objDerivedClass = new DerivedClass();
 
-            // Accessing internal member from the base class
-            Console.WriteLine($"Internal Field: {InternalField}");
+            // Access public members from the base class
+            Console.WriteLine("Accessing public field in the derived class: " + objDerivedClass.PublicField);
+            objDerivedClass.PublicMethod();
 
-            // Accessing protected internal member from the base class
-            Console.WriteLine($"Protected Internal Field: {ProtectedInternalField}");
+            // Uncommenting the lines below will result in compilation errors
+            // because privateField and internalField are not directly accessible here.
 
-            // Accessing private protected member from the base class
-            Console.WriteLine($"Private Protected Field: {PrivateProtectedField}");
+            // Console.WriteLine("Accessing private field in the derived class: " + objDerivedClass.privateField);
+            // Console.WriteLine("Accessing internal field in the derived class: " + objDerivedClass.internalField);
         }
-        #endregion
-    }
-
-    /// <summary>
-    /// Main class Program
-    /// </summary>
-   public class Program
-    {
-        #region Main method
-        /// <summary>
-        /// Main method for calling base class and derived class's method
-        /// </summary>
-        /// <param name="args"></param>
-        static void Main(string[] args)
-        {
-            #region methods call of BaseClass 
-            // Creating an instance of the base class
-            BaseClass baseObject = new BaseClass();
-
-            // Accessing public method from the base class
-            baseObject.PublicMethod();
-
-            // Private method is not accessible from outside the class
-            //baseObject.PrivateMethod(); // Uncommenting this line will result in a compilation error
-
-            //// Accessing protected method from the base class
-            //baseObject.ProtectedMethod();
-
-            // Accessing internal method from the base class
-            baseObject.InternalMethod();
-
-            // Accessing protected internal method from the base class
-            baseObject.ProtectedInternalMethod();
-
-            // Private protected method is not accessible from outside the class
-            // baseObject.PrivateProtectedMethod(); // Uncommenting this line will result in a compilation error
-
-            #endregion
-
-            Console.WriteLine();
-
-            #region Methods call of Derived Class
-            // Creating an instance of the derived class
-            DerivedClass derivedObject = new DerivedClass();
-
-            // Accessing public method from the base class using the derived class object
-            derivedObject.PublicMethod();
-
-            // Private method is not accessible from outside the class
-            // derivedObject.PrivateMethod(); // Uncommenting this line will result in a compilation error
-
-            //// Accessing protected method from the base class using the derived class object
-            //derivedObject.ProtectedMethod();
-
-            // Accessing internal method from the base class using the derived class object
-            derivedObject.InternalMethod();
-
-            // Accessing protected internal method from the base class using the derived class object
-            derivedObject.ProtectedInternalMethod();
-
-            // Private protected method is not accessible from outside the class
-            // derivedObject.PrivateProtectedMethod(); // Uncommenting this line will result in a compilation error
-
-            Console.WriteLine();
-
-            // Using the derived class method to access members of the base class
-            derivedObject.AccessBaseClassMembers();
-
-            #endregion
-        }
-
-        #endregion
-
     }
 }
+
+
 
 
 

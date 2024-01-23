@@ -34,6 +34,7 @@ class Program
     #endregion
 
     #region Display DataTable
+
     /// <summary>
     /// This method displays datatable' data
     /// </summary>
