@@ -1,0 +1,4 @@
+﻿
+Teacher:teacher123     ===>  VGVhY2hlcjp0ZWFjaGVyMTIz
+Student:student123     ===>  U3R1ZGVudDpzdHVkZW50MTIz
+Principal:principal123 ===>  UHJpbmNpcGFsOnByaW5jaXBhbDEyMw==
