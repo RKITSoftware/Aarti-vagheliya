@@ -86,6 +86,8 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="CustomException\CustomExceptionFilter.cs" />
+    <Compile Include="CustomException\CustomExceptionHandler.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
