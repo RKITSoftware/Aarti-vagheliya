@@ -11,6 +11,8 @@ namespace TokenBasedAuthentication.Models
     /// </summary>
     public class User
     {
+        #region Properties for Users Data
+
         /// <summary>
         /// Gets or sets the unique identifier for the user.
         /// </summary>
@@ -35,5 +37,7 @@ namespace TokenBasedAuthentication.Models
         /// Gets or sets the role of the user for authorization purposes.
         /// </summary>
         public string Role { get; set; }
+
+        #endregion
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+
 
 namespace TokenBasedAuthentication.Models
 {
@@ -10,7 +8,7 @@ namespace TokenBasedAuthentication.Models
     /// </summary>
     public class Student
     {
-        #region Properties
+        #region Properties For Student Data
 
         /// <summary>
         /// Gets or sets the unique identifier for the student.

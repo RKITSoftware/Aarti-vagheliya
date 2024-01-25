@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using TokenBasedAuthentication.Models;
 
 namespace TokenBasedAuthentication.Data
 {
+    /// <summary>
+    /// Represents a class for managing student data.
+    /// </summary>
     public class StudentData
     {
+        #region list of StudentsDetail
+        /// <summary>
+        /// Retrieves a list of student details.
+        /// </summary>
+        /// <returns>List of student details.</returns>
         public static List<Student> StudentsDetail()
         {
+            // Sample student data
             List<Student> student = new List<Student>()
            {
                new Student { Id = 1,  FirstName = "Arti", LastName = "Vagheliya", DateOfBirth = new DateTime(2002,09,25), MobileNo = "+91 9874563215", Email = "arti@gmail.com" },
@@ -24,5 +31,6 @@ namespace TokenBasedAuthentication.Data
            };
             return student;
         }
+        #endregion
     }
 }
