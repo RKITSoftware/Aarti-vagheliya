@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace FinalDemo
 {
@@ -78,20 +79,17 @@ namespace FinalDemo
         }
         #endregion
 
-        #endregion
-
-        #region AddStock
-
+        #region SetQuantity
         /// <summary>
-        /// Adds stock to the product.
+        /// sets the new quanity of the product.
         /// </summary>
-        /// <param name="quantity">The quantity to add to the stock.</param>
-        public void AddStock(int quantity)
+        /// <param name="newQuantity">new quantity of the product.</param>
+        public void SetQuantity(int newQuantity)
         {
-            // Basic validation: ensure the added quantity is non-negative
-            if (quantity >= 0)
+            // Basic validation: ensure the new quantity is non-negative
+            if (newQuantity >= 0)
             {
-                QuantityInStock += quantity;
+                QuantityInStock = newQuantity;
             }
             else
             {
@@ -100,25 +98,8 @@ namespace FinalDemo
         }
         #endregion
 
-        //#region Sell
+        #endregion
 
-        ///// <summary>
-        ///// Sells a quantity of the product.
-        ///// </summary>
-        ///// <param name="quantity">The quantity to sell.</param>
-        //public void Sell(int quantity)
-        //{
-        //    // Basic validation: ensure there is enough stock to sell
-        //    if (quantity >= 0 && quantity <= QuantityInStock)
-        //    {
-        //        QuantityInStock -= quantity;
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Invalid quantity to sell. Please provide a valid quantity.");
-        //    }
-        //}
-        //#endregion
 
         #region Validation
 
@@ -231,7 +212,7 @@ namespace FinalDemo
                 updatedProduct.SetPrice(Convert.ToDecimal(Console.ReadLine()));
 
                 Console.Write("Enter new Quantity in Stock: ");
-                updatedProduct.AddStock(Convert.ToInt32(Console.ReadLine()));
+                updatedProduct.SetQuantity(Convert.ToInt32(Console.ReadLine()));
 
                 // Update the product in the inventory
                 inventory.UpdateProduct(updatedProduct);

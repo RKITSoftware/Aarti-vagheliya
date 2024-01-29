@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-
+using System.IO;
 
 namespace FinalDemo
 {
@@ -11,8 +11,9 @@ namespace FinalDemo
     public class Inventory
     {
         //Category and Product list objects
-        private List<Product> products;
-        private List<Category> categories;
+        private List<Product> _products;
+        private List<Category> _categories;
+       
 
         #region Constructor
         /// <summary>
@@ -21,8 +22,9 @@ namespace FinalDemo
         public Inventory()
         {
             //Initialize instances
-            products = new List<Product>();
-            categories = new List<Category>();
+            _products = new List<Product>();
+            _categories = new List<Category>();
+           
         }
         #endregion
 
@@ -44,14 +46,15 @@ namespace FinalDemo
                 }
 
                 // Validate product ID including checking for duplicates
-                if (!ValidationHelper.IsProductIdValid(product.ProductId, products))
+                if (!ValidationHelper.IsProductIdValid(product.ProductId, _products))
                 {
                     throw new ArgumentException("Invalid or duplicate Product ID.");
                 }
 
                 ValidateProduct(product); // Validate product before adding
 
-                products.Add(product);
+                _products.Add(product);
+
                 Console.WriteLine("Product added to inventory.");
             }
             catch (Exception ex)
@@ -78,14 +81,14 @@ namespace FinalDemo
 
                 /*ValidateProduct(updatedProduct); */// Validate product before updating
 
-                Product existingProduct = products.Find(p => p.ProductId == updatedProduct.ProductId);
+                Product existingProduct = _products.Find(p => p.ProductId == updatedProduct.ProductId);
 
                 if (existingProduct != null)
                 {
                     // Update product details
                     existingProduct.SetProductName(updatedProduct.ProductName);
                     existingProduct.SetPrice(updatedProduct.Price);
-                    existingProduct.AddStock(updatedProduct.QuantityInStock);
+                    existingProduct.SetQuantity(updatedProduct.QuantityInStock);
 
                     Console.WriteLine("Product updated successfully.");
                 }
@@ -111,10 +114,12 @@ namespace FinalDemo
         {
             try
             {
-                Product productToRemove = products.Find(p => p.ProductId == productId);
+                Product productToRemove = _products.Find(p => p.ProductId == productId);
                 if (productToRemove != null)
                 {
-                        products.Remove(productToRemove);
+                  
+
+                    _products.Remove(productToRemove);
                         Console.WriteLine("Product removed from inventory.");
                 }
                 else
@@ -149,11 +154,14 @@ namespace FinalDemo
                     throw new ArgumentNullException(nameof(category), "Category cannot be null.");
                 }
 
-                category.Validate(categories);
+                category.Validate(_categories);
                 ValidateCategory(category); // Validate category before adding
 
 
-                categories.Add(category);
+                _categories.Add(category);
+
+               
+
                 Console.WriteLine("Category added to inventory.");
             }
             catch (Exception ex)
@@ -180,7 +188,7 @@ namespace FinalDemo
 
                 /*ValidateCategory(updatedCategory); */// Validate category before updating
 
-                Category existingCategory = categories.Find(c => c.CategoryId == updatedCategory.CategoryId);
+                Category existingCategory = _categories.Find(c => c.CategoryId == updatedCategory.CategoryId);
 
                 if (existingCategory != null)
                 {
@@ -211,11 +219,12 @@ namespace FinalDemo
         {
             try
             {
-                Category categoryToRemove = categories.Find(c => c.CategoryId == categoryId);
+                Category categoryToRemove = _categories.Find(c => c.CategoryId == categoryId);
 
                 if (categoryToRemove != null)
                 {
-                    categories.Remove(categoryToRemove);
+                    
+                    _categories.Remove(categoryToRemove);
                     Console.WriteLine("Category removed from inventory.");
                 }
                 else
@@ -235,7 +244,7 @@ namespace FinalDemo
         #region  Methods for display data
         // Display methods
 
-        #region DisplayProducts
+        #region Displayproducts
 
         /// <summary>
         /// Displays the list of products in the inventory using DataTable.
@@ -252,13 +261,16 @@ namespace FinalDemo
             productTable.Columns.Add("Quantity in Stock", typeof(int));
 
             //loop for add data to the datatable
-            foreach (Product product in products)
+            foreach (Product product in _products)
             {
                 productTable.Rows.Add(product.ProductId, product.ProductName, product.Price, product.QuantityInStock);
             }
 
             //call DisplayDataTable method to print the data
-            DisplayDataTable("Products in Inventory:", productTable);
+            DisplayDataTable("products in Inventory:", productTable);
+
+            // Write the DataTable to a file
+            WriteDataTableToFile("products.txt", productTable);
         }
         #endregion
 
@@ -277,13 +289,16 @@ namespace FinalDemo
             categoryTable.Columns.Add("Category Name", typeof(string));
 
             //loop for add data to the datatable
-            foreach (Category category in categories)
+            foreach (Category category in _categories)
             {
                 categoryTable.Rows.Add(category.CategoryId, category.CategoryName);
             }
 
             //call DisplayDataTable method to print the data
             DisplayDataTable("Categories in Inventory:", categoryTable);
+
+            // Write the DataTable to a file
+            WriteDataTableToFile("Categories.txt", categoryTable);
         }
         #endregion
 
@@ -316,6 +331,57 @@ namespace FinalDemo
             }
             Console.WriteLine("------------------------");
         }
+
+        #endregion
+
+        #region WriteDataTableToFile
+
+        /// <summary>
+        /// Writes the contents of a DataTable to a text file.
+        /// </summary>
+        /// <param name="fileName">The name of the file to write to.</param>
+        /// <param name="table">The DataTable containing the data to write.</param>
+        private void WriteDataTableToFile(string fileName, DataTable table)
+        {
+            try
+            {
+                // Get the full path of the file in the current application directory
+                string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
+
+                // Use a StreamWriter to write to the file
+                using (StreamWriter writer = new StreamWriter(fullPath))
+                {
+                    // Write column names to the file
+                    foreach (DataColumn column in table.Columns)
+                    {
+                        // Write each column name with a width of 15 characters
+                        writer.Write($"{column.ColumnName,-15}");
+                    }
+                    // Move to the next line after writing column names
+                    writer.WriteLine();
+
+                    // Write data rows to the file
+                    foreach (DataRow row in table.Rows)
+                    {
+                        // Write each data item with a width of 15 characters
+                        foreach (var item in row.ItemArray)
+                        {
+                            writer.Write($"{item,-15}");
+                        }
+                        writer.WriteLine();
+                    }
+                }
+
+                // Display a message indicating successful writing to the file
+                Console.WriteLine($"Data written to {fullPath}.");
+            }
+            catch (IOException ex)
+            {
+                // Display an error message if an exception occurs during writing
+                Console.WriteLine($"Error writing to {fileName}: {ex.Message}");
+            }
+        }
+
         #endregion
 
         #endregion
@@ -333,7 +399,7 @@ namespace FinalDemo
         private void ValidateProduct(Product product)
         {
             //Validation for product ID
-            if (!ValidationHelper.IsProductIdValid(product.ProductId, products))
+            if (!ValidationHelper.IsProductIdValid(product.ProductId, _products))
             {
                 throw new ArgumentException("Invalid Product ID. Please provide a positive integer value.");
             }
@@ -368,7 +434,7 @@ namespace FinalDemo
         private void ValidateCategory(Category category)
         {
             //Validate Category Id
-            if (!ValidationHelper.IsCategoryIdValid(category.CategoryId, categories))
+            if (!ValidationHelper.IsCategoryIdValid(category.CategoryId, _categories))
             {
                 throw new ArgumentException("Invalid Category ID. Please provide a positive integer value.");
             }
@@ -383,30 +449,7 @@ namespace FinalDemo
 
         #endregion
 
-        //#region DisplayStock
-
-        ///// <summary>
-        ///// Displays the current stock quantity for a specific product in the inventory.
-        ///// </summary>
-        ///// <param name="productId">The unique identifier of the product.</param>
-        //public void DisplayStock(int productId)
-        //{
-        //    // Find the product in the inventory based on the provided productId
-        //    Product product = products.Find(p => p.ProductId == productId);
-
-        //    // Check if the product exists in the inventory
-        //    if (product != null)
-        //    {
-        //        // Display the stock quantity for the found product
-        //        Console.WriteLine($"Stock for Product ID {productId}: {product.QuantityInStock}");
-        //    }
-        //    else
-        //    {
-        //        // If the product is not found, inform the user
-        //        Console.WriteLine("Product not found in inventory.");
-        //    }
-        //}
-        //#endregion
+       
 
     }
 
