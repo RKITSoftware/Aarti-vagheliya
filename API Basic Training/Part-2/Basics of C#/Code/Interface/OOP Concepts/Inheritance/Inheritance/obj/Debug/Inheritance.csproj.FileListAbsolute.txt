@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Inheritance\Inheritance\bin\Debug\Inheritance.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Inheritance\Inheritance\bin\Debug\Inheritance.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Inheritance\Inheritance\bin\Debug\Inheritance.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Inheritance\Inheritance\obj\Debug\Inheritance.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Inheritance\Inheritance\obj\Debug\Inheritance.pdb

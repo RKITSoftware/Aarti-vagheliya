@@ -1,8 +1,0 @@
-F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Encapsulation\Encapsulation\bin\Debug\Encapsulation.exe.config
-F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Encapsulation\Encapsulation\bin\Debug\Encapsulation.exe
-F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Encapsulation\Encapsulation\bin\Debug\Encapsulation.pdb
-F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Encapsulation\Encapsulation\obj\Debug\Encapsulation.csproj.AssemblyReference.cache
-F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Encapsulation\Encapsulation\obj\Debug\Encapsulation.csproj.SuggestedBindingRedirects.cache
-F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Encapsulation\Encapsulation\obj\Debug\Encapsulation.csproj.CoreCompileInputs.cache
-F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Encapsulation\Encapsulation\obj\Debug\Encapsulation.exe
-F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\OOP Concepts\Encapsulation\Encapsulation\obj\Debug\Encapsulation.pdb
