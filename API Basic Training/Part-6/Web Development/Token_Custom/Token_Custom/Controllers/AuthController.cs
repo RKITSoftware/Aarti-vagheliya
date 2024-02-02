@@ -1,74 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Web.Http;
+using Token_Custom.Auth;
 using Token_Custom.Filters;
 using Token_Custom.Models;
 using Token_Custom.Services;
 
 namespace Token_Custom.Controllers
 {
-    [AllowAnonymous]
+
+
     [RoutePrefix("api/auth")]
-    //[RoutePrefix("api/Auth")]
     public class AuthController : ApiController
     {
 
         [HttpPost]
-        [Route("login")]
-        public IHttpActionResult Login()
+        [Route("GetToken")]
+        [JwtAuthenticationFilter]
+        public IHttpActionResult GetToken()
         {
-            // Authenticate user (demo purposes)
-            // In a real scenario, you would validate user credentials here
+            string authToken = Request.Headers.Authorization.Parameter;
 
-            // For demo purposes, let's create a simple token
-            TokenService tokenService = new TokenService();
-            var token = tokenService.GenerateToken("username"); // Pass your user identity here
-
-            return Ok(new { Token = token });
+            string[] usernamepassword = authToken.Split(':');
+            string username = usernamepassword[0];
+            string password = usernamepassword[1];
+            var userDetails = UserRepository.users.FirstOrDefault(u => u.Username == username && u.Password == password);
+            if (userDetails != null)
+            {
+                return Ok(TokenService.GenerateToken(username));
+            }
+            return BadRequest("Enter valid user details");
         }
 
+        [HttpGet]
+        [Route("GetSomeState")]
+        [BearerAuthentication]
+        [Authorize(Roles = "User")]
+        public IHttpActionResult GetSomeState()
+        {
+            // Your logic to fetch products
+            var someState = StateDate.RetriveStateData().Where(u=>u.Key <=3 );
+            return Ok(someState);
+        }
 
-        //private readonly TokenService _tokenService;
-
-        //[AllowAnonymous]
-        //[HttpPost]
-        //[Route("login")]
-        //public HttpResponseMessage Get()
-        //{
-        //    return new HttpResponseMessage(HttpStatusCode.OK);
-        //}
-
-        //[Route("Login")]
-        //[AllowAnonymous]
-        //[HttpPost]
-        //public HttpResponseMessage Login(User user)
-        //{
-        //    try
-        //    {
-        //        // Check if the provided credentials are valid
-        //        if (TokenAuthenticationService.ValidateCredentials(user.Username, user.Password))
-        //        {
-        //            // Generate a JWT token using the authentication service
-        //            string token = TokenAuthenticationService.GenerateToken(user.Username);
-
-        //            // Return an OK response with the JWT token
-        //            return Request.CreateErrorResponse(HttpStatusCode.OK, token);
-        //        }
-        //        else
-        //        {
-        //            // Return an Unauthorized response with an error message
-        //            return Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Invalid credentials");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Log or handle any exceptions that might occur during token generation or validation
-        //        // Log.Error($"An error occurred during authentication: {ex}");
-        //        return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "An error occurred");
-        //    }
-        //}
+        [HttpGet]
+        [Route("GetStates")]
+        [BearerAuthentication]
+        [Authorize(Roles = "Admin")]
+        public IHttpActionResult GetStates()
+        {
+            // Your logic to fetch States
+            var state = StateDate.RetriveStateData();
+            return Ok(state);
+        }
     }
 }
+

@@ -1,68 +1,111 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Web;
+using Token_Custom.Models;
 
 namespace Token_Custom.Services
 {
-    public  class TokenService
+    public static class TokenService
     {
-       private readonly string _secretKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+        private static readonly string _secretKey = "ERMN05OPLoDvbTTa/QkqLNMI7cPLguaRyHzyg7n5qNBVjQmtBhz4SzYh4NBVCXi3KJHlSXKP+oi2+bXr6CUYTR==";
 
 
-        public string GenerateToken(string username)
+        public static string GenerateToken(string userName)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            //var key = Encoding.ASCII.GetBytes(_secretKey);
+            byte[] key = Encoding.UTF8.GetBytes(_secretKey);
 
-            byte[] key = Convert.FromBase64String(_secretKey);
+            var user = UserRepository.users.FirstOrDefault(u => u.Username == userName);
 
-            var tokenDescriptor = new SecurityTokenDescriptor
+            SymmetricSecurityKey symmetricSecurityKey = new SymmetricSecurityKey(key);
+
+
+            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[]
-                {
-                    new Claim(ClaimTypes.Name, username)
+                Subject = new ClaimsIdentity(new[] {
+                    new Claim(ClaimTypes.Name, user.Username),
+                    new Claim(ClaimTypes.Role, user.Role)
                 }),
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                Expires = DateTime.UtcNow.AddHours(1), // Consider making this configurable
+                SigningCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature)
             };
 
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+            JwtSecurityToken jwtSecurityToken = handler.CreateJwtSecurityToken(tokenDescriptor);
+
+            // Set Key ID (kid) in the token header
+            jwtSecurityToken.Header.Add("kid", "RKIT");
+
+            return handler.WriteToken(jwtSecurityToken);
         }
 
 
-        public ClaimsPrincipal GetPrincipal(string token)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_secretKey);
 
+
+
+        public static ClaimsPrincipal GetPrincipal(string token)
+        {
             try
             {
-                var principal = tokenHandler.ValidateToken(token, new TokenValidationParameters
+                JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+
+                var jwtToken = (JwtSecurityToken)tokenHandler.ReadToken(token);
+                // Retrieve Key ID (kid) from the token header
+                string keyId = jwtToken.Header?.Kid;
+
+                if (jwtToken == null)
                 {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    return null;
+                }
+
+                // Use a different key for validation
+                byte[] key = Encoding.UTF8.GetBytes(_secretKey);
+
+                TokenValidationParameters parameters = new TokenValidationParameters()
+                {
+                    RequireExpirationTime = true,
                     ValidateIssuer = false,
                     ValidateAudience = false,
-                    ClockSkew = TimeSpan.Zero
-                }, out var securityToken);
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+
+                SecurityToken securityToken;
+                var principal = tokenHandler.ValidateToken(token, parameters, out securityToken);
 
                 return principal;
             }
-            catch
+            catch (SecurityTokenExpiredException)
             {
+                // Handle token expiration (returning null in this case)
+                Console.WriteLine("Token has expired.");
+                return null;
+            }
+            catch (Exception ex)
+            {
+                // Handle other token validation exceptions
+                Console.WriteLine($"Token validation error: {ex.Message}");
                 return null;
             }
         }
 
+        /// <summary>
+        /// Validates token 
+        /// </summary>
+        /// <param name="token">JWT token</param>
+        /// <returns>True if token is valid otherwise false</returns>
+        public static bool ValidateToken(string token)
+        {
+            ClaimsPrincipal principal = GetPrincipal(token);
+            if (principal == null)
+                return false;
+            return true;
+        }
+
 
     }
-
+}
     //#region AuthServices
     ///// <summary>
     ///// Contains methods for token Authentication
@@ -78,7 +121,7 @@ namespace Token_Custom.Services
     //    public static bool ValidateCredentials(string userName, string password)
     //    {
     //        // Replace this with your actual logic to validate credentials
-    //        return userName == "admin" && password == "password";
+    //        return userName == "user1" && password == "password1";
     //    }
 
     //    /// <summary>
@@ -93,4 +136,4 @@ namespace Token_Custom.Services
     //    }
     //}
     //#endregion
-}
+//}

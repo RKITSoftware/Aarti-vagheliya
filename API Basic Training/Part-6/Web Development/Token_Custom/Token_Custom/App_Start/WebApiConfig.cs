@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
-using Token_Custom.Filters;
+﻿using System.Web.Http;
 
 namespace Token_Custom
 {
@@ -21,7 +17,7 @@ namespace Token_Custom
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            config.Filters.Add(new JwtAuthenticationFilter());
+            //config.Filters.Add(new JwtAuthenticationFilter());
         }
     }
 }
