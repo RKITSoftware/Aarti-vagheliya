@@ -7,7 +7,7 @@ namespace BasicFileOperation
     /// <summary>
     /// This program demonstrate basic file operation in C#.
     /// </summary>
-     class Program
+    class Program
     {
         #region Create  File
         /// <summary>
@@ -169,6 +169,80 @@ namespace BasicFileOperation
         }
         #endregion
 
+
+        #region Directory Creation demo
+
+        /// <summary>
+        /// Create directory , subdirectory and file.
+        /// </summary>
+        static void DirectoryDemo()
+        {
+            try
+            {
+                // Specify the directory path
+                string rootDirectory = @"F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\FileDemo";
+                string subDirectory = "SubDirectory";
+                string filePath = Path.Combine(rootDirectory, subDirectory, "example.txt");
+
+                // Create the root directory if it doesn't exist
+                if (!Directory.Exists(rootDirectory))
+                {
+                    Directory.CreateDirectory(rootDirectory);
+                    Console.WriteLine($"Root directory '{rootDirectory}' created.");
+                }
+
+                // Create the subdirectory inside the root directory
+                string subDirectoryPath = Path.Combine(rootDirectory, subDirectory);
+                if (!Directory.Exists(subDirectoryPath))
+                {
+                    Directory.CreateDirectory(subDirectoryPath);
+                    Console.WriteLine($"Subdirectory '{subDirectory}' created inside '{rootDirectory}'.");
+                }
+
+                // Create a file inside the subdirectory
+                if (!File.Exists(filePath))
+                {
+                    // You can write content to the file if needed
+                    File.WriteAllText(filePath, "Hello, this is a sample file content.");
+
+                    Console.WriteLine($"File '{filePath}' created inside '{subDirectory}'.");
+                }
+
+                #region File Info
+                // Create a FileInfo object
+                FileInfo fileInfo = new FileInfo(filePath);
+
+                // Check if the file exists
+                if (fileInfo.Exists)
+                {
+                    Console.WriteLine($"File Name: {fileInfo.Name}");
+                    Console.WriteLine($"File Size: {fileInfo.Length} bytes");
+                    Console.WriteLine($"Last Modified: {fileInfo.LastWriteTime}");
+                }
+                else
+                {
+                    Console.WriteLine("File does not exist.");
+                }
+
+                Console.ReadLine();
+
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+            Console.ReadLine();
+        }
+
+        #endregion
+
+
+        
+
+
+
         /// <summary>
         /// This main method call all the file operation custome method
         /// </summary>
@@ -199,6 +273,10 @@ namespace BasicFileOperation
             // Delete the file
             DeleteFileDemo();
             #endregion
+
+            DirectoryDemo();
+
+            
         }
     }
 }

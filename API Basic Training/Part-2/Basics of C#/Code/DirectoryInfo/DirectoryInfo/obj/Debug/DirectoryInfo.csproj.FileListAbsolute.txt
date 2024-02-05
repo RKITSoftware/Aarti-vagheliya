@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DirectoryInfo\DirectoryInfo\bin\Debug\DirectoryInfo.exe.config
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DirectoryInfo\DirectoryInfo\bin\Debug\DirectoryInfo.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DirectoryInfo\DirectoryInfo\bin\Debug\DirectoryInfo.pdb
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DirectoryInfo\DirectoryInfo\obj\Debug\DirectoryInfo.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DirectoryInfo\DirectoryInfo\obj\Debug\DirectoryInfo.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DirectoryInfo\DirectoryInfo\obj\Debug\DirectoryInfo.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DirectoryInfo\DirectoryInfo\obj\Debug\DirectoryInfo.exe
+F:\Arti-368\New folder\API Basic Training\Part-2\Basics of C#\Code\DirectoryInfo\DirectoryInfo\obj\Debug\DirectoryInfo.pdb

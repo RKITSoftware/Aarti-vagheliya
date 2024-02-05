@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace StringClass
 {
@@ -209,6 +209,42 @@ namespace StringClass
         #endregion
 
 
+        static void StringToListAndListToString()
+        {
+            // Convert string to list of strings
+            string inputString = "apple,orange,banana";
+            List<string> stringList = ConvertStringToList(inputString);
+
+            // Display the list elements
+            Console.WriteLine("List elements:");
+            foreach (var item in stringList)
+            {
+                Console.WriteLine(item);
+            }
+
+            // Convert list of strings to a single string
+            string outputString = ConvertListToString(stringList);
+
+            // Display the concatenated string
+            Console.WriteLine("\nConcatenated String:");
+            Console.WriteLine(outputString);
+
+            Console.ReadLine();
+        }
+
+        // Function to convert a string to a list of strings
+        static List<string> ConvertStringToList(string input)
+        {
+            return new List<string>(input.Split(','));
+        }
+
+        // Function to convert a list of strings to a single string
+        static string ConvertListToString(List<string> inputList)
+        {
+            return string.Join(":", inputList);
+        }
+    
+
         static void Main(string[] args)
         {
             #region Length Demo
@@ -258,6 +294,8 @@ namespace StringClass
             #region Remove Demo
             RemoveDemo();
             #endregion
+
+            StringToListAndListToString();
         }
     
     }
