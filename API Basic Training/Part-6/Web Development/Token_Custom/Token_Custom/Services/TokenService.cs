@@ -8,20 +8,31 @@ using Token_Custom.Models;
 
 namespace Token_Custom.Services
 {
+    /// <summary>
+    /// Service for handling JWT token generation and validation.
+    /// </summary>
     public static class TokenService
     {
+        // Secret key used for token generation and validation
         private static readonly string _secretKey = "ERMN05OPLoDvbTTa/QkqLNMI7cPLguaRyHzyg7n5qNBVjQmtBhz4SzYh4NBVCXi3KJHlSXKP+oi2+bXr6CUYTR==";
 
 
+        /// <summary>
+        /// Generates a JWT token for the specified user.
+        /// </summary>
+        /// <param name="userName">Username of the user.</param>
+        /// <returns>Generated JWT token as a string.</returns>
         public static string GenerateToken(string userName)
         {
+          
             byte[] key = Encoding.UTF8.GetBytes(_secretKey);
 
+            // Retrieve user details based on the username
             var user = UserRepository.users.FirstOrDefault(u => u.Username == userName);
 
             SymmetricSecurityKey symmetricSecurityKey = new SymmetricSecurityKey(key);
 
-
+            // Token descriptor with user claims, expiration time, and signing credentials
             SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[] {
@@ -44,7 +55,11 @@ namespace Token_Custom.Services
 
 
 
-
+        /// <summary>
+        /// Retrieves a ClaimsPrincipal from the provided JWT token.
+        /// </summary>
+        /// <param name="token">JWT token as a string.</param>
+        /// <returns>ClaimsPrincipal if successful, null otherwise.</returns>
         public static ClaimsPrincipal GetPrincipal(string token)
         {
             try
@@ -106,34 +121,4 @@ namespace Token_Custom.Services
 
     }
 }
-    //#region AuthServices
-    ///// <summary>
-    ///// Contains methods for token Authentication
-    ///// </summary>
-    //public static class TokenAuthenticationService
-    //{
-    //    /// <summary>
-    //    /// Validates the provided username and password.
-    //    /// </summary>
-    //    /// <param name="userName">The username to validate.</param>
-    //    /// <param name="password">The password associated with the username.</param>
-    //    /// <returns>True if the credentials are valid; otherwise, false.</returns>
-    //    public static bool ValidateCredentials(string userName, string password)
-    //    {
-    //        // Replace this with your actual logic to validate credentials
-    //        return userName == "user1" && password == "password1";
-    //    }
-
-    //    /// <summary>
-    //    /// Generates a JWT token for the specified username.
-    //    /// </summary>
-    //    /// <param name="userName">The username to include in the JWT token.</param>
-    //    /// <returns>The generated JWT token as a string.</returns>
-    //    public static string GenerateToken(string userName)
-    //    {
-    //        // Use TokenManager or your token generation logic here
-    //        return TokenService.GenerateToken(userName);
-    //    }
-    //}
-    //#endregion
-//}
+    
