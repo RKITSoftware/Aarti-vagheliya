@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\Advance API\Debugging in Visual Studio\Debugging Demo\Debugging Demo\bin\Debug\Debugging Demo.exe.config
+F:\Arti-368\New folder\Advance API\Debugging in Visual Studio\Debugging Demo\Debugging Demo\bin\Debug\Debugging Demo.exe
+F:\Arti-368\New folder\Advance API\Debugging in Visual Studio\Debugging Demo\Debugging Demo\bin\Debug\Debugging Demo.pdb
+F:\Arti-368\New folder\Advance API\Debugging in Visual Studio\Debugging Demo\Debugging Demo\obj\Debug\Debugging Demo.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\Advance API\Debugging in Visual Studio\Debugging Demo\Debugging Demo\obj\Debug\Debugging Demo.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\Advance API\Debugging in Visual Studio\Debugging Demo\Debugging Demo\obj\Debug\Debugging Demo.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\Advance API\Debugging in Visual Studio\Debugging Demo\Debugging Demo\obj\Debug\Debugging Demo.exe
+F:\Arti-368\New folder\Advance API\Debugging in Visual Studio\Debugging Demo\Debugging Demo\obj\Debug\Debugging Demo.pdb
