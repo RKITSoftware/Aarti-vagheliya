@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Static Class\Static Class\bin\Debug\Static Class.exe.config
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Static Class\Static Class\bin\Debug\Static Class.exe
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Static Class\Static Class\bin\Debug\Static Class.pdb
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Static Class\Static Class\obj\Debug\Static Class.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Static Class\Static Class\obj\Debug\Static Class.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Static Class\Static Class\obj\Debug\Static Class.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Static Class\Static Class\obj\Debug\Static Class.exe
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Static Class\Static Class\obj\Debug\Static Class.pdb
