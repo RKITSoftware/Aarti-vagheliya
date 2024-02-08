@@ -8,7 +8,7 @@ namespace CalculatorClient
     /// </summary>
     public class Program
     {
-        /// <summary>
+        /// <summary> 
         /// The entry point of the program.
         /// </summary>
         /// <param name="args">Command-line arguments.</param>

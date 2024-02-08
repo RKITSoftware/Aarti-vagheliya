@@ -5,7 +5,7 @@ namespace CalculatorLibrary
     /// <summary>
     /// Represents a basic calculator with arithmetic operations.
     /// </summary>
-    public class Calculator
+    public class Calculator 
     {
         /// <summary>
         /// Adds two integers.

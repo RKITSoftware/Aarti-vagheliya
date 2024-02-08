@@ -7,7 +7,7 @@
     {
         /// <summary>
         /// Extension method to multiply two integers.
-        /// </summary>
+        /// </summary> 
         /// <param name="obj">Instance of the Calculator class.</param>
         /// <param name="x">First integer operand.</param>
         /// <param name="y">Second integer operand.</param>
