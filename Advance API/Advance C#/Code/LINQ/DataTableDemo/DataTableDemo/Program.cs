@@ -7,25 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataTableDemo
 {
-    /// <summary>
-    /// Represents a city with properties for name, country, and state.
-    /// </summary>
-    class City
-    {/// <summary>
-     /// Gets or sets the name of the city.
-     /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Gets or sets the country where the city is located.
-        /// </summary>
-        public string Country { get; set; }
-
-        /// <summary>
-        /// Gets or sets the state or region where the city is located.
-        /// </summary>
-        public string State { get; set; }
-    }
+    
 
     /// <summary>
     /// The main class of the program.
@@ -46,6 +28,8 @@ namespace DataTableDemo
 
         #region DataTable Operations
 
+        #region CreateCitiesDataTable
+
         /// <summary>
         /// Creates a DataTable with columns for City, Country, and State.
         /// </summary>
@@ -58,6 +42,10 @@ namespace DataTableDemo
             citiesTable.Columns.Add("State", typeof(string));
             return citiesTable;
         }
+
+        #endregion
+
+        #region PopulateCitiesDataTable
 
         /// <summary>
         /// Populates the DataTable with sample data.
@@ -74,6 +62,8 @@ namespace DataTableDemo
 
         #endregion
 
+        #endregion
+
         #region Query Methods
 
         /// <summary>
@@ -82,15 +72,25 @@ namespace DataTableDemo
         /// <param name="citiesTable">DataTable containing city data.</param>
         static void QueryCities(DataTable citiesTable)
         {
+            #region DisplayDataTable
+
             // Display the DataTable
             Console.WriteLine("Cities Table:");
             DisplayDataTable(citiesTable);
+
+            #endregion
+
+            #region Select all cities
 
             // Query: Select all cities
             var allCities = from city in citiesTable.AsEnumerable()
                             select city;
             Console.WriteLine("\nAll Cities:");
             DisplayDataTable(allCities.CopyToDataTable());
+
+            #endregion
+
+            #region Select cities in USA
 
             // Query: Select cities in USA
             var citiesInUSA = from city in citiesTable.AsEnumerable()
@@ -99,6 +99,10 @@ namespace DataTableDemo
             Console.WriteLine("\nCities in USA:");
             DisplayDataTable(citiesInUSA.CopyToDataTable());
 
+            #endregion
+
+            #region Select cities in France
+
             // Query: Select cities in France
             var citiesInFrance = from city in citiesTable.AsEnumerable()
                                  where city.Field<string>("Country") == "France"
@@ -106,13 +110,23 @@ namespace DataTableDemo
             Console.WriteLine("\nCities in France:");
             DisplayDataTable(citiesInFrance.CopyToDataTable());
 
+            #endregion
+
+            #region Select cities in New York state
+
             // Query: Select cities in New York state
             var citiesInNewYorkState = from city in citiesTable.AsEnumerable()
                                        where city.Field<string>("State") == "New York"
                                        select city;
             Console.WriteLine("\nCities in New York State:");
             DisplayDataTable(citiesInNewYorkState.CopyToDataTable());
+
+            #endregion
         }
+
+        #endregion
+
+        #region DisplayDataTable
 
         /// <summary>
         /// Displays the contents of a DataTable.
@@ -138,7 +152,10 @@ namespace DataTableDemo
             }
             Console.WriteLine("--------------------------------");
         }
+
         #endregion
+
+       
     }
 }
 
