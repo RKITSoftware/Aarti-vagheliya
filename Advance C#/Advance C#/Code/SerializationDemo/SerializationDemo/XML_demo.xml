@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEmployee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Employee>
+    <Id>101</Id>
+    <FirstName>ABC</FirstName>
+    <LastName>abc</LastName>
+    <City>Rajkot</City>
+  </Employee>
+  <Employee>
+    <Id>102</Id>
+    <FirstName>PQR</FirstName>
+    <LastName>pqr</LastName>
+    <City>Jamnagar</City>
+  </Employee>
+  <Employee>
+    <Id>103</Id>
+    <FirstName>XYZ</FirstName>
+    <LastName>xyz</LastName>
+    <City>Morbi</City>
+  </Employee>
+</ArrayOfEmployee>

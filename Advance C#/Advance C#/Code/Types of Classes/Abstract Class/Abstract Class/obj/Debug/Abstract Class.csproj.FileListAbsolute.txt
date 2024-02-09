@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Abstract Class\Abstract Class\bin\Debug\Abstract Class.exe.config
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Abstract Class\Abstract Class\bin\Debug\Abstract Class.exe
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Abstract Class\Abstract Class\bin\Debug\Abstract Class.pdb
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Abstract Class\Abstract Class\obj\Debug\Abstract Class.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Abstract Class\Abstract Class\obj\Debug\Abstract Class.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Abstract Class\Abstract Class\obj\Debug\Abstract Class.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Abstract Class\Abstract Class\obj\Debug\Abstract Class.exe
+F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Abstract Class\Abstract Class\obj\Debug\Abstract Class.pdb
