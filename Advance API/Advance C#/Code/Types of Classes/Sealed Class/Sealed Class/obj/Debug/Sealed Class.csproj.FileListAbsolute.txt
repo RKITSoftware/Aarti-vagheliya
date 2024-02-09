@@ -1,8 +1,0 @@
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Sealed Class\Sealed Class\bin\Debug\Sealed Class.exe.config
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Sealed Class\Sealed Class\bin\Debug\Sealed Class.exe
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Sealed Class\Sealed Class\bin\Debug\Sealed Class.pdb
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Sealed Class\Sealed Class\obj\Debug\Sealed Class.csproj.AssemblyReference.cache
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Sealed Class\Sealed Class\obj\Debug\Sealed Class.csproj.SuggestedBindingRedirects.cache
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Sealed Class\Sealed Class\obj\Debug\Sealed Class.csproj.CoreCompileInputs.cache
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Sealed Class\Sealed Class\obj\Debug\Sealed Class.exe
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Sealed Class\Sealed Class\obj\Debug\Sealed Class.pdb

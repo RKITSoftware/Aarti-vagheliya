@@ -1,8 +1,0 @@
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Partial Class\Partial Class\bin\Debug\Partial Class.exe.config
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Partial Class\Partial Class\bin\Debug\Partial Class.exe
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Partial Class\Partial Class\bin\Debug\Partial Class.pdb
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Partial Class\Partial Class\obj\Debug\Partial Class.csproj.AssemblyReference.cache
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Partial Class\Partial Class\obj\Debug\Partial Class.csproj.SuggestedBindingRedirects.cache
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Partial Class\Partial Class\obj\Debug\Partial Class.csproj.CoreCompileInputs.cache
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Partial Class\Partial Class\obj\Debug\Partial Class.exe
-F:\Arti-368\New folder\Advance API\Advance C#\Code\Types of Classes\Partial Class\Partial Class\obj\Debug\Partial Class.pdb
