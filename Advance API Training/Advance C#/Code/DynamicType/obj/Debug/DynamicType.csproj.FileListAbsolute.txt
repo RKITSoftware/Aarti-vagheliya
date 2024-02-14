@@ -1,0 +1,8 @@
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\DynamicType\bin\Debug\DynamicType.exe.config
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\DynamicType\bin\Debug\DynamicType.exe
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\DynamicType\bin\Debug\DynamicType.pdb
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\DynamicType\obj\Debug\DynamicType.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\DynamicType\obj\Debug\DynamicType.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\DynamicType\obj\Debug\DynamicType.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\DynamicType\obj\Debug\DynamicType.exe
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\DynamicType\obj\Debug\DynamicType.pdb
