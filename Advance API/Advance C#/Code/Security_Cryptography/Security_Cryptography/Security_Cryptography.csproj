@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\BLAES.cs" />
-    <Compile Include="BL\BLDES.cs" />
     <Compile Include="BL\BLDigitalSignature.cs" />
     <Compile Include="BL\BLHashing.cs" />
     <Compile Include="BL\BLRijndael.cs" />

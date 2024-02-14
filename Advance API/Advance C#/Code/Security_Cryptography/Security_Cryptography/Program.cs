@@ -1,68 +1,86 @@
 ﻿using Security_Cryptography.BL;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Security_Cryptography
 {
+    /// <summary>
+    /// Represents a console application to demonstrate various cryptographic operations.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            string originalText = "Hello, world!";
+            #region Input
+
+            // Input from user
+            Console.WriteLine("Enter words: ");
+            string originalText = Console.ReadLine();//"Hello, world!";
             Console.WriteLine("Original Text: " + originalText);
+            Console.WriteLine();
+
+            #endregion
 
             // Symmetric Encryption and Decryption using AES algorithm
-            string encryptedAES = BLAES.Encrypt(originalText);
-            Console.WriteLine("Encrypted Text (AES): " + encryptedAES);
-            string decryptedAES = BLAES.Decrypt(encryptedAES);
-            Console.WriteLine("Decrypted Text (AES): " + decryptedAES);
+            #region AES Encryption and Decryption
 
-            // Asymmetric Encryption and Decryption using RSA algorithm
-            string encryptedRSA = BLRSA.Encrypt(originalText);
-            Console.WriteLine("Encrypted Text (RSA): " + encryptedRSA);
-            string decryptedRSA = BLRSA.Decrypt(encryptedRSA);
-            Console.WriteLine("Decrypted Text (RSA): " + decryptedRSA);
+            Console.WriteLine("AES Encryption and Decryption:");
+            string encryptedAES = BLAES.Encrypt(originalText); // Encrypt input using AES
+            Console.WriteLine("Encrypted Text (AES): " + encryptedAES);
+            string decryptedAES = BLAES.Decrypt(encryptedAES); // Decrypt AES-encrypted text
+            Console.WriteLine("Decrypted Text (AES): " + decryptedAES);
+            Console.WriteLine();
+
+            #endregion
 
             // Hashing using SHA256 algorithm
-            string hashedText = BLHashing.ComputeSHA256Hash(originalText);
+            #region SHA256 Hashing
+
+            Console.WriteLine("Hashing using SHA256:");
+            string hashedText = BLHashing.ComputeSHA256Hash(originalText); // Compute SHA256 hash
             Console.WriteLine("Hashed Text (SHA256): " + hashedText);
+            Console.WriteLine();
+
+            #endregion 
 
             // Digital Signature using RSA algorithm
-            byte[] signature = BLDigitalSignature.GenerateSignature(originalText);
-            bool isValidSignature = BLDigitalSignature.VerifySignature(originalText, signature);
+            #region RSA Digital Signature
+
+            Console.WriteLine("Digital Signature using RSA:");
+            byte[] signature = BLDigitalSignature.GenerateSignature(originalText); // Generate RSA digital signature
+            bool isValidSignature = BLDigitalSignature.VerifySignature(originalText, signature); // Verify RSA signature
             Console.WriteLine("Is Signature Valid: " + isValidSignature);
+            Console.WriteLine();
 
+            #endregion
 
+            //  Rijndael Encryption and Decryption
+            #region Rijndael Encryption and Decryption
 
-            //#region AES
-            //var key = "b14ca5898a4e4133bbce2ea2315a1916";
-
-            ////Console.WriteLine("Please enter a secret key for the symmetric algorithm.");
-            ////var key = Console.ReadLine();
-
-            //Console.WriteLine("Please enter a string for encryption");
-            //var str = Console.ReadLine();
-            //var encryptedString = BLAES.EncryptString(key, str);
-            //Console.WriteLine($"encrypted string = {encryptedString}");
-
-            //var decryptedString = BLAES.DecryptString(key, encryptedString);
-            //Console.WriteLine($"decrypted string = {decryptedString}");
-
-            //Console.ReadKey();
-
-            //#endregion
-
-            //string originalText = "Hello, world!";
+            Console.WriteLine("Rijndael Encryption and Decryption:");
             Console.WriteLine("Original Text: " + originalText);
+            string encryptedText = BLRijndael.Encrypt(originalText); // Encrypt input using Rijndael
+            Console.WriteLine("Encrypted Text (Rijndael): " + encryptedText);
+            string decryptedText = BLRijndael.Decrypt(encryptedText); // Decrypt Rijndael-encrypted text
+            Console.WriteLine("Decrypted Text (Rijndael): " + decryptedText);
+            Console.WriteLine();
 
-            string encryptedText = BLRijndael.Encrypt(originalText);
-            Console.WriteLine("Encrypted Text: " + encryptedText);
+            #endregion
 
-            string decryptedText = BLRijndael.Decrypt(encryptedText);
-            Console.WriteLine("Decrypted Text: " + decryptedText);
+            // Encrypt and decrypt using RSA
+            #region RSA Encryption and Decryption
+
+            Console.WriteLine("RSA Encryption and Decryption:");
+            string encryptedRSA = BLRSA.EncryptedByRSA(originalText); // Encrypt input using RSA
+            Console.WriteLine("Encrypted Text (RSA): " + encryptedRSA);
+            string decryptedRSA = BLRSA.DecryptByRSA(encryptedRSA); // Decrypt RSA-encrypted text
+            Console.WriteLine("Decrypted Text (RSA): " + decryptedRSA);
+
+            #endregion
+
+
+
+
+
         }
     }
 }
