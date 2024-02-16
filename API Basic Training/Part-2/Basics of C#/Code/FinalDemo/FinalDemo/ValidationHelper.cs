@@ -38,7 +38,8 @@ namespace FinalDemo
         /// <returns>True if the product name is valid; otherwise, false.</returns>
         public static bool IsProductNameValid(string productName)
         {
-            return !string.IsNullOrWhiteSpace(productName);
+           return !string.IsNullOrWhiteSpace(productName);
+            
         }
         #endregion
 

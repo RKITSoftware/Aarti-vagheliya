@@ -101,39 +101,6 @@ namespace FinalDemo
         #endregion
 
 
-        #region Validation
-
-        /// <summary>
-        /// Validates the product against existing products.
-        /// </summary>
-        /// <param name="existingProducts">The list of existing products.</param>
-        public void Validate(List<Product> existingProducts)
-        {
-            //Validate Product ID
-            if (!ValidationHelper.IsProductIdValid(ProductId, existingProducts))
-            {
-                throw new ArgumentException("Invalid Product ID. Please provide a positive integer value.");
-            }
-
-            //Validate Product Name
-            if (!ValidationHelper.IsProductNameValid(ProductName))
-            {
-                throw new ArgumentException("Invalid Product Name. Please provide a non-empty string.");
-            }
-
-            //Validate Price
-            if (!ValidationHelper.IsPriceValid(Price))
-            {
-                throw new ArgumentException("Invalid Price. Please provide a non-negative value.");
-            }
-
-            //Validate Quantity Stock value
-            if (!ValidationHelper.IsQuantityInStockValid(QuantityInStock))
-            {
-                throw new ArgumentException("Invalid Quantity in Stock. Please provide a non-negative integer value.");
-            }
-        }
-        #endregion
 
         #region Add Product
 

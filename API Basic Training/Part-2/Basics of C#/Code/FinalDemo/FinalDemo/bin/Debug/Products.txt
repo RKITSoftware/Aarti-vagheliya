@@ -1,2 +1,1 @@
 Product ID     Product Name   Price          Quantity in Stock
-1              rtret          52             3              
