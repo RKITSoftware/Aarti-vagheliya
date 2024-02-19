@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalDemo_Advance_C_.Bussiness_Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -19,6 +20,10 @@ namespace FinalDemo_Advance_C_
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //for enum configuration
+            BLUser.Configure();
+
         }
     }
 }

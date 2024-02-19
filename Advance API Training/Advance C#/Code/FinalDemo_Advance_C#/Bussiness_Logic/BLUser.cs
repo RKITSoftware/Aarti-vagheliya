@@ -1,6 +1,8 @@
 ﻿using FinalDemo_Advance_C_.Models;
+using Newtonsoft.Json.Converters;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
+using ServiceStack.Text;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,22 +13,26 @@ using System.Web;
 
 namespace FinalDemo_Advance_C_.Bussiness_Logic
 {
+    
     public class BLUser
     {
-        //private static readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-
-        //private readonly IDbConnectionFactory _dbFactory = new OrmLiteConnectionFactory(_connectionString, MySqlDialect.Provider);
-
 
         private readonly IDbConnectionFactory _dbFactory;
+
         private static readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
         public BLUser()
         {
             _dbFactory = new OrmLiteConnectionFactory(_connectionString, MySqlDialect.Provider);
             CreateIfNotExists();
+           
         }
 
+
+        public static void Configure()
+        {
+            SqlServerDialect.Provider.StringSerializer = new JsonStringSerializer(); // Or any other serializer that supports enum serialization
+        }
 
         public void CreateIfNotExists()
         {
@@ -43,22 +49,25 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
 
         public List<USR01> GetAllUsers()
         {
-            List<USR01> users = new List<USR01>();
-
+            //List<USR01> users = new List<USR01>();
+            
             using (var db = _dbFactory.Open())
             {
                 if (!db.TableExists<USR01>())
                 {
-                    return users; // Table does not exist
+                    return null; // Table does not exist
                 }
 
                 // Retrieve all users
-                users = db.Select<USR01>();
+              var users = db.Select<USR01>();
 
                 // Decrypt the password for each user
                 foreach (var user in users)
                 {
                     user.R01F03 = BLCryptography.Decrypt(user.R01F03);
+
+                    // Map enum value to string
+                   // user.R01F05 = BLConverter.UserRoleToString(user.Role);
                 }
                 return users;
             }

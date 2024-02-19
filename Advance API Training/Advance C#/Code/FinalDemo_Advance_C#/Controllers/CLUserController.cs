@@ -1,10 +1,12 @@
-﻿using FinalDemo_Advance_C_.Bussiness_Logic;
+﻿using FinalDemo_Advance_C_.Authentication;
+using FinalDemo_Advance_C_.Bussiness_Logic;
 using FinalDemo_Advance_C_.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Web.Http;
 
 namespace FinalDemo_Advance_C_.Controllers
@@ -23,6 +25,26 @@ namespace FinalDemo_Advance_C_.Controllers
         public CLUserController()
         {
             _objBLUser = new BLUser();
+        }
+
+        [HttpGet]
+        [Route("token")]
+        [BasicAuthentication]
+        public IHttpActionResult GetToken()
+        {
+            string authToken = Request.Headers.Authorization.Parameter;
+            byte[] authByte = Convert.FromBase64String(authToken);
+            authToken = Encoding.UTF8.GetString(authByte);
+            string[] usernamepassword = authToken.Split(':');
+            string username = usernamepassword[0];
+            string password = usernamepassword[1];
+            var user = _objBLUser.GetAllUsers().FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password);
+
+            if(user != null)
+            {
+                return Ok(BLTokenManager.GenerateToken(username));
+            }
+            return BadRequest("Enter valid user details.");
         }
 
         /// <summary>

@@ -6,6 +6,15 @@ using System.Web;
 
 namespace FinalDemo_Advance_C_.Models
 {
+    public enum UserRole
+    {
+        Admin,
+        Seller,
+        Supplier,
+        Customer
+
+    }
+
     [Alias("USR01")]
     public class USR01
     {
@@ -33,6 +42,8 @@ namespace FinalDemo_Advance_C_.Models
         /// <summary>
         /// Gets or sets the roles assigned to the user.
         /// </summary>
-        public string R01F05 { get; set; }
+        public UserRole R01F05 { get; set; } // Use enum type for roles
+
+        //public UserRole Role { get; set; } // Add Role property
     }
 }

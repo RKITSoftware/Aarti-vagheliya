@@ -2,6 +2,11 @@ using System.Web.Http;
 using WebActivatorEx;
 using FinalDemo_Advance_C_;
 using Swashbuckle.Application;
+using Swashbuckle.Swagger;
+using System.Collections.Generic;
+using System.Web.Http.Description;
+using FinalDemo_Advance_C_.Authentication;
+using System.Linq;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -57,11 +62,16 @@ namespace FinalDemo_Advance_C_
                         // at the document or operation level to indicate which schemes are required for an operation. To do this,
                         // you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
                         // according to your specific authorization implementation
-                        //
-                        //c.BasicAuth("basic")
-                        //    .Description("Basic HTTP Authentication");
-                        //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+
+                        c.BasicAuth("basic")
+                            .Description("Basic HTTP Authentication");
+
+                        c.ApiKey("BearerToken")
+                                         .Description("Bearer Token Authentication")
+                                         .Name("Authorization")
+                                         .In("header");
+                        c.OperationFilter<AssignOAuth2SecurityRequirements>();
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")
@@ -250,6 +260,46 @@ namespace FinalDemo_Advance_C_
                         //
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
+        }
+
+        public class AssignOAuth2SecurityRequirements : IOperationFilter
+        {
+            public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
+            {
+                // Check if the method has the BasicAuth attribute
+                var basicAuthRequired = apiDescription.GetControllerAndActionAttributes<BasicAuthentication>().Any();
+
+                // Check if the method has the BearerAuth attribute
+                var bearerAuthRequired = apiDescription.GetControllerAndActionAttributes<BearerAuthentication>().Any();
+
+                if (basicAuthRequired)
+                {
+                    // Apply Basic Authentication
+                    if (operation.security == null)
+                        operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+
+                    var basicAuth = new Dictionary<string, IEnumerable<string>>
+                    {
+                        { "basic", new string[] { } }
+                    };
+
+                    operation.security.Add(basicAuth);
+                }
+
+                if (bearerAuthRequired)
+                {
+                    // Apply Bearer Authentication
+                    if (operation.security == null)
+                        operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+
+                    var bearerAuth = new Dictionary<string, IEnumerable<string>>
+                    {
+                        { "BearerToken", new string[] { } }
+                    };
+
+                    operation.security.Add(bearerAuth);
+                }
+            }
         }
     }
 }

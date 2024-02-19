@@ -1,4 +1,5 @@
-﻿using FinalDemo_Advance_C_.Bussiness_Logic;
+﻿using FinalDemo_Advance_C_.Authentication;
+using FinalDemo_Advance_C_.Bussiness_Logic;
 using FinalDemo_Advance_C_.Models;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace FinalDemo_Advance_C_.Controllers
 
         [HttpGet]
         [Route("GetAllProducts")]
+        [BearerAuthentication]
+        [Authorize(Roles = ("Customer,Seller,Admin,Supplier"))]
         public IHttpActionResult GetAllProducts()
         {
             _objBLProduct = new BLProduct();
