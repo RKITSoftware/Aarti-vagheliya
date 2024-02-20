@@ -10,50 +10,63 @@ using System.Web.Http.Filters;
 
 namespace FinalDemo_Advance_C_.Authentication
 {
+    /// <summary>
+    /// Class implementing basic authentication for API endpoints.
+    /// </summary>
     public class BasicAuthentication : ActionFilterAttribute
     {
+        // Instance of BLUser class for user authentication
         private BLUser _objBLUser = new BLUser();
 
+        /// <summary>
+        /// Method executed before the action method is invoked.
+        /// </summary>
+        /// <param name="actionContext">The context for the action.</param>
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
+            // Getting the authorization header from the request
             var authHeader = actionContext.Request.Headers.Authorization;
 
-            if(authHeader == null)
+            // If authorization header is null
+            if (authHeader == null)
             {
+                // Returning unauthorized response
                 actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
                                         "invalid headers");
             }
-            else if(authHeader.Scheme == "Basic")
+            // If authorization scheme is Basic
+            else if (authHeader.Scheme == "Basic")
             {
-                string authToken = authHeader.Parameter;
-                byte[] authBytes = Convert.FromBase64String(authToken);
-                authToken = Encoding.UTF8.GetString(authBytes);
-                string[] usernamePassword = authToken.Split(':');
+                string authToken = authHeader.Parameter; // Getting the authorization token
+                byte[] authBytes = Convert.FromBase64String(authToken); // Converting the token from base64 to bytes
+                authToken = Encoding.UTF8.GetString(authBytes); // Decoding the token to get username and password
+                string[] usernamePassword = authToken.Split(':'); // Splitting username and password
 
-                //Extracts username and password from the decoded token.
+                // Extracting username and password from the decoded token
                 string username = usernamePassword[0];
                 string password = usernamePassword[1];
 
+                // Checking if the user exists and credentials match
                 var user = _objBLUser.GetAllUsers().Any(u => u.R01F02 == username && u.R01F03 == password);
 
-                if(user != null)
+                if (user) // If user exists and credentials match
                 {
-                    var token = BLTokenManager.GenerateToken(username);
+                    var token = BLTokenManager.GenerateToken(username); // Generating JWT token for the user
 
-                    var principal = BLTokenManager.GetPrincipal(token);
+                    var principal = BLTokenManager.GetPrincipal(token); // Getting claims principal from token
 
-                    if(principal == null)
+                    if (principal == null) // If principal is null
                     {
                         actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized,
-                                                 "Invalid token");
+                                                 "Invalid token"); // Returning unauthorized response
                     }
 
-                    Thread.CurrentPrincipal = principal;
+                    Thread.CurrentPrincipal = principal; // Setting current principal
 
-                    actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.OK, token);
+                    actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.OK, token); // Returning OK response with token
                 }
 
-                base.OnActionExecuting(actionContext);
+                base.OnActionExecuting(actionContext); // Calling base implementation
             }
         }
     }

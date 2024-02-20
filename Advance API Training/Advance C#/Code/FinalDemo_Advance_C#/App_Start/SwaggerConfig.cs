@@ -262,8 +262,17 @@ namespace FinalDemo_Advance_C_
                     });
         }
 
+        /// <summary>
+        /// Class implementing operation filter for assigning OAuth2 security requirements.
+        /// </summary>
         public class AssignOAuth2SecurityRequirements : IOperationFilter
         {
+            /// <summary>
+            /// Apply OAuth2 security requirements to the operation based on the presence of BasicAuthentication or BearerAuthentication attributes.
+            /// </summary>
+            /// <param name="operation">The operation to apply security requirements.</param>
+            /// <param name="schemaRegistry">The schema registry.</param>
+            /// <param name="apiDescription">The API description.</param>
             public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
             {
                 // Check if the method has the BasicAuth attribute

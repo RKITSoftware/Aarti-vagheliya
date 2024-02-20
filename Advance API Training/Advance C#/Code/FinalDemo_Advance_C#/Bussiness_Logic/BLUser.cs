@@ -1,56 +1,63 @@
 ﻿using FinalDemo_Advance_C_.Models;
-using Newtonsoft.Json.Converters;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
 using ServiceStack.Text;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Web;
 
 namespace FinalDemo_Advance_C_.Bussiness_Logic
 {
-    
+    /// <summary>
+    /// Class containing methods for managing user data.
+    /// </summary>
     public class BLUser
     {
-
+        // Instance of IDbConnectionFactory for database connection
         private readonly IDbConnectionFactory _dbFactory;
 
+        // Connection string to the database
         private static readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
+        /// <summary>
+        /// Constructor for BLUser class.
+        /// </summary>
         public BLUser()
         {
-            _dbFactory = new OrmLiteConnectionFactory(_connectionString, MySqlDialect.Provider);
-            CreateIfNotExists();
-           
+            _dbFactory = new OrmLiteConnectionFactory(_connectionString, MySqlDialect.Provider); // Initializing IDbConnectionFactory
+            CreateIfNotExists(); // Creating the table if it doesn't exist
         }
 
-
+        /// <summary>
+        /// Method to configure SQL dialect.
+        /// </summary>
         public static void Configure()
         {
+            // Configuring SQL dialect
             SqlServerDialect.Provider.StringSerializer = new JsonStringSerializer(); // Or any other serializer that supports enum serialization
         }
 
+        /// <summary>
+        /// Method to create the table if it doesn't exist.
+        /// </summary>
         public void CreateIfNotExists()
         {
             using (var db = _dbFactory.Open())
             {
                 if (!db.TableExists<USR01>())
                 {
-                    db.CreateTable<USR01>();
+                    db.CreateTable<USR01>(); // Creating the table if it doesn't exist
                     Console.WriteLine("Table USR01 created successfully.");
                 }
             }
         }
 
-
+        /// <summary>
+        /// Method to retrieve all users from the database.
+        /// </summary>
+        /// <returns>List of users.</returns>
         public List<USR01> GetAllUsers()
         {
-            //List<USR01> users = new List<USR01>();
-            
             using (var db = _dbFactory.Open())
             {
                 if (!db.TableExists<USR01>())
@@ -65,22 +72,20 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 foreach (var user in users)
                 {
                     user.R01F03 = BLCryptography.Decrypt(user.R01F03);
-
-                    // Map enum value to string
-                   // user.R01F05 = BLConverter.UserRoleToString(user.Role);
                 }
-                return users;
+                return users; // Returning the list of users
             }
 
         }
-            #region Insert Method
 
-            /// <summary>
-            /// Inserts a new record into table USR01
-            /// </summary>
-            /// <param name="objUSR01">New user object to be inserted</param>
-            /// <returns>Message indicating the success of the operation</returns>
-            public string Insert(USR01 objUSR01)
+        #region Insert Method
+
+        /// <summary>
+        /// Inserts a new record into table USR01
+        /// </summary>
+        /// <param name="objUSR01">New user object to be inserted</param>
+        /// <returns>Message indicating the success of the operation</returns>
+        public string Insert(USR01 objUSR01)
         {
             // Open a database connection
             using (var db = _dbFactory.Open())

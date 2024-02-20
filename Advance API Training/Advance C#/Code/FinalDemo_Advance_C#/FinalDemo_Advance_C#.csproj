@@ -194,16 +194,18 @@
     <Compile Include="Authentication\BasicAuthentication.cs" />
     <Compile Include="Authentication\BearerAuthentication.cs" />
     <Compile Include="Bussiness_Logic\BLCategory.cs" />
-    <Compile Include="Bussiness_Logic\BLConverter.cs" />
     <Compile Include="Bussiness_Logic\BLCryptography.cs" />
     <Compile Include="Bussiness_Logic\BLProduct.cs" />
+    <Compile Include="Bussiness_Logic\BLSaler.cs" />
     <Compile Include="Bussiness_Logic\BLSupplier.cs" />
     <Compile Include="Bussiness_Logic\BLTokenManager.cs" />
     <Compile Include="Bussiness_Logic\BLTransaction.cs" />
     <Compile Include="Bussiness_Logic\BLUser.cs" />
     <Compile Include="Controllers\CLCategoryController.cs" />
     <Compile Include="Controllers\CLProductController.cs" />
+    <Compile Include="Controllers\CLSalerController.cs" />
     <Compile Include="Controllers\CLSupplierController.cs" />
+    <Compile Include="Controllers\CLTokenGeneratorController.cs" />
     <Compile Include="Controllers\CLTransactionController.cs" />
     <Compile Include="Controllers\CLUserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -211,6 +213,7 @@
     </Compile>
     <Compile Include="Models\CAT01.cs" />
     <Compile Include="Models\PRD01.cs" />
+    <Compile Include="Models\SLR01.cs" />
     <Compile Include="Models\SUP01.cs" />
     <Compile Include="Models\TRA01.cs" />
     <Compile Include="Models\USR01.cs" />

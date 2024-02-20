@@ -15,69 +15,75 @@ using System.Web.Http.Filters;
 
 namespace FinalDemo_Advance_C_.Authentication
 {
+    /// <summary>
+    /// Class implementing bearer token authentication for API endpoints.
+    /// </summary>
     public class BearerAuthentication : AuthorizationFilterAttribute
     {
+        // Instance of BLUser class for user authentication
         private BLUser _objBLUser = new BLUser();
 
+        /// <summary>
+        /// Method called when authorization is requested for the action method.
+        /// </summary>
+        /// <param name="actionContext">The context for the action.</param>
         public override void OnAuthorization(HttpActionContext actionContext)
         {
-            string tokenValue = actionContext.Request.Headers.Authorization.Scheme;
+            string tokenValue = actionContext.Request.Headers.Authorization.Scheme; // Extracting the token value from the authorization header
 
-            var isValid = BLTokenManager.ValidateToken(tokenValue);
+            var isValid = BLTokenManager.ValidateToken(tokenValue); // Validating the token
 
-            if (!isValid)
+            if (!isValid) // If token is not valid
             {
                 actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
-                                        "Enter valid token");
+                                        "Enter valid token"); // Returning unauthorized response
             }
-            else
+            else // If token is valid
             {
                 // get jwt payload
-                string jwtEncodedPayload = tokenValue.Split('.')[1];
+                string jwtEncodedPayload = tokenValue.Split('.')[1]; // Extracting the payload from JWT token
 
                 jwtEncodedPayload = jwtEncodedPayload.Replace('+', '-')
                                                      .Replace('/', '_')
-                                                     .Replace("=", "");
+                                                     .Replace("=", ""); // Normalizing the JWT payload
 
-                
                 // pad jwtEncodedPayload if needed
                 int padding = jwtEncodedPayload.Length % 4;
                 if (padding != 0)
                 {
-                    jwtEncodedPayload += new string('=', 4 - padding);
+                    jwtEncodedPayload += new string('=', 4 - padding); // Padding the JWT payload if needed
                 }
 
                 // decode the jwt payload
-                byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
+                byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload); // Decoding the JWT payload
 
-                string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
+                string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes); // Decoding the payload string
 
-                JObject json = JObject.Parse(decodedPayload);
+                JObject json = JObject.Parse(decodedPayload); // Parsing the payload as JSON object
 
-                USR01 user = _objBLUser.GetAllUsers().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
-
+                USR01 user = _objBLUser.GetAllUsers().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString()); // Getting user details from the payload
 
                 // create an identity => i.e., attach username which is used to identify the user
-                GenericIdentity identity = new GenericIdentity(user.R01F02);
+                GenericIdentity identity = new GenericIdentity(user.R01F02); // Creating a generic identity for the user
 
                 // add claims for the identity => a claim has (claim_type, value)
-                identity.AddClaim(new Claim("Id", Convert.ToString(user.R01F01)));
+                identity.AddClaim(new Claim("Id", Convert.ToString(user.R01F01))); // Adding claims to the identity
 
                 // create a principal that represent a user => it has an (identity object + roles)
-                IPrincipal principal = new GenericPrincipal(identity, user.R01F05.ToString().Split(','));
+                IPrincipal principal = new GenericPrincipal(identity, user.R01F05.ToString().Split(',')); // Creating a principal for the user
 
                 // now associate the user/principal with the thread
-                Thread.CurrentPrincipal = principal;
+                Thread.CurrentPrincipal = principal; // Setting the current principal
 
                 if (HttpContext.Current != null)
                 {
                     // HttpContext is responsible for rq and res.
-                    HttpContext.Current.User = principal;
+                    HttpContext.Current.User = principal; // Setting the user for the current HttpContext
                 }
                 else
                 {
                     actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
-                                             "Authorization denied");
+                                             "Authorization denied"); // Returning unauthorized response if HttpContext is null
                 }
             }
         }

@@ -3,15 +3,21 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
 
 namespace FinalDemo_Advance_C_.Bussiness_Logic
 {
+    /// <summary>
+    /// Class containing methods for managing supplier operations.
+    /// </summary>
     public class BLSupplier
     {
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
+        /// <summary>
+        /// Adds a new supplier to the database.
+        /// </summary>
+        /// <param name="objSUP01">The supplier to add.</param>
+        /// <returns>True if the supplier is successfully added, otherwise false.</returns>
         public bool AddSupplier(SUP01 objSUP01)
         {
             using (var connection = new MySqlConnection(_connectionString))
@@ -43,6 +49,10 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             }
         }
 
+        /// <summary>
+        /// Retrieves all suppliers from the database.
+        /// </summary>
+        /// <returns>A list of all suppliers.</returns>
         public List<SUP01> GetAllSuppliers()
         {
             List<SUP01> suppliers = new List<SUP01>();
@@ -85,6 +95,12 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             return suppliers;
         }
 
+        /// <summary>
+        /// Updates an existing supplier in the database.
+        /// </summary>
+        /// <param name="supplierId">The ID of the supplier to update.</param>
+        /// <param name="objSUP01">The updated supplier data.</param>
+        /// <returns>True if the supplier is successfully updated, otherwise false.</returns>
         public bool UpdateSupplier(int supplierId, SUP01 objSUP01)
         {
             using (var connection = new MySqlConnection(_connectionString))
@@ -117,6 +133,11 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             }
         }
 
+        /// <summary>
+        /// Deletes a supplier from the database.
+        /// </summary>
+        /// <param name="supplierId">The ID of the supplier to delete.</param>
+        /// <returns>True if the supplier is successfully deleted, otherwise false.</returns>
         public bool DeleteSupplier(int supplierId)
         {
             using (var connection = new MySqlConnection(_connectionString))

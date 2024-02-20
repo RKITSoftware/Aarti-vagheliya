@@ -1,13 +1,10 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Web;
+﻿using System;
 
 namespace FinalDemo_Advance_C_.Models
 {
-    // Define enum for transaction types
+    /// <summary>
+    /// Represents the types of transactions.
+    /// </summary>
     public enum TransactionType
     {
         //[EnumMember(Value = "Purchase")]
@@ -16,9 +13,20 @@ namespace FinalDemo_Advance_C_.Models
         //[EnumMember(Value = "Sale")]
         //Sale
 
+        /// <summary>
+        /// Indicates a purchase transaction.
+        /// </summary>
         Purchase = 0,
+
+        /// <summary>
+        /// Indicates a sale transaction.
+        /// </summary>
         Sale = 1,
     }
+
+    /// <summary>
+    /// Represents a transaction entity with properties for TransactionID, ProductID, ProductName, TransactionType, TransactionDate, Quantity, and TotalAmount.
+    /// </summary>
     public class TRA01
     {
         /// <summary>
@@ -30,13 +38,16 @@ namespace FinalDemo_Advance_C_.Models
         /// Gets or sets the ProductID.
         /// </summary>
         public int A01F02 { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ProductName.
+        /// </summary>
         public string ProductName { get; set; }
 
         /// <summary>
-        /// Gets or sets the TransactionType (e.g., Purchase, Sale).
+        /// Gets or sets the TransactionType.
         /// </summary>
         public TransactionType A01F03 { get; set; }
-      //  public TransactionType TransactionType { get; set; }
 
         /// <summary>
         /// Gets or sets the TransactionDate.
@@ -47,22 +58,11 @@ namespace FinalDemo_Advance_C_.Models
         /// Gets or sets the Quantity.
         /// </summary>
         public int A01F05 { get; set; }
-         
+
         /// <summary>
         /// Gets or sets the TotalAmount.
         /// </summary>
         public decimal A01F06 { get; set; }
 
-        public override string ToString()
-        {
-            return A01F03.ToString();
-        }
-
-        // Method to convert integer to enum
-        public static TransactionType ConvertToTransactionType(int value)
-        {
-            return (TransactionType)value;
-        }
-        
     }
 }

@@ -1,12 +1,7 @@
 ﻿using FinalDemo_Advance_C_.Authentication;
 using FinalDemo_Advance_C_.Bussiness_Logic;
 using FinalDemo_Advance_C_.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Web.Http;
 
 namespace FinalDemo_Advance_C_.Controllers
@@ -17,6 +12,7 @@ namespace FinalDemo_Advance_C_.Controllers
     [RoutePrefix("api/user")]
     public class CLUserController : ApiController
     {
+        // Instance of the user business logic class
         private readonly BLUser _objBLUser;
 
         /// <summary>
@@ -27,25 +23,6 @@ namespace FinalDemo_Advance_C_.Controllers
             _objBLUser = new BLUser();
         }
 
-        [HttpGet]
-        [Route("token")]
-        [BasicAuthentication]
-        public IHttpActionResult GetToken()
-        {
-            string authToken = Request.Headers.Authorization.Parameter;
-            byte[] authByte = Convert.FromBase64String(authToken);
-            authToken = Encoding.UTF8.GetString(authByte);
-            string[] usernamepassword = authToken.Split(':');
-            string username = usernamepassword[0];
-            string password = usernamepassword[1];
-            var user = _objBLUser.GetAllUsers().FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password);
-
-            if(user != null)
-            {
-                return Ok(BLTokenManager.GenerateToken(username));
-            }
-            return BadRequest("Enter valid user details.");
-        }
 
         /// <summary>
         /// Gets all users
@@ -53,11 +30,14 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>List of all users</returns>
         [HttpGet]
         [Route("getAll")]
+        [BearerAuthentication]
+        [Authorize(Roles = ("Admin"))]
         public IHttpActionResult GetAllUsers()
         {
-            List<USR01> users = _objBLUser.GetAllUsers();
-            return Ok(users);
+            List<USR01> users = _objBLUser.GetAllUsers(); // Retrieves all users from the database
+            return Ok(users); // Returns the list of users
         }
+
 
         /// <summary>
         /// Adds a new user
@@ -66,6 +46,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>Success message or error</returns>
         [HttpPost]
         [Route("add")]
+        [BearerAuthentication]
+        [Authorize(Roles = ("Admin"))]
         public IHttpActionResult AddUser(USR01 user)
         {
             string result = _objBLUser.Insert(user);
@@ -80,6 +62,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>Success message or error</returns>
         [HttpPut]
         [Route("update")]
+        [BearerAuthentication]
+        [Authorize(Roles = ("Admin"))]
         public IHttpActionResult UpdateUser(int id, USR01 user)
         {
             user.R01F01 = id; // Ensure the correct ID is set
@@ -94,6 +78,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>Success message or error</returns>
         [HttpDelete]
         [Route("delete")]
+        [BearerAuthentication]
+        [Authorize(Roles = ("Admin"))]
         public IHttpActionResult DeleteUser(int id)
         {
             string result = _objBLUser.Delete(id);

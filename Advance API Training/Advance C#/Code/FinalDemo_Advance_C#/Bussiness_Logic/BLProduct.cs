@@ -3,17 +3,20 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace FinalDemo_Advance_C_.Bussiness_Logic
 {
+    /// <summary>
+    /// Class containing methods for managing product operations.
+    /// </summary>
     public class BLProduct
     {
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
-
+        /// <summary>
+        /// Retrieves all products from the database.
+        /// </summary>
+        /// <returns>A list of all products.</returns>
         public List<PRD01> GetAllProducts()
         {
             List<PRD01> products = new List<PRD01>();
@@ -58,7 +61,11 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             return products;
         }
 
-
+        /// <summary>
+        /// Adds a new product to the database.
+        /// </summary>
+        /// <param name="objPRD01">The product to add.</param>
+        /// <returns>True if the product is successfully added, otherwise false.</returns>
         public bool AddProduct(PRD01 objPRD01)
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
@@ -101,8 +108,12 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             }
         }
 
-        
-
+        /// <summary>
+        /// Updates an existing product in the database.
+        /// </summary>
+        /// <param name="productId">The ID of the product to update.</param>
+        /// <param name="objPRD01">The updated product data.</param>
+        /// <returns>True if the product is successfully updated, otherwise false.</returns>
         public bool UpdateProduct(int productId, PRD01 objPRD01)
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
@@ -138,6 +149,11 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             }
         }
 
+        /// <summary>
+        /// Deletes a product from the database.
+        /// </summary>
+        /// <param name="productId">The ID of the product to delete.</param>
+        /// <returns>True if the product is successfully deleted, otherwise false.</returns>
         public bool DeleteProduct(int productId)
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
@@ -156,6 +172,12 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             }
         }
 
+        /// <summary>
+        /// Updates the brand of a product in the database.
+        /// </summary>
+        /// <param name="productId">The ID of the product to update.</param>
+        /// <param name="brand">The new brand name.</param>
+        /// <returns>True if the product brand is successfully updated, otherwise false.</returns>
         public bool UpdateProductBrand(int productId, string brand)
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))

@@ -1,7 +1,4 @@
 ﻿using FinalDemo_Advance_C_.Bussiness_Logic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
 
 namespace FinalDemo_Advance_C_
@@ -21,7 +18,7 @@ namespace FinalDemo_Advance_C_
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            //for enum configuration
+            //for enum configuration for serialization
             BLUser.Configure();
 
         }

@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Web;
 
 namespace FinalDemo_Advance_C_.Bussiness_Logic
 {
+    /// <summary>
+    /// Class containing methods for encryption and decryption using Rijndael algorithm.
+    /// </summary>
     public class BLCryptography
     {
         private static readonly byte[] Key = Encoding.UTF8.GetBytes("ThisIsASecretKey1234567890123456"); // 256-bit key
         private static readonly byte[] IV = Encoding.UTF8.GetBytes("1234567890123456"); // 128-bit IV
-
 
         /// <summary>
         /// Encrypts the input plain text using Rijndael encryption.

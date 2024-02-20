@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace FinalDemo_Advance_C_.Models
 {
+    /// <summary>
+    /// Represents a product entity with properties for ProductID, ProductName, CategoryID, UnitPrice, SupplierID, Description, DateAdded, Brand, DateRemoved, and Count.
+    /// </summary>
     public class PRD01
     {
         /// <summary>
@@ -38,7 +38,7 @@ namespace FinalDemo_Advance_C_.Models
         public string D01F06 { get; set; } // Description
 
         /// <summary>
-        /// Gets or sets the Date when product add.
+        /// Gets or sets the Date when the product was added.
         /// </summary>
         public DateTime? D01F07 { get; set; } // DateAdded
 
@@ -48,7 +48,7 @@ namespace FinalDemo_Advance_C_.Models
         public string D01F08 { get; set; } // Brand
 
         /// <summary>
-        /// Gets or sets the Date when product remove.
+        /// Gets or sets the Date when the product was removed.
         /// </summary>
         public DateTime? D01F09 { get; set; } //DateRemoved
 
