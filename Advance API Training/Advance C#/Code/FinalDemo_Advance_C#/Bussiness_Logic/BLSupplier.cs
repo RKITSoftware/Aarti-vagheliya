@@ -11,7 +11,13 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
     /// </summary>
     public class BLSupplier
     {
+        #region Private member
+
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        #endregion
+
+        #region Public methods
 
         /// <summary>
         /// Adds a new supplier to the database.
@@ -43,8 +49,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error adding supplier: " + ex.Message);
-                    return false;
+                    throw new Exception("Error adding supplier: " + ex.Message);
                 }
             }
         }
@@ -88,7 +93,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error fetching suppliers: " + ex.Message);
+                    throw new Exception("Error fetching suppliers: " + ex.Message);
                 }
             }
 
@@ -127,8 +132,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error updating supplier: " + ex.Message);
-                    return false;
+                   throw new Exception("Error updating supplier: " + ex.Message);
                 }
             }
         }
@@ -158,10 +162,11 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error deleting supplier: " + ex.Message);
-                    return false;
+                    throw new Exception("Error deleting supplier: " + ex.Message);
                 }
             }
         }
+
+        #endregion
     }
 }

@@ -11,10 +11,16 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
     /// </summary>
     public class BLTokenManager
     {
+        #region Private member
+
         /// <summary>
         /// Secret key for hashing.
         /// </summary>
         private static readonly string _secretKey = "ERMN05OPLoDvbTTa/QkqLNMI7cPLguaRyHzyg7n5qNBVjQmtBhz4SzYh4NBVCXi3KJHlSXKP+oi2+bXr6CUYTR==";
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Generates a JWT token.
@@ -75,17 +81,18 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
 
                 return principal; // Return the claims principal
             }
-            catch
+            catch (Exception ex)
             {
-                return null;
+                throw new Exception($"Error in Get Principal : {ex.Message}");
             }
         }
 
+       
         /// <summary>
-        /// Validates a JWT token.
-        /// </summary>
-        /// <param name="token">The JWT token to validate.</param>
-        /// <returns>True if the token is valid, otherwise false.</returns>
+            /// Validates a JWT token.
+            /// </summary>
+            /// <param name="token">The JWT token to validate.</param>
+            /// <returns>True if the token is valid, otherwise false.</returns>
         public static bool ValidateToken(string token)
         {
             ClaimsPrincipal principal = GetPrincipal(token); // Get the claims principal from the token
@@ -93,5 +100,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 return false; // Return false if the principal is null
             return true; // Return true otherwise
         }
+
+        #endregion
     }
 }

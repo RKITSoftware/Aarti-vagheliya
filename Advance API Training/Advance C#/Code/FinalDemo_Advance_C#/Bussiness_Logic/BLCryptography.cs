@@ -10,8 +10,14 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
     /// </summary>
     public class BLCryptography
     {
+        #region Private member
+
         private static readonly byte[] Key = Encoding.UTF8.GetBytes("ThisIsASecretKey1234567890123456"); // 256-bit key
         private static readonly byte[] IV = Encoding.UTF8.GetBytes("1234567890123456"); // 128-bit IV
+
+        #endregion
+
+        #region Public methods
 
         /// <summary>
         /// Encrypts the input plain text using Rijndael encryption.
@@ -84,7 +90,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             }
         }
 
+        #endregion
 
-        
     }
 }

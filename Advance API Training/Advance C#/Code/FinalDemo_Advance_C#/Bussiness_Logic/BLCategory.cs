@@ -11,8 +11,14 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
     /// </summary>
     public class BLCategory
     {
+        #region Private member
+
         // Connection string for accessing the database
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Retrieves all categories from the database.
@@ -48,7 +54,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error fetching categories: " + ex.Message);
+                    throw new Exception("Error fetching categories: " + ex.Message);
                 }
             }
 
@@ -80,8 +86,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error adding category: " + ex.Message);
-                    return false;
+                    throw new Exception($"Error in Inserting Category : {ex.Message}");
                 }
             }
         }
@@ -97,9 +102,12 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             // Establishing a connection to the database
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                string query = "UPDATE CAT01 " +
-                                "SET T01F02 = @NewCategoryName " +
-                                "WHERE T01F01 = @CategoryID";
+                string query = "UPDATE " +
+                                    "CAT01 " +
+                                "SET " +
+                                    "T01F02 = @NewCategoryName " +
+                                "WHERE " +
+                                    "T01F01 = @CategoryID";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@NewCategoryName", objCAT01.T01F02);
                 command.Parameters.AddWithValue("@CategoryID", categoryId);
@@ -112,8 +120,8 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error updating category: " + ex.Message);
-                    return false;
+                    throw new Exception("Error updating category: " + ex.Message);
+                   
                 }
             }
         }
@@ -144,10 +152,11 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error deleting category: " + ex.Message);
-                    return false;
+                   throw new Exception("Error deleting category: " + ex.Message);
                 }
             }
         }
+
+        #endregion
     }
 }

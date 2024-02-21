@@ -12,8 +12,14 @@ namespace FinalDemo_Advance_C_.Controllers
     /// </summary>
     public class CLTokenGeneratorController : ApiController
     {
+        #region Private member
+
         // Instance of the user business logic class
         private BLUser _objBLUser = new BLUser();
+
+        #endregion
+
+        #region Public Method
 
         /// <summary>
         /// Generates an authentication token for the specified user credentials.
@@ -38,5 +44,7 @@ namespace FinalDemo_Advance_C_.Controllers
             }
             return BadRequest("Enter valid user details."); // Returns a bad request response for invalid user details
         }
+
+        #endregion
     }
 }

@@ -11,7 +11,13 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
     /// </summary>
     public class BLProduct
     {
+        #region Private member
+
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        #endregion
+
+        #region Public methods
 
         /// <summary>
         /// Retrieves all products from the database.
@@ -37,26 +43,34 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                                     "PRD01";
                 MySqlCommand command = new MySqlCommand(query, connection);
 
-                connection.Open();
-                MySqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    PRD01 product = new PRD01
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        D01F01 = Convert.ToInt32(reader["ProductID"]),
-                        D01F02 = Convert.ToString(reader["ProductName"]),
-                        D01F03 = Convert.ToInt32(reader["CategoryID"]),
-                        D01F04 = Convert.ToDecimal(reader["UnitPrice"]),
-                        D01F05 = Convert.ToInt32(reader["SupplierID"]),
-                        D01F06 = Convert.ToString(reader["Description"]),
-                        D01F07 = Convert.ToDateTime(reader["DateAdded"]),
-                        D01F08 = Convert.ToString(reader["Brand"]),
-                        D01F09 = Convert.ToDateTime(reader["DateRemoved"]),
-                        D01F10 = Convert.ToInt32(reader["Count"])
-                    };
-                    products.Add(product);
+                        PRD01 product = new PRD01
+                        {
+                            D01F01 = Convert.ToInt32(reader["ProductID"]),
+                            D01F02 = Convert.ToString(reader["ProductName"]),
+                            D01F03 = Convert.ToInt32(reader["CategoryID"]),
+                            D01F04 = Convert.ToDecimal(reader["UnitPrice"]),
+                            D01F05 = Convert.ToInt32(reader["SupplierID"]),
+                            D01F06 = Convert.ToString(reader["Description"]),
+                            D01F07 = Convert.ToDateTime(reader["DateAdded"]),
+                            D01F08 = Convert.ToString(reader["Brand"]),
+                            D01F09 = Convert.ToDateTime(reader["DateRemoved"]),
+                            D01F10 = Convert.ToInt32(reader["Count"])
+                        };
+                        products.Add(product);
+                    }
                 }
+                catch(Exception ex)
+                {
+                    throw new Exception("Error fetching products: " + ex.Message);
+                }
+                
             }
             return products;
         }
@@ -102,9 +116,17 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 command.Parameters.AddWithValue("@DateRemoved", objPRD01.D01F09);
                 command.Parameters.AddWithValue("@Count", objPRD01.D01F10);
 
-                connection.Open();
-                int rowsAffected = command.ExecuteNonQuery();
-                return rowsAffected > 0;
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch(Exception ex)
+                {
+                    throw new Exception($"Error in Inserting Product : {ex.Message}");
+                }
+               
             }
         }
 
@@ -143,9 +165,18 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 command.Parameters.AddWithValue("@DateRemoved", objPRD01.D01F09);
                 command.Parameters.AddWithValue("@Count", objPRD01.D01F10);
 
-                connection.Open();
-                int rowsAffected = command.ExecuteNonQuery();
-                return rowsAffected > 0;
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error updating product: " + ex.Message);
+
+                }
+
             }
         }
 
@@ -166,9 +197,17 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ProductID", productId);
 
-                connection.Open();
-                int rowsAffected = command.ExecuteNonQuery();
-                return rowsAffected > 0;
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error deleting product: " + ex.Message);
+                }
+
             }
         }
 
@@ -197,13 +236,13 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                     int rowsAffected = command.ExecuteNonQuery();
                     return rowsAffected > 0;
                 }
-                catch (MySqlException ex)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Error updating product brand: " + ex.Message);
-                    return false;
+                    throw new Exception("Error updating product brand: " + ex.Message);    
                 }
             }
         }
 
+        #endregion
     }
 }

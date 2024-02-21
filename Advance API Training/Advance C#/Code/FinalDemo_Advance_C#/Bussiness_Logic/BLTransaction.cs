@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
+using System.Linq;
 
 namespace FinalDemo_Advance_C_.Bussiness_Logic
 {
@@ -13,14 +14,20 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
     /// </summary>
     public class BLTransaction
     {
+        #region Private member
+
         // Connection string to the database
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
         // App data folder path
-        static string appDataFolderPath = AppDomain.CurrentDomain.GetData("DataDirectory").ToString();
+        private static string appDataFolderPath = AppDomain.CurrentDomain.GetData("DataDirectory").ToString();
 
         // Path to save the JSON file
-        string filePath = Path.Combine(appDataFolderPath, "transactions.json");
+        private string filePath = Path.Combine(appDataFolderPath, "transactions.json");
+
+        #endregion
+
+        #region Public methods
 
         /// <summary>
         /// Retrieves all transactions from the database.
@@ -50,7 +57,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                                 A01F01 = reader.GetInt32("A01F01"), // Setting transaction ID
                                 A01F02 = reader.GetInt32("A01F02"), // Setting product ID
                                 ProductName = reader.GetString("D01F02"), // Setting product name
-                                A01F03 = (TransactionType)Enum.Parse(typeof(TransactionType), reader.GetString("A01F03")), // Setting transaction type
+                                A01F03 = (enmTransactionType)Enum.Parse(typeof(enmTransactionType), reader.GetString("A01F03")), // Setting transaction type
                                 A01F04 = reader.GetDateTime("A01F04"), // Setting transaction date
                                 A01F05 = reader.GetInt32("A01F05"), // Setting quantity
                                 A01F06 = reader.GetDecimal("A01F06") // Setting net price
@@ -61,7 +68,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error fetching transactions: " + ex.Message);
+                    throw new Exception("Error fetching transactions: " + ex.Message);
                 }
             }
 
@@ -123,8 +130,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("Error adding transaction: " + ex.Message);
-                        return false;
+                        throw new Exception("Error adding transaction: " + ex.Message);
                     }
                 }
             }
@@ -144,6 +150,44 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             // Write JSON to file
             File.WriteAllText(filePath, json);
         }
+
+
+        public void GenerateTransactionJsonFile(string userRole)
+        {
+            List<TRA01> transactions = GetAllTransactions();
+
+            // Filter transactions based on user role
+            switch (userRole.ToLower())
+            {
+                case "admin":
+                    // Include all transactions
+                    break;
+                case "seller":
+                    // Include only sale transactions
+                    transactions = transactions.Where(t => t.A01F03 == enmTransactionType.Sale).ToList();
+                    break;
+                case "supplier":
+                    // Include only purchase transactions
+                    transactions = transactions.Where(t => t.A01F03 == enmTransactionType.Purchase).ToList();
+                    break;
+                default:
+                    throw new ArgumentException("Invalid user role");
+            }
+
+            // Serialize transactions to JSON
+            string json = JsonConvert.SerializeObject(transactions, Formatting.Indented);
+
+            // Determine file path based on user role
+            string fileName = $"{userRole.ToLower()}_transactions.json";
+            string filePath = Path.Combine(appDataFolderPath, fileName);
+
+            // Write JSON to file
+            File.WriteAllText(filePath, json);
+        }
+
+        #endregion
+
+        #region Private Methods
 
         /// <summary>
         /// Retrieves the unit price of a product from the database.
@@ -174,7 +218,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 catch (Exception ex)
                 {
                     // Handling any exceptions
-                    Console.WriteLine("Error retrieving unit price: " + ex.Message);
+                    throw new Exception("Error retrieving unit price: " + ex.Message);
                 }
             }
 
@@ -204,10 +248,10 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
         /// <param name="transactionType">The type of transaction (Sale or Purchase).</param>
         /// <param name="transaction">The MySqlTransaction object.</param>
         /// <returns>True if the update was successful, otherwise false.</returns>
-        private bool UpdateProductQuantity(MySqlConnection connection, int productId, int quantity, TransactionType transactionType, MySqlTransaction transaction)
+        private bool UpdateProductQuantity(MySqlConnection connection, int productId, int quantity, enmTransactionType transactionType, MySqlTransaction transaction)
         {
             string updateQuery = "";
-            if (transactionType == TransactionType.Sale)
+            if (transactionType == enmTransactionType.Sale)
             {
                 // For sale transactions, decrease the product quantity
                 updateQuery = "UPDATE " +
@@ -217,7 +261,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                              "WHERE " +
                                 "D01F01 = @ProductId AND D01F10 >= @Quantity";
             }
-            else if (transactionType == TransactionType.Purchase)
+            else if (transactionType == enmTransactionType.Purchase)
             {
                 // For purchase transactions, increase the product quantity
                 updateQuery = "UPDATE " +
@@ -248,10 +292,12 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error updating product quantity: " + ex.Message);
                 transaction.Rollback(); // Rollback the transaction if an error occurs
-                return false;
+                throw new Exception("Error updating product quantity: " + ex.Message);
             }
         }
+
+        #endregion
     }
+
 }

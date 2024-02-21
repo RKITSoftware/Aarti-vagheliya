@@ -5,6 +5,8 @@
     /// </summary>
     public class CAT01
     {
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the CategoryID.
         /// </summary>
@@ -14,5 +16,7 @@
         /// Gets or sets the CategoryName.
         /// </summary>
         public string T01F02 { get; set; } //CategoryName
+
+        #endregion
     }
 }

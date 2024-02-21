@@ -15,8 +15,14 @@ namespace FinalDemo_Advance_C_.Authentication
     /// </summary>
     public class BasicAuthentication : ActionFilterAttribute
     {
+        #region Private Member
+
         // Instance of BLUser class for user authentication
         private BLUser _objBLUser = new BLUser();
+
+        #endregion
+
+        #region public method
 
         /// <summary>
         /// Method executed before the action method is invoked.
@@ -69,5 +75,7 @@ namespace FinalDemo_Advance_C_.Authentication
                 base.OnActionExecuting(actionContext); // Calling base implementation
             }
         }
+
+        #endregion
     }
 }

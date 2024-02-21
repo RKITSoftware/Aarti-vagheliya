@@ -12,8 +12,14 @@ namespace FinalDemo_Advance_C_.Controllers
     [RoutePrefix("api/Product")]
     public class CLProductController : ApiController
     {
+        #region Private Member 
+
         // Instance of the product business logic class
         private BLProduct _objBLProduct;
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Retrieves all products.
@@ -123,5 +129,7 @@ namespace FinalDemo_Advance_C_.Controllers
                 return InternalServerError();
             }
         }
+
+        #endregion
     }
 }

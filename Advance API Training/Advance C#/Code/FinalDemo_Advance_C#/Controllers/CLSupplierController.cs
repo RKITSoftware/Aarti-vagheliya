@@ -1,6 +1,7 @@
 ﻿using FinalDemo_Advance_C_.Authentication;
 using FinalDemo_Advance_C_.Bussiness_Logic;
 using FinalDemo_Advance_C_.Models;
+using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -12,8 +13,16 @@ namespace FinalDemo_Advance_C_.Controllers
     [RoutePrefix("api/suppliers")]
     public class CLSupplierController : ApiController
     {
+        #region Private Member
+
         // Instance of the supplier business logic class
         private readonly BLSupplier _objBLSupplier = new BLSupplier();
+
+        private readonly BLTransaction _objBLTransaction = new BLTransaction();
+
+        #endregion
+
+        #region Public methods
 
         /// <summary>
         /// Retrieves all suppliers.
@@ -83,6 +92,27 @@ namespace FinalDemo_Advance_C_.Controllers
             else
                 return InternalServerError();
         }
+
+        [HttpGet]
+        [Route("GenerateTransactionsFile")]
+        [BearerAuthentication]
+        [Authorize(Roles = ("Supplier"))]
+        public IHttpActionResult GenerateTransactionsFile()
+        {
+            try
+            {
+                // Pass the user role to the GenerateTransactionJsonFile method
+                _objBLTransaction.GenerateTransactionJsonFile("supplier");
+                return Ok("Supplier transactions JSON file generated successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                return InternalServerError(ex);
+            }
+        }
+
+        #endregion
     }
 }
 

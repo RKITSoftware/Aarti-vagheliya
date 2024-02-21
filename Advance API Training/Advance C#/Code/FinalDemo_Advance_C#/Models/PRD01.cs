@@ -7,6 +7,8 @@ namespace FinalDemo_Advance_C_.Models
     /// </summary>
     public class PRD01
     {
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the ProductID.
         /// </summary>
@@ -56,5 +58,7 @@ namespace FinalDemo_Advance_C_.Models
         /// Gets or sets the product count
         /// </summary>
         public int D01F10 { get; set; } //Count
+
+        #endregion
     }
 }

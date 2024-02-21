@@ -5,6 +5,8 @@
     /// </summary>
     public class SUP01
     {
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the SupplierID.
         /// </summary>
@@ -24,5 +26,7 @@
         /// Gets or sets the Email.
         /// </summary>
         public string P01F04 { get; set; } //Email
+
+        #endregion
     }
 }

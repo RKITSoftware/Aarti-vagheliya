@@ -3,6 +3,9 @@ using FinalDemo_Advance_C_.Bussiness_Logic;
 using FinalDemo_Advance_C_.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net.Http;
+using System.Net;
 using System.Web.Http;
 
 namespace FinalDemo_Advance_C_.Controllers
@@ -13,8 +16,16 @@ namespace FinalDemo_Advance_C_.Controllers
     [RoutePrefix("api/transactions")]
     public class CLTransactionController : ApiController
     {
+        #region Private Member
+
         // Instance of the transaction business logic class
         private readonly BLTransaction _objBLTransaction = new BLTransaction();
+
+        private readonly string _transactionFilePath = @"F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\App_Data\transactions.json";
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Retrieves all transactions.
@@ -77,5 +88,28 @@ namespace FinalDemo_Advance_C_.Controllers
                 return InternalServerError(ex); // Returns an internal server error response with the exception
             }
         }
+
+        [HttpGet]
+        [Route("Download")]
+        [BearerAuthentication]
+        [Authorize(Roles = ("Admin"))]
+        public IHttpActionResult DownloadTransactionJsonFile()
+        {
+
+            if (!File.Exists(_transactionFilePath))
+                return NotFound();
+
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+            response.Content = new StreamContent(new FileStream(_transactionFilePath, FileMode.Open));
+            response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+            response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+            {
+                FileName = Path.GetFileName(_transactionFilePath)
+            };
+
+            return ResponseMessage(response);
+        }
+
+        #endregion
     }
 }

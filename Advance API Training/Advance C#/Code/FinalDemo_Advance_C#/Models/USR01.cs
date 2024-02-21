@@ -2,10 +2,12 @@
 
 namespace FinalDemo_Advance_C_.Models
 {
+    #region Enum UserRole
+
     /// <summary>
     /// Represents the roles that can be assigned to a user.
     /// </summary>
-    public enum UserRole
+    public enum enmUserRole
     {
         Admin,
         Seller,
@@ -14,12 +16,16 @@ namespace FinalDemo_Advance_C_.Models
 
     }
 
+    #endregion
+
     /// <summary>
     /// Represents a user entity with properties for UserID, Username, Password, Email, and Role.
     /// </summary>
     [Alias("USR01")]
     public class USR01
     {
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the unique identifier for the user.
         /// </summary>
@@ -44,8 +50,8 @@ namespace FinalDemo_Advance_C_.Models
         /// <summary>
         /// Gets or sets the role of the user.
         /// </summary>
-        public UserRole R01F05 { get; set; } // Use enum type for roles
+        public enmUserRole R01F05 { get; set; } // Use enum type for roles
 
-        
+        #endregion
     }
 }

@@ -2,10 +2,12 @@
 
 namespace FinalDemo_Advance_C_.Models
 {
+    #region Enum TransactionType
+
     /// <summary>
     /// Represents the types of transactions.
     /// </summary>
-    public enum TransactionType
+    public enum enmTransactionType
     {
         //[EnumMember(Value = "Purchase")]
         //Purchase,
@@ -24,11 +26,15 @@ namespace FinalDemo_Advance_C_.Models
         Sale = 1,
     }
 
+    #endregion
+
     /// <summary>
     /// Represents a transaction entity with properties for TransactionID, ProductID, ProductName, TransactionType, TransactionDate, Quantity, and TotalAmount.
     /// </summary>
     public class TRA01
     {
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the TransactionID.
         /// </summary>
@@ -47,7 +53,7 @@ namespace FinalDemo_Advance_C_.Models
         /// <summary>
         /// Gets or sets the TransactionType.
         /// </summary>
-        public TransactionType A01F03 { get; set; }
+        public enmTransactionType A01F03 { get; set; }
 
         /// <summary>
         /// Gets or sets the TransactionDate.
@@ -64,5 +70,6 @@ namespace FinalDemo_Advance_C_.Models
         /// </summary>
         public decimal A01F06 { get; set; }
 
+        #endregion
     }
 }

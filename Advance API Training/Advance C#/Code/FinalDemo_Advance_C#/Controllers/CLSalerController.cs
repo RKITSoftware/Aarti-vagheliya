@@ -12,8 +12,14 @@ namespace FinalDemo_Advance_C_.Controllers
     [RoutePrefix("api/salers")]
     public class CLSalerController : ApiController
     {
+        #region Private Member
+
         // Instance of the saler business logic class
         private readonly BLSaler _objBLSaler = new BLSaler();
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Retrieves all salers.
@@ -83,5 +89,7 @@ namespace FinalDemo_Advance_C_.Controllers
             else
                 return InternalServerError(); // Returns an internal server error response
         }
+
+        #endregion
     }
 }

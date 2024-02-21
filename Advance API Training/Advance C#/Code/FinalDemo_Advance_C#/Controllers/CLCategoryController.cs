@@ -12,8 +12,14 @@ namespace FinalDemo_Advance_C_.Controllers
     [RoutePrefix("api/CLCategory")]
     public class CLCategoryController : ApiController
     {
+        #region Private member
+
         // Instance of the category business logic class
         private BLCategory _objBLCategory;
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Retrieves all categories.
@@ -98,5 +104,7 @@ namespace FinalDemo_Advance_C_.Controllers
                 // Returns a not found response
                 return NotFound();
         }
+
+        #endregion
     }
 }

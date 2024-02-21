@@ -5,6 +5,8 @@
     /// </summary>
     public class SLR01
     {
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the SalerId.
         /// </summary>
@@ -29,5 +31,7 @@
         /// Gets or sets the City.
         /// </summary>
         public string R01F05 { get; set; } // City
+
+        #endregion
     }
 }

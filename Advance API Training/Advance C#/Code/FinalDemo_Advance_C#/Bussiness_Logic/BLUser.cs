@@ -13,11 +13,17 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
     /// </summary>
     public class BLUser
     {
+        #region Private Member
+
         // Instance of IDbConnectionFactory for database connection
         private readonly IDbConnectionFactory _dbFactory;
 
         // Connection string to the database
         private static readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Constructor for BLUser class.
@@ -27,6 +33,10 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             _dbFactory = new OrmLiteConnectionFactory(_connectionString, MySqlDialect.Provider); // Initializing IDbConnectionFactory
             CreateIfNotExists(); // Creating the table if it doesn't exist
         }
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Method to configure SQL dialect.
@@ -173,6 +183,8 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 return "Success!";
             }
         }
+
+        #endregion
 
         #endregion
     }

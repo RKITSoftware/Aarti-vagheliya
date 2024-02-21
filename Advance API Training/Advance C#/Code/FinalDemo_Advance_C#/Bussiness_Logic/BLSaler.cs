@@ -11,7 +11,13 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
     /// </summary>
     public class BLSaler
     {
+        #region Private member
+
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+        #endregion
+
+        #region Public methods 
 
         /// <summary>
         /// Adds a new saler to the database.
@@ -46,8 +52,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error adding saler: " + ex.Message);
-                    return false;
+                   throw new Exception("Error adding saler: " + ex.Message);
                 }
             }
         }
@@ -93,7 +98,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error fetching salers: " + ex.Message);
+                    throw new Exception("Error fetching salers: " + ex.Message);
                 }
             }
 
@@ -134,8 +139,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error updating saler: " + ex.Message);
-                    return false;
+                    throw new Exception("Error updating saler: " + ex.Message);
                 }
             }
         }
@@ -165,10 +169,11 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error deleting saler: " + ex.Message);
-                    return false;
+                    throw new Exception("Error deleting saler: " + ex.Message);
                 }
             }
         }
+
+        #endregion
     }
 }

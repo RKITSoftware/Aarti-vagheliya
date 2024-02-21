@@ -195,6 +195,7 @@
     <Compile Include="Authentication\BearerAuthentication.cs" />
     <Compile Include="Bussiness_Logic\BLCategory.cs" />
     <Compile Include="Bussiness_Logic\BLCryptography.cs" />
+    <Compile Include="Bussiness_Logic\BLFileLogger.cs" />
     <Compile Include="Bussiness_Logic\BLProduct.cs" />
     <Compile Include="Bussiness_Logic\BLSaler.cs" />
     <Compile Include="Bussiness_Logic\BLSupplier.cs" />
@@ -208,6 +209,7 @@
     <Compile Include="Controllers\CLTokenGeneratorController.cs" />
     <Compile Include="Controllers\CLTransactionController.cs" />
     <Compile Include="Controllers\CLUserController.cs" />
+    <Compile Include="Exception_Filter\GlobalExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -246,7 +248,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59810</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44358/</IISUrl>
+          <IISUrl>https://localhost:44320/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

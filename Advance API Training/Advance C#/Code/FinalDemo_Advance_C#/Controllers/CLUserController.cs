@@ -12,8 +12,14 @@ namespace FinalDemo_Advance_C_.Controllers
     [RoutePrefix("api/user")]
     public class CLUserController : ApiController
     {
+        #region Private member
+
         // Instance of the user business logic class
         private readonly BLUser _objBLUser;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Constructor to initialize BLUser instance
@@ -23,6 +29,9 @@ namespace FinalDemo_Advance_C_.Controllers
             _objBLUser = new BLUser();
         }
 
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Gets all users
@@ -37,7 +46,6 @@ namespace FinalDemo_Advance_C_.Controllers
             List<USR01> users = _objBLUser.GetAllUsers(); // Retrieves all users from the database
             return Ok(users); // Returns the list of users
         }
-
 
         /// <summary>
         /// Adds a new user
@@ -85,5 +93,7 @@ namespace FinalDemo_Advance_C_.Controllers
             string result = _objBLUser.Delete(id);
             return Ok(result);
         }
+
+        #endregion
     }
 }

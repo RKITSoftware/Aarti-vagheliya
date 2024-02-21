@@ -20,8 +20,14 @@ namespace FinalDemo_Advance_C_.Authentication
     /// </summary>
     public class BearerAuthentication : AuthorizationFilterAttribute
     {
+        #region Private member
+
         // Instance of BLUser class for user authentication
         private BLUser _objBLUser = new BLUser();
+
+        #endregion
+
+        #region public method
 
         /// <summary>
         /// Method called when authorization is requested for the action method.
@@ -87,5 +93,7 @@ namespace FinalDemo_Advance_C_.Authentication
                 }
             }
         }
+
+        #endregion
     }
 }
