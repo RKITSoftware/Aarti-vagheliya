@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 
 namespace FinalDemo
 {
@@ -12,10 +10,27 @@ namespace FinalDemo
         #region Public Properties 
 
         // Properties with private setters for encapsulation
+
+        /// <summary>
+        /// Gets the ID of the product.
+        /// </summary>
         public int ProductId { get; private set; }
+
+        /// <summary>
+        /// Gets the name of the product.
+        /// </summary>
         public string ProductName { get; private set; }
+
+        /// <summary>
+        /// Gets the price of the product.
+        /// </summary>
         public decimal Price { get; private set; }
+
+        /// <summary>
+        /// Gets the quantity of the product in stock.
+        /// </summary>
         public int QuantityInStock { get; private set; }
+
         #endregion
 
         #region Constructor
@@ -68,7 +83,7 @@ namespace FinalDemo
         public void SetPrice(decimal newPrice)
         {
             // Basic validation: ensure the new price is non-negative
-            if (newPrice >= 0)
+            if (newPrice > 0)
             {
                 Price = newPrice;
             }
@@ -100,8 +115,6 @@ namespace FinalDemo
 
         #endregion
 
-
-
         #region Add Product
 
         /// <summary>
@@ -126,7 +139,7 @@ namespace FinalDemo
                 int quantityInStock = Convert.ToInt32(Console.ReadLine());
 
                 // Validate the input
-                if (productId <= 0 || price < 0 || quantityInStock < 0)
+                if (productId <= 0 || price <= 0 || quantityInStock < 0)
                 {
                     throw new ArgumentException("Invalid input. Please provide valid values for Product ID, Price, and Quantity in Stock.");
                 }
@@ -134,8 +147,6 @@ namespace FinalDemo
                 // Create a new product and add it to the inventory
                 Product newProduct = new Product(productId, productName, price, quantityInStock);
                 inventory.AddProduct(newProduct);
-
-                //Console.WriteLine("Product added to inventory.");
             }
             catch (FormatException)
             {
@@ -183,8 +194,6 @@ namespace FinalDemo
 
                 // Update the product in the inventory
                 inventory.UpdateProduct(updatedProduct);
-
-                //Console.WriteLine("Product updated successfully.");
             }
             catch (FormatException)
             {
@@ -222,7 +231,6 @@ namespace FinalDemo
                 // Remove the product from the inventory
                 inventory.RemoveProduct(productId);
 
-                //Console.WriteLine("Product removed from inventory.");
             }
             catch (FormatException)
             {

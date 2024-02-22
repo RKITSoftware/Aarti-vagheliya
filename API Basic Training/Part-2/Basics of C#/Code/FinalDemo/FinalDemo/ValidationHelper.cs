@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 
@@ -20,7 +19,7 @@ namespace FinalDemo
         public static bool IsProductIdValid(int productId, List<Product> existingProducts)
         {
             // Check if the product ID is greater than 0
-            if (productId <= 0)
+            if (productId < 0)
             {
                 return false;
             }
@@ -51,7 +50,7 @@ namespace FinalDemo
         /// <returns>True if the price is valid; otherwise, false.</returns>
         public static bool IsPriceValid(decimal price)
         {
-            return price >= 0;
+            return price > 0;
         }
         #endregion
 
@@ -63,7 +62,7 @@ namespace FinalDemo
         /// <returns>True if the quantity in stock is valid; otherwise, false.</returns>
         public static bool IsQuantityInStockValid(int quantityInStock)
         {
-            return quantityInStock >= 0;
+            return quantityInStock > 0;
         }
         #endregion
 
@@ -77,7 +76,7 @@ namespace FinalDemo
         public static bool IsCategoryIdValid(int categoryId, List<Category> existingCategories)
         {
             // Check if the category ID is greater than 0
-            if (categoryId <= 0)
+            if (categoryId < 0)
             {
                 return false;
             }

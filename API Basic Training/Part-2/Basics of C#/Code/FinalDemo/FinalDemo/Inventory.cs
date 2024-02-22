@@ -10,12 +10,16 @@ namespace FinalDemo
     /// </summary>
     public class Inventory
     {
+        #region Private Fields
+
         //Category and Product list objects
         private List<Product> _products;
         private List<Category> _categories;
-       
+
+        #endregion
 
         #region Constructor
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Inventory"/> class.
         /// </summary>
@@ -78,8 +82,6 @@ namespace FinalDemo
                 {
                     throw new ArgumentNullException(nameof(updatedProduct), "Updated product cannot be null.");
                 }
-
-                /*ValidateProduct(updatedProduct); */// Validate product before updating
 
                 Product existingProduct = _products.Find(p => p.ProductId == updatedProduct.ProductId);
 
@@ -186,8 +188,6 @@ namespace FinalDemo
                     throw new ArgumentNullException(nameof(updatedCategory), "Updated category cannot be null.");
                 }
 
-                /*ValidateCategory(updatedCategory); */// Validate category before updating
-
                 Category existingCategory = _categories.Find(c => c.CategoryId == updatedCategory.CategoryId);
 
                 if (existingCategory != null)
@@ -263,7 +263,10 @@ namespace FinalDemo
             //loop for add data to the datatable
             foreach (Product product in _products)
             {
-                productTable.Rows.Add(product.ProductId, product.ProductName, product.Price, product.QuantityInStock);
+                productTable.Rows.Add(product.ProductId, 
+                                      product.ProductName, 
+                                      product.Price, 
+                                      product.QuantityInStock);
             }
 
             //call DisplayDataTable method to print the data
@@ -291,7 +294,8 @@ namespace FinalDemo
             //loop for add data to the datatable
             foreach (Category category in _categories)
             {
-                categoryTable.Rows.Add(category.CategoryId, category.CategoryName);
+                categoryTable.Rows.Add(category.CategoryId, 
+                                       category.CategoryName);
             }
 
             //call DisplayDataTable method to print the data
@@ -449,10 +453,5 @@ namespace FinalDemo
 
         #endregion
 
-       
-
     }
-
-
-
 }

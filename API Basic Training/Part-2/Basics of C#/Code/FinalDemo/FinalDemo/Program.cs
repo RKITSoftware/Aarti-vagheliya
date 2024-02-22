@@ -15,8 +15,6 @@ namespace FinalDemo
         /// <param name="args">The command-line arguments.</param>
         static void Main(string[] args)
         {
-            //Product product = new Product();
-            //Category category = new Category();
             Inventory inventory = new Inventory();
 
             while (true)

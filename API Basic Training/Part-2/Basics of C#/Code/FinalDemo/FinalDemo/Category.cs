@@ -10,9 +10,19 @@ namespace FinalDemo
     public class Category
     {
         #region Public Properties 
+
         // Properties with private setters for encapsulation
+
+        /// <summary>
+        /// Gets or sets the ID of the category.
+        /// </summary>
         public int CategoryId { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the name of the category.
+        /// </summary>
         public string CategoryName { get; private set; }
+
         #endregion
 
         #region Constructor
@@ -70,8 +80,6 @@ namespace FinalDemo
         }
         #endregion
 
-        #endregion
-
         #region Add Category
 
         /// <summary>
@@ -90,7 +98,7 @@ namespace FinalDemo
                 string categoryName = Console.ReadLine();
 
                 // Validate the input
-                if (categoryId <= 0)
+                if (categoryId < 0)
                 {
                     throw new ArgumentException("Invalid Category ID. Please provide a positive integer value.");
                 }
@@ -98,8 +106,6 @@ namespace FinalDemo
                 // Create a new category and add it to the inventory
                 Category newCategory = new Category(categoryId, categoryName);
                 inventory.AddCategory(newCategory);
-
-                //Console.WriteLine("Category added to inventory.");
             }
             catch (FormatException)
             {
@@ -141,8 +147,6 @@ namespace FinalDemo
 
                 // Update the category in the inventory
                 inventory.UpdateCategory(updatedCategory);
-
-                //Console.WriteLine("Category updated successfully.");
             }
             catch (FormatException)
             {
@@ -179,8 +183,6 @@ namespace FinalDemo
 
                 // Remove the category from the inventory
                 inventory.RemoveCategory(categoryId);
-
-                //Console.WriteLine("Category removed from inventory.");
             }
             catch (FormatException)
             {
@@ -195,6 +197,8 @@ namespace FinalDemo
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
         }
+
+        #endregion
 
         #endregion
     }
