@@ -33,11 +33,28 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The list of transactions.</returns>
         [HttpGet]
         [Route("GetAllTransactions")]
-        [BearerAuthentication]
-        [Authorize(Roles = ("Admin"))]
+        //[BearerAuthentication]
+        //[Authorize(Roles = ("Admin"))]
         public IHttpActionResult GetAllTransactions()
         {
             List<TRA01> transactions = _objBLTransaction.GetAllTransactions(); // Retrieves all transactions from the database
+            if (transactions != null) // Checks if transactions exist
+            {
+                return Ok(transactions); // Returns the list of transactions
+            }
+            else
+            {
+                return InternalServerError(); // Returns an internal server error response
+            }
+        }
+
+        [HttpGet]
+        [Route("GetTransactionBill")]
+        //[BearerAuthentication]
+        //[Authorize(Roles = ("Admin"))]
+        public IHttpActionResult GetTransactionBill()
+        {
+            dynamic transactions = _objBLTransaction.GetTransactionBill(); // Retrieves all transactions from the database
             if (transactions != null) // Checks if transactions exist
             {
                 return Ok(transactions); // Returns the list of transactions
@@ -55,11 +72,11 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>A response indicating the success of the operation.</returns>
         [HttpPost]
         [Route("InsertTransaction")]
-        [BearerAuthentication]
-        [Authorize(Roles = ("Seller,Admin,Supplier"))]
+        //[BearerAuthentication]
+        //[Authorize(Roles = ("Admin"))]
         public IHttpActionResult InsertTransaction(TRA01 transaction)
         {
-            bool success = _objBLTransaction.InsertTransaction(transaction); // Inserts the transaction into the database
+            bool success = _objBLTransaction.AddTransaction(transaction); // Inserts the transaction into the database
             if (success) // Checks if the transaction was inserted successfully
             {
                 return Ok("Transaction inserted successfully."); // Returns a success response
@@ -86,6 +103,25 @@ namespace FinalDemo_Advance_C_.Controllers
             catch (Exception ex)
             {
                 return InternalServerError(ex); // Returns an internal server error response with the exception
+            }
+        }
+
+        [HttpGet]
+        [Route("GenerateTransactionsFile")]
+        //[BearerAuthentication]
+        //[Authorize(Roles = ("Supplier"))]
+        public IHttpActionResult GenerateTransactionsFile(string billtype)
+        {
+            try
+            {
+                // Pass the user role to the GenerateTransactionJsonFile method
+                _objBLTransaction.GenerateTransactionJsonFile(billtype);
+                return Ok($"{billtype} transactions JSON file generated successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                return InternalServerError(ex);
             }
         }
 

@@ -10,10 +10,8 @@ namespace FinalDemo_Advance_C_.Models
     public enum enmUserRole
     {
         Admin,
-        Seller,
-        Supplier,
-        Customer
-
+        DEO,
+        Accountant
     }
 
     #endregion

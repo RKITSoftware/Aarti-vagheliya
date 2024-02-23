@@ -31,7 +31,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             // Establishing a connection to the database
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                string query = "SELECT T01F01, T01F02 FROM CAT01";
+                string query = "SELECT T01F01, T01F02 , T01F03 FROM CAT01";
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 try
@@ -46,7 +46,8 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                             CAT01 category = new CAT01
                             {
                                 T01F01 = reader.GetInt32("T01F01"),
-                                T01F02 = reader.GetString("T01F02")
+                                T01F02 = reader.GetString("T01F02"),
+                                T01F03 = reader.GetString("T01F03")
                             };
                             categories.Add(category); // Adding category to the list
                         }
@@ -72,11 +73,12 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
                 string query = "INSERT INTO CAT01 " +
-                                                "(T01F01, T01F02) " +
-                                          "VALUES (@CategoryID, @CategoryName)";
+                                                "(T01F01, T01F02, T01F03) " +
+                                          "VALUES (@CategoryID, @CategoryName, @Description)";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@CategoryID", objCAT01.T01F01);
                 command.Parameters.AddWithValue("@CategoryName", objCAT01.T01F02);
+                command.Parameters.AddWithValue("@Description", objCAT01.T01F03);
 
                 try
                 {
@@ -105,11 +107,13 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 string query = "UPDATE " +
                                     "CAT01 " +
                                 "SET " +
-                                    "T01F02 = @NewCategoryName " +
+                                    "T01F02 = @NewCategoryName, " +
+                                    "T01F03 = @Description " +
                                 "WHERE " +
                                     "T01F01 = @CategoryID";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@NewCategoryName", objCAT01.T01F02);
+                command.Parameters.AddWithValue("@Description", objCAT01.T01F03);
                 command.Parameters.AddWithValue("@CategoryID", categoryId);
 
                 try

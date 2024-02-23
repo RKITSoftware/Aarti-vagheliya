@@ -17,6 +17,11 @@
         /// </summary>
         public string T01F02 { get; set; } //CategoryName
 
+        /// <summary>
+        /// Gets or sets the description for the T01F03 property.
+        /// </summary>
+        public string T01F03 { get; set; } //Description
+
         #endregion
     }
 }

@@ -24,40 +24,21 @@ namespace FinalDemo_Advance_C_.Models
         /// </summary>
         public int? D01F03 { get; set; } // CategoryID
 
-        /// <summary>
-        /// Gets or sets the UnitPrice.
-        /// </summary>
-        public decimal? D01F04 { get; set; } // UnitPrice
-
-        /// <summary>
-        /// Gets or sets the SupplierID.
-        /// </summary>
-        public int? D01F05 { get; set; } // SupplierID
+        //public string CategoryName { get; set; } // CategoryName
 
         /// <summary>
         /// Gets or sets the Description.
         /// </summary>
-        public string D01F06 { get; set; } // Description
+        public string D01F04 { get; set; } // Description
 
         /// <summary>
-        /// Gets or sets the Date when the product was added.
+        /// Gets or sets the UnitPrice.
         /// </summary>
-        public DateTime? D01F07 { get; set; } // DateAdded
+        public decimal? D01F05 { get; set; } // PURCHASE_PRICE
 
-        /// <summary>
-        /// Gets or sets the Brand.
-        /// </summary>
-        public string D01F08 { get; set; } // Brand
+        public decimal? D01F06 { get; set; } // SELLING_PRICE
 
-        /// <summary>
-        /// Gets or sets the Date when the product was removed.
-        /// </summary>
-        public DateTime? D01F09 { get; set; } //DateRemoved
 
-        /// <summary>
-        /// Gets or sets the product count
-        /// </summary>
-        public int D01F10 { get; set; } //Count
 
         #endregion
     }

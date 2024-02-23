@@ -32,13 +32,9 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                                      "D01F01 AS ProductID, " +
                                      "D01F02 AS ProductName, " +
                                      "D01F03 AS CategoryID, " +
-                                     "D01F04 AS UnitPrice, " +
-                                     "D01F05 AS SupplierID, " +
-                                     "D01F06 AS Description, " +
-                                     "D01F07 AS DateAdded, " +
-                                     "D01F08 AS Brand, " +
-                                     "D01F09 AS DateRemoved, " +
-                                     "D01F10 AS Count " +
+                                     "D01F04 AS Description, " +
+                                     "D01F05 AS PurchasePrice, " +
+                                     "D01F06 AS SellingPrice " +   
                                "FROM " +
                                     "PRD01";
                 MySqlCommand command = new MySqlCommand(query, connection);
@@ -55,13 +51,9 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                             D01F01 = Convert.ToInt32(reader["ProductID"]),
                             D01F02 = Convert.ToString(reader["ProductName"]),
                             D01F03 = Convert.ToInt32(reader["CategoryID"]),
-                            D01F04 = Convert.ToDecimal(reader["UnitPrice"]),
-                            D01F05 = Convert.ToInt32(reader["SupplierID"]),
-                            D01F06 = Convert.ToString(reader["Description"]),
-                            D01F07 = Convert.ToDateTime(reader["DateAdded"]),
-                            D01F08 = Convert.ToString(reader["Brand"]),
-                            D01F09 = Convert.ToDateTime(reader["DateRemoved"]),
-                            D01F10 = Convert.ToInt32(reader["Count"])
+                            D01F04 = Convert.ToString(reader["Description"]),
+                            D01F05 = Convert.ToDecimal(reader["PurchasePrice"]),
+                            D01F06 = Convert.ToDecimal(reader["SellingPrice"])
                         };
                         products.Add(product);
                     }
@@ -90,31 +82,19 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                                             "D01F03, " +
                                             "D01F04, " +
                                             "D01F05, " +
-                                            "D01F06, " +
-                                            "D01F07, " +
-                                            "D01F08, " +
-                                            "D01F09, " +
-                                            "D01F10) " +
+                                            "D01F06) " +
                                     "VALUES " +
                                             "(@ProductName, " +
                                             "@CategoryID, " +
-                                            "@UnitPrice, " +
-                                            "@SupplierID, " +
                                             "@Description, " +
-                                            "@DateAdded, " +
-                                            "@Brand, " +
-                                            "@DateRemoved, " +
-                                            "@Count)";
+                                            "@PurchasePrice, " +
+                                            "@SellingPrice )";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ProductName", objPRD01.D01F02);
                 command.Parameters.AddWithValue("@CategoryID", objPRD01.D01F03);
-                command.Parameters.AddWithValue("@UnitPrice", objPRD01.D01F04);
-                command.Parameters.AddWithValue("@SupplierID", objPRD01.D01F05);
-                command.Parameters.AddWithValue("@Description", objPRD01.D01F06);
-                command.Parameters.AddWithValue("@DateAdded", objPRD01.D01F07);
-                command.Parameters.AddWithValue("@Brand", objPRD01.D01F08);
-                command.Parameters.AddWithValue("@DateRemoved", objPRD01.D01F09);
-                command.Parameters.AddWithValue("@Count", objPRD01.D01F10);
+                command.Parameters.AddWithValue("@Description", objPRD01.D01F04);
+                command.Parameters.AddWithValue("@PurchasePrice", objPRD01.D01F05);
+                command.Parameters.AddWithValue("@SellingPrice", objPRD01.D01F06);
 
                 try
                 {
@@ -145,25 +125,17 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                                 "SET " +
                                    "D01F02 = @ProductName, " +
                                    "D01F03 = @CategoryID, " +
-                                   "D01F04 = @UnitPrice, " +
-                                   "D01F05 = @SupplierID, " +
-                                   "D01F06 = @Description, " +
-                                   "D01F07 = @DateAdded, " +
-                                   "D01F08 = @Brand, " +
-                                   "D01F09 = @DateRemoved, " +
-                                   "D01F10 = @Count " +
+                                   "D01F04 = @Description, " +
+                                   "D01F05 = @PurchasePrice, " +
+                                   "D01F06 = @SellingPrice " +
                                "WHERE D01F01 = @ProductID";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ProductID", productId);
                 command.Parameters.AddWithValue("@ProductName", objPRD01.D01F02);
                 command.Parameters.AddWithValue("@CategoryID", objPRD01.D01F03);
-                command.Parameters.AddWithValue("@UnitPrice", objPRD01.D01F04);
-                command.Parameters.AddWithValue("@SupplierID", objPRD01.D01F05);
-                command.Parameters.AddWithValue("@Description", objPRD01.D01F06);
-                command.Parameters.AddWithValue("@DateAdded", objPRD01.D01F07);
-                command.Parameters.AddWithValue("@Brand", objPRD01.D01F08);
-                command.Parameters.AddWithValue("@DateRemoved", objPRD01.D01F09);
-                command.Parameters.AddWithValue("@Count", objPRD01.D01F10);
+                command.Parameters.AddWithValue("@Description", objPRD01.D01F04);
+                command.Parameters.AddWithValue("@PurchasePrice", objPRD01.D01F05);
+                command.Parameters.AddWithValue("@SellingPrice", objPRD01.D01F06);
 
                 try
                 {
@@ -217,7 +189,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
         /// <param name="productId">The ID of the product to update.</param>
         /// <param name="brand">The new brand name.</param>
         /// <returns>True if the product brand is successfully updated, otherwise false.</returns>
-        public bool UpdateProductBrand(int productId, string brand)
+        public bool UpdateProductCategory(int productId, string brand)
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {

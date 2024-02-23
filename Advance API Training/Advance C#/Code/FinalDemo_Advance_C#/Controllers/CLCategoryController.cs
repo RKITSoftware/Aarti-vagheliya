@@ -27,8 +27,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The list of categories.</returns>
         [HttpGet]
         [Route("GetAllCategories")]
-        [BearerAuthentication] // Performs bearer token authentication
-        [Authorize(Roles = ("Customer,Seller,Admin,Supplier"))]
+        //[BearerAuthentication] // Performs bearer token authentication
+        //[Authorize(Roles = ("Customer,Seller,Admin,Supplier"))]
         public IHttpActionResult GetAllCategories()
         {
             // Instantiates the category business logic class
@@ -51,8 +51,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpPost]
         [Route("AddCategory")]
-        [BearerAuthentication]
-        [Authorize(Roles = ("Seller,Admin"))]
+        //[BearerAuthentication]
+        //[Authorize(Roles = ("Seller,Admin"))]
         public IHttpActionResult AddCategory(CAT01 Category)
         {
             _objBLCategory = new BLCategory();
@@ -72,8 +72,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpPut]
         [Route("UpdateCategory")]
-        [BearerAuthentication]
-        [Authorize(Roles = ("Seller,Admin"))]
+        //[BearerAuthentication]
+        //[Authorize(Roles = ("Seller,Admin"))]
         public IHttpActionResult UpdateCategory(int categoryId, CAT01 Category)
         {
             // Instantiates the category business logic class
@@ -93,8 +93,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpDelete]
         [Route("DeleteCategory")]
-        [BearerAuthentication]
-        [Authorize(Roles = ("Seller,Admin"))]
+        //[BearerAuthentication]
+        //[Authorize(Roles = ("Seller,Admin"))]
         public IHttpActionResult DeleteCategory(int categoryId)
         {
             _objBLCategory = new BLCategory();

@@ -93,24 +93,24 @@ namespace FinalDemo_Advance_C_.Controllers
                 return InternalServerError();
         }
 
-        [HttpGet]
-        [Route("GenerateTransactionsFile")]
-        [BearerAuthentication]
-        [Authorize(Roles = ("Supplier"))]
-        public IHttpActionResult GenerateTransactionsFile()
-        {
-            try
-            {
-                // Pass the user role to the GenerateTransactionJsonFile method
-                _objBLTransaction.GenerateTransactionJsonFile("supplier");
-                return Ok("Supplier transactions JSON file generated successfully.");
-            }
-            catch (Exception ex)
-            {
-                // Handle exceptions
-                return InternalServerError(ex);
-            }
-        }
+        //[HttpGet]
+        //[Route("GenerateTransactionsFile")]
+        //[BearerAuthentication]
+        //[Authorize(Roles = ("Supplier"))]
+        //public IHttpActionResult GenerateTransactionsFile()
+        //{
+        //    try
+        //    {
+        //        // Pass the user role to the GenerateTransactionJsonFile method
+        //        _objBLTransaction.GenerateTransactionJsonFile("supplier");
+        //        return Ok("Supplier transactions JSON file generated successfully.");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Handle exceptions
+        //        return InternalServerError(ex);
+        //    }
+        //}
 
         #endregion
     }

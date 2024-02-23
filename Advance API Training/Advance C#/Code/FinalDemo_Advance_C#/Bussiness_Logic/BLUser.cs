@@ -88,8 +88,6 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
 
         }
 
-        #region Insert Method
-
         /// <summary>
         /// Inserts a new record into table USR01
         /// </summary>
@@ -114,10 +112,6 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 return "Success!";
             }
         }
-
-        #endregion
-
-        #region Update Method
 
         /// <summary>
         /// Updates a record in table USR01
@@ -151,10 +145,6 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             }
         }
 
-        #endregion
-
-        #region Delete Method
-
         /// <summary>
         /// Deletes a record from table USR01
         /// </summary>
@@ -183,8 +173,6 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 return "Success!";
             }
         }
-
-        #endregion
 
         #endregion
     }
