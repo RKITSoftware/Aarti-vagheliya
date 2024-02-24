@@ -1,83 +1,52 @@
 [
   {
-    "A01F01": 1,
-    "A01F02": 2,
-    "ProductName": "LED TV",
-    "A01F03": 0,
-    "A01F04": "2024-02-19T00:00:00",
-    "A01F05": 5,
-    "A01F06": 555.00
+    "TransactionID": 7,
+    "ProductName": "KitKat",
+    "TransactionDate": "2024-02-23T10:12:22",
+    "TransactionType": "Sale",
+    "PartyName": "Oreo",
+    "Quantity": 2,
+    "NetPrice": 50.00,
+    "Description": "string"
   },
   {
-    "A01F01": 2,
-    "A01F02": 1,
-    "ProductName": "Smartphone",
-    "A01F03": 1,
-    "A01F04": "2024-02-19T00:00:00",
-    "A01F05": 50,
-    "A01F06": 8552.00
+    "TransactionID": 8,
+    "ProductName": "KitKat",
+    "TransactionDate": "2024-02-23T10:32:46",
+    "TransactionType": "Sale",
+    "PartyName": "Oreo",
+    "Quantity": 5,
+    "NetPrice": 125.00,
+    "Description": "stringll"
   },
   {
-    "A01F01": 4,
-    "A01F02": 3,
-    "ProductName": "files",
-    "A01F03": 1,
-    "A01F04": "2024-02-20T00:00:00",
-    "A01F05": 5,
-    "A01F06": 250.00
+    "TransactionID": 10,
+    "ProductName": "KitKat",
+    "TransactionDate": "2024-02-23T11:09:38",
+    "TransactionType": "Purchase",
+    "PartyName": "Keshav Enterprise",
+    "Quantity": 2,
+    "NetPrice": 20.00,
+    "Description": "string"
   },
   {
-    "A01F01": 6,
-    "A01F02": 2,
-    "ProductName": "LED TV",
-    "A01F03": 0,
-    "A01F04": "2024-02-20T00:00:00",
-    "A01F05": 0,
-    "A01F06": 0.00
+    "TransactionID": 11,
+    "ProductName": "Cargo jeans",
+    "TransactionDate": "2024-02-24T07:36:56",
+    "TransactionType": "Purchase",
+    "PartyName": "Om Fashion",
+    "Quantity": 10,
+    "NetPrice": 50000.00,
+    "Description": "Purchase jeanse"
   },
   {
-    "A01F01": 8,
-    "A01F02": 3,
-    "ProductName": "files",
-    "A01F03": 1,
-    "A01F04": "2024-02-20T00:00:00",
-    "A01F05": 2,
-    "A01F06": 100.00
-  },
-  {
-    "A01F01": 9,
-    "A01F02": 3,
-    "ProductName": "files",
-    "A01F03": 1,
-    "A01F04": "2024-02-20T00:00:00",
-    "A01F05": 2,
-    "A01F06": 100.00
-  },
-  {
-    "A01F01": 10,
-    "A01F02": 3,
-    "ProductName": "files",
-    "A01F03": 0,
-    "A01F04": "2024-02-20T00:00:00",
-    "A01F05": 2,
-    "A01F06": 100.00
-  },
-  {
-    "A01F01": 11,
-    "A01F02": 2,
-    "ProductName": "LED TV",
-    "A01F03": 0,
-    "A01F04": "2024-02-20T00:00:00",
-    "A01F05": 2,
-    "A01F06": 1599.98
-  },
-  {
-    "A01F01": 12,
-    "A01F02": 2,
-    "ProductName": "LED TV",
-    "A01F03": 1,
-    "A01F04": "2024-02-20T00:00:00",
-    "A01F05": 2,
-    "A01F06": 1599.98
+    "TransactionID": 12,
+    "ProductName": "Chair",
+    "TransactionDate": "2024-02-24T07:36:56",
+    "TransactionType": "Sale",
+    "PartyName": "Royal Enterprise",
+    "Quantity": 10,
+    "NetPrice": 40000.00,
+    "Description": "Sale Chair"
   }
 ]

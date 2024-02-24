@@ -1,4 +1,5 @@
-﻿using FinalDemo_Advance_C_.Bussiness_Logic;
+﻿using FinalDemo_Advance_C_.Authentication;
+using FinalDemo_Advance_C_.Bussiness_Logic;
 using FinalDemo_Advance_C_.Models;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The list of stock entries.</returns>
         [HttpGet]
         [Route("GetAllStockEntries")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Seller,Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult GetAllStockEntries()
         {
             // Instantiates the stock business logic class
@@ -54,8 +55,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpPost]
         [Route("AddStockEntry")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Seller,Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult AddStockEntry(STK01 stockEntry)
         {
             _objBLStock = new BLStock();
@@ -75,8 +76,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpPut]
         [Route("UpdateStockEntry")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Seller,Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult UpdateStockEntry(int stockId, int quantity)
         {
             // Instantiates the stock business logic class
@@ -96,8 +97,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpDelete]
         [Route("DeleteStockEntry")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Seller,Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult DeleteStockEntry(int stockId)
         {
             _objBLStock = new BLStock();

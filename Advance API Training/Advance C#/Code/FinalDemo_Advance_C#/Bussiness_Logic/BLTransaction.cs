@@ -5,7 +5,6 @@ using ServiceStack;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.Common;
 using System.IO;
 using System.Linq;
 
@@ -26,6 +25,10 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
 
         // Path to save the JSON file
         private string filePath = Path.Combine(appDataFolderPath, "transactions.json");
+
+        // Path to save the JSON file
+        private string filePathBill = Path.Combine(appDataFolderPath, "Bill.json");
+
 
         #endregion
 
@@ -158,58 +161,11 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
         }
 
         /// <summary>
-        /// Updates an existing transaction in the database.
-        /// </summary>
-        /// <param name="transactionId">The ID of the transaction to update.</param>
-        /// <param name="transaction">The updated transaction data.</param>
-        /// <returns>True if the transaction is successfully updated, otherwise false.</returns>
-        public bool UpdateTransaction(int transactionId, TRA01 transaction)
-        {
-            using (var connection = new MySqlConnection(_connectionString))
-            {
-                string query = "UPDATE " +
-                               "TRA01 " +
-                               "SET " +
-                               "A01F02 = @ProductId, " +
-                               "A01F03 = @StockId, " +
-                               "A01F04 = @TransactionDate, " +
-                               "A01F05 = @TransactionType, " +
-                               "A01F06 = @ContactId, " +
-                               "A01F07 = @Quantity, " +
-                               "A01F08 = @NetPrice, " +
-                               "A01F09 = @Description " +
-                               "WHERE " +
-                               "A01F01 = @TransactionId";
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ProductId", transaction.A01F02);
-                command.Parameters.AddWithValue("@StockId", transaction.A01F03);
-                command.Parameters.AddWithValue("@TransactionDate", transaction.A01F04);
-                command.Parameters.AddWithValue("@TransactionType", (int)transaction.A01F05);
-                command.Parameters.AddWithValue("@ContactId", transaction.A01F06);
-                command.Parameters.AddWithValue("@Quantity", transaction.A01F07);
-                command.Parameters.AddWithValue("@NetPrice", transaction.A01F08);
-                command.Parameters.AddWithValue("@Description", transaction.A01F09);
-                command.Parameters.AddWithValue("@TransactionId", transactionId);
-
-                try
-                {
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-                    return rowsAffected > 0;
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Error updating transaction: " + ex.Message);
-                }
-            }
-        }
-
-        /// <summary>
         /// Generates a JSON file containing all transactions.
         /// </summary>
         public void GenerateTransactionJsonFile()
         {
-            List<TRA01> transactions = GetAllTransactions();
+            List<object> transactions = GetTransactionBill();
 
             // Serialize transactions to JSON
             string json = JsonConvert.SerializeObject(transactions, Formatting.Indented);
@@ -218,46 +174,18 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             File.WriteAllText(filePath, json);
         }
 
-        public void GenerateTransactionJsonFile(string userRole)
-        {
-            List<TRA01> transactions = GetAllTransactions();
-
-            // Filter transactions based on user role
-            switch (userRole.ToLower())
-            {
-                case "admin":
-                    // Include all transactions
-                    transactions.ToList();
-                    break;
-                case "seller":
-                    // Include only sale transactions
-                    transactions = transactions.Where(t => t.A01F05 == enmTransactionType.Sale).ToList();
-                    break;
-                case "supplier":
-                    // Include only purchase transactions
-                    transactions = transactions.Where(t => t.A01F05 == enmTransactionType.Purchase).ToList();
-                    break;
-                default:
-                    throw new ArgumentException("Invalid user role");
-            }
-
-            // Serialize transactions to JSON
-            string json = JsonConvert.SerializeObject(transactions, Formatting.Indented);
-
-            // Determine file path based on user role
-            string fileName = $"{userRole.ToLower()}_transactions.json";
-            string filePath = Path.Combine(appDataFolderPath, fileName);
-
-            // Write JSON to file
-            File.WriteAllText(filePath, json);
-        }
-
+        /// <summary>
+        /// Retrieves transaction data along with product and party details for generating a bill.
+        /// </summary>
+        /// <returns>A dynamic collection containing transaction details.</returns>
         public dynamic GetTransactionBill()
         {
             List<object> transaction = new List<object>();
 
+            // Establish database connection
             using (var connection = new MySqlConnection(_connectionString))
             {
+                // Define SQL query
                 string query = "SELECT " +
                                     "T.A01F01 AS TransactionID, " +
                                     "P.D01F02 AS ProductName, " +
@@ -269,21 +197,25 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                                     "T.A01F09 AS Description " +
                                 "FROM " +
                                      "TRA01 AS T " +
-                                 "JOIN PRD01 AS P ON T.A01F02 = P.D01F01 " + 
-                                 "JOIN CNT01 AS C ON T.A01F06 = C.T01F01";
+                                 "JOIN PRD01 AS P ON T.A01F02 = P.D01F01 " +
+                                 "JOIN CNT01 AS C ON T.A01F06 = C.T01F01 " +
+                                 "ORDER BY T.A01F04";
 
-
-                //Create Command
+                // Create MySqlCommand object
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 try
                 {
+                    // Open database connection
                     connection.Open();
-                    //Create a data reader and Execute the command
+
+                    // Execute SQL query and get data reader
                     MySqlDataReader dataReader = command.ExecuteReader();
 
+                    // Iterate through each row of the data reader
                     while (dataReader.Read())
                     {
+                        // Add transaction details to the list
                         transaction.Add(new
                         {
                             TransactionID = dataReader[0],
@@ -297,18 +229,93 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                         });
                     }
 
+                    // Close the data reader
                     dataReader.Close();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
+                    // Throw an exception if an error occurs
                     throw new Exception("Error Generate in bill: " + ex.Message);
                 }
-                    
-                
+
+                // Return the list of transactions
                 return transaction;
             }
-           
         }
+
+        /// <summary>
+        /// Retrieves transaction-wise bill data including product details, transaction type, quantity, stock, and total amount.
+        /// </summary>
+        /// <returns>A dynamic collection containing transaction-wise bill details.</returns>
+        public dynamic TransactionWiseBill()
+        {
+            List<object> transaction = new List<object>();
+
+            // Establish database connection
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                // Define SQL query
+                string query = @"SELECT 
+                                    D01F02 AS Product,
+                                    A01F05 AS Tr_Type,
+                                    A01F07 AS Quantity,
+                                    K01F03 AS Stock,
+                                    SUM(TRA01.A01F08) AS TotalAmount
+                                FROM 
+                                    TRA01
+                                JOIN 
+                                    PRD01 ON PRD01.D01F01 = TRA01.A01F02
+                                JOIN 
+                                    STK01 ON STK01.K01F02 = TRA01.A01F03  
+                                GROUP BY 
+                                    TRA01.A01F05,A01F02
+                                ";
+
+                // Create MySqlCommand object
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                try
+                {
+                    // Open database connection
+                    connection.Open();
+
+                    // Execute SQL query and get data reader
+                    MySqlDataReader dataReader = command.ExecuteReader();
+
+                    // Iterate through each row of the data reader
+                    while (dataReader.Read())
+                    {
+                        // Add transaction details to the list
+                        transaction.Add(new
+                        {
+                            Product = dataReader[0],
+                            Tr_Type = dataReader[1],
+                            Quantity = dataReader[2],
+                            Stock = dataReader[3],
+                            TotalAmount = dataReader[4]
+                        });
+                    }
+
+                    // Close the data reader
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    // Throw an exception if an error occurs
+                    throw new Exception("Error Generate in bill: " + ex.Message);
+                }
+
+                // Serialize transactions to JSON
+                string json = JsonConvert.SerializeObject(transaction, Formatting.Indented);
+
+                // Write JSON to file
+                File.WriteAllText(filePathBill, json);
+
+                // Return the list of transactions
+                return transaction;
+            }
+        }
+
 
         #endregion
 
@@ -432,61 +439,40 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
 
 }
 
-
-//#region Public methods
-
 ///// <summary>
-///// Retrieves all transactions from the database.
+///// Generates a JSON file containing transaction data based on the user's role.
 ///// </summary>
-///// <returns>A list of transactions.</returns>
-//public List<TRA01> GetAllTransactions()
+///// <param name="userRole">The role of the user.</param>
+//public void GenerateTransactionJsonFile(string userRole)
 //{
-//    List<TRA01> transactions = new List<TRA01>(); // List to store transactions
+//    List<TRA01> transactions = GetAllTransactions();
 
-//    using (MySqlConnection connection = new MySqlConnection(_connectionString)) // Creating a MySqlConnection object
+//    // Filter transactions based on user role
+//    switch (userRole.ToLower())
 //    {
-//        string query = @"SELECT T.A01F01, T.A01F02, T.A01F03, T.A01F04, T.A01F05, T.A01F06, 
-//                        P.D01F02 
-//                 FROM TRA01 AS T
-//                 JOIN PRD01 AS P ON T.A01F02 = P.D01F01"; // SQL query to retrieve transactions along with product details
-
-
-
-
-//        MySqlCommand command = new MySqlCommand(query, connection); // Creating a MySqlCommand object
-
-//        try
-//        {
-//            connection.Open(); // Opening the database connection
-//            using (MySqlDataReader reader = command.ExecuteReader()) // Executing the SQL command
-//            {
-//                while (reader.Read()) // Looping through the result set
-//                {
-//                    TRA01 transaction = new TRA01 // Creating a new transaction object
-//                    {
-//                        A01F01 = reader.GetInt32("A01F01"), // Setting transaction ID
-//                        A01F02 = reader.GetInt32("A01F02"), // Setting product ID
-//                        //ProductName = reader.GetString("D01F02"), // Setting product name
-//                        A01F03 = (enmTransactionType)Enum.Parse(typeof(enmTransactionType), reader.GetString("A01F03")), // Setting transaction type
-//                        A01F04 = reader.GetDateTime("A01F04"), // Setting transaction date
-//                        A01F05 = reader.GetInt32("A01F05"), // Setting quantity
-//                        A01F06 = reader.GetDecimal("A01F06") // Setting net price
-//                    };
-//                    transactions.Add(transaction); // Adding the transaction to the list
-//                }
-//            }
-//        }
-//        catch (Exception ex)
-//        {
-//            throw new Exception("Error fetching transactions: " + ex.Message);
-//        }
+//        case "admin":
+//            // Include all transactions for admin
+//            transactions.ToList();
+//            break;
+//        case "seller":
+//            // Include only sale transactions for sellers
+//            transactions = transactions.Where(t => t.A01F05 == enmTransactionType.Sale).ToList();
+//            break;
+//        case "supplier":
+//            // Include only purchase transactions for suppliers
+//            transactions = transactions.Where(t => t.A01F05 == enmTransactionType.Purchase).ToList();
+//            break;
+//        default:
+//            throw new ArgumentException("Invalid user role");
 //    }
 
-//    return transactions; // Returning the list of transactions
+//    // Serialize transactions to JSON
+//    string json = JsonConvert.SerializeObject(transactions, Formatting.Indented);
+
+//    // Determine file path based on user role
+//    string fileName = $"{userRole.ToLower()}_transactions.json";
+//    string filePath = Path.Combine(appDataFolderPath, fileName);
+
+//    // Write JSON to file
+//    File.WriteAllText(filePath, json);
 //}
-
-
-
-
-
-

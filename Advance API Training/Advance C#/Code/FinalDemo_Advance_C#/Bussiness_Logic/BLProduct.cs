@@ -184,36 +184,66 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
         }
 
         /// <summary>
-        /// Updates the brand of a product in the database.
+        /// Retrieves product details including ID, name, category, description, and price.
         /// </summary>
-        /// <param name="productId">The ID of the product to update.</param>
-        /// <param name="brand">The new brand name.</param>
-        /// <returns>True if the product brand is successfully updated, otherwise false.</returns>
-        public bool UpdateProductCategory(int productId, string brand)
+        /// <returns>A dynamic collection containing product details.</returns>
+        public dynamic DisplayProducts()
         {
+            List<object> products = new List<object>();
+
+            // Establish database connection
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                string query = "UPDATE " +
-                                    "PRD01 " +
-                                "SET " +
-                                   "D01F08 = @Brand " +
-                               "WHERE D01F01 = @ProductID";
+                // Define SQL query to retrieve product details along with category information
+                string query = "SELECT " +
+                                    "P.D01F01 AS ProductID, " +
+                                    "P.D01F02 AS ProductName, " +
+                                    "C.T01F02 AS CategoryName, " +
+                                    "P.D01F04 AS Description, " +
+                                    "P.D01F06 AS Price " +
+                              "FROM " +
+                                   "PRD01 AS P " +
+                                   "JOIN CAT01 AS C ON P.D01F03 = C.T01F01";
+
+                // Create MySqlCommand object
                 MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ProductID", productId);
-                command.Parameters.AddWithValue("@Brand", brand);
 
                 try
                 {
+                    // Open database connection
                     connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-                    return rowsAffected > 0;
+
+                    // Execute SQL query and get data reader
+                    MySqlDataReader dataReader = command.ExecuteReader();
+
+                    // Iterate through each row of the data reader
+                    while (dataReader.Read())
+                    {
+                        // Add product details to the list
+                        products.Add(new
+                        {
+                            ProductID = dataReader[0],
+                            ProductName = dataReader[1],
+                            CategoryName = dataReader[2],
+                            Description = dataReader[3],
+                            Price = dataReader[4],
+                        });
+                    }
+
+                    // Close the data reader
+                    dataReader.Close();
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Error updating product brand: " + ex.Message);    
+                    // Throw an exception if an error occurs
+                    throw new Exception($"Error in Displaying Products: {ex.Message}");
                 }
+
+                // Return the list of products
+                return products;
             }
         }
+
 
         #endregion
     }

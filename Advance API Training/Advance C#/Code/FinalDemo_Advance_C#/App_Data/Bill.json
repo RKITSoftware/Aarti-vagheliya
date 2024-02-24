@@ -1,0 +1,30 @@
+[
+  {
+    "Product": "KitKat",
+    "Tr_Type": "Purchase",
+    "Quantity": 2,
+    "Stock": 47,
+    "TotalAmount": 20.00
+  },
+  {
+    "Product": "KitKat",
+    "Tr_Type": "Sale",
+    "Quantity": 5,
+    "Stock": 47,
+    "TotalAmount": 175.00
+  },
+  {
+    "Product": "Cargo jeans",
+    "Tr_Type": "Purchase",
+    "Quantity": 10,
+    "Stock": 110,
+    "TotalAmount": 50000.00
+  },
+  {
+    "Product": "Chair",
+    "Tr_Type": "Sale",
+    "Quantity": 10,
+    "Stock": 40,
+    "TotalAmount": 40000.00
+  }
+]

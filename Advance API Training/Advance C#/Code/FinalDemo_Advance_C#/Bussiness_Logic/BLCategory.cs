@@ -31,7 +31,12 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             // Establishing a connection to the database
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                string query = "SELECT T01F01, T01F02 , T01F03 FROM CAT01";
+                string query = "SELECT " +
+                                    "T01F01, " +
+                                    "T01F02 , " +
+                                    "T01F03 " +
+                               "FROM " +
+                                    "CAT01";
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 try
@@ -73,8 +78,12 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
                 string query = "INSERT INTO CAT01 " +
-                                                "(T01F01, T01F02, T01F03) " +
-                                          "VALUES (@CategoryID, @CategoryName, @Description)";
+                                                "(T01F01, " +
+                                                 "T01F02, " +
+                                                 "T01F03) " +
+                                          "VALUES (@CategoryID, " +
+                                                  "@CategoryName, " +
+                                                  "@Description)";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@CategoryID", objCAT01.T01F01);
                 command.Parameters.AddWithValue("@CategoryName", objCAT01.T01F02);

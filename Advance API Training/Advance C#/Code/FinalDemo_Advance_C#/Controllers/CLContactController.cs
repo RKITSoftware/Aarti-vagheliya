@@ -1,4 +1,5 @@
-﻿using FinalDemo_Advance_C_.Bussiness_Logic;
+﻿using FinalDemo_Advance_C_.Authentication;
+using FinalDemo_Advance_C_.Bussiness_Logic;
 using FinalDemo_Advance_C_.Models;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The list of contacts.</returns>
         [HttpGet]
         [Route("GetAllContacts")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO,Accountant"))]
         public IHttpActionResult GetAllContacts()
         {
             List<CNT01> contacts = _objBLContact.GetAllContacts();
@@ -48,8 +49,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpPost]
         [Route("AddContact")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult AddContact(CNT01 contact)
         {
             if (_objBLContact.AddContact(contact)) // Attempts to add the contact
@@ -66,8 +67,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpPut]
         [Route("UpdateContact")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult UpdateContact(int contactId, CNT01 contact)
         {
             if (_objBLContact.UpdateContact(contactId, contact))
@@ -83,8 +84,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>The HTTP action result indicating success or failure.</returns>
         [HttpDelete]
         [Route("DeleteContact")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult DeleteContact(int contactId)
         {
             if (_objBLContact.DeleteContact(contactId)) // Attempts to delete the contact

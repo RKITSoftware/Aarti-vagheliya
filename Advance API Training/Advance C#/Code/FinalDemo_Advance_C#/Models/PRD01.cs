@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FinalDemo_Advance_C_.Models
+﻿namespace FinalDemo_Advance_C_.Models
 {
     /// <summary>
     /// Represents a product entity with properties for ProductID, ProductName, CategoryID, UnitPrice, SupplierID, Description, DateAdded, Brand, DateRemoved, and Count.
@@ -24,8 +22,6 @@ namespace FinalDemo_Advance_C_.Models
         /// </summary>
         public int? D01F03 { get; set; } // CategoryID
 
-        //public string CategoryName { get; set; } // CategoryName
-
         /// <summary>
         /// Gets or sets the Description.
         /// </summary>
@@ -36,9 +32,10 @@ namespace FinalDemo_Advance_C_.Models
         /// </summary>
         public decimal? D01F05 { get; set; } // PURCHASE_PRICE
 
+        /// <summary>
+        /// Gets or sets the Selling Price.
+        /// </summary>
         public decimal? D01F06 { get; set; } // SELLING_PRICE
-
-
 
         #endregion
     }

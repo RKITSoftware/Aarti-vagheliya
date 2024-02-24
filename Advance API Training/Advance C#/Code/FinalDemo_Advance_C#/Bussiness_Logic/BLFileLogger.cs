@@ -35,7 +35,7 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 try
                 {
                     // Generate a log file name with the current date
-                    string fileName = $"error_{DateTime.Now:yyyyMMdd}.log"; // Include date in the file name
+                    string fileName = $"error_{DateTime.Now:ddd MMM dd yyyy}.log"; // Include date in the file name
 
                     // Combine the directory path and the file name to get the full log file path
                     logFilePath = Path.Combine(logDirectoryPath, fileName);

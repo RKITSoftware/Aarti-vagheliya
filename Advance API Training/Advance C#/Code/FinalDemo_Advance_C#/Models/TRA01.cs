@@ -40,32 +40,39 @@ namespace FinalDemo_Advance_C_.Models
         public int A01F02 { get; set; }
 
         /// <summary>
-        /// Gets or sets the ProductName.
+        /// Gets or sets the StockId.
         /// </summary>
-        //public string ProductName { get; set; }
-
-        public int A01F03  { get; set; } //StockId
+        public int A01F03 { get; set; }
 
         /// <summary>
         /// Gets or sets the TransactionDate.
         /// </summary>
         public DateTime A01F04 { get; set; }
-       
 
         /// <summary>
         /// Gets or sets the TransactionType.
         /// </summary>
         public enmTransactionType A01F05 { get; set; }
 
-        public int A01F06 { get; set; } // ContactId
+        /// <summary>
+        /// Gets or sets the ContactId.
+        /// </summary>
+        public int A01F06 { get; set; }
 
-      
-        public int A01F07 { get; set; } //Quantity
+        /// <summary>
+        /// Gets or sets the Quantity.
+        /// </summary>
+        public int A01F07 { get; set; }
 
-       // public decimal UnitPrice { get; set; }
+        /// <summary>
+        /// Gets or sets the NetPrice.
+        /// </summary>
+        public decimal A01F08 { get; set; }
 
-        public decimal A01F08 { get; set; } // netPirce 
-        public string A01F09 { get; set; }// Description
+        /// <summary>
+        /// Gets or sets the Description.
+        /// </summary>
+        public string A01F09 { get; set; }
 
         #endregion
     }

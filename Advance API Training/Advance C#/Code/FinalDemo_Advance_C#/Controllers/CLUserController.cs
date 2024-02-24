@@ -39,8 +39,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>List of all users</returns>
         [HttpGet]
         [Route("getAll")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult GetAllUsers()
         {
             List<USR01> users = _objBLUser.GetAllUsers(); // Retrieves all users from the database
@@ -54,8 +54,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>Success message or error</returns>
         [HttpPost]
         [Route("add")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult AddUser(USR01 user)
         {
             string result = _objBLUser.Insert(user);
@@ -70,8 +70,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>Success message or error</returns>
         [HttpPut]
         [Route("update")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult UpdateUser(int id, USR01 user)
         {
             user.R01F01 = id; // Ensure the correct ID is set
@@ -86,8 +86,8 @@ namespace FinalDemo_Advance_C_.Controllers
         /// <returns>Success message or error</returns>
         [HttpDelete]
         [Route("delete")]
-        //[BearerAuthentication]
-        //[Authorize(Roles = ("Admin"))]
+        [BearerAuthentication] // Performs bearer token authentication
+        [Authorize(Roles = ("Admin,DEO"))]
         public IHttpActionResult DeleteUser(int id)
         {
             string result = _objBLUser.Delete(id);
