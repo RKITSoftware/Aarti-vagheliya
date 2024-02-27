@@ -28,7 +28,7 @@ namespace FinalDemo
             return !existingProducts.Any(p => p.ProductId == productId);
         }
         #endregion
-
+        
         #region IsProductNameValid
         /// <summary>
         /// Checks if the product name is valid (non-empty and not null or whitespace).

@@ -102,7 +102,7 @@ namespace FinalDemo
         public void SetQuantity(int newQuantity)
         {
             // Basic validation: ensure the new quantity is non-negative
-            if (newQuantity >= 0)
+            if (newQuantity > 0)
             {
                 QuantityInStock = newQuantity;
             }
@@ -137,12 +137,6 @@ namespace FinalDemo
 
                 Console.Write("Enter Quantity in Stock: ");
                 int quantityInStock = Convert.ToInt32(Console.ReadLine());
-
-                // Validate the input
-                if (productId <= 0 || price <= 0 || quantityInStock < 0)
-                {
-                    throw new ArgumentException("Invalid input. Please provide valid values for Product ID, Price, and Quantity in Stock.");
-                }
 
                 // Create a new product and add it to the inventory
                 Product newProduct = new Product(productId, productName, price, quantityInStock);
@@ -230,7 +224,7 @@ namespace FinalDemo
 
                 // Remove the product from the inventory
                 inventory.RemoveProduct(productId);
-
+                
             }
             catch (FormatException)
             {

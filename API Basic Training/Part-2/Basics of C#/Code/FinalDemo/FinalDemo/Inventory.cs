@@ -116,25 +116,23 @@ namespace FinalDemo
         {
             try
             {
-                Product productToRemove = _products.Find(p => p.ProductId == productId);
-                if (productToRemove != null)
+                int indexToRemove = _products.FindIndex(p => p.ProductId == productId);
+                if (indexToRemove != -1)
                 {
-                  
-
-                    _products.Remove(productToRemove);
-                        Console.WriteLine("Product removed from inventory.");
+                    _products.RemoveAt(indexToRemove);
+                    Console.WriteLine("Product removed from inventory.");
                 }
                 else
                 {
-                     Console.WriteLine("Product not found in inventory.");
+                    Console.WriteLine("Product not found in inventory.");
                 }
-               
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error removing product: {ex.Message}");
             }
         }
+
         #endregion
 
         #endregion
@@ -156,7 +154,7 @@ namespace FinalDemo
                     throw new ArgumentNullException(nameof(category), "Category cannot be null.");
                 }
 
-                category.Validate(_categories);
+                
                 ValidateCategory(category); // Validate category before adding
 
 
@@ -219,12 +217,12 @@ namespace FinalDemo
         {
             try
             {
-                Category categoryToRemove = _categories.Find(c => c.CategoryId == categoryId);
+                int indexToRemove = _categories.FindIndex(c => c.CategoryId == categoryId);
 
-                if (categoryToRemove != null)
+                if (indexToRemove != -1)
                 {
                     
-                    _categories.Remove(categoryToRemove);
+                    _categories.RemoveAt(indexToRemove);
                     Console.WriteLine("Category removed from inventory.");
                 }
                 else

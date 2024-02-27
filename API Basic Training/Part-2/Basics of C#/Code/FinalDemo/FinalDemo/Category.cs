@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 
 namespace FinalDemo
@@ -41,6 +40,7 @@ namespace FinalDemo
         #region Public Methods
 
         #region SetCategoryName
+
         /// <summary>
         /// Sets a new name for the category.
         /// </summary>
@@ -57,27 +57,7 @@ namespace FinalDemo
                 Console.WriteLine("Invalid category name. Please provide a non-empty name.");
             }
         }
-        #endregion
 
-        #region Validate
-        /// <summary>
-        /// Validates the category's properties against existing categories.
-        /// </summary>
-        /// <param name="existingCategories">The list of existing categories for validation.</param>
-        public void Validate(List<Category> existingCategories)
-        {
-            // Validate the uniqueness of Category ID
-            if (!ValidationHelper.IsCategoryIdValid(CategoryId, existingCategories))
-            {
-                throw new ArgumentException("Invalid or duplicate Category ID.");
-            }
-
-            // Validate the Category Name
-            if (!ValidationHelper.IsCategoryNameValid(CategoryName))
-            {
-                throw new ArgumentException("Invalid Category Name. Please provide a non-empty string.");
-            }
-        }
         #endregion
 
         #region Add Category
@@ -96,12 +76,6 @@ namespace FinalDemo
 
                 Console.Write("Enter Category Name: ");
                 string categoryName = Console.ReadLine();
-
-                // Validate the input
-                if (categoryId < 0)
-                {
-                    throw new ArgumentException("Invalid Category ID. Please provide a positive integer value.");
-                }
 
                 // Create a new category and add it to the inventory
                 Category newCategory = new Category(categoryId, categoryName);
