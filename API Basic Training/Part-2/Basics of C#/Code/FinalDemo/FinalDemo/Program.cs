@@ -85,7 +85,7 @@ namespace FinalDemo
         /// Logs user actions with a timestamp.
         /// </summary>
         /// <param name="action">The action to log.</param>
-        static void LogAction(string action)
+        private static void LogAction(string action)
         {
             Console.WriteLine($"{DateTime.Now} - {action}");
         }

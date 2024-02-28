@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace FinalDemo
 {
     /// <summary>
@@ -22,19 +21,6 @@ namespace FinalDemo
         /// </summary>
         public string CategoryName { get; private set; }
 
-        #endregion
-
-        #region Constructor
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Category"/> class.
-        /// </summary>
-        /// <param name="categoryId">The unique identifier for the category.</param>
-        /// <param name="categoryName">The name of the category.</param>
-        public Category(int categoryId, string categoryName)
-        {
-            CategoryId = categoryId;
-            CategoryName = categoryName;
-        }
         #endregion
 
         #region Public Methods
@@ -77,8 +63,14 @@ namespace FinalDemo
                 Console.Write("Enter Category Name: ");
                 string categoryName = Console.ReadLine();
 
-                // Create a new category and add it to the inventory
-                Category newCategory = new Category(categoryId, categoryName);
+                // Create a new category
+                Category newCategory = new Category
+                {
+                    CategoryId = categoryId,
+                    CategoryName = categoryName
+                };
+
+                // Add the category to the inventory
                 inventory.AddCategory(newCategory);
             }
             catch (FormatException)
@@ -114,10 +106,15 @@ namespace FinalDemo
                 Console.Write("Enter Category ID to update: ");
                 int categoryId = Convert.ToInt32(Console.ReadLine());
 
-                Category updatedCategory = new Category(categoryId, ""); // Dummy value, will be updated
-
                 Console.Write("Enter new Category Name: ");
-                updatedCategory.SetCategoryName(Console.ReadLine());
+                string categoryName = Console.ReadLine();
+
+                // Create a new category
+                Category updatedCategory = new Category
+                {
+                    CategoryId = categoryId,
+                    CategoryName = categoryName
+                };
 
                 // Update the category in the inventory
                 inventory.UpdateCategory(updatedCategory);
@@ -176,5 +173,4 @@ namespace FinalDemo
 
         #endregion
     }
-
 }

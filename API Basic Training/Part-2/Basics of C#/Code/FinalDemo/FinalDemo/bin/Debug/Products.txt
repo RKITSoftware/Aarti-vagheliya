@@ -1,2 +1,6 @@
 Product ID     Product Name   Price          Quantity in Stock
-2              hukhuk         454            12             
+1              KitKat         25             50             
+2              Pen            10             80             
+3              Bottle         200            2              
+4              Book           50             100            
+5              Dairy          500            5              

@@ -10,7 +10,7 @@ namespace FinalDemo
     /// </summary>
     public class Inventory
     {
-        #region Private Fields
+        #region Private Members
 
         //Category and Product list objects
         private List<Product> _products;
@@ -31,6 +31,8 @@ namespace FinalDemo
            
         }
         #endregion
+
+        #region Public Methods
 
         #region Methods for managing products
         // Methods for managing products
@@ -239,9 +241,6 @@ namespace FinalDemo
 
         #endregion
 
-        #region  Methods for display data
-        // Display methods
-
         #region Displayproducts
 
         /// <summary>
@@ -261,9 +260,9 @@ namespace FinalDemo
             //loop for add data to the datatable
             foreach (Product product in _products)
             {
-                productTable.Rows.Add(product.ProductId, 
-                                      product.ProductName, 
-                                      product.Price, 
+                productTable.Rows.Add(product.ProductId,
+                                      product.ProductName,
+                                      product.Price,
                                       product.QuantityInStock);
             }
 
@@ -292,7 +291,7 @@ namespace FinalDemo
             //loop for add data to the datatable
             foreach (Category category in _categories)
             {
-                categoryTable.Rows.Add(category.CategoryId, 
+                categoryTable.Rows.Add(category.CategoryId,
                                        category.CategoryName);
             }
 
@@ -303,6 +302,10 @@ namespace FinalDemo
             WriteDataTableToFile("Categories.txt", categoryTable);
         }
         #endregion
+
+        #endregion
+
+        #region  Private Methods
 
         #region DisplayDataTable
 
@@ -385,11 +388,6 @@ namespace FinalDemo
         }
 
         #endregion
-
-        #endregion
-
-        #region Methods for validation
-        // Validation methods
 
         #region ValidateProduct
 

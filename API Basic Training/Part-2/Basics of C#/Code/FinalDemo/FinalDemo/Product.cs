@@ -3,7 +3,7 @@
 namespace FinalDemo
 {
     /// <summary>
-    /// Represents a products in the inventory.
+    /// Represents a product in the inventory.
     /// </summary>
     public class Product
     {
@@ -12,50 +12,33 @@ namespace FinalDemo
         // Properties with private setters for encapsulation
 
         /// <summary>
-        /// Gets the ID of the product.
+        /// Gets or sets the ID of the product.
         /// </summary>
         public int ProductId { get; private set; }
 
         /// <summary>
-        /// Gets the name of the product.
+        /// Gets or sets the name of the product.
         /// </summary>
         public string ProductName { get; private set; }
 
         /// <summary>
-        /// Gets the price of the product.
+        /// Gets or sets the price of the product.
         /// </summary>
         public decimal Price { get; private set; }
 
         /// <summary>
-        /// Gets the quantity of the product in stock.
+        /// Gets or sets the quantity of the product in stock.
         /// </summary>
         public int QuantityInStock { get; private set; }
 
         #endregion
 
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Product"/> class.
-        /// </summary>
-        /// <param name="productId">The unique identifier for the product.</param>
-        /// <param name="productName">The name of the product.</param>
-        /// <param name="price">The price of the product.</param>
-        /// <param name="quantityInStock">The quantity of the product in stock.</param>
-        public Product(int productId, string productName, decimal price, int quantityInStock)
-        {
-            ProductId = productId;
-            ProductName = productName;
-            Price = price;
-            QuantityInStock = quantityInStock;
-        }
-        #endregion
+        #region  public Methods
 
         #region Encapsulated Interactions
 
         // Methods for encapsulated interactions
 
-        #region SetProductName
         /// <summary>
         /// Sets the name of the product.
         /// </summary>
@@ -72,9 +55,6 @@ namespace FinalDemo
                 Console.WriteLine("Invalid product name. Please provide a non-empty name.");
             }
         }
-        #endregion
-
-        #region SetPrice 
 
         /// <summary>
         /// Sets the price of the product.
@@ -92,13 +72,11 @@ namespace FinalDemo
                 Console.WriteLine("Invalid price. Please provide a non-negative price.");
             }
         }
-        #endregion
 
-        #region SetQuantity
         /// <summary>
-        /// sets the new quanity of the product.
+        /// Sets the new quantity of the product.
         /// </summary>
-        /// <param name="newQuantity">new quantity of the product.</param>
+        /// <param name="newQuantity">The new quantity of the product.</param>
         public void SetQuantity(int newQuantity)
         {
             // Basic validation: ensure the new quantity is non-negative
@@ -111,7 +89,6 @@ namespace FinalDemo
                 Console.WriteLine("Invalid quantity. Please provide a non-negative quantity.");
             }
         }
-        #endregion
 
         #endregion
 
@@ -138,8 +115,16 @@ namespace FinalDemo
                 Console.Write("Enter Quantity in Stock: ");
                 int quantityInStock = Convert.ToInt32(Console.ReadLine());
 
-                // Create a new product and add it to the inventory
-                Product newProduct = new Product(productId, productName, price, quantityInStock);
+                // Create a new product
+                Product newProduct = new Product
+                {
+                    ProductId = productId,
+                    ProductName = productName,
+                    Price = price,
+                    QuantityInStock = quantityInStock
+                };
+
+                // Add the product to the inventory
                 inventory.AddProduct(newProduct);
             }
             catch (FormatException)
@@ -167,7 +152,7 @@ namespace FinalDemo
         /// Updates an existing product in the inventory.
         /// </summary>
         /// <param name="inventory">The inventory containing the product to be updated.</param>
-         public static void UpdateProduct(Inventory inventory)
+        public static void UpdateProduct(Inventory inventory)
         {
             try
             {
@@ -175,16 +160,23 @@ namespace FinalDemo
                 Console.Write("Enter Product ID to update: ");
                 int productId = Convert.ToInt32(Console.ReadLine());
 
-                Product updatedProduct = new Product(productId, "", 0, 0); // Dummy values, will be updated
-
                 Console.Write("Enter new Product Name: ");
-                updatedProduct.SetProductName(Console.ReadLine());
+                string productName = Console.ReadLine();
 
                 Console.Write("Enter new Price: ");
-                updatedProduct.SetPrice(Convert.ToDecimal(Console.ReadLine()));
+                decimal price = Convert.ToDecimal(Console.ReadLine());
 
                 Console.Write("Enter new Quantity in Stock: ");
-                updatedProduct.SetQuantity(Convert.ToInt32(Console.ReadLine()));
+                int quantityInStock = Convert.ToInt32(Console.ReadLine());
+
+                // Create a new product
+                Product updatedProduct = new Product
+                {
+                    ProductId = productId,
+                    ProductName = productName,
+                    Price = price,
+                    QuantityInStock = quantityInStock
+                };
 
                 // Update the product in the inventory
                 inventory.UpdateProduct(updatedProduct);
@@ -213,8 +205,8 @@ namespace FinalDemo
         /// <summary>
         /// Removes a product from the inventory.
         /// </summary>
-        /// <param name="inventory">The inventory to remove the product from.</param
-       public static void RemoveProduct(Inventory inventory)
+        /// <param name="inventory">The inventory to remove the product from.</param>
+        public static void RemoveProduct(Inventory inventory)
         {
             try
             {
@@ -224,7 +216,6 @@ namespace FinalDemo
 
                 // Remove the product from the inventory
                 inventory.RemoveProduct(productId);
-                
             }
             catch (FormatException)
             {
@@ -239,6 +230,8 @@ namespace FinalDemo
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
         }
+        #endregion
+
         #endregion
 
     }
