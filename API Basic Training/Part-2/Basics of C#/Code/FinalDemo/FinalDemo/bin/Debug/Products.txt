@@ -1,6 +1,4 @@
 Product ID     Product Name   Price          Quantity in Stock
-1              KitKat         25             50             
-2              Pen            10             80             
-3              Bottle         200            2              
-4              Book           50             100            
-5              Dairy          500            5              
+1              Chocolate      20             1              
+2              book           100            80             
+3              dairy Milk     150            5              

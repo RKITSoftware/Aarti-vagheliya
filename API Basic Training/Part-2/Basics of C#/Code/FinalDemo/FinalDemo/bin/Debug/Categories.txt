@@ -1,4 +1,4 @@
 Category ID    Category Name  
-1              food           
+1              Food           
 2              Stationary     
-3              Grossary       
+3              Clothes        

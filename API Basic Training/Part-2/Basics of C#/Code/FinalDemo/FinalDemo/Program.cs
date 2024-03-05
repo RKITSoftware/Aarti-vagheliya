@@ -12,7 +12,7 @@ namespace FinalDemo
         /// <summary>
         /// The entry point of the program.
         /// </summary>
-        /// <param name="args">The command-line arguments.</param>
+        /// <param name="args">The command-line arguments.</param> 
         static void Main(string[] args)
         {
             Inventory inventory = new Inventory();

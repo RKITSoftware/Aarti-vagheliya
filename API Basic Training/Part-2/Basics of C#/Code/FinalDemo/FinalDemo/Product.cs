@@ -3,94 +3,41 @@
 namespace FinalDemo
 {
     /// <summary>
-    /// Represents a product in the inventory.
+    /// This class manage properties for Products
     /// </summary>
-    public class Product
+    public class ProductModel
     {
         #region Public Properties 
-
-        // Properties with private setters for encapsulation
 
         /// <summary>
         /// Gets or sets the ID of the product.
         /// </summary>
-        public int ProductId { get; private set; }
+        public int ProductId { get;  set; }
 
         /// <summary>
         /// Gets or sets the name of the product.
         /// </summary>
-        public string ProductName { get; private set; }
+        public string ProductName { get;  set; }
 
         /// <summary>
         /// Gets or sets the price of the product.
         /// </summary>
-        public decimal Price { get; private set; }
+        public decimal Price { get;  set; }
 
         /// <summary>
         /// Gets or sets the quantity of the product in stock.
         /// </summary>
-        public int QuantityInStock { get; private set; }
+        public int QuantityInStock { get;  set; }
 
         #endregion
+    }
 
+    /// <summary>
+    /// Represents a product in the inventory.
+    /// </summary>
+    public class Product
+    {
         #region  public Methods
-
-        #region Encapsulated Interactions
-
-        // Methods for encapsulated interactions
-
-        /// <summary>
-        /// Sets the name of the product.
-        /// </summary>
-        /// <param name="newName">The new name for the product.</param>
-        public void SetProductName(string newName)
-        {
-            // Basic validation: ensure the new name is not empty
-            if (!string.IsNullOrWhiteSpace(newName))
-            {
-                ProductName = newName;
-            }
-            else
-            {
-                Console.WriteLine("Invalid product name. Please provide a non-empty name.");
-            }
-        }
-
-        /// <summary>
-        /// Sets the price of the product.
-        /// </summary>
-        /// <param name="newPrice">The new price for the product.</param>
-        public void SetPrice(decimal newPrice)
-        {
-            // Basic validation: ensure the new price is non-negative
-            if (newPrice > 0)
-            {
-                Price = newPrice;
-            }
-            else
-            {
-                Console.WriteLine("Invalid price. Please provide a non-negative price.");
-            }
-        }
-
-        /// <summary>
-        /// Sets the new quantity of the product.
-        /// </summary>
-        /// <param name="newQuantity">The new quantity of the product.</param>
-        public void SetQuantity(int newQuantity)
-        {
-            // Basic validation: ensure the new quantity is non-negative
-            if (newQuantity > 0)
-            {
-                QuantityInStock = newQuantity;
-            }
-            else
-            {
-                Console.WriteLine("Invalid quantity. Please provide a non-negative quantity.");
-            }
-        }
-
-        #endregion
 
         #region Add Product
 
@@ -103,6 +50,7 @@ namespace FinalDemo
             try
             {
                 // Get product details from the user
+
                 Console.Write("Enter Product ID: ");
                 int productId = Convert.ToInt32(Console.ReadLine());
 
@@ -116,7 +64,7 @@ namespace FinalDemo
                 int quantityInStock = Convert.ToInt32(Console.ReadLine());
 
                 // Create a new product
-                Product newProduct = new Product
+                ProductModel newProduct = new ProductModel
                 {
                     ProductId = productId,
                     ProductName = productName,
@@ -127,23 +75,12 @@ namespace FinalDemo
                 // Add the product to the inventory
                 inventory.AddProduct(newProduct);
             }
-            catch (FormatException)
-            {
-                Console.WriteLine("Invalid input format. Please enter a valid numeric value.");
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Invalid input. The provided value is too large.");
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
             catch (Exception ex)
             {
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
         }
+
         #endregion
 
         #region Update Product
@@ -157,6 +94,7 @@ namespace FinalDemo
             try
             {
                 // Get updated product details from the user
+
                 Console.Write("Enter Product ID to update: ");
                 int productId = Convert.ToInt32(Console.ReadLine());
 
@@ -170,7 +108,7 @@ namespace FinalDemo
                 int quantityInStock = Convert.ToInt32(Console.ReadLine());
 
                 // Create a new product
-                Product updatedProduct = new Product
+                ProductModel updatedProduct = new ProductModel
                 {
                     ProductId = productId,
                     ProductName = productName,
@@ -181,23 +119,12 @@ namespace FinalDemo
                 // Update the product in the inventory
                 inventory.UpdateProduct(updatedProduct);
             }
-            catch (FormatException)
-            {
-                Console.WriteLine("Invalid input format. Please enter a valid numeric value.");
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Invalid input. The provided value is too large.");
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
             catch (Exception ex)
             {
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
         }
+
         #endregion
 
         #region Remove Product
@@ -217,19 +144,12 @@ namespace FinalDemo
                 // Remove the product from the inventory
                 inventory.RemoveProduct(productId);
             }
-            catch (FormatException)
-            {
-                Console.WriteLine("Invalid input format. Please enter a valid numeric value.");
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Invalid input. The provided value is too large.");
-            }
             catch (Exception ex)
             {
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
         }
+
         #endregion
 
         #endregion

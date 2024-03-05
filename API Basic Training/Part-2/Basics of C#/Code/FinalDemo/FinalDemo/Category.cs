@@ -5,46 +5,29 @@ namespace FinalDemo
     /// <summary>
     /// Represents a category in the inventory.
     /// </summary>
-    public class Category
+    public class CategoryModel
     {
         #region Public Properties 
-
-        // Properties with private setters for encapsulation
 
         /// <summary>
         /// Gets or sets the ID of the category.
         /// </summary>
-        public int CategoryId { get; private set; }
+        public int CategoryId { get;  set; }
 
         /// <summary>
         /// Gets or sets the name of the category.
         /// </summary>
-        public string CategoryName { get; private set; }
+        public string CategoryName { get;  set; }
 
         #endregion
+    }
 
+    /// <summary>
+    /// Represents methods for managing categories in the inventory.
+    /// </summary>
+    public class Category
+    {
         #region Public Methods
-
-        #region SetCategoryName
-
-        /// <summary>
-        /// Sets a new name for the category.
-        /// </summary>
-        /// <param name="newCategoryName">The new name for the category.</param>
-        public void SetCategoryName(string newCategoryName)
-        {
-            // Basic validation: ensure the new category name is not empty
-            if (!string.IsNullOrWhiteSpace(newCategoryName))
-            {
-                CategoryName = newCategoryName;
-            }
-            else
-            {
-                Console.WriteLine("Invalid category name. Please provide a non-empty name.");
-            }
-        }
-
-        #endregion
 
         #region Add Category
 
@@ -57,14 +40,15 @@ namespace FinalDemo
             try
             {
                 // Get category details from the user
+
                 Console.Write("Enter Category ID: ");
                 int categoryId = Convert.ToInt32(Console.ReadLine());
-
+ 
                 Console.Write("Enter Category Name: ");
                 string categoryName = Console.ReadLine();
 
                 // Create a new category
-                Category newCategory = new Category
+                CategoryModel newCategory = new CategoryModel
                 {
                     CategoryId = categoryId,
                     CategoryName = categoryName
@@ -73,23 +57,12 @@ namespace FinalDemo
                 // Add the category to the inventory
                 inventory.AddCategory(newCategory);
             }
-            catch (FormatException)
-            {
-                Console.WriteLine("Invalid input format. Please enter a valid numeric value.");
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Invalid input. The provided value is too large.");
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
             catch (Exception ex)
             {
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
         }
+
         #endregion
 
         #region Update Category
@@ -103,6 +76,7 @@ namespace FinalDemo
             try
             {
                 // Get updated category details from the user
+
                 Console.Write("Enter Category ID to update: ");
                 int categoryId = Convert.ToInt32(Console.ReadLine());
 
@@ -110,7 +84,7 @@ namespace FinalDemo
                 string categoryName = Console.ReadLine();
 
                 // Create a new category
-                Category updatedCategory = new Category
+                CategoryModel updatedCategory = new CategoryModel
                 {
                     CategoryId = categoryId,
                     CategoryName = categoryName
@@ -119,23 +93,12 @@ namespace FinalDemo
                 // Update the category in the inventory
                 inventory.UpdateCategory(updatedCategory);
             }
-            catch (FormatException)
-            {
-                Console.WriteLine("Invalid input format. Please enter a valid numeric value.");
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Invalid input. The provided value is too large.");
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
             catch (Exception ex)
             {
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
         }
+
         #endregion
 
         #region Remove Category
@@ -154,14 +117,6 @@ namespace FinalDemo
 
                 // Remove the category from the inventory
                 inventory.RemoveCategory(categoryId);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Invalid input format. Please enter a valid numeric value.");
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Invalid input. The provided value is too large.");
             }
             catch (Exception ex)
             {

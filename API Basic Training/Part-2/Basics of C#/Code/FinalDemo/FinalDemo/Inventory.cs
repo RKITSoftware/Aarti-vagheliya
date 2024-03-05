@@ -13,8 +13,8 @@ namespace FinalDemo
         #region Private Members
 
         //Category and Product list objects
-        private List<Product> _products;
-        private List<Category> _categories;
+        private List<ProductModel> _products;
+        private List<CategoryModel> _categories;
 
         #endregion
 
@@ -26,8 +26,8 @@ namespace FinalDemo
         public Inventory()
         {
             //Initialize instances
-            _products = new List<Product>();
-            _categories = new List<Category>();
+            _products = new List<ProductModel>();
+            _categories = new List<CategoryModel>();
            
         }
         #endregion
@@ -35,26 +35,20 @@ namespace FinalDemo
         #region Public Methods
 
         #region Methods for managing products
-        // Methods for managing products
+
         #region AddProduct
 
         /// <summary>
         /// Adds a product to the inventory.
         /// </summary>
         /// <param name="product">The product to add.</param>
-        public void AddProduct(Product product)
+        public void AddProduct(ProductModel product)
         {
             try
             {
                 if (product == null)
                 {
                     throw new ArgumentNullException(nameof(product), "Product cannot be null.");
-                }
-
-                // Validate product ID including checking for duplicates
-                if (!ValidationHelper.IsProductIdValid(product.ProductId, _products))
-                {
-                    throw new ArgumentException("Invalid or duplicate Product ID.");
                 }
 
                 ValidateProduct(product); // Validate product before adding
@@ -68,6 +62,7 @@ namespace FinalDemo
                 Console.WriteLine($"Error adding product: {ex.Message}");
             }
         }
+
         #endregion
 
         #region UpdateProduct
@@ -76,7 +71,7 @@ namespace FinalDemo
         /// Updates a product in the inventory.
         /// </summary>
         /// <param name="updatedProduct">The updated product.</param>
-        public void UpdateProduct(Product updatedProduct)
+        public void UpdateProduct(ProductModel updatedProduct)
         {
             try
             {
@@ -85,14 +80,14 @@ namespace FinalDemo
                     throw new ArgumentNullException(nameof(updatedProduct), "Updated product cannot be null.");
                 }
 
-                Product existingProduct = _products.Find(p => p.ProductId == updatedProduct.ProductId);
+                ProductModel existingProduct = _products.Find(p => p.ProductId == updatedProduct.ProductId);
 
                 if (existingProduct != null)
                 {
                     // Update product details
-                    existingProduct.SetProductName(updatedProduct.ProductName);
-                    existingProduct.SetPrice(updatedProduct.Price);
-                    existingProduct.SetQuantity(updatedProduct.QuantityInStock);
+                    existingProduct.ProductName = updatedProduct.ProductName;
+                    existingProduct.Price = updatedProduct.Price;
+                    existingProduct.QuantityInStock = updatedProduct.QuantityInStock;
 
                     Console.WriteLine("Product updated successfully.");
                 }
@@ -106,6 +101,7 @@ namespace FinalDemo
                 Console.WriteLine($"Error updating product: {ex.Message}");
             }
         }
+
         #endregion
 
         #region RemoveProduct
@@ -147,7 +143,7 @@ namespace FinalDemo
         /// Adds a category to the inventory.
         /// </summary>
         /// <param name="category">The category to add.</param>
-        public void AddCategory(Category category)
+        public void AddCategory(CategoryModel category)
         {
             try
             {
@@ -161,8 +157,6 @@ namespace FinalDemo
 
 
                 _categories.Add(category);
-
-               
 
                 Console.WriteLine("Category added to inventory.");
             }
@@ -179,7 +173,7 @@ namespace FinalDemo
         /// Updates a category in the inventory.
         /// </summary>
         /// <param name="updatedCategory">The updated category.</param>
-        public void UpdateCategory(Category updatedCategory)
+        public void UpdateCategory(CategoryModel updatedCategory)
         {
             try
             {
@@ -188,12 +182,12 @@ namespace FinalDemo
                     throw new ArgumentNullException(nameof(updatedCategory), "Updated category cannot be null.");
                 }
 
-                Category existingCategory = _categories.Find(c => c.CategoryId == updatedCategory.CategoryId);
+                CategoryModel existingCategory = _categories.Find(c => c.CategoryId == updatedCategory.CategoryId);
 
                 if (existingCategory != null)
                 {
                     // Update category details
-                    existingCategory.SetCategoryName(updatedCategory.CategoryName);
+                    existingCategory.CategoryName =  updatedCategory.CategoryName;
 
                     Console.WriteLine("Category updated successfully.");
                 }
@@ -207,6 +201,7 @@ namespace FinalDemo
                 Console.WriteLine($"Error updating category: {ex.Message}");
             }
         }
+
         #endregion
 
         #region RemoveCategory
@@ -237,6 +232,7 @@ namespace FinalDemo
                 Console.WriteLine($"Error removing category: {ex.Message}");
             }
         }
+
         #endregion
 
         #endregion
@@ -258,7 +254,7 @@ namespace FinalDemo
             productTable.Columns.Add("Quantity in Stock", typeof(int));
 
             //loop for add data to the datatable
-            foreach (Product product in _products)
+            foreach (ProductModel product in _products)
             {
                 productTable.Rows.Add(product.ProductId,
                                       product.ProductName,
@@ -272,6 +268,7 @@ namespace FinalDemo
             // Write the DataTable to a file
             WriteDataTableToFile("products.txt", productTable);
         }
+
         #endregion
 
         #region DisplayCategories
@@ -289,7 +286,7 @@ namespace FinalDemo
             categoryTable.Columns.Add("Category Name", typeof(string));
 
             //loop for add data to the datatable
-            foreach (Category category in _categories)
+            foreach (CategoryModel category in _categories)
             {
                 categoryTable.Rows.Add(category.CategoryId,
                                        category.CategoryName);
@@ -396,8 +393,9 @@ namespace FinalDemo
         /// </summary>
         /// <param name="product">The product to be add.</param>
         /// <exception cref="ArgumentException"></exception>
-        private void ValidateProduct(Product product)
+        private void ValidateProduct(ProductModel product)
         {
+           
             //Validation for product ID
             if (!ValidationHelper.IsProductIdValid(product.ProductId, _products))
             {
@@ -431,7 +429,7 @@ namespace FinalDemo
         /// </summary>
         /// <param name="category">Category to add.</param>
         /// <exception cref="ArgumentException"></exception>
-        private void ValidateCategory(Category category)
+        private void ValidateCategory(CategoryModel category)
         {
             //Validate Category Id
             if (!ValidationHelper.IsCategoryIdValid(category.CategoryId, _categories))
