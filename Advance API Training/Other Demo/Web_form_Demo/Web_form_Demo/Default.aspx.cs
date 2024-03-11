@@ -1,33 +1,50 @@
 ﻿using System;
 using System.Configuration;
 using System.Data;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 
 namespace Web_form_Demo
 {
-    public partial class Default : System.Web.UI.Page
+    /// <summary>
+    /// Code-behind class for the default page of the web form demo.
+    /// </summary>
+    public partial class Default : Page
     {
+        /// <summary>
+        /// Handles the page load event.
+        /// </summary>
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                // Bind the grid on initial page load
                 BindGrid();
             }
         }
 
+        /// <summary>
+        /// Handles the row editing event of the GridView.
+        /// </summary>
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GridView1.EditIndex = e.NewEditIndex;
             BindGrid();
         }
 
+        /// <summary>
+        /// Handles the row canceling edit event of the GridView.
+        /// </summary>
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridView1.EditIndex = -1;
             BindGrid();
         }
 
+        /// <summary>
+        /// Handles the row updating event of the GridView.
+        /// </summary>
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             GridViewRow row = GridView1.Rows[e.RowIndex];
@@ -64,7 +81,9 @@ namespace Web_form_Demo
             BindGrid();
         }
 
-
+        /// <summary>
+        /// Handles the row deleting event of the GridView.
+        /// </summary>
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
@@ -90,6 +109,9 @@ namespace Web_form_Demo
             BindGrid();
         }
 
+        /// <summary>
+        /// Handles the click event of the "Add" button.
+        /// </summary>
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             string name = txtName.Text;
@@ -128,7 +150,9 @@ namespace Web_form_Demo
             BindGrid();
         }
 
-
+        /// <summary>
+        /// Binds data to the GridView.
+        /// </summary>
         private void BindGrid()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
