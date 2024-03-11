@@ -1,7 +1,8 @@
-using System.Web.Http;
-using WebActivatorEx;
-using Token_Custom;
 using Swashbuckle.Application;
+using System.Web.Http;
+using Token_Custom;
+using Token_Custom.Services;
+using WebActivatorEx;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -57,11 +58,17 @@ namespace Token_Custom
                         // at the document or operation level to indicate which schemes are required for an operation. To do this,
                         // you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
                         // according to your specific authorization implementation
-                        //
-                        //c.BasicAuth("basic")
-                        //    .Description("Basic HTTP Authentication");
-                        //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+
+                        c.BasicAuth("basic")
+                            .Description("Basic HTTP Authentication");
+
+                        c.ApiKey("BearerToken")
+                                        .Description("Bearer Token Authentication")
+                                        .Name("Authorization")
+                                        .In("header");
+                        c.OperationFilter<AssignOAuth2SecurityRequirements>();
+
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")

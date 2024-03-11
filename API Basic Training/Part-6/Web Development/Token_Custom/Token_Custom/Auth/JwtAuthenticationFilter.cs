@@ -25,7 +25,7 @@ namespace Token_Custom.Filters
             {
                 actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, "Login failed");
             }
-            else if (authorizationHeader.Scheme != "Bearer")
+            else if (authorizationHeader.Scheme != "Basic")
             {
                 string authToken = actionContext.Request.Headers.Authorization.Parameter;
 
@@ -36,7 +36,7 @@ namespace Token_Custom.Filters
                 string password = usernamePassword[1];
 
                 var user = UserRepository.users.Any(u => u.Username == username && u.Password == password);
-                if (user != null)
+                if (user )
                 {
                     var token = TokenService.GenerateToken(username);
                     var principal = TokenService.GetPrincipal(token);

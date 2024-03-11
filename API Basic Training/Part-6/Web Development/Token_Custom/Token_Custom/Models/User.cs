@@ -7,10 +7,26 @@ namespace Token_Custom.Models
     /// </summary>
     public class User
     {
-        public int Id { get; set; } 
+        /// <summary>
+        /// Represents the unique identifier of the user.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Represents the username of the user.
+        /// </summary>
         public string Username { get; set; }
+
+        /// <summary>
+        /// Represents the password of the user.
+        /// </summary>
         public string Password { get; set; }
+
+        /// <summary>
+        /// Represents the role of the user.
+        /// </summary>
         public string Role { get; set; }
+
     }
 
 
@@ -27,15 +43,5 @@ namespace Token_Custom.Models
             new User { Id = 1, Username = "user1", Password = "password1", Role = "User" },
             new User { Id = 2, Username = "user2", Password = "password2", Role = "Admin" }
         };
-
-        /// <summary>
-        /// Gets a user by their username.
-        /// </summary>
-        /// <param name="username">The username of the user to retrieve.</param>
-        /// <returns>The user with the specified username, or null if not found.</returns>
-        public User GetUserByUsername(string username)
-        {
-            return users.Find(u => u.Username == username);
-        }
     }
 }

@@ -16,7 +16,6 @@ namespace Token_Custom.Services
         // Secret key used for token generation and validation
         private static readonly string _secretKey = "ERMN05OPLoDvbTTa/QkqLNMI7cPLguaRyHzyg7n5qNBVjQmtBhz4SzYh4NBVCXi3KJHlSXKP+oi2+bXr6CUYTR==";
 
-
         /// <summary>
         /// Generates a JWT token for the specified user.
         /// </summary>
@@ -51,9 +50,6 @@ namespace Token_Custom.Services
 
             return handler.WriteToken(jwtSecurityToken);
         }
-
-
-
 
         /// <summary>
         /// Retrieves a ClaimsPrincipal from the provided JWT token.

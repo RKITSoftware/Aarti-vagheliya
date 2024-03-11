@@ -27,7 +27,7 @@ namespace Token_Custom.Auth
         public override void OnAuthorization(HttpActionContext actionContext)
         {
 
-            string tokenValue = actionContext.Request.Headers.Authorization.Parameter;
+            string tokenValue = actionContext.Request.Headers.Authorization.Scheme;
 
             // check jwt token's validity
             var isValid = TokenService.ValidateToken(tokenValue);

@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Text;
 using System.Web.Http;
 using Token_Custom.Auth;
 using Token_Custom.Filters;
@@ -24,8 +26,11 @@ namespace Token_Custom.Controllers
         public IHttpActionResult GetToken()
         {
             // Extracts username and password from the authorization header
-            string authToken = Request.Headers.Authorization.Parameter;
+            string parameter = Request.Headers.Authorization.Parameter;
 
+            byte[] authByte = Convert.FromBase64String(parameter); // Decodes the base64-encoded token
+            string authToken = Encoding.UTF8.GetString(authByte); // Converts the byte array to a string
+           
             string[] usernamepassword = authToken.Split(':');
             string username = usernamepassword[0];
             string password = usernamepassword[1];

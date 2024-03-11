@@ -147,6 +147,7 @@
     <Compile Include="Models\StateDate.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AssignOAuth2SecurityRequirements.cs" />
     <Compile Include="Services\TokenService.cs" />
   </ItemGroup>
   <ItemGroup>
