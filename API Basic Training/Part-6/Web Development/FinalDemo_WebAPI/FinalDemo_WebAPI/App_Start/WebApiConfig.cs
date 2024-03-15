@@ -28,18 +28,18 @@ namespace FinalDemo_WebAPI
             #region Routing for URI Versioning
 
             //Define routing for version 1
-            config.Routes.MapHttpRoute(
-                name: "ProductVersion1",
-                routeTemplate: "api/V1/Product/{id}",
-                defaults: new { Controller = "CLProductV1", id = RouteParameter.Optional }
-            );
+           // config.Routes.MapHttpRoute(
+           //     name: "ProductVersion1",
+           //     routeTemplate: "api/V1/Product/{id}",
+           //     defaults: new { Controller = "CLProductV1", id = RouteParameter.Optional }
+           // );
 
-            // Define routing for version 2
-            config.Routes.MapHttpRoute(
-               name: "ProductVersion2",
-               routeTemplate: "api/V2/Product/{id}",
-               defaults: new { Controller = "CLProductV2", id = RouteParameter.Optional }
-           );
+           // // Define routing for version 2
+           // config.Routes.MapHttpRoute(
+           //    name: "ProductVersion2",
+           //    routeTemplate: "api/V2/Product/{id}",
+           //    defaults: new { Controller = "CLProductV2", id = RouteParameter.Optional }
+           //);
 
             #endregion
 

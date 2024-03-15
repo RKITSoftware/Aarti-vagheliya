@@ -12,6 +12,8 @@ namespace FinalDemo_WebAPI.Controllers
     [RoutePrefix("api/CLCategory")]
     public class CLCategoryController : ApiController
     {
+        #region Public Methods 
+
         #region GetAllCategories
 
         /// <summary>
@@ -105,6 +107,8 @@ namespace FinalDemo_WebAPI.Controllers
             }
         }
 
-        #endregion   
+        #endregion
+
+        #endregion
     }
 }

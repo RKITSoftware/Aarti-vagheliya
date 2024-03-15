@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Web.Caching;
 
 namespace FinalDemo_WebAPI.DAL
 {
@@ -14,6 +15,9 @@ namespace FinalDemo_WebAPI.DAL
     public class BLProductV2 : IInventoryManager
     {
         #region Private member
+
+        //cache class object 
+        private static Cache _objCache = System.Web.HttpRuntime.Cache;
 
         // Static variable to maintain a unique identifier for products
         private static int _productId = 0;
@@ -48,8 +52,8 @@ namespace FinalDemo_WebAPI.DAL
         /// <summary>
         /// Retrieves all products.
         /// </summary>
-        /// <returns>An IEnumerable of ProductV2.</returns>
-        public static IEnumerable<ProductV2> GetAllProducts()
+        /// <returns>An List of ProductV2.</returns>
+        public static List<ProductV2> GetAllProducts()
         {
             return _products;
         }
@@ -81,6 +85,7 @@ namespace FinalDemo_WebAPI.DAL
         {
             product.ProductId = GenerateId();
             _products.Add(product);
+            UpdateCache();
             return product;
         }
 
@@ -105,6 +110,7 @@ namespace FinalDemo_WebAPI.DAL
                 existingProduct.ExpiryDate = updatedProduct.ExpiryDate;
                 existingProduct.ManufacturingDate = updatedProduct.ManufacturingDate;
                 existingProduct.CategoryId = updatedProduct.CategoryId;
+                UpdateCache();
                 return existingProduct;
             }
             else
@@ -128,6 +134,7 @@ namespace FinalDemo_WebAPI.DAL
             if (product != null)
             {
                 _products.Remove(product);
+                UpdateCache();
                 return product;
             }
             else
@@ -154,6 +161,7 @@ namespace FinalDemo_WebAPI.DAL
             {
                 // Update product count after selling
                 product.ProductCount -= quantity;
+                UpdateCache();
                 return true; // Sold successfully
             }
 
@@ -178,6 +186,7 @@ namespace FinalDemo_WebAPI.DAL
             {
                 // Update product count
                 product.ProductCount += quantity;
+                UpdateCache();
                 return true; // Stock managed successfully
             }
 
@@ -233,6 +242,22 @@ namespace FinalDemo_WebAPI.DAL
         private static int GenerateId()
         {
             return ++_productId;
+        }
+
+        #endregion
+
+        #region UpdateCache
+
+        /// <summary>
+        /// Updates the cache with the latest product data and resets the data modification flag.
+        /// </summary>
+        private static void UpdateCache()
+        {
+            // Update the cache with the latest product data
+            _objCache["ProductsV2"] = _products;
+
+            // Reset the data modification flag
+            _objCache["DataModified"] = false;
         }
 
         #endregion

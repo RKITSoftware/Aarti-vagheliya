@@ -1,9 +1,8 @@
-﻿using FinalDemo_WebAPI.Caching;
-using FinalDemo_WebAPI.DAL;
+﻿using FinalDemo_WebAPI.DAL;
 using FinalDemo_WebAPI.Interface;
 using FinalDemo_WebAPI.Models;
 using FinalDemo_WebAPI.ServiceProvider;
-using System.Data;
+using System.Web.Caching;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -12,15 +11,32 @@ namespace FinalDemo_WebAPI.Controllers
     /// <summary>
     /// Controller for managing products with version 1.
     /// </summary>
- 
-    [BasicAuthenticationAttribute]
-    [EnableCorsAttribute(origins: "*", headers: "*", methods: "DeleteProduct,UpdateProduct,AddProduct")]
+
+    [EnableCorsAttribute(origins: "*", headers: "*", methods: "*")]
+    [BearerAuthentication] // Performs bearer token authentication
     [RoutePrefix("api/CLProductV1")]
-    [CacheFilter(Duration = 100)]
-    public class CLProductV1Controller : ApiController
-    {
+     public class CLProductV1Controller : ApiController
+     {
         #region Private Member
+
+        // object of the inventory interface
         private readonly IInventoryManager _inventoryManagement = new BLProductV1();
+
+        // declare object of Cache class
+        private Cache _objCache;
+
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Constructor initialize the object of the cache
+        /// </summary>
+        public CLProductV1Controller()
+        {
+            _objCache = new Cache();
+        }
+
         #endregion
 
         #region Public methods
@@ -30,14 +46,17 @@ namespace FinalDemo_WebAPI.Controllers
         /// <summary>
         /// Gets all products.
         /// </summary>
-        [HttpGet]
         [DisableCors]
+        [HttpGet]
         [Route("GetAllProducts")]
-        [BasicAuthorizationAttribute(Roles= "Customer,Supplier,Seller")]
+        [Authorize(Roles = ("Customer,Supplier,Seller"))]
         public IHttpActionResult GetAllProducts()
         {
-            // Retrieve all products from BLProductV1 and return as IHttpActionResult
-            return Ok(BLProductV1.GetAllProducts());    
+            // insert data into the cache 
+            _objCache.Insert("ProductsV1", BLProductV1.GetAllProducts());
+           
+            // Return the response
+            return Ok(_objCache.Get("ProductsV1"));
         }
 
         #endregion
@@ -49,7 +68,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpGet]
         [Route("GetProduct/{id}")]
-        [BasicAuthorizationAttribute(Roles = "Customer,Seller")]
+        [Authorize(Roles = ("Customer,Seller"))]
         public IHttpActionResult GetProductById(int id)
         {
             // Retrieve a product by ID from BLProductV1 and return as IHttpActionResult
@@ -73,7 +92,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpPost]
         [Route("AddProduct")]
-        [BasicAuthorizationAttribute(Roles = "Seller")]
+        [Authorize(Roles = ("Seller"))]
         public IHttpActionResult AddProduct(ProductV1 product)
         {
             // Add a new product using BLProductV1 and return the added product details
@@ -90,7 +109,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpPut]
         [Route("UpdateProduct/{id}")]
-        [BasicAuthorizationAttribute(Roles = "Seller,Supplier")]
+        [Authorize(Roles = ("Supplier,Seller"))]
         public IHttpActionResult UpdateProduct(int id, ProductV1 updatedProduct)
         {
             // Update an existing product using BLProductV1 and return the updated product details
@@ -114,7 +133,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpDelete]
         [Route("DeleteProduct/{id}")]
-        [BasicAuthorizationAttribute(Roles = "Seller")]
+        [Authorize(Roles = ("Seller"))]
         public IHttpActionResult DeleteProduct(int id)
         {
             // Delete a product by ID using BLProductV1 and return the deleted product details
@@ -146,6 +165,9 @@ namespace FinalDemo_WebAPI.Controllers
             bool result = _inventoryManagement.SellProduct(productId, quantity);
             if (result)
             {
+                _objCache.Remove("ProductsV1");
+                _objCache.Insert("ProductsV1",BLProductV1.GetAllProducts());
+
                 return Ok("Product sold successfully.");
             }
             else
@@ -184,22 +206,24 @@ namespace FinalDemo_WebAPI.Controllers
         #region DisplayAllStock
 
         /// <summary>
-        /// Displays information about all products in stock.
+        /// Retrieves and caches all products in stock, then returns them.
         /// </summary>
+        /// <returns>An IHttpActionResult representing the HTTP response with the list of products in stock.</returns>
         [HttpGet]
         [Route("DisplayAllStock")]
         [AllowAnonymous]
         //[BasicAuthorizationAttribute(Roles = "Customer,Supplier,Seller")]
         public IHttpActionResult DisplayAllStock()
-        {
-            // Display information about all products in stock using _inventoryManagement
-            DataTable stockData = _inventoryManagement.DisplayAllStock();
-            // Convert DataTable to JSON or any other format suitable for your response
-            return Ok(stockData);
+        { 
+            // Insert the list of products into cache
+            _objCache.Insert("Products", _inventoryManagement.DisplayAllStock());
+
+            // Return the list of products retrieved from cache
+            return Ok(_objCache.Get("Products"));
         }
 
         #endregion
 
         #endregion
-    }
+     }
 }

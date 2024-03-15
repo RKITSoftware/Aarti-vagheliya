@@ -17,7 +17,7 @@ namespace FinalDemo_WebAPI.UserRepository
         #region Public Member
 
         // Static list to store user information
-        public static List<User> _users = new List<User>
+        public static List<User> users = new List<User>
         {
             new User { UserId = GenerateUserId(), UserName = "Customer", PassWord = "customer", Email = "customer@gamil.com", Roles = "Customer" },
             new User { UserId = GenerateUserId(), UserName = "Supplier", PassWord = "supplier", Email = "supplier@gamil.com", Roles = "Supplier" },
@@ -37,7 +37,7 @@ namespace FinalDemo_WebAPI.UserRepository
         /// <returns>An IEnumerable of User.</returns>
         public IEnumerable<User> GetAllUsers()
         {
-            return _users;
+            return users;
         }
 
         #endregion
@@ -51,7 +51,7 @@ namespace FinalDemo_WebAPI.UserRepository
         /// <returns>A User object if found, otherwise null.</returns>
         public User GetUserById(int userId)
         {
-            return _users.Find(u => u.UserId == userId);
+            return users.Find(u => u.UserId == userId);
         }
 
         #endregion
@@ -66,7 +66,7 @@ namespace FinalDemo_WebAPI.UserRepository
         public User AddUser(User user)
         {
             user.UserId = GenerateUserId();
-            _users.Add(user);
+            users.Add(user);
             return user;
         }
 
@@ -82,7 +82,7 @@ namespace FinalDemo_WebAPI.UserRepository
         /// <returns>The updated User object if successful, otherwise null.</returns>
         public User UpdateUser(int userId, User updatedUser)
         {
-            var existingUser = _users.Find(u => u.UserId == userId);
+            var existingUser = users.Find(u => u.UserId == userId);
             if (existingUser != null)
             {
                 existingUser.UserName = updatedUser.UserName;
@@ -108,10 +108,10 @@ namespace FinalDemo_WebAPI.UserRepository
         /// <returns>The deleted User object if successful, otherwise null.</returns>
         public User DeleteUser(int userId)
         {
-            var user = _users.Find(u => u.UserId == userId);
+            var user = users.Find(u => u.UserId == userId);
             if (user != null)
             {
-                _users.Remove(user);
+                users.Remove(user);
                 return user;
             }
             else

@@ -1,7 +1,9 @@
+using FinalDemo_WebAPI;
+using FinalDemo_WebAPI.ServiceProvider;
+using Swashbuckle.Application;
+using System.Globalization;
 using System.Web.Http;
 using WebActivatorEx;
-using FinalDemo_WebAPI;
-using Swashbuckle.Application;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -32,7 +34,7 @@ namespace FinalDemo_WebAPI
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "FinalDemo_WebAPI");
+                       // c.SingleApiVersion("v1", "FinalDemo_WebAPI");
 
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //
@@ -43,13 +45,34 @@ namespace FinalDemo_WebAPI
                         // included in the docs for a given API version. Like "SingleApiVersion", each call to "Version"
                         // returns an "Info" builder so you can provide additional metadata per API version.
                         //
-                        //c.MultipleApiVersions(
-                        //    (apiDesc, targetApiVersion) => ResolveVersionSupportByRouteConstraint(apiDesc, targetApiVersion),
-                        //    (vc) =>
-                        //    {
-                        //        vc.Version("v2", "Swashbuckle Dummy API V2");
-                        //        vc.Version("v1", "Swashbuckle Dummy API V1");
-                        //    });
+
+                        c.MultipleApiVersions(
+                          (apiDesc, targetApiVersion) =>
+                          {
+                              var controllerNamespace = apiDesc.ActionDescriptor.ControllerDescriptor.ControllerType.FullName;
+                             
+                              // Check if the controller namespace contains "Products", "Category", "Token", "User" or any other controllers
+                              if (CultureInfo.InvariantCulture.CompareInfo.IndexOf(controllerNamespace, string.Format("{0}Controller", targetApiVersion), CompareOptions.IgnoreCase) >= 0 ||
+                                  CultureInfo.InvariantCulture.CompareInfo.IndexOf(controllerNamespace, "Category", CompareOptions.IgnoreCase) >= 0 ||
+                                  CultureInfo.InvariantCulture.CompareInfo.IndexOf(controllerNamespace, "User", CompareOptions.IgnoreCase) >= 0 ||
+                                  CultureInfo.InvariantCulture.CompareInfo.IndexOf(controllerNamespace, "Token", CompareOptions.IgnoreCase) >= 0
+                              // Add conditions for other controllers here
+                              )
+                              {
+                                  return true; // Return true to include the controller in both versions
+                              }
+                              else
+                              {
+                                  return false; // Exclude other controllers from being versioned
+                              }
+                          },
+                          (vc) =>
+                          {
+                              vc.Version("v1", "FinalDemo_WebAPI_V1");
+                              vc.Version("v2", "FinalDemo_WebAPI_V2");
+                           
+                          }
+                        );
 
                         // You can use "BasicAuth", "ApiKey" or "OAuth2" options to describe security schemes for the API.
                         // See https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md for more details.
@@ -57,11 +80,18 @@ namespace FinalDemo_WebAPI
                         // at the document or operation level to indicate which schemes are required for an operation. To do this,
                         // you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
                         // according to your specific authorization implementation
-                        //
-                        //c.BasicAuth("basic")
-                        //    .Description("Basic HTTP Authentication");
-                        //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+
+                        c.BasicAuth("basic")
+                            .Description("Basic HTTP Authentication");
+
+                        c.ApiKey("BearerToken")
+                                        .Description("Bearer Token Authentication")
+                                        .Name("Authorization")
+                                        .In("header");
+
+                        
+
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")
@@ -156,7 +186,7 @@ namespace FinalDemo_WebAPI
                         // to inspect some attribute on each action and infer which (if any) OAuth2 scopes are required
                         // to execute the operation
                         //
-                        //c.OperationFilter<AssignOAuth2SecurityRequirements>();
+                        c.OperationFilter<AssignOAuth2SecurityRequirements>();
 
                         // Post-modify the entire Swagger document by wiring up one or more Document filters.
                         // This gives full control to modify the final SwaggerDocument. You should have a good understanding of

@@ -42,7 +42,7 @@ namespace FinalDemo_WebAPI.DAL
         /// Retrieves all products.
         /// </summary>
         /// <returns>An IEnumerable of ProductV1.</returns>
-        public static IEnumerable<ProductV1> GetAllProducts()
+        public static List<ProductV1> GetAllProducts()
         {
             return _products;
         }
@@ -176,6 +176,9 @@ namespace FinalDemo_WebAPI.DAL
         /// <returns>A DataTable containing stock information.</returns>
         public DataTable DisplayAllStock()
         {
+            
+           // List<ProductV1> products = GetAllProducts();
+
             // Convert the list of products to a DataTable for display
             _stockTable = ConvertToDataTable(_products);
             return _stockTable;

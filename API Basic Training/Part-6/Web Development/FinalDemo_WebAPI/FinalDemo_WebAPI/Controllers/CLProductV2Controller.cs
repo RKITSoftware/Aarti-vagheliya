@@ -1,23 +1,42 @@
 ﻿using FinalDemo_WebAPI.DAL;
-using FinalDemo_WebAPI.Caching;
+using FinalDemo_WebAPI.Interface;
 using FinalDemo_WebAPI.Models;
+using FinalDemo_WebAPI.ServiceProvider;
+using System.Collections.Generic;
+using System.Data;
+using System.Web.Caching;
 using System.Web.Http;
 using System.Web.Http.Cors;
-using FinalDemo_WebAPI.Interface;
-using System.Data;
 
 namespace FinalDemo_WebAPI.Controllers
 {
     /// <summary>
     /// Controller for managing products with version 2.
     /// </summary>
-    [EnableCorsAttribute(origins: "https://localhost:44333", headers: "*", methods: "DeleteProduct,UpdateProduct,AddProduct")]
+    [EnableCorsAttribute(origins: "https://localhost:44331", headers: "*", methods: "DeleteProduct,UpdateProduct,AddProduct")]
+    [BearerAuthentication] // Performs bearer token authentication
     [RoutePrefix("api/CLProductV2")]
-    [CacheFilter(Duration = 300)]
     public class CLProductV2Controller : ApiController
     {
         #region Private member
+
+        // Interface object of IinventoryManager
         private readonly IInventoryManager _inventoryManagement = new BLProductV2();
+
+        // Cache class 's object
+        private Cache _objCache;
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Constructor for initialize Cache class's object
+        /// </summary>
+        public CLProductV2Controller()
+        {
+            _objCache = System.Web.HttpRuntime.Cache;
+        }
+
         #endregion
 
         #region Public Methods
@@ -27,14 +46,29 @@ namespace FinalDemo_WebAPI.Controllers
         /// <summary>
         /// Gets all products.
         /// </summary>
-        [HttpGet]
         [DisableCors]
+        [HttpGet]
         [Route("GetAllProducts")]
-        [Authorize(Roles = "Customer,Supplier,Seller")]
+        [Authorize(Roles = ("Customer,Supplier,Seller"))]
         public IHttpActionResult GetAllProducts()
         {
-            // Retrieve all products from BLProductV2 and return as IHttpActionResult
-            return Ok(BLProductV2.GetAllProducts());
+            List<ProductV2> products;
+
+            if (_objCache["ProductsV2"] != null)
+            {
+                // retrive Product list from the cache
+                products = (List<ProductV2>)_objCache.Get("ProductsV2");
+            }
+            else
+            {
+                products = BLProductV2.GetAllProducts();
+
+                // Add Product list to the cache
+                _objCache.Insert("ProductsV2", products);
+            }
+
+           return Ok(products);
+           
         }
 
         #endregion
@@ -47,7 +81,7 @@ namespace FinalDemo_WebAPI.Controllers
         [HttpGet]
         [DisableCors]
         [Route("GetProduct/{productId}")]
-        [Authorize(Roles = "Customer,Seller")]
+        [Authorize(Roles = ("Customer,Seller"))]
         public IHttpActionResult GetProductById(int productId)
         {
             // Retrieve a product by ID from BLProductV2 and return as IHttpActionResult
@@ -71,7 +105,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpPost]
         [Route("AddProduct")]
-        [Authorize(Roles = "Seller,Supplier")]
+        [Authorize(Roles = ("Supplier,Seller"))]
         public IHttpActionResult AddProduct(ProductV2 product)
         {
             // Add a new product using BLProductV2 and return the added product details
@@ -88,7 +122,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpPut]
         [Route("UpdateProduct/{productId}")]
-        [Authorize(Roles = "Supplier,Seller")]
+        [Authorize(Roles = ("Supplier,Seller"))]
         public IHttpActionResult UpdateProduct(int productId, ProductV2 updatedProduct)
         {
             // Update an existing product using BLProductV2 and return the updated product details
@@ -112,7 +146,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpDelete]
         [Route("DeleteProduct/{productId}")]
-        [Authorize(Roles = "Seller")]
+        [Authorize(Roles = ("Seller"))]
         public IHttpActionResult DeleteProduct(int productId)
         {
             // Delete a product by ID using BLProductV2 and return the deleted product details
@@ -136,7 +170,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpPost]
         [Route("SellProduct/{productId}/{quantity}")]
-        [Authorize(Roles = "Seller")]
+        [Authorize(Roles = ("Seller"))]
         public IHttpActionResult SellProduct(int productId, int quantity)
         {
             // Sell a product by reducing its quantity using _inventoryManagement
@@ -160,7 +194,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpPost]
         [Route("AddStock/{productId}/{quantity}")]
-        [Authorize(Roles = "Seller")]
+        [Authorize(Roles = ("Seller"))]
         public IHttpActionResult AddStock(int productId, int quantity)
         {
             // Add stock to a product in the inventory using _inventoryManagement
@@ -184,7 +218,8 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpGet]
         [Route("DisplayAllStock")]
-        [Authorize(Roles = "Customer,Supplier,Seller")]
+        [AllowAnonymous]
+        //[Authorize(Roles = ("Customer,Supplier,Seller"))]
         public IHttpActionResult DisplayAllStock()
         {
             // Display information about all products in stock using _inventoryManagement
@@ -202,7 +237,7 @@ namespace FinalDemo_WebAPI.Controllers
         /// </summary>
         [HttpGet]
         [Route("DisplayStockByCategory/{categoryId}")]
-        [Authorize(Roles = "Customer,Supplier,Seller")]
+        [Authorize(Roles = ("Customer,Supplier,Seller"))]
         public IHttpActionResult DisplayStockByCategory(int categoryId)
         {
             // Display information about products in stock filtered by category using _inventoryManagement
