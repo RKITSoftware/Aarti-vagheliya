@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "JOybJfszVq95UKmEtSAtpjP9o8QJKn/jSU/GAjLxYUs=",
+  "Source": "Middleware_BasicAuthentication",
+  "BasePath": "_content/Middleware_BasicAuthentication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
