@@ -2,12 +2,12 @@
 use schoolmanagement ;
 
 -- CREATE NON-UNIQUE INDEX ON FIRSTNAME COLUMN
-CREATE INDEX idx_FirstName
+CREATE INDEX idx_d01f02
 ON std01 (d01f02);
 
 
 -- CREATYE UNIOQUE INDEX ON EMAIL FIELD
-CREATE UNIQUE INDEX idx_UniqueEmail
+CREATE UNIQUE INDEX idx_d01f06
 ON std01 (d01f06);
 
 
@@ -17,4 +17,4 @@ SELECT
 FROM 
 	std01
 WHERE 
-	d01f02 = 'Arti';
+	d01f02 = 'Aarti';

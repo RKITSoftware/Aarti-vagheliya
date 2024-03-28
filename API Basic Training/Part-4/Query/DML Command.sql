@@ -24,11 +24,11 @@ WHERE k01f01 = 2;
 
 
 -- select data from bank table
-Select 
+SELECT 
 	Bnk01.k01f01,
     Bnk01.k01f02,
     Bnk01.k01f03,
     Bnk01.k01f04,
     Bnk01.k01f05
-from 
+FROM 
 	Bnk01;

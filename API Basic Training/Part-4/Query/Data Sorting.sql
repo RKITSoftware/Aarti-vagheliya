@@ -18,7 +18,7 @@ Select
 	* 
 From 
 	Std01
-order by d01f08
+order by d01f08;
 
 -- Sorting column by grade in descending order
 Select 

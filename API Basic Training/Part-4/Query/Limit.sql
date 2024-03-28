@@ -13,3 +13,11 @@ SELECT * FROM Bnk01
 order by Bnk01.k01f02 desc
 LIMIT 3;
 
+
+-- Retrieve 2 rows from the table Bnk01, starting from the 4th row (skipping the first 3 rows).
+SELECT 
+    *
+FROM
+    Bnk01
+LIMIT 3 , 2;
+

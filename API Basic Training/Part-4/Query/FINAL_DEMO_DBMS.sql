@@ -42,7 +42,7 @@ CREATE TABLE PRD01 (
 CREATE TABLE TRA01 (
     A01F01 INT PRIMARY KEY AUTO_INCREMENT COMMENT 'TransactionID',
     A01F02 INT COMMENT 'ProductID',
-    A01F03 VARCHAR(20) COMMENT 'TransactionType', -- Assuming transaction type is a string (e.g., Purchase, Sale)
+    A01F03 VARCHAR(20) COMMENT 'TransactionType', 
     A01F04 DATE COMMENT 'TransactionDate',
     A01F05 INT COMMENT 'Quantity',
     A01F06 DECIMAL(10, 2) COMMENT 'TotalAmount',

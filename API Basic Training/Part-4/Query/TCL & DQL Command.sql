@@ -12,22 +12,22 @@ VALUES (2, 'PQR Bank', 'PQR', 'City C', '555-123-4567');
 
 
 -- select data from bank table
-Select 
+SELECT 
 	*
-from 
+FROM 
 	Bnk01;
     
     
 -- Updating data within the transaction
 UPDATE Bnk01
-SET k01f03 = 'BOB'
+SET k01f03 = 'BOB1'
 WHERE k01f01 = 3;
 
 
 -- select data from bank table
-Select 
+SELECT 
 	*
-from 
+FROM 
 	Bnk01;
 
 
@@ -36,9 +36,9 @@ Rollback;
 
 
 -- select data from bank table 
-Select 
+SELECT 
 	*
-from 
+FROM 
 	Bnk01;
 
  
@@ -48,9 +48,9 @@ commit;
 
 -- DQL Command
 -- select data from bank table 
-Select 
+SELECT 
 	*
-from 
+FROM 
 	Bnk01
 WHERE 
 	k01f01 = 5;

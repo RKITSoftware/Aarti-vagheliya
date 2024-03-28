@@ -26,7 +26,7 @@ where d01f02 = 'Ishika';
 SET SQL_SAFE_UPDATES = 0;
 
 
--- delete asynatax
+-- delete syntax
 delete from 
 	std01
 where 

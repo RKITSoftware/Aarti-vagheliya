@@ -35,6 +35,8 @@ ON
 FROM 
 	'aarti.v';
     
+ 
+ 
 -- select data from bank table
 Select 
 	Bnk01.k01f01,
