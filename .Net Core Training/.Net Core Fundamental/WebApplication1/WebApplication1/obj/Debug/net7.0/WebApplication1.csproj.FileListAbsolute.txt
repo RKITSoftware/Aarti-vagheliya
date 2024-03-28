@@ -1,0 +1,62 @@
+F:\Arti-368\WebApplication1\WebApplication1\bin\Debug\net7.0\appsettings.Development.json
+F:\Arti-368\WebApplication1\WebApplication1\bin\Debug\net7.0\appsettings.json
+F:\Arti-368\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.staticwebassets.runtime.json
+F:\Arti-368\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.exe
+F:\Arti-368\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.deps.json
+F:\Arti-368\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.runtimeconfig.json
+F:\Arti-368\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.dll
+F:\Arti-368\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.pdb
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.AssemblyReference.cache
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfoInputs.cache
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfo.cs
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.CoreCompileInputs.cache
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cache
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cs
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.build.WebApplication1.props
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WebApplication1.props
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.WebApplication1.props
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.pack.json
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.build.json
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.development.json
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\bundle\WebApplication1.styles.css
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\projectbundle\WebApplication1.bundle.scp.css
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.dll
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\refint\WebApplication1.dll
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.pdb
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.genruntimeconfig.cache
+F:\Arti-368\WebApplication1\WebApplication1\obj\Debug\net7.0\ref\WebApplication1.dll
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfoInputs.cache
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.AssemblyInfo.cs
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cache
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.RazorAssemblyInfo.cs
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.dll
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\refint\WebApplication1.dll
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.pdb
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\bin\Debug\net7.0\appsettings.Development.json
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\bin\Debug\net7.0\appsettings.json
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.staticwebassets.runtime.json
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.exe
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.deps.json
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.runtimeconfig.json
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.dll
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\bin\Debug\net7.0\WebApplication1.pdb
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.build.WebApplication1.props
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WebApplication1.props
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.WebApplication1.props
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.pack.json
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.build.json
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\staticwebassets.development.json
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\bundle\WebApplication1.styles.css
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\scopedcss\projectbundle\WebApplication1.bundle.scp.css
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\WebApplication1.genruntimeconfig.cache
+F:\Arti-368\New folder\.Net Core Training\.Net Core Fundamental\WebApplication1\WebApplication1\obj\Debug\net7.0\ref\WebApplication1.dll
