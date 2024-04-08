@@ -50,3 +50,42 @@ HAVING AVG(P01F06) > 5000
 ORDER BY EmployeeCount DESC
 LIMIT 5;
 
+
+-- Function in Mysql
+
+DELIMITER //
+CREATE FUNCTION get_number_of_distinctions(minmarks INT) RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE count_distinctions INT DEFAULT 0;
+    SELECT COUNT(d01f01) INTO count_distinctions FROM std01 WHERE d01f08 >= minmarks;
+    RETURN count_distinctions;
+END //
+DELIMITER ;
+
+-- Excecute function
+SELECT get_number_of_distinctions(80) AS number_of_distinctions;
+
+
+-- If statement 
+SELECT 
+    d01f01,
+    d01f02,
+    IF(d01f08 >= 60, 'Pass', 'Fail') AS result
+FROM 
+    std01;
+    
+    
+ -- CASE - WHEN Syntax   
+SELECT 
+   d01f01,
+    d01f02,
+    CASE
+        WHEN d01f08 >= 90 THEN 'A'
+        WHEN d01f08 >= 80 THEN 'B'
+        WHEN d01f08 >= 70 THEN 'C'
+        ELSE 'D'
+    END AS grade
+FROM 
+    std01;
+

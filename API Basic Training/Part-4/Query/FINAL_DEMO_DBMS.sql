@@ -8,48 +8,48 @@ USE inventory_management;
 
 -- CREATE CAT01 (CATEGORY) TABLE
 CREATE TABLE CAT01 (
-    T01F01 INT PRIMARY KEY AUTO_INCREMENT COMMENT 'CategoryID',
-    T01F02 VARCHAR(255) NOT NULL COMMENT 'CategoryName'
-) COMMENT 'CAT_CATEGORY';
+    T01F01 INT PRIMARY KEY AUTO_INCREMENT ,
+    T01F02 VARCHAR(255) NOT NULL
+);
 
 
 
 -- CREATE SUP01 (SUPPLIERS) TABLE
-CREATE TABLE SUP01 (
-    P01F01 INT PRIMARY KEY AUTO_INCREMENT COMMENT 'SupplierID',
-    P01F02 VARCHAR(255) NOT NULL COMMENT 'SupplierName',
-    P01F03 VARCHAR(30) COMMENT 'ContactNumber',
-    P01F04 VARCHAR(50) COMMENT 'Email'
-) COMMENT 'SUP_SUPPLIER';
+CREATE TABLE SUP0T01F01usr011 (
+    P01F01 INT PRIMARY KEY AUTO_INCREMENT,
+    P01F02 VARCHAR(255) NOT NULL,
+    P01F03 VARCHAR(30),
+    P01F04 VARCHAR(50)
+);
 
 
 
 -- CREATE PRD01 (PRODUCT) TABLE
 CREATE TABLE PRD01 (
-    D01F01 INT PRIMARY KEY AUTO_INCREMENT COMMENT 'ProductID',
-    D01F02 VARCHAR(255) NOT NULL COMMENT 'ProductName',
-    D01F03 INT COMMENT 'CategoryID',
-    D01F04 DECIMAL(10, 2) COMMENT 'UnitPrice',
-    D01F05 INT COMMENT 'SupplierID',
-    D01F06 VARCHAR(100) COMMENT 'Description',
-    D01F07 DATE COMMENT 'DateAdded',
-    D01F08 VARCHAR(50) COMMENT 'Brand'
-) COMMENT 'PRD_PRODUCTS' ;
+    D01F01 INT PRIMARY KEY AUTO_INCREMENT,
+    D01F02 VARCHAR(255) NOT NULL,
+    D01F03 INT,
+    D01F04 DECIMAL(10 , 2 ),
+    D01F05 INT,
+    D01F06 VARCHAR(100),
+    D01F07 DATE,
+    D01F08 VARCHAR(50)
+);
 
 
 
 -- CREATE TRA01 (TRANSACTION) TABLE
 CREATE TABLE TRA01 (
-    A01F01 INT PRIMARY KEY AUTO_INCREMENT COMMENT 'TransactionID',
-    A01F02 INT COMMENT 'ProductID',
-    A01F03 VARCHAR(20) COMMENT 'TransactionType', 
-    A01F04 DATE COMMENT 'TransactionDate',
-    A01F05 INT COMMENT 'Quantity',
-    A01F06 DECIMAL(10, 2) COMMENT 'TotalAmount',
+    A01F01 INT PRIMARY KEY AUTO_INCREMENT ,
+    A01F02 INT ,
+    A01F03 VARCHAR(20) , 
+    A01F04 DATE ,
+    A01F05 INT ,
+    A01F06 DECIMAL(10, 2) ,
     CONSTRAINT FK_Product
     FOREIGN KEY (A01F02) 
     REFERENCES PRD01(D01F01)
-) COMMENT 'TRA_TRANSACTION';
+) ;
 
 
 
@@ -347,10 +347,10 @@ FROM
 
 
 -- Create a unique index on ProductID (D01F01) in the PRD01 table
-CREATE UNIQUE INDEX idx_ProductID ON PRD01(D01F01);
+CREATE UNIQUE INDEX idx_D01F01 ON PRD01(D01F01);
 
 -- Create a composite index on CategoryID (D01F03) and UnitPrice (D01F04) in the PRD01 table
-CREATE INDEX idx_Category_UnitPrice ON PRD01(D01F03, D01F04);
+CREATE INDEX idx_D01F03_D01F04 ON PRD01(D01F03, D01F04);
 
 
 
@@ -399,7 +399,7 @@ WHERE
 
 
 -- Complex SELECT query involving sorting, limiting, using indexes, and WHERE clause
-SELECT
+SELECT 
     P.D01F01 AS ProductID,
     P.D01F02 AS ProductName,
     C.T01F02 AS CategoryName,
@@ -411,14 +411,95 @@ SELECT
     T.A01F06 AS TransactionAmount
 FROM
     PRD01 P
-JOIN CAT01 C ON P.D01F03 = C.T01F01
-LEFT JOIN SUP01 S ON P.D01F05 = S.P01F01
-LEFT JOIN TRA01 T ON P.D01F01 = T.A01F02
+        JOIN
+    CAT01 C ON P.D01F03 = C.T01F01
+        LEFT JOIN
+    SUP01 S ON P.D01F05 = S.P01F01
+        LEFT JOIN
+    TRA01 T ON P.D01F01 = T.A01F02
 WHERE
-    C.T01F02 IN ('Electronics', 'Clothing')
-    AND S.P01F01 IS NOT NULL
-    AND T.A01F04 >= '2022-01-01'
-ORDER BY
-    T.A01F04 DESC, P.D01F02 ASC
+    C.T01F02 IN ('Electronics' , 'Clothing')
+        AND S.P01F01 IS NOT NULL
+        AND T.A01F04 >= '2022-01-01'
+ORDER BY T.A01F04 DESC , P.D01F02 ASC
 LIMIT 5;
 
+
+
+
+CREATE OR REPLACE VIEW vws_d01n01a01 AS
+SELECT Distinct
+	n01.N01F02 AS SupplierName,
+	d01.D01F02 As Product_name
+FROM
+    tra01 a01
+JOIN
+    con01 AS n01 ON a01.A01F06 = n01.N01F01
+JOIN
+    prd01 AS d01 ON a01.A01F02 = d01.D01F01
+WHERE
+    n01.N01F06 = 'Supplier';
+
+
+
+
+
+SELECT 
+	* 
+FROM 
+	vws_d01n01a01 ;
+    
+    
+    
+CREATE OR REPLACE VIEW vws_d01k01 AS
+    SELECT 
+        d01.D01F01 AS Product_Id,
+        d01.D01F02 AS Product_Name,
+        k01.K01F03 AS Stock
+    FROM
+        prd01 d01
+            JOIN
+        stk01 k01 ON d01.D01F01 = k01.K01F02;
+      
+      
+      
+SELECT 
+    *
+FROM
+    vws_d01k01
+ORDER BY 
+	Stock DESC;
+    
+    
+    
+    
+    
+    
+-- Complex SELECT query involving sorting, limiting, using indexes, and WHERE clause
+-- tables  & View => tra01, cat01, prd01, con01, vws_d01k01
+Explain SELECT 
+	a01.A01F01 AS SRNo,
+    vw.Product_Name AS ProductName,
+    vw.Stock AS Stock,
+    t01.T01F02 AS CategoryName,
+    a01.A01F04 AS TransactionDate,
+    a01.A01F05 AS TransactionType,
+    a01.A01F07 AS Quantity,
+    d01.D01F06 AS Unit_Price,
+    a01.A01F08 AS Net_Price,
+    n01.N01F02 AS SupplierName
+FROM
+    vws_d01k01 vw
+JOIN
+    tra01 a01 ON vw.Product_Id = a01.A01F02
+JOIN
+	prd01 d01 ON d01.D01F01 = vw.Product_Id
+JOIN
+    CAT01 t01 ON t01.T01F01 = d01.D01F03
+JOIN
+	con01 n01 ON n01.N01F01 = a01.A01F06
+-- WHERE
+--     t01.T01F02 IN ('Electronics' , 'Clothing', 'Food')
+--         AND a01.A01F04 >= '2022-01-01'
+ORDER BY a01.A01F04 DESC , vw.Product_Name ASC
+LIMIT 10;
