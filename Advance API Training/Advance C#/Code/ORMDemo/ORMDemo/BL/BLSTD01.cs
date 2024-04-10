@@ -8,7 +8,7 @@ namespace ORMDemo.BL
     /// <summary>
     /// Contains business logic for Student table
     /// </summary>
-    public class BLStudent
+    public class BLSTD01
     {
         #region Select Method
 

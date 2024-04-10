@@ -16,6 +16,6 @@ namespace ORMDemo.BL
         /// <summary>
         /// Creates a new instance of OrmLiteConnectionFactory using the connection string and MySQL dialect.
         /// </summary>
-        public static ServiceStack.OrmLite.OrmLiteConnectionFactory dbFactory = new ServiceStack.OrmLite.OrmLiteConnectionFactory(ConnectionString, MySqlDialect.Provider);
+        public static OrmLiteConnectionFactory dbFactory = new OrmLiteConnectionFactory(ConnectionString, MySqlDialect.Provider);
     }
 }

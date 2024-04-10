@@ -181,11 +181,18 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BL\BLConnection.cs" />
-    <Compile Include="BL\BLStudent.cs" />
-    <Compile Include="Controllers\CLStudentController.cs" />
+    <Compile Include="BL\BLConvertor.cs" />
+    <Compile Include="BL\BLFAC01.cs" />
+    <Compile Include="BL\BLMapper.cs" />
+    <Compile Include="BL\BLSTD01.cs" />
+    <Compile Include="Controllers\CLFAC01Controller.cs" />
+    <Compile Include="Controllers\CLSTD01Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DTO\DtoFAC01.cs" />
+    <Compile Include="Models\POCO\FAC01.cs" />
+    <Compile Include="Models\RES01.cs" />
     <Compile Include="Models\STD01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

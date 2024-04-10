@@ -8,13 +8,17 @@ namespace ORMDemo.Controllers
     /// Controller for handling CRUD operations related to students.
     /// </summary>
     [RoutePrefix("api/Student")]
-    public class CLStudentController : ApiController
+    public class CLSTD01Controller : ApiController
     {
-        private readonly BLStudent objBLStudent;
+        //Create instance of BLStudent class
+        private readonly BLSTD01 objBLStudent;
 
-        public CLStudentController()
+        /// <summary>
+        /// Initialize object of BLSTD01
+        /// </summary>
+        public CLSTD01Controller()
         {
-            objBLStudent = new BLStudent();
+            objBLStudent = new BLSTD01();
         }
 
         #region GetAll
