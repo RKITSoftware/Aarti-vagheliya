@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace ActionMethodResponse.Models
 {
@@ -9,9 +6,10 @@ namespace ActionMethodResponse.Models
     /// Represents a student entity with basic information.
     /// </summary>
     public class Student
-    {/// <summary>
-     /// Gets or sets the unique identifier for the student.
-     /// </summary>
+    {
+        /// <summary>
+        /// Gets or sets the unique identifier for the student.
+        /// </summary>
         public int Id { get; set; }
 
         /// <summary>

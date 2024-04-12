@@ -8,27 +8,27 @@ namespace Build_Web_API.Controllers
     /// <summary>
     /// API controller for managing student data.
     /// </summary>
-    public class StudentController : ApiController
+    public class CLStudentController : ApiController
     {
         #region List of Student
         // Static list to store student data.
-        private static List<Student> _student = new List<Student>
+        private static List<Student> _lstStudent = new List<Student>
        {
            new Student { Id = 1, FirstName = "Arti", LastName = "Vagheliya", DateOfBirth = new DateTime(2002,09,25), MobileNo = "+91 9874563215", Email = "arti@gmail.com" },
            new Student { Id = 2, FirstName = "Krinsi", LastName = "Kayada", DateOfBirth = new DateTime(2003,08,17), MobileNo = "+91 9852563215", Email = "krinsi@gmail.com" },
            new Student { Id = 3, FirstName = "Ishika", LastName = "Jethwa", DateOfBirth = new DateTime(2002,07,18), MobileNo = "+91 9874565215", Email = "ishika@gmail.com" },
            new Student { Id = 4, FirstName = "Dimple", LastName = "Mithiya", DateOfBirth = new DateTime(2003,06,05), MobileNo = "+91 9874598215", Email = "dimple@gmail.com" },
            new Student { Id = 5, FirstName = "Yashvi", LastName = "Shah", DateOfBirth = new DateTime(2001,05,15), MobileNo = "+91 4274563215", Email = "yashvi@gmail.com" },
-       };
+       }; 
         #endregion
 
         #region Get
         /// <summary>
         /// Retrieves all students.
-        /// </summary>
+        /// </summary
         public List<Student> Get()
         {
-            return _student;
+            return _lstStudent;                                
         }
         #endregion
 
@@ -36,7 +36,7 @@ namespace Build_Web_API.Controllers
         /// <summary>
         /// Retrieves a student by ID.
         /// </summary>
-        public Student GetById(int id)
+        public Student ById(int id)
         {
             // Gets the student by ID.
             var Student = GetStudentById(id);
@@ -56,7 +56,7 @@ namespace Build_Web_API.Controllers
             // If the student exists, removes it.
             if (student != null)
             {
-                _student.Remove(student);
+                _lstStudent.Remove(student);
             }
 
         }
@@ -73,7 +73,7 @@ namespace Build_Web_API.Controllers
             if (student != null)
             {
                 student.Id = GetNextStudentId();
-                _student.Add(student);
+                _lstStudent.Add(student);
             }
 
         }
@@ -106,7 +106,7 @@ namespace Build_Web_API.Controllers
         /// </summary>
         private Student GetStudentById(int id)
         {
-            return _student.Find(s => s.Id == id);
+            return _lstStudent.Find(s => s.Id == id);
         }
         #endregion
 
@@ -116,7 +116,7 @@ namespace Build_Web_API.Controllers
         /// </summary>
         private int GetNextStudentId()
         {
-            return _student.Count + 1;
+            return _lstStudent.Count + 1;
         }
         #endregion
     }

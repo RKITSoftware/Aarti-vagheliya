@@ -7,9 +7,10 @@ namespace Build_Web_API.Models
     /// Represents a student entity with basic information.
     /// </summary>
     public class Student
-    {/// <summary>
-     /// Gets or sets the unique identifier for the student.
-     /// </summary>
+    {
+        /// <summary>
+        /// Gets or sets the unique identifier for the student.
+        /// </summary> 
         public int Id { get; set; }
 
         /// <summary>
