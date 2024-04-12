@@ -477,7 +477,7 @@ ORDER BY
     
 -- Complex SELECT query involving sorting, limiting, using indexes, and WHERE clause
 -- tables  & View => tra01, cat01, prd01, con01, vws_d01k01
-Explain SELECT 
+ SELECT 
 	a01.A01F01 AS SRNo,
     vw.Product_Name AS ProductName,
     vw.Stock AS Stock,
