@@ -1,0 +1,59 @@
+2024-04-08 09:40:46.3240 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-04-08 09:40:47.8353 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-04-08 09:40:48.2463 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-04-08 09:40:48.3053 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-04-08 09:40:48.3053 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly LogLevel_Demo
+2024-04-08 09:40:48.3053 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-04-08 09:40:48.3053 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-04-08 09:40:48.5200 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLG" accepted.
+2024-04-08 09:40:48.5200 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLF" accepted.
+2024-04-08 09:40:48.5200 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLG" started.
+2024-04-08 09:40:48.5200 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLF" started.
+2024-04-08 09:40:48.8580 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLH" accepted.
+2024-04-08 09:40:48.8587 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLI" accepted.
+2024-04-08 09:40:48.8587 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLI" started.
+2024-04-08 09:40:48.8587 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLH" started.
+2024-04-08 09:40:48.9569 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN2NG7FHIQLH" received FIN.
+2024-04-08 09:40:48.9742 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN2NG7FHIQLH established using the following protocol: Tls12
+2024-04-08 09:40:48.9742 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN2NG7FHIQLI established using the following protocol: Tls12
+2024-04-08 09:40:48.9990 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN2NG7FHIQLH" is closed. The last processed stream ID was 0.
+2024-04-08 09:40:49.0010 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN2NG7FHIQLH" sending FIN because: "The client closed the connection."
+2024-04-08 09:40:49.0205 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLH" stopped.
+2024-04-08 09:40:49.1110 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-04-08 09:40:49.6619 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-04-08 09:40:50.1474 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-04-08 09:40:58.5434 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Authentication of the HTTPS connection timed out.
+2024-04-08 09:40:58.5434 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Authentication of the HTTPS connection timed out.
+2024-04-08 09:40:58.5434 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLG" stopped.
+2024-04-08 09:40:58.5434 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN2NG7FHIQLF" stopped.
+2024-04-08 09:40:58.5434 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN2NG7FHIQLG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-04-08 09:40:58.5434 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN2NG7FHIQLF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-04-08 09:41:54.7402 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| PUT requests are not supported
+2024-04-08 09:41:54.7402 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| PUT requests are not supported
+2024-04-08 09:41:54.8145 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLOrderService/updateOrderStatus/8/0'
+2024-04-08 09:41:54.8145 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.UpdateOrderStatus (LogLevel_Demo)' with route pattern 'api/CLOrderService/updateOrderStatus/{orderId}/{status}' is valid for the request path '/api/CLOrderService/updateOrderStatus/8/0'
+2024-04-08 09:41:54.8145 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.UpdateOrderStatus (LogLevel_Demo)'
+2024-04-08 09:41:54.8926 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): None
+2024-04-08 09:41:54.8926 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-04-08 09:41:54.8926 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-04-08 09:41:54.8926 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-04-08 09:41:54.8926 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-04-08 09:41:54.8926 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller LogLevel_Demo.Controllers.CLOrderServiceController (LogLevel_Demo)
+2024-04-08 09:41:55.5014 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller LogLevel_Demo.Controllers.CLOrderServiceController (LogLevel_Demo)
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'orderId' of type 'System.Int32' ...
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'orderId' of type 'System.Int32' using the name 'orderId' in request data ...
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'orderId' of type 'System.Int32'.
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'orderId' of type 'System.Int32'.
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'orderId' of type 'System.Int32' ...
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'orderId' of type 'System.Int32'.
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'status' of type 'LogLevel_Demo.Enum.enmOrderStatus' ...
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'status' of type 'LogLevel_Demo.Enum.enmOrderStatus' using the name 'status' in request data ...
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'status' of type 'LogLevel_Demo.Enum.enmOrderStatus'.
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'status' of type 'LogLevel_Demo.Enum.enmOrderStatus'.
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'status' of type 'LogLevel_Demo.Enum.enmOrderStatus' ...
+2024-04-08 09:41:55.5373 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'status' of type 'LogLevel_Demo.Enum.enmOrderStatus'.
+2024-04-08 09:41:58.1570 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-04-08 09:41:58.1570 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-04-08 09:41:58.1570 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-04-08 09:41:58.1570 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-04-08 09:41:58.1570 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.

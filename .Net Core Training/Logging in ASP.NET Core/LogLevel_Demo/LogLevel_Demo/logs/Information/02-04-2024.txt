@@ -1,0 +1,9 @@
+2024-04-02 16:39:17.8330 | INFO | LogLevel_Demo.Program | Hello 
+2024-04-02 16:39:21.6091 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/index.html - - 
+2024-04-02 16:39:22.8022 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/index.html - - - 200 - text/html;charset=utf-8 1201.9280ms 
+2024-04-02 16:39:23.0901 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - 
+2024-04-02 16:39:23.0901 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_vs/browserLink - - 
+2024-04-02 16:39:23.0901 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 7.1898ms 
+2024-04-02 16:39:23.3238 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 236.5049ms 
+2024-04-02 16:39:23.4946 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - 
+2024-04-02 16:39:23.8254 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 331.5693ms 

@@ -1,0 +1,5 @@
+2024-04-03 10:40:12.3815 | ERROR | LogLevel_Demo.BusinessLogic.BLOrderService | Failed to update order status. Order with ID 5 not found. 
+2024-04-03 10:53:44.0347 | ERROR | LogLevel_Demo.BusinessLogic.BLOrderService | Failed to update order status. Order with ID 1 not found. 
+2024-04-03 11:13:56.2174 | ERROR | LogLevel_Demo.BusinessLogic.BLOrderService | Failed to update order status. Order with ID 21 not found. 
+2024-04-03 11:39:00.8711 | ERROR | LogLevel_Demo.BusinessLogic.BLOrderService | Failed to update order status. Order with ID 2 not found. 
+2024-04-03 11:46:13.6617 | ERROR | LogLevel_Demo.BusinessLogic.BLOrderService | Failed to update order status. Order with ID 4 not found. 

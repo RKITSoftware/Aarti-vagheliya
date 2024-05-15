@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LogLevel_Demo.props" />
+</Project>

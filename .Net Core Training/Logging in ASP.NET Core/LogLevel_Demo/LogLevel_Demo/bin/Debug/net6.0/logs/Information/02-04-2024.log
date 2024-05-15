@@ -1,0 +1,14 @@
+2024-04-02 13:21:53.0737|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7054/swagger/index.html - - 
+2024-04-02 13:21:53.7072|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7054/swagger/index.html - - - 200 - text/html;charset=utf-8 640.8885ms 
+2024-04-02 13:21:53.7278|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - 
+2024-04-02 13:21:53.7278|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7054/_vs/browserLink - - 
+2024-04-02 13:21:53.7496|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 21.7540ms 
+2024-04-02 13:21:54.4597|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7054/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 723.0888ms 
+2024-04-02 13:21:54.5934|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - 
+2024-04-02 13:21:54.9845|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 391.0640ms 
+2024-04-02 13:22:00.3619|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7054/api/CLOrderService/placeOrder application/json 91 
+2024-04-02 13:22:00.4214|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.PlaceOrder (LogLevel_Demo)' 
+2024-04-02 13:22:00.5022|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "PlaceOrder", controller = "CLOrderService"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PlaceOrder(LogLevel_Demo.Model.ORD01) on controller LogLevel_Demo.Controllers.CLOrderServiceController (LogLevel_Demo). 
+2024-04-02 13:22:41.3257|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LogLevel_Demo.Controllers.CLOrderServiceController.PlaceOrder (LogLevel_Demo) in 40804.6332ms 
+2024-04-02 13:22:41.3257|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.PlaceOrder (LogLevel_Demo)' 
+2024-04-02 13:22:41.3894|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7054/api/CLOrderService/placeOrder application/json 91 - 500 - text/plain;+charset=utf-8 41026.8093ms 
