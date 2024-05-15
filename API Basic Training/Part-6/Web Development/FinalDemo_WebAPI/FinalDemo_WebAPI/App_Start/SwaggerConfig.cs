@@ -89,7 +89,7 @@ namespace FinalDemo_WebAPI
                                         .Name("Authorization")
                                         .In("header");
 
-                        
+                        c.OperationFilter<AssignOAuth2SecurityRequirements>();
 
                         // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
@@ -186,7 +186,7 @@ namespace FinalDemo_WebAPI
                         // to inspect some attribute on each action and infer which (if any) OAuth2 scopes are required
                         // to execute the operation
                         //
-                        c.OperationFilter<AssignOAuth2SecurityRequirements>();
+
 
                         // Post-modify the entire Swagger document by wiring up one or more Document filters.
                         // This gives full control to modify the final SwaggerDocument. You should have a good understanding of

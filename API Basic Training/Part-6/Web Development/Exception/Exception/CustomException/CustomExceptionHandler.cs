@@ -48,7 +48,7 @@ namespace Exception.CustomException
             var response = context.Request.CreateResponse(statusCode, errorMsg);
 
             // Add custom header to the response
-            response.Headers.Add("X-Error", "Freom exception Handler");
+            response.Headers.Add("X-Error", "From exception Handler");
 
             // Set the custom response as the result in the context
             context.Result = new ResponseMessageResult(response);

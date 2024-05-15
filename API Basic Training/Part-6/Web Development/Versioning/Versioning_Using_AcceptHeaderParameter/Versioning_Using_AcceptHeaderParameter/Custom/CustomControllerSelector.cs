@@ -12,7 +12,14 @@ namespace Versioning_Using_AcceptHeaderParameter.Custom
     /// </summary>
     public class CustomControllerSelector : DefaultHttpControllerSelector
     {
+        #region Private Member
+
+        //private object of HttpConfiguration.
         private HttpConfiguration _config;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomControllerSelector"/> class.
@@ -22,6 +29,9 @@ namespace Versioning_Using_AcceptHeaderParameter.Custom
         {
             _config = config;
         }
+        #endregion
+
+        #region Public method
 
         /// <summary>
         /// Selects the appropriate HTTP controller descriptor based on the API version specified in the custom header.
@@ -67,5 +77,6 @@ namespace Versioning_Using_AcceptHeaderParameter.Custom
             return null;
         }
 
+        #endregion
     }
 }

@@ -11,7 +11,15 @@ namespace FinalDemo_WebAPI.Version
     /// </summary>
     public class CustomControllerSelector : DefaultHttpControllerSelector
     {
+        #region Private Member
+
+        //Private object of HttpConfiguration.
         private HttpConfiguration _config;
+
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomControllerSelector"/> class.
@@ -22,6 +30,10 @@ namespace FinalDemo_WebAPI.Version
             _config = config;
         }
 
+        #endregion
+
+        #region Public Method
+
         /// <summary>
         /// Selects the appropriate HTTP controller descriptor based on the API version specified in the custom header.
         /// </summary>
@@ -29,6 +41,9 @@ namespace FinalDemo_WebAPI.Version
         /// <returns>The selected HTTP controller descriptor.</returns>
         public override HttpControllerDescriptor SelectController(HttpRequestMessage request)
         {
+            // local declaration for controllerDescriptor
+            HttpControllerDescriptor controllerDescriptor;
+
             //returns all possible API Controllers
             var controllers = GetControllerMapping();
 
@@ -67,8 +82,6 @@ namespace FinalDemo_WebAPI.Version
                 controllerName = controllerName + "V2";
             }
 
-            HttpControllerDescriptor controllerDescriptor;
-
             //check the value in controllers dictionary. TryGetValue is an efficient way to check the value existence
             if (controllers.TryGetValue(controllerName, out controllerDescriptor))
             {
@@ -76,5 +89,7 @@ namespace FinalDemo_WebAPI.Version
             }
             return null;
         }
+
+        #endregion
     }
 }

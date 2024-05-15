@@ -10,6 +10,7 @@ using System.Threading;
 using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
+using Token_Custom.BL;
 using Token_Custom.Models;
 using Token_Custom.Services;
 
@@ -39,23 +40,27 @@ namespace Token_Custom.Auth
             }
             else
             {
-                // get jwt payload
+                // Extract the JWT payload from the token by splitting it at the '.' and taking the second part.
                 string jwtEncodedPayload = tokenValue.Split('.')[1];
 
-                // pad jwtEncodedPayload
+                // Add padding to the jwtEncodedPayload to ensure it's a multiple of 4.
+                // JWT payloads are Base64Url encoded and might require padding.
                 jwtEncodedPayload = jwtEncodedPayload + new string('=', (4 - (jwtEncodedPayload.Length % 4)));
 
-                // decode the jwt payload
+                // Decode the Base64Url encoded jwt payload into a byte array.
                 byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
 
+                // Convert the byte array to a UTF-8 encoded string to get the actual JSON payload.
                 string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
 
+                // Parse the JSON payload into a JObject for easier manipulation.
                 JObject json = JObject.Parse(decodedPayload);
 
-                User user = UserRepository.users.FirstOrDefault(u => u.Username == json["unique_name"].ToString());
+                // Find the user in the users list whose username matches the 'unique_name' from the JWT payload.
+                User user = BLUser.users.FirstOrDefault(u => u.Username == json["unique_name"].ToString());
 
-
-                // create an identity => i.e., attach username which is used to identify the user
+                // Create a new GenericIdentity using the found user's username.
+                // This identity will be used to represent the user in the application.
                 GenericIdentity identity = new GenericIdentity(user.Username);
 
                 // add claims for the identity => a claim has (claim_type, value)

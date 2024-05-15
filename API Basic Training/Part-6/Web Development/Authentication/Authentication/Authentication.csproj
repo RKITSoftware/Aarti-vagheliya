@@ -86,13 +86,14 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BasicAuthentication\BasicAuthenticationAttribute.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="BL\BLStudent.cs" />
+    <Compile Include="BL\ValidateUser.cs" />
+    <Compile Include="Controllers\CLStudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidateUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,5 +1,4 @@
-﻿using FinalDemo_WebAPI.DAL;
-using FinalDemo_WebAPI.UserRepository;
+﻿using FinalDemo_WebAPI.BL;
 using System;
 using System.Diagnostics.Contracts;
 using System.Linq;
@@ -13,16 +12,11 @@ using System.Web.Http.Filters;
 
 namespace FinalDemo_WebAPI.ServiceProvider
 {
+    /// <summary>
+    /// This class for perform Basic Auhtentication.
+    /// </summary>
     public class BasicAuthentication : ActionFilterAttribute
-    {
-
-        #region Private Member
-
-        // Instance of BLUser class for user authentication
-        private BLUser _objBLUser = new BLUser();
-
-        #endregion
-
+    { 
         #region public method
 
         /// <summary>
@@ -56,7 +50,7 @@ namespace FinalDemo_WebAPI.ServiceProvider
                 string password = usernamePassword[1];
 
                 // Checking if the user exists and credentials match
-                var user = _objBLUser.GetAllUsers().Any(u => u.UserName == username && u.PassWord == password);
+                var user = BLUser.lstUsers.Any(u => u.UserName == username && u.PassWord == password);
 
                 if (user) // If user exists and credentials match
                 {
@@ -86,6 +80,7 @@ namespace FinalDemo_WebAPI.ServiceProvider
         /// <returns></returns>
         public static bool SkipAuthorization(HttpActionContext actionContext)
         {
+            // Check precondition and if false then terminate application.
             // Use Contract.Assert to ensure that the actionContext is not null.
             Contract.Assert(actionContext != null);
 

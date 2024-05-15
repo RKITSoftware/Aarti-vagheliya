@@ -11,6 +11,8 @@ namespace FinalDemo_WebAPI.CustomException
     /// </summary>
     public class CustomExceptionFilter : ExceptionFilterAttribute
     {
+        #region Public Method
+        
         /// <summary>
         /// Overrides the OnException method to handle exceptions and provide custom responses.
         /// </summary>
@@ -74,5 +76,7 @@ namespace FinalDemo_WebAPI.CustomException
 
             base.OnException(actionExecutedContext);
         }
+
+        #endregion
     }
 }

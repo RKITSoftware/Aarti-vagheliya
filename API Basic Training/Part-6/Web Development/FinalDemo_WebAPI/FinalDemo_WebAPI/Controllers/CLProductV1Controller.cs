@@ -1,4 +1,4 @@
-﻿using FinalDemo_WebAPI.DAL;
+﻿using FinalDemo_WebAPI.BL;
 using FinalDemo_WebAPI.Interface;
 using FinalDemo_WebAPI.Models;
 using FinalDemo_WebAPI.ServiceProvider;
@@ -25,6 +25,9 @@ namespace FinalDemo_WebAPI.Controllers
         // declare object of Cache class
         private Cache _objCache;
 
+        //Private instance of BLProductV1 class.
+        private BLProductV1 _objBLProductV1 = new BLProductV1();
+
         #endregion
 
         #region Constructor
@@ -41,11 +44,10 @@ namespace FinalDemo_WebAPI.Controllers
 
         #region Public methods
 
-        #region GetAllProducts
-
         /// <summary>
-        /// Gets all products.
+        /// Retrieves all products.
         /// </summary>
+        /// <returns>An IHttpActionResult containing the response with all products.</returns>
         [DisableCors]
         [HttpGet]
         [Route("GetAllProducts")]
@@ -53,162 +55,121 @@ namespace FinalDemo_WebAPI.Controllers
         public IHttpActionResult GetAllProducts()
         {
             // insert data into the cache 
-            _objCache.Insert("ProductsV1", BLProductV1.GetAllProducts());
+            _objCache.Insert("ProductsV1", _objBLProductV1.GetAllProducts());
            
             // Return the response
             return Ok(_objCache.Get("ProductsV1"));
         }
 
-        #endregion
-
-        #region GetProductById
-
         /// <summary>
-        /// Gets a product by its ID.
+        /// Retrieves a product by its ID.
         /// </summary>
+        /// <param name="id">The ID of the product to retrieve.</param>
+        /// <returns>An IHttpActionResult containing the response with the product if found.</returns>
         [HttpGet]
         [Route("GetProduct/{id}")]
         [Authorize(Roles = ("Customer,Seller"))]
         public IHttpActionResult GetProductById(int id)
         {
-            // Retrieve a product by ID from BLProductV1 and return as IHttpActionResult
-            var product = BLProductV1.GetProductById(id);
-            if (product != null)
-            {
-                return Ok(product);
-            }
-            else
-            {
-                return NotFound();
-            }
+            return Ok( _objBLProductV1.GetProductById(id));
         }
-
-        #endregion
-
-        #region AddProduct
 
         /// <summary>
         /// Adds a new product.
         /// </summary>
+        /// <param name="product">The ProductV1 object to add.</param>
+        /// <returns>An IHttpActionResult containing the response with the result of the product addition.</returns>
         [HttpPost]
         [Route("AddProduct")]
         [Authorize(Roles = ("Seller"))]
         public IHttpActionResult AddProduct(ProductV1 product)
         {
-            // Add a new product using BLProductV1 and return the added product details
-            var addedProduct = BLProductV1.AddProduct(product);
-            return Created(Request.RequestUri + "/" + addedProduct.ProductId, addedProduct);
+            Response response = _objBLProductV1.Validation(product.ProductCount);
+            if (!response.isError)
+            {
+                response = _objBLProductV1.AddProduct(product);
+            }
+            return Ok(response);
         }
-
-        #endregion
-
-        #region UpdateProduct
 
         /// <summary>
         /// Updates an existing product.
         /// </summary>
+        /// <param name="id">The ID of the product to update.</param>
+        /// <param name="updatedProduct">The updated ProductV1 object.</param>
+        /// <returns>An IHttpActionResult containing the response with the result of the product update.</returns>
         [HttpPut]
         [Route("UpdateProduct/{id}")]
         [Authorize(Roles = ("Supplier,Seller"))]
         public IHttpActionResult UpdateProduct(int id, ProductV1 updatedProduct)
         {
-            // Update an existing product using BLProductV1 and return the updated product details
-            var product = BLProductV1.UpdateProduct(id, updatedProduct);
-            if (product != null)
+            Response response = _objBLProductV1.Validation(updatedProduct.ProductCount);
+            if (!response.isError)
             {
-                return Ok(product);
+                response = _objBLProductV1.UpdateProduct(id, updatedProduct);
             }
-            else
-            {
-                return NotFound();
-            }
+            return Ok(response);
         }
-
-        #endregion
-
-        #region DeleteProduct
 
         /// <summary>
         /// Deletes a product by its ID.
         /// </summary>
+        /// <param name="id">The ID of the product to delete.</param>
+        /// <returns>An IHttpActionResult containing the response with the result of the product deletion.</returns>
         [HttpDelete]
         [Route("DeleteProduct/{id}")]
         [Authorize(Roles = ("Seller"))]
         public IHttpActionResult DeleteProduct(int id)
         {
-            // Delete a product by ID using BLProductV1 and return the deleted product details
-            var product = BLProductV1.DeleteProduct(id);
-            if (product != null)
-            {
-                return Ok(product);
-            }
-            else
-            {
-                return NotFound();
-            }
+            return Ok(_objBLProductV1.DeleteProduct(id));
         }
 
-        #endregion
-
-        #region SellProduct
-
         /// <summary>
-        /// Sells a product by reducing its quantity.
+        /// Sells a specified quantity of a product.
         /// </summary>
+        /// <param name="productId">The ID of the product to sell.</param>
+        /// <param name="quantity">The quantity to sell.</param>
+        /// <returns>An IHttpActionResult containing the response with the result of the product sale.</returns>
         [HttpPost]
         [Route("SellProduct/{productId}/{quantity}")]
         [AllowAnonymous]
         //[BasicAuthorizationAttribute(Roles = "Seller")]
         public IHttpActionResult SellProduct(int productId, int quantity)
         {
-            // Sell a product by reducing its quantity using _inventoryManagement
-            bool result = _inventoryManagement.SellProduct(productId, quantity);
-            if (result)
+            Response response = _objBLProductV1.Validation(quantity);
+            if (!response.isError)
             {
+                response = _objBLProductV1.SellProduct(productId, quantity);
                 _objCache.Remove("ProductsV1");
-                _objCache.Insert("ProductsV1",BLProductV1.GetAllProducts());
-
-                return Ok("Product sold successfully.");
+                _objCache.Insert("ProductsV1", _objBLProductV1.GetAllProducts());
             }
-            else
-            {
-                return BadRequest("Failed to sell the product.");
-            }
+            return Ok(response);
         }
 
-        #endregion
-
-        #region AddStock
-
         /// <summary>
-        /// Adds stock to a product in the inventory.
+        /// Adds stock to a product.
         /// </summary>
+        /// <param name="productId">The ID of the product to add stock to.</param>
+        /// <param name="quantity">The quantity of stock to add.</param>
+        /// <returns>An IHttpActionResult containing the response with the result of the stock addition.</returns>
         [HttpPost]
         [Route("AddStock/{productId}/{quantity}")]
         [AllowAnonymous]
         //[BasicAuthorizationAttribute(Roles = "Supplier")]
         public IHttpActionResult AddStock(int productId, int quantity)
         {
-            // Add stock to a product in the inventory using _inventoryManagement
-            bool result = _inventoryManagement.AddStock(productId, quantity);
-            if (result)
+            Response response = _objBLProductV1.Validation(quantity);
+            if (!response.isError)
             {
-                return Ok("Product Added in Inventory successfully.");
+                response = _objBLProductV1.AddStock(productId, quantity);
             }
-            else
-            {
-                return BadRequest("Failed to add the product.");
-            }
+            return Ok(response);
         }
 
-        #endregion
-
-        #region DisplayAllStock
-
         /// <summary>
-        /// Retrieves and caches all products in stock, then returns them.
+        /// Displays all available stock.
         /// </summary>
-        /// <returns>An IHttpActionResult representing the HTTP response with the list of products in stock.</returns>
+        /// <returns>An IHttpActionResult containing the response with the list of all available products in stock.</returns>
         [HttpGet]
         [Route("DisplayAllStock")]
         [AllowAnonymous]
@@ -221,8 +182,6 @@ namespace FinalDemo_WebAPI.Controllers
             // Return the list of products retrieved from cache
             return Ok(_objCache.Get("Products"));
         }
-
-        #endregion
 
         #endregion
      }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace TokenBasedAuthentication.Models
+﻿namespace TokenBasedAuthentication.Models
 {
     /// <summary>
     /// Represents a user entity with authentication and authorization information.
@@ -11,7 +6,7 @@ namespace TokenBasedAuthentication.Models
     /// </summary>
     public class User
     {
-        #region Properties for Users Data
+        #region Public Properties 
 
         /// <summary>
         /// Gets or sets the unique identifier for the user.

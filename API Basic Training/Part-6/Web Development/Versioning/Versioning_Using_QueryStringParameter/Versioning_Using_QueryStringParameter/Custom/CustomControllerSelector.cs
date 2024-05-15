@@ -12,7 +12,16 @@ namespace Versioning_Using_QueryStringParameter.Custom
     /// </summary>
     public class CustomControllerSelector : DefaultHttpControllerSelector
     {
-       private HttpConfiguration _config;
+        #region private member
+
+        /// <summary>
+        /// Private Instance of Configuration
+        /// </summary>
+        private HttpConfiguration _config;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomControllerSelector"/> class.
@@ -22,6 +31,10 @@ namespace Versioning_Using_QueryStringParameter.Custom
         {
             _config = config;
         }
+
+        #endregion
+
+        #region Public Member
 
         /// <summary>
         /// Selects the appropriate HTTP controller descriptor based on the API version specified in the query string.
@@ -68,5 +81,6 @@ namespace Versioning_Using_QueryStringParameter.Custom
             return null;
         }
 
+        #endregion
     }
 }

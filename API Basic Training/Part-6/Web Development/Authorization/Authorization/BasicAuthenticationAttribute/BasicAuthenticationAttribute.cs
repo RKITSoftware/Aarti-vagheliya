@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Authorization.BL;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Security.Claims;
@@ -16,6 +17,9 @@ namespace Authorization.BasicAuthentication
     /// </summary>
     public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
     {
+        //Private object of ValidateUser class.
+        private ValidateUser _objValidateUser = new ValidateUser();
+
         /// <summary>
         /// Handles authorization based on basic authentication credentials.
         /// </summary>
@@ -27,7 +31,7 @@ namespace Authorization.BasicAuthentication
             {
                 // Responds with unauthorized status if no authorization header is found.
                 actionContext.Response = actionContext.Request
-                    .CreateErrorResponse(HttpStatusCode.Unauthorized, "Login Failed.");
+                    .CreateErrorResponse(HttpStatusCode.Unauthorized, "Login Failed. Enter Credentials..!");
             }
             else
             {
@@ -45,10 +49,10 @@ namespace Authorization.BasicAuthentication
                     string password = usernamePassword[1];
 
                     // Validates user credentials.
-                    if (ValidateUser.Exist(username, password))
+                    if (_objValidateUser.Exist(username, password))
                     {
                         // Collects user details for creating identity claims.
-                        var UserDetails = ValidateUser.CollectUserDetail(username, password);
+                        var UserDetails = _objValidateUser.CollectUserDetail(username, password);
 
                         // Creates a new identity and adds claims.
                         var identity = new GenericIdentity(username);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Authentication.BL;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Security.Principal;
@@ -14,6 +15,9 @@ namespace Authentication.BasicAuthentication
     /// </summary>
     public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
     {
+        //Private object of ValidateUser class.
+        private ValidateUser _objValidateUser = new ValidateUser();
+
         /// <summary>
         /// Handles authorization based on basic authentication credentials.
         /// </summary>
@@ -22,11 +26,11 @@ namespace Authentication.BasicAuthentication
         {
             // Checks if authorization header is present.
             if (actionContext.Request.Headers.Authorization == null) 
-           {
+            {
                 // Responds with unauthorized status if no authorization header is found.
                 actionContext.Response = actionContext.Request
-                    .CreateErrorResponse(HttpStatusCode.Unauthorized,"Login Failed.");
-           }
+                    .CreateErrorResponse(HttpStatusCode.Unauthorized,"Please Enter Credentials..!!");
+            }
            else
            {
                 try
@@ -43,7 +47,7 @@ namespace Authentication.BasicAuthentication
                     string password = usernamePassword[1];
 
                     // Validates user credentials.
-                    if (ValidateUser.Login(username, password))
+                    if (_objValidateUser.Login(username, password))
                     {
                         // Sets the current principal for the executing thread.
                         Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username), null);
@@ -52,7 +56,7 @@ namespace Authentication.BasicAuthentication
                     {
                         // Responds with unauthorized status for invalid credentials.
                         actionContext.Response = actionContext.Request
-                            .CreateErrorResponse(HttpStatusCode.Unauthorized, "Login failed.");
+                            .CreateErrorResponse(HttpStatusCode.Unauthorized, "Invalid Credentials");
                     }
                 }
                 catch(Exception)

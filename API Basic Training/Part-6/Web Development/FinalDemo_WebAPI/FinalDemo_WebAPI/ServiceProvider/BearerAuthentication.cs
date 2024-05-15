@@ -1,6 +1,5 @@
-﻿using FinalDemo_WebAPI.DAL;
+﻿using FinalDemo_WebAPI.BL;
 using FinalDemo_WebAPI.Models;
-using FinalDemo_WebAPI.UserRepository;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
@@ -16,15 +15,11 @@ using System.Web.Http.Filters;
 
 namespace FinalDemo_WebAPI.ServiceProvider
 {
+    /// <summary>
+    /// Perform Bearer Authentication.
+    /// </summary>
     public class BearerAuthentication : AuthorizationFilterAttribute
     {
-        #region Private member
-
-        // Instance of BLUser class for user authentication
-        private BLUser _objBLUser = new BLUser();
-
-        #endregion
-
         #region public method
 
         /// <summary>
@@ -67,13 +62,13 @@ namespace FinalDemo_WebAPI.ServiceProvider
 
                 JObject json = JObject.Parse(decodedPayload); // Parsing the payload as JSON object
 
-                User user = _objBLUser.GetAllUsers().FirstOrDefault(u => u.UserName == json["unique_name"].ToString()); // Getting user details from the payload
+                User user = BLUser.lstUsers.FirstOrDefault(u => u.UserName == json["unique_name"].ToString()); // Getting user details from the payload
 
                 // create an identity => i.e., attach username which is used to identify the user
                 GenericIdentity identity = new GenericIdentity(user.UserName); // Creating a generic identity for the user
 
                 // add claims for the identity => a claim has (claim_type, value)
-                identity.AddClaim(new Claim("Id", Convert.ToString(user.UserId))); // Adding claims to the identity
+                identity.AddClaim(new Claim("Id", Convert.ToString(user.Id))); // Adding claims to the identity
 
                 // create a principal that represent a user => it has an (identity object + roles)
                 IPrincipal principal = new GenericPrincipal(identity, user.Roles.ToString().Split(',')); // Creating a principal for the user

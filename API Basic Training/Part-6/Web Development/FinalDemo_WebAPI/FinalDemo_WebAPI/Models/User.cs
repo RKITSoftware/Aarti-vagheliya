@@ -1,6 +1,4 @@
-﻿
-
-namespace FinalDemo_WebAPI.Models
+﻿namespace FinalDemo_WebAPI.Models
 {
     /// <summary>
     /// Represents a user in the system.
@@ -12,7 +10,7 @@ namespace FinalDemo_WebAPI.Models
         /// <summary>
         /// Gets or sets the unique identifier for the user.
         /// </summary>
-        public int UserId { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or sets the username of the user.
@@ -35,7 +33,5 @@ namespace FinalDemo_WebAPI.Models
         public string Roles { get; set; }
 
         #endregion
-
-
     }
 }

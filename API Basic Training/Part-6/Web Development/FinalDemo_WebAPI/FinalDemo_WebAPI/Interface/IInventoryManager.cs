@@ -1,4 +1,4 @@
-﻿using System.Data;
+﻿using FinalDemo_WebAPI.Models;
 
 namespace FinalDemo_WebAPI.Interface
 {
@@ -8,32 +8,32 @@ namespace FinalDemo_WebAPI.Interface
     public interface IInventoryManager
     {
         /// <summary>
-        /// Sell a specified quantity of a product and update the stock accordingly.
+        /// Sells a specified quantity of a product.
         /// </summary>
-        /// <param name="productId">The ID of the product to be sold.</param>
-        /// <param name="quantity">The quantity to be sold.</param>
-        /// <returns>True if the product is sold successfully; otherwise, false.</returns>
-        bool SellProduct(int productId, int quantity);
+        /// <param name="productId">The ID of the product to sell.</param>
+        /// <param name="quantity">The quantity of the product to sell.</param>
+        /// <returns>A response indicating the success or failure of the operation.</returns>
+        Response SellProduct(int productId, int quantity);
 
         /// <summary>
-        /// Manage the stock of a product by increasing or decreasing the quantity.
+        /// Adds a specified quantity of stock for a product.
         /// </summary>
-        /// <param name="productId">The ID of the product.</param>
-        /// <param name="quantity">The quantity to be added (positive) or deducted (negative).</param>
-        /// <returns>True if the stock is managed successfully; otherwise, false.</returns>
-        bool AddStock(int productId, int quantity);
+        /// <param name="productId">The ID of the product to add stock for.</param>
+        /// <param name="quantity">The quantity of stock to add.</param>
+        /// <returns>A response indicating the success or failure of the operation.</returns>
+        Response AddStock(int productId, int quantity);
 
         /// <summary>
-        /// Display the current stock of all products.
+        /// Displays information about all products in stock.
         /// </summary>
-        /// <returns>A DataTable representing the current stock of all products.</returns>
-        DataTable DisplayAllStock();
+        /// <returns>A response containing information about all products in stock.</returns>
+        Response DisplayAllStock();
 
         /// <summary>
-        /// Display the stock of products belonging to a specific category.
+        /// Displays information about products in stock filtered by category.
         /// </summary>
-        /// <param name="categoryId">The ID of the category.</param>
-        /// <returns>A DataTable representing the stock of products in the specified category.</returns>
-        DataTable DisplayStockByCategory(int categoryId);
+        /// <param name="categoryId">The ID of the category to filter by.</param>
+        /// <returns>A response containing information about products in stock filtered by category.</returns>
+        Response DisplayStockByCategory(int categoryId);
     }
 }

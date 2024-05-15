@@ -12,7 +12,7 @@ namespace FinalDemo_WebAPI.Models
         /// <summary>
         /// Gets or sets the unique identifier for the product.
         /// </summary>
-        public int ProductId { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the product.
@@ -31,7 +31,7 @@ namespace FinalDemo_WebAPI.Models
 
         /// <summary>
         /// Gets or sets the expiration date of the product.
-        /// </summary>
+        /// </summary>     
         public DateTime ExpiryDate { get; set; }
 
         /// <summary>

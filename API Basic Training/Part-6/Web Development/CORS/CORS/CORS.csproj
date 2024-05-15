@@ -149,8 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\TeachersController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="BL\BLTeachers.cs" />
+    <Compile Include="Controllers\CLTeachersController.cs" />
+    <Compile Include="Controllers\CLTestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -139,12 +139,13 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auth\BearerAuthentication.cs" />
-    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="BL\BLStateData.cs" />
+    <Compile Include="BL\BLUser.cs" />
+    <Compile Include="Controllers\CLAuthController.cs" />
     <Compile Include="Auth\JwtAuthenticationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\StateDate.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AssignOAuth2SecurityRequirements.cs" />

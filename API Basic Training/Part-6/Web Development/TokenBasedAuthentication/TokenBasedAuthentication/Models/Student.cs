@@ -8,7 +8,7 @@ namespace TokenBasedAuthentication.Models
     /// </summary>
     public class Student
     {
-        #region Properties For Student Data
+        #region Public Properties 
 
         /// <summary>
         /// Gets or sets the unique identifier for the student.

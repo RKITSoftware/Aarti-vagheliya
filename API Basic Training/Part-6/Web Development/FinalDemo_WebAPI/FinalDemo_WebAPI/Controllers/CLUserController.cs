@@ -1,5 +1,5 @@
-﻿using FinalDemo_WebAPI.Models;
-using FinalDemo_WebAPI.UserRepository;
+﻿using FinalDemo_WebAPI.BL;
+using FinalDemo_WebAPI.Models;
 using System.Web.Http;
 
 namespace FinalDemo_WebAPI.Controllers
@@ -11,110 +11,75 @@ namespace FinalDemo_WebAPI.Controllers
     public class CLUserController : ApiController
     {
         #region Private member
-        private BLUser _objUser = new BLUser();
+
+        //Private instance of BLUser.
+        private BLUser _objBLUser = new BLUser();
+
         #endregion
 
         #region Public methods
 
-        #region GetAllUsers
-
         /// <summary>
-        /// Gets all users.
+        /// Retrieves all users.
         /// </summary>
+        /// <returns>An IHttpActionResult containing the response with all users.</returns>
         [HttpGet]
         [Route("GetAllUsers")]
         public IHttpActionResult GetAllUsers()
         {
-            // Retrieve all users from BLUser and return as IHttpActionResult
-            return Ok(_objUser.GetAllUsers());
+            Response response = _objBLUser.GetAllUsers();
+          
+            return Ok(response);
         }
 
-        #endregion
-
-        #region GetUserById
-
         /// <summary>
-        /// Gets a user by their ID.
+        /// Retrieves a user by their ID.
         /// </summary>
+        /// <param name="userId">The ID of the user to retrieve.</param>
+        /// <returns>An IHttpActionResult containing the response with the user if found.</returns>
         [HttpGet]
         [Route("GetUserById/{userId}")]
         public IHttpActionResult GetUserById(int userId)
         {
-            // Retrieve a user by ID from BLUser and return as IHttpActionResult
-            var user = _objUser.GetUserById(userId);
-            if (user != null)
-            {
-                return Ok(user);
-            }
-            else
-            {
-                return NotFound();
-            }
+            return Ok(_objBLUser.GetUserById(userId));
         }
-
-        #endregion
-
-        #region AddUser
 
         /// <summary>
         /// Adds a new user.
         /// </summary>
+        /// <param name="user">The User object to add.</param>
+        /// <returns>An IHttpActionResult containing the response with the result of the user addition.</returns>
         [HttpPost]
         [Route("AddUser")]
         public IHttpActionResult AddUser(User user)
         {
-            // Add a new user using BLUser and return the added user details
-            var addedUser = _objUser.AddUser(user);
-            return Created(Request.RequestUri + "/" + addedUser.UserId, addedUser);
+            return Ok(_objBLUser.AddUser(user));
         }
-
-        #endregion
-
-        #region UpdateUser
 
         /// <summary>
         /// Updates an existing user.
         /// </summary>
+        /// <param name="userId">The ID of the user to update.</param>
+        /// <param name="updatedUser">The updated User object.</param>
+        /// <returns>An IHttpActionResult containing the response with the result of the user update.</returns>
         [HttpPut]
         [Route("UpdateUser/{userId}")]
         public IHttpActionResult UpdateUser(int userId, User updatedUser)
         {
-            // Update an existing user using BLUser and return the updated user details
-            var user = _objUser.UpdateUser(userId, updatedUser);
-            if (user != null)
-            {
-                return Ok(user);
-            }
-            else
-            {
-                return NotFound();
-            }
+            return Ok(_objBLUser.UpdateUser(userId, updatedUser));
         }
-
-        #endregion
-
-        #region DeleteUser
 
         /// <summary>
         /// Deletes a user by their ID.
         /// </summary>
+        /// <param name="userId">The ID of the user to delete.</param>
+        /// <returns>An IHttpActionResult containing the response with the result of the user deletion.</returns>
         [HttpDelete]
         [Route("DeleteUser/{userId}")]
         public IHttpActionResult DeleteUser(int userId)
         {
-            // Delete a user by ID using BLUser and return the deleted user details
-            var user = _objUser.DeleteUser(userId);
-            if (user != null)
-            {
-                return Ok(user);
-            }
-            else
-            {
-                return NotFound();
-            }
+            return Ok(_objBLUser.DeleteUser(userId));
         }
-
-        #endregion
 
         #endregion
     }

@@ -151,16 +151,17 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BL\BLHelper.cs" />
     <Compile Include="Controllers\CLTokenGeneratorController.cs" />
     <Compile Include="Controllers\CLUserController.cs" />
-    <Compile Include="DAL\BLCategory.cs" />
-    <Compile Include="DAL\BLProductV1.cs" />
-    <Compile Include="DAL\BLProductV2.cs" />
+    <Compile Include="BL\BLCategory.cs" />
+    <Compile Include="BL\BLProductV1.cs" />
+    <Compile Include="BL\BLProductV2.cs" />
     <Compile Include="Controllers\CLCategoryController.cs" />
     <Compile Include="Controllers\CLProductV1Controller.cs" />
     <Compile Include="Controllers\CLProductV2Controller.cs" />
     <Compile Include="CustomException\CustomExceptionFilter.cs" />
-    <Compile Include="DAL\BLTokenManager.cs" />
+    <Compile Include="BL\BLTokenManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -168,9 +169,10 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ProductV1.cs" />
     <Compile Include="Models\ProductV2.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DAL\BLUser.cs" />
+    <Compile Include="BL\BLUser.cs" />
     <Compile Include="ServiceProvider\AssignOAuth2SecurityRequirements.cs" />
     <Compile Include="ServiceProvider\BasicAuthentication.cs" />
     <Compile Include="ServiceProvider\BearerAuthentication.cs" />

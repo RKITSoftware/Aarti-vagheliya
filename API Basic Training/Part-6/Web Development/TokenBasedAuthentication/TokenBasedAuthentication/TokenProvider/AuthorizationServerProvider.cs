@@ -1,8 +1,7 @@
 ﻿using Microsoft.Owin.Security.OAuth;
 using System.Security.Claims;
 using System.Threading.Tasks;
-
-
+using TokenBasedAuthentication.BL;
 
 namespace TokenBasedAuthentication.TokenProvider
 {
@@ -11,8 +10,6 @@ namespace TokenBasedAuthentication.TokenProvider
     /// </summary>
     public class AuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
-        #region ValidateClientAuthentication
-
         /// <summary>
         /// Validates the client authentication.
         /// </summary>
@@ -22,18 +19,16 @@ namespace TokenBasedAuthentication.TokenProvider
             context.Validated();
         }
 
-        #endregion
-
-        #region GrantResourceOwnerCredentials
-
         /// <summary>
         /// Grants the resource owner credentials.
         /// </summary>
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-            // Validates user credentials
+            //create instance of the Validate class.
             Validate objValidate = new Validate();
-           var user = objValidate.ValidatedUser(context.UserName, context.Password);
+
+            // Validates user credentials
+            var user = objValidate.ValidatedUser(context.UserName, context.Password);
 
             if(user == null)
             {
@@ -57,6 +52,5 @@ namespace TokenBasedAuthentication.TokenProvider
             context.Validated(identity);
         }
 
-        #endregion
     }
 }

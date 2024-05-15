@@ -4,7 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using Token_Custom.Models;
+using Token_Custom.BL;
 
 namespace Token_Custom.Services
 {
@@ -13,7 +13,9 @@ namespace Token_Custom.Services
     /// </summary>
     public static class TokenService
     {
-        // Secret key used for token generation and validation
+        /// <summary>
+        /// Secret key used for token generation and validation
+        /// </summary>
         private static readonly string _secretKey = "ERMN05OPLoDvbTTa/QkqLNMI7cPLguaRyHzyg7n5qNBVjQmtBhz4SzYh4NBVCXi3KJHlSXKP+oi2+bXr6CUYTR==";
 
         /// <summary>
@@ -27,7 +29,7 @@ namespace Token_Custom.Services
             byte[] key = Encoding.UTF8.GetBytes(_secretKey);
 
             // Retrieve user details based on the username
-            var user = UserRepository.users.FirstOrDefault(u => u.Username == userName);
+            var user = BLUser.users.FirstOrDefault(u => u.Username == userName);
 
             SymmetricSecurityKey symmetricSecurityKey = new SymmetricSecurityKey(key);
 
