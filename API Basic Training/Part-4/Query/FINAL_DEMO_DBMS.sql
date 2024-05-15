@@ -15,7 +15,7 @@ CREATE TABLE CAT01 (
 
 
 -- CREATE SUP01 (SUPPLIERS) TABLE
-CREATE TABLE SUP0T01F01usr011 (
+CREATE TABLE SUP01 (
     P01F01 INT PRIMARY KEY AUTO_INCREMENT,
     P01F02 VARCHAR(255) NOT NULL,
     P01F03 VARCHAR(30),
@@ -158,10 +158,10 @@ VALUES
 SELECT 
 	A01F01 AS TransactionID, 
     A01F02 AS ProductID, 
-    A01F03 AS TransactionType, 
+    A01F05 AS TransactionType, 
     A01F04 AS TransactionDate, 
-    A01F05 AS Quantity, 
-    A01F06 AS TotalAmount
+    A01F07 AS Quantity, 
+    A01F08 AS TotalAmount
 FROM 
 	TRA01;
 
@@ -206,28 +206,28 @@ SELECT
 FROM 
 	TRA01
 WHERE 
-	A01F03 = 'Purchase'
+	A01F05 = 'P'
 GROUP BY 
 	A01F02;
     
     
 -- Find the product with the highest unit price
 SELECT 
-	MAX(D01F04) AS HighestUnitPriceProduct
+	MAX(D01F06) AS HighestUnitPriceProduct
 FROM 
 	PRD01;
 
 
 -- Identify the lowest total amount in a single transaction
 SELECT 
-	MIN(A01F06) AS LowestTotalAmount
+	MIN(A01F08) AS LowestTotalAmount
 FROM 
 	TRA01;
 
 
 -- Find the average total amount of transactions
 SELECT 
-	AVG(A01F06) AS AverageTotalAmount
+	AVG(A01F08) AS AverageTotalAmount
 FROM 
 	TRA01;
 
@@ -235,12 +235,12 @@ FROM
 
 -- Calculate the total amount of transactions per transaction type
 SELECT 
-	A01F03 AS TransactionType, 
+	A01F05 AS TransactionType, 
 	COUNT(*) AS TotalTransactions
 FROM 
 	TRA01
 GROUP BY 
-	A01F03;
+	A01F05;
     
     
 
@@ -262,7 +262,7 @@ SELECT
 FROM 
 	TRA01
 WHERE 
-	A01F06 = (SELECT MAX(A01F06) FROM TRA01);
+	A01F08 = (SELECT MAX(A01F08) FROM TRA01);
 
 
 
@@ -305,6 +305,8 @@ LEFT JOIN
 	SUP01 
 ON 
 	PRD01.D01F05 = SUP01.P01F01;
+    
+    
 
 
 
@@ -312,8 +314,8 @@ ON
 SELECT 
 	A.A01F01 AS TransactionID, 
 	A.A01F02 AS ProductID, 
-    A.A01F03 AS TransactionTypeA, 
-    B.A01F03 AS TransactionTypeB
+    A.A01F05 AS TransactionTypeA, 
+    B.A01F05 AS TransactionTypeB
 FROM 
 	TRA01 A
 JOIN 
@@ -339,7 +341,7 @@ UNION
 SELECT 
 	A01F01 AS ID, 
     A01F02 AS Name, 
-    A01F03 AS Type
+    A01F05 AS Type
 FROM 
 	TRA01;
 
@@ -353,76 +355,8 @@ CREATE UNIQUE INDEX idx_D01F01 ON PRD01(D01F01);
 CREATE INDEX idx_D01F03_D01F04 ON PRD01(D01F03, D01F04);
 
 
-
-
--- Create a view that combines information from PRD01, CAT01, SUP01, and TRA01
-CREATE OR REPLACE VIEW VWS_ProductTransactionView AS
-SELECT
-    P.D01F01 AS ProductID,
-    P.D01F02 AS ProductName,
-    C.T01F01 AS CategoryID,
-    C.T01F02 AS CategoryName,
-    S.P01F01 AS SupplierID,
-    S.P01F02 AS SupplierName,
-    T.A01F01 AS TransactionID,
-    T.A01F02 AS TransactionProductID,
-    T.A01F03 AS TransactionType,
-    T.A01F04 AS TransactionDate,
-    T.A01F05 AS TransactionQuantity,
-    T.A01F06 AS TransactionAmount
-FROM PRD01 P
-JOIN CAT01 C ON P.D01F03 = C.T01F01
-LEFT JOIN SUP01 S ON P.D01F05 = S.P01F01
-LEFT JOIN TRA01 T ON P.D01F01 = T.A01F02;
-
-
-
--- Example query on the created view
-SELECT 
-	* 
-FROM 
-	VWS_ProductTransactionView 
-WHERE 
-	CategoryName = 'Electronics' 
-LIMIT 2;
-
-
-
-SELECT 
-	* 
-FROM 
-	VWS_ProductTransactionView 
-WHERE 
-	CategoryName = 'Stationary';
-
-
-
-
--- Complex SELECT query involving sorting, limiting, using indexes, and WHERE clause
-SELECT 
-    P.D01F01 AS ProductID,
-    P.D01F02 AS ProductName,
-    C.T01F02 AS CategoryName,
-    S.P01F01 AS SupplierName,
-    T.A01F01 AS TransactionID,
-    T.A01F03 AS TransactionType,
-    T.A01F04 AS TransactionDate,
-    T.A01F05 AS TransactionQuantity,
-    T.A01F06 AS TransactionAmount
-FROM
-    PRD01 P
-        JOIN
-    CAT01 C ON P.D01F03 = C.T01F01
-        LEFT JOIN
-    SUP01 S ON P.D01F05 = S.P01F01
-        LEFT JOIN
-    TRA01 T ON P.D01F01 = T.A01F02
-WHERE
-    C.T01F02 IN ('Electronics' , 'Clothing')
-        AND S.P01F01 IS NOT NULL
-        AND T.A01F04 >= '2022-01-01'
-ORDER BY T.A01F04 DESC , P.D01F02 ASC
-LIMIT 5;
+-- Create a unique index on StockId (K01F01) in the STK01 table
+CREATE UNIQUE INDEX idx_K01F01 ON STK01(K01F01);
 
 
 
@@ -438,7 +372,7 @@ JOIN
 JOIN
     prd01 AS d01 ON a01.A01F02 = d01.D01F01
 WHERE
-    n01.N01F06 = 'Supplier';
+    n01.N01F06 = 'Sp';
 
 
 
@@ -462,13 +396,15 @@ CREATE OR REPLACE VIEW vws_d01k01 AS
         stk01 k01 ON d01.D01F01 = k01.K01F02;
       
       
-      
+      -- Custom order by 
 SELECT 
     *
 FROM
     vws_d01k01
-ORDER BY 
-	Stock DESC;
+ ORDER BY field(Product_Id, 2,3,5,4,1)   
+ 
+# ORDER BY 
+	# Stock DESC;
     
     
     
