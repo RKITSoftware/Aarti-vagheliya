@@ -1,0 +1,623 @@
+2024-05-10 10:36:13.2950 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 10:36:17.2614 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 10:36:17.8400 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 10:36:18.0219 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 10:36:18.0219 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 10:36:18.0219 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 10:36:18.0219 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 10:36:18.0314 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GLRMDPN90" received FIN.
+2024-05-10 10:36:18.0314 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GLRMDPN90" accepted.
+2024-05-10 10:36:18.0314 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GLRMDPN90" started.
+2024-05-10 10:36:18.0595 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 10:36:18.0640 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GLRMDPN90" stopped.
+2024-05-10 10:36:18.0640 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GLRMDPN90" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 10:36:18.5440 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GLRMDPN91" accepted.
+2024-05-10 10:36:18.5440 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GLRMDPN91" started.
+2024-05-10 10:36:18.5929 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GLRMDPN91 established using the following protocol: Tls12
+2024-05-10 10:36:18.9563 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 10:36:19.4648 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 10:36:19.9135 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 10:36:25.7155 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GLRMDPN91" received FIN.
+2024-05-10 10:36:25.7199 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GLRMDPN91" is closed. The last processed stream ID was 7.
+2024-05-10 10:36:25.7199 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GLRMDPN91" sending FIN because: "The client closed the connection."
+2024-05-10 10:36:25.7199 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GLRMDPN91" stopped.
+2024-05-10 10:56:32.5280 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting shutdown
+2024-05-10 12:50:10.6631 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 12:50:25.0432 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 12:50:27.6034 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 12:50:27.9397 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 12:50:27.9397 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 12:50:27.9397 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 12:50:27.9397 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 12:50:29.1631 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GO6LRCT4T" received FIN.
+2024-05-10 12:50:29.2310 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GO6LRCT4T" accepted.
+2024-05-10 12:50:29.2691 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GO6LRCT4T" started.
+2024-05-10 12:50:29.2817 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GO6LRCT4U" accepted.
+2024-05-10 12:50:29.2906 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GO6LRCT4U" started.
+2024-05-10 12:50:29.4019 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 12:50:29.4166 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GO6LRCT4U established using the following protocol: Tls12
+2024-05-10 12:50:29.4166 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GO6LRCT4T" stopped.
+2024-05-10 12:50:29.4166 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GO6LRCT4T" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 12:50:29.6323 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 12:50:31.4835 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 12:50:31.7936 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 12:50:38.4117 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GO6LRCT4U" received FIN.
+2024-05-10 12:50:38.4175 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GO6LRCT4U" is closed. The last processed stream ID was 7.
+2024-05-10 12:50:38.4175 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GO6LRCT4U" sending FIN because: "The client closed the connection."
+2024-05-10 12:50:38.4175 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GO6LRCT4U" stopped.
+2024-05-10 12:50:53.8225 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GO6LRCT4V" accepted.
+2024-05-10 12:50:53.8225 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GO6LRCT4V" started.
+2024-05-10 12:50:53.8225 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GO6LRCT4V established using the following protocol: Tls12
+2024-05-10 12:50:53.8428 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 12:50:53.8428 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/GetAllCompanies does not match a supported file type
+2024-05-10 12:50:53.8989 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/GetAllCompanies'
+2024-05-10 12:50:53.8989 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)' with route pattern 'api/CLCMP01/GetAllCompanies' is valid for the request path '/api/CLCMP01/GetAllCompanies'
+2024-05-10 12:50:53.8989 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)'
+2024-05-10 12:50:53.9322 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 12:50:53.9322 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 12:50:53.9322 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 12:50:53.9322 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 12:50:53.9322 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 12:50:58.5867 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 12:50:58.5867 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 12:59:57.9399 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 12:59:59.9642 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 13:00:00.3410 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 13:00:00.3635 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 13:00:00.3635 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 13:00:00.3635 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 13:00:00.3635 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 13:00:00.4496 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOC03ICNC" accepted.
+2024-05-10 13:00:00.4496 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOC03ICND" accepted.
+2024-05-10 13:00:00.4496 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOC03ICNC" started.
+2024-05-10 13:00:00.4496 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOC03ICND" started.
+2024-05-10 13:00:00.6541 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOC03ICNE" accepted.
+2024-05-10 13:00:00.6541 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOC03ICNE" started.
+2024-05-10 13:00:00.6933 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GOC03ICNE established using the following protocol: Tls12
+2024-05-10 13:00:00.7885 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 13:00:01.2953 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 13:00:01.6083 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 13:00:10.4659 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Authentication of the HTTPS connection timed out.
+2024-05-10 13:00:10.4659 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Authentication of the HTTPS connection timed out.
+2024-05-10 13:00:10.4736 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOC03ICNC" stopped.
+2024-05-10 13:00:10.4736 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOC03ICND" stopped.
+2024-05-10 13:00:10.4736 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GOC03ICNC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 13:00:10.4736 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GOC03ICND" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 13:02:45.2394 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 13:02:48.1658 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 13:02:48.6416 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 13:02:48.7607 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 13:02:48.7607 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 13:02:48.7607 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 13:02:48.7607 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 13:02:48.8018 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GODI9487G" received FIN.
+2024-05-10 13:02:48.8187 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487G" accepted.
+2024-05-10 13:02:48.8187 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487G" started.
+2024-05-10 13:02:48.8466 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 13:02:48.8554 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487G" stopped.
+2024-05-10 13:02:48.8554 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GODI9487G" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 13:02:49.0647 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487H" accepted.
+2024-05-10 13:02:49.0720 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487H" started.
+2024-05-10 13:02:49.1380 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GODI9487H established using the following protocol: Tls12
+2024-05-10 13:02:49.3249 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 13:02:50.0126 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 13:02:50.5857 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 13:03:06.2728 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 13:03:06.2728 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/GetAllCompanies does not match a supported file type
+2024-05-10 13:03:06.3709 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/GetAllCompanies'
+2024-05-10 13:03:06.3859 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)' with route pattern 'api/CLCMP01/GetAllCompanies' is valid for the request path '/api/CLCMP01/GetAllCompanies'
+2024-05-10 13:03:06.3859 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)'
+2024-05-10 13:03:06.4921 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 13:03:06.4921 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 13:03:06.4921 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 13:03:06.4921 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 13:03:06.4921 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 13:03:08.8386 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 13:03:08.8681 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 13:03:14.5398 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 13:03:14.5693 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 13:03:14.5693 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 13:03:14.5693 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 13:03:14.5693 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-05-10 13:03:33.7506 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 13:03:33.7506 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLJOL01/GetAllJobs does not match a supported file type
+2024-05-10 13:03:33.7577 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLJOL01/GetAllJobs'
+2024-05-10 13:03:33.7577 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder)' with route pattern 'api/CLJOL01/GetAllJobs' is valid for the request path '/api/CLJOL01/GetAllJobs'
+2024-05-10 13:03:33.7577 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder)'
+2024-05-10 13:03:33.7577 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 13:03:33.7577 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 13:03:33.7577 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 13:03:33.7577 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 13:03:33.7577 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 13:03:54.7839 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder)
+2024-05-10 13:03:54.7950 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder)
+2024-05-10 13:03:58.7967 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 13:03:58.7967 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 13:03:58.7967 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 13:03:58.7967 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 13:03:58.7967 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-05-10 13:04:07.8485 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GODI9487H" received FIN.
+2024-05-10 13:04:07.8485 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GODI9487H" is closed. The last processed stream ID was 11.
+2024-05-10 13:04:07.8485 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GODI9487H" sending FIN because: "The client closed the connection."
+2024-05-10 13:04:07.8485 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487H" stopped.
+2024-05-10 13:08:41.2685 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487I" accepted.
+2024-05-10 13:08:41.2685 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487I" started.
+2024-05-10 13:08:41.3175 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GODI9487I established using the following protocol: Tls12
+2024-05-10 13:08:41.4506 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 13:08:41.4506 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLJOA01/GetAllJobApplication does not match a supported file type
+2024-05-10 13:08:41.4506 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLJOA01/GetAllJobApplication'
+2024-05-10 13:08:41.4506 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder)' with route pattern 'api/CLJOA01/GetAllJobApplication' is valid for the request path '/api/CLJOA01/GetAllJobApplication'
+2024-05-10 13:08:41.4506 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder)'
+2024-05-10 13:08:41.4506 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter, Job_Finder.Filters.AuthorizationFilter
+2024-05-10 13:08:41.4636 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 13:08:41.4636 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 13:08:41.4636 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 13:08:41.4636 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 13:09:13.9619 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder)
+2024-05-10 13:09:13.9975 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder)
+2024-05-10 13:09:23.5552 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 13:09:23.5552 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 13:09:23.5552 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 13:09:23.5552 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 13:09:23.5552 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-05-10 13:09:28.0580 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GODI9487I" received FIN.
+2024-05-10 13:09:28.1762 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GODI9487I" is closed. The last processed stream ID was 1.
+2024-05-10 13:09:28.1762 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GODI9487I" sending FIN because: "The client closed the connection."
+2024-05-10 13:09:28.1762 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487I" stopped.
+2024-05-10 13:10:08.6619 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487J" accepted.
+2024-05-10 13:10:08.6619 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GODI9487J" started.
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GODI9487J established using the following protocol: Tls12
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLJOS01/GetAllJobSeeker does not match a supported file type
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLJOS01/GetAllJobSeeker'
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLJOS01Controller.GetAllJobSeeker (Job_Finder)' with route pattern 'api/CLJOS01/GetAllJobSeeker' is valid for the request path '/api/CLJOS01/GetAllJobSeeker'
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLJOS01Controller.GetAllJobSeeker (Job_Finder)'
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 13:10:08.6710 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 13:10:14.2732 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLJOS01Controller (Job_Finder)
+2024-05-10 13:10:17.8404 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLJOS01Controller (Job_Finder)
+2024-05-10 13:17:37.4734 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 13:17:40.3907 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 13:17:40.7865 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 13:17:40.8818 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 13:17:40.8818 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 13:17:40.8818 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 13:17:40.8818 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 13:17:40.9912 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GOLS5NAL7" received FIN.
+2024-05-10 13:17:41.0174 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOLS5NAL7" accepted.
+2024-05-10 13:17:41.0198 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOLS5NAL7" started.
+2024-05-10 13:17:41.0418 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 13:17:41.0500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOLS5NAL7" stopped.
+2024-05-10 13:17:41.0500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GOLS5NAL7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 13:17:41.3294 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOLS5NAL8" accepted.
+2024-05-10 13:17:41.3310 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOLS5NAL8" started.
+2024-05-10 13:17:41.3729 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GOLS5NAL8 established using the following protocol: Tls12
+2024-05-10 13:17:41.4724 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 13:17:41.9216 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 13:17:42.2789 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 13:17:53.0676 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GOLS5NAL8" received FIN.
+2024-05-10 13:17:53.0676 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GOLS5NAL8" is closed. The last processed stream ID was 7.
+2024-05-10 13:17:53.0676 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GOLS5NAL8" sending FIN because: "The client closed the connection."
+2024-05-10 13:17:53.0676 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GOLS5NAL8" stopped.
+2024-05-10 14:48:20.7831 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 14:48:35.8980 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 14:48:39.1312 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 14:48:39.6418 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 14:48:39.6418 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 14:48:39.6418 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 14:48:39.6418 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 14:48:39.6418 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3F6" received FIN.
+2024-05-10 14:48:39.6735 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F6" accepted.
+2024-05-10 14:48:39.6735 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F6" started.
+2024-05-10 14:48:39.8046 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 14:48:39.8327 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F6" stopped.
+2024-05-10 14:48:39.8609 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3F6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 14:48:40.4248 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F7" accepted.
+2024-05-10 14:48:40.9997 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F7" started.
+2024-05-10 14:48:41.4526 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GQ8MVJ3F7 established using the following protocol: Tls12
+2024-05-10 14:48:42.3472 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 14:48:44.5411 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 14:48:46.0287 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 14:49:09.7877 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 14:49:09.7877 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLUSR01/GetAllUsers does not match a supported file type
+2024-05-10 14:49:09.9046 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLUSR01/GetAllUsers'
+2024-05-10 14:49:09.9105 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder)' with route pattern 'api/CLUSR01/GetAllUsers' is valid for the request path '/api/CLUSR01/GetAllUsers'
+2024-05-10 14:49:09.9105 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder)'
+2024-05-10 14:49:10.0167 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 14:49:10.0167 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 14:49:10.0167 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 14:49:10.0167 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 14:49:10.0167 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 14:49:20.4036 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder)
+2024-05-10 14:49:20.4107 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder)
+2024-05-10 14:49:27.3557 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 14:49:27.9635 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 14:49:27.9635 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 14:49:27.9635 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 14:49:27.9635 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-05-10 14:55:25.1055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3F7" received FIN.
+2024-05-10 14:55:25.1055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GQ8MVJ3F7" is closed. The last processed stream ID was 9.
+2024-05-10 14:55:25.1055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3F7" sending FIN because: "The client closed the connection."
+2024-05-10 14:55:25.1055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F7" stopped.
+2024-05-10 15:00:26.6183 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F8" accepted.
+2024-05-10 15:00:26.6183 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F8" started.
+2024-05-10 15:00:26.6360 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GQ8MVJ3F8 established using the following protocol: Tls12
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLUSR01/GetAllUsers does not match a supported file type
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLUSR01/GetAllUsers'
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder)' with route pattern 'api/CLUSR01/GetAllUsers' is valid for the request path '/api/CLUSR01/GetAllUsers'
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder)'
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 15:00:26.6991 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 15:00:37.3211 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder)
+2024-05-10 15:00:37.3332 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder)
+2024-05-10 15:00:40.1640 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 15:00:40.1640 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 15:00:40.1640 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 15:00:40.1640 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 15:00:40.1640 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-05-10 15:00:45.3709 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3F8" received FIN.
+2024-05-10 15:00:45.3709 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GQ8MVJ3F8" is closed. The last processed stream ID was 1.
+2024-05-10 15:00:45.3709 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3F8" sending FIN because: "The client closed the connection."
+2024-05-10 15:00:45.3709 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F8" stopped.
+2024-05-10 15:00:45.7638 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F9" accepted.
+2024-05-10 15:00:45.7638 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F9" started.
+2024-05-10 15:00:45.7963 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GQ8MVJ3F9 established using the following protocol: Tls12
+2024-05-10 15:00:45.8200 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 15:00:45.9146 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 15:00:55.3646 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3F9" received FIN.
+2024-05-10 15:00:55.3646 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GQ8MVJ3F9" is closed. The last processed stream ID was 7.
+2024-05-10 15:00:55.3646 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3F9" sending FIN because: "The client closed the connection."
+2024-05-10 15:00:55.3646 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3F9" stopped.
+2024-05-10 15:01:50.3122 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3FA" accepted.
+2024-05-10 15:01:50.3122 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3FA" started.
+2024-05-10 15:01:50.3122 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GQ8MVJ3FA established using the following protocol: Tls12
+2024-05-10 15:01:50.7653 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 15:01:50.7653 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /favicon.ico does not match an existing file
+2024-05-10 15:01:50.7653 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| No candidates found for the request path '/favicon.ico'
+2024-05-10 15:01:50.7653 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request did not match any endpoints
+2024-05-10 15:02:20.3889 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3FA" received FIN.
+2024-05-10 15:02:20.3889 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GQ8MVJ3FA" is closed. The last processed stream ID was 3.
+2024-05-10 15:02:20.3889 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQ8MVJ3FA" sending FIN because: "The client closed the connection."
+2024-05-10 15:02:20.3889 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQ8MVJ3FA" stopped.
+2024-05-10 15:09:07.9740 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 15:09:09.0837 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 15:09:09.6811 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 15:09:09.7432 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 15:09:09.7432 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 15:09:09.7432 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 15:09:09.7432 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 15:09:09.9508 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA65" accepted.
+2024-05-10 15:09:09.9508 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA64" accepted.
+2024-05-10 15:09:09.9508 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA64" started.
+2024-05-10 15:09:09.9508 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA65" started.
+2024-05-10 15:09:09.9910 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQK5KIA65" received FIN.
+2024-05-10 15:09:09.9910 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQK5KIA64" received FIN.
+2024-05-10 15:09:09.9910 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 15:09:10.0055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 15:09:10.0055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA65" stopped.
+2024-05-10 15:09:10.0055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA64" stopped.
+2024-05-10 15:09:10.0055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQK5KIA65" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 15:09:10.0055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQK5KIA64" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 15:09:10.0993 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA66" accepted.
+2024-05-10 15:09:10.0993 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA66" started.
+2024-05-10 15:09:10.1267 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GQK5KIA66 established using the following protocol: Tls12
+2024-05-10 15:09:10.2148 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 15:09:10.4744 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 15:09:10.5516 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 15:09:15.9987 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting shutdown
+2024-05-10 15:09:15.9987 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GQK5KIA66" is closing.
+2024-05-10 15:09:16.0059 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GQK5KIA66" is closed. The last processed stream ID was 7.
+2024-05-10 15:09:16.0059 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQK5KIA66" received FIN.
+2024-05-10 15:09:16.0059 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GQK5KIA66" sending FIN because: "The client closed the connection."
+2024-05-10 15:09:16.0059 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GQK5KIA66" stopped.
+2024-05-10 17:21:45.2145 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 17:21:51.2929 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 17:21:52.8864 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 17:21:52.9217 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 17:21:52.9217 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 17:21:52.9217 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 17:21:52.9217 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 17:21:52.9823 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GSUAPVV8A" received FIN.
+2024-05-10 17:21:52.9982 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8A" accepted.
+2024-05-10 17:21:52.9982 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8A" started.
+2024-05-10 17:21:53.1053 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 17:21:53.1164 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8A" stopped.
+2024-05-10 17:21:53.1230 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GSUAPVV8A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 17:21:53.2690 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8B" accepted.
+2024-05-10 17:21:53.2791 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8B" started.
+2024-05-10 17:21:53.3360 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GSUAPVV8B established using the following protocol: Tls12
+2024-05-10 17:21:53.4896 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 17:21:54.3913 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 17:21:54.6444 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 17:21:58.9046 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GSUAPVV8B" received FIN.
+2024-05-10 17:21:58.9046 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GSUAPVV8B" is closed. The last processed stream ID was 7.
+2024-05-10 17:21:58.9046 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GSUAPVV8B" sending FIN because: "The client closed the connection."
+2024-05-10 17:21:58.9046 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8B" stopped.
+2024-05-10 17:22:13.6044 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8C" accepted.
+2024-05-10 17:22:13.6044 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8C" started.
+2024-05-10 17:22:13.6093 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GSUAPVV8C established using the following protocol: Tls12
+2024-05-10 17:22:13.6895 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 17:22:13.6895 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/GetComapanyWiseJobListing does not match a supported file type
+2024-05-10 17:22:13.8813 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/GetComapanyWiseJobListing'
+2024-05-10 17:22:13.9746 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetComapanyWiseJobListing (Job_Finder)' with route pattern 'api/CLCMP01/GetComapanyWiseJobListing' is valid for the request path '/api/CLCMP01/GetComapanyWiseJobListing'
+2024-05-10 17:22:13.9746 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetComapanyWiseJobListing (Job_Finder)'
+2024-05-10 17:22:14.1544 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 17:22:14.1544 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 17:22:14.1544 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 17:22:14.1544 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 17:22:14.1544 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 17:22:35.3491 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 17:22:35.3567 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 17:22:37.6073 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'comapanyId' of type 'System.Int32' ...
+2024-05-10 17:22:37.6073 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'comapanyId' of type 'System.Int32' using the name 'comapanyId' in request data ...
+2024-05-10 17:22:37.6073 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'comapanyId' of type 'System.Int32'.
+2024-05-10 17:22:37.6073 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'comapanyId' of type 'System.Int32'.
+2024-05-10 17:22:37.6073 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'comapanyId' of type 'System.Int32' ...
+2024-05-10 17:22:37.6505 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'comapanyId' of type 'System.Int32'.
+2024-05-10 17:24:08.9876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 17:24:08.9876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 17:24:08.9876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 17:24:08.9876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 17:24:08.9876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-05-10 17:24:24.2215 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GSUAPVV8C" received FIN.
+2024-05-10 17:24:24.2215 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GSUAPVV8C" is closed. The last processed stream ID was 1.
+2024-05-10 17:24:24.2215 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GSUAPVV8C" sending FIN because: "The client closed the connection."
+2024-05-10 17:24:24.2215 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GSUAPVV8C" stopped.
+2024-05-10 17:31:32.8041 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting shutdown
+2024-05-10 18:04:52.6591 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 18:05:07.7025 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 18:05:08.3201 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 18:05:08.3927 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 18:05:08.3927 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 18:05:08.3927 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 18:05:08.3927 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 18:05:08.4100 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTMG9TQTJ" received FIN.
+2024-05-10 18:05:08.4261 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTJ" accepted.
+2024-05-10 18:05:08.4261 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTJ" started.
+2024-05-10 18:05:08.4672 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 18:05:08.4672 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTJ" stopped.
+2024-05-10 18:05:08.4817 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTMG9TQTJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 18:05:08.6420 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTK" accepted.
+2024-05-10 18:05:08.6420 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTK" started.
+2024-05-10 18:05:08.6793 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTMG9TQTK established using the following protocol: Tls12
+2024-05-10 18:05:09.0260 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 18:05:09.9284 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 18:05:10.1390 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 18:05:15.2185 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTMG9TQTK" received FIN.
+2024-05-10 18:05:15.2185 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GTMG9TQTK" is closed. The last processed stream ID was 7.
+2024-05-10 18:05:15.2185 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTMG9TQTK" sending FIN because: "The client closed the connection."
+2024-05-10 18:05:15.2283 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTK" stopped.
+2024-05-10 18:05:30.3226 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTL" accepted.
+2024-05-10 18:05:30.3226 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTL" started.
+2024-05-10 18:05:30.3480 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTMG9TQTL established using the following protocol: Tls12
+2024-05-10 18:05:30.3521 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 18:05:30.3521 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/ExportCompanyWiseJobListingToExcel does not match a supported file type
+2024-05-10 18:05:30.5283 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:05:30.5283 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)' with route pattern 'api/CLCMP01/ExportCompanyWiseJobListingToExcel' is valid for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:05:30.5283 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)'
+2024-05-10 18:05:30.6933 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 18:05:30.6933 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 18:05:30.6933 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 18:05:30.6933 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 18:05:30.6933 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 18:05:52.9376 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:05:52.9579 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:05:53.3548 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:05:53.3548 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' using the name 'companyId' in request data ...
+2024-05-10 18:05:53.3779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:05:53.3779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:05:53.3779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:05:53.3839 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:06:16.3680 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 18:06:16.5270 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 18:06:16.5270 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 18:06:16.5270 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 18:06:16.5270 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-10 18:06:25.4798 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTMG9TQTL" received FIN.
+2024-05-10 18:06:25.4798 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GTMG9TQTL" is closed. The last processed stream ID was 1.
+2024-05-10 18:06:25.4798 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTMG9TQTL" sending FIN because: "The client closed the connection."
+2024-05-10 18:06:25.4798 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTL" stopped.
+2024-05-10 18:06:42.2412 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTM" accepted.
+2024-05-10 18:06:42.4741 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTM" started.
+2024-05-10 18:06:42.4790 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTMG9TQTM established using the following protocol: Tls12
+2024-05-10 18:06:42.4966 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 18:06:42.4966 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/ExportCompanyWiseJobListingToExcel does not match a supported file type
+2024-05-10 18:06:42.5118 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:06:42.5118 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)' with route pattern 'api/CLCMP01/ExportCompanyWiseJobListingToExcel' is valid for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:06:42.5118 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)'
+2024-05-10 18:06:42.5118 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 18:06:42.5118 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 18:06:42.5118 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 18:06:42.5118 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 18:06:42.5118 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 18:06:56.0200 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:06:56.0386 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:06:56.0386 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:06:56.0386 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' using the name 'companyId' in request data ...
+2024-05-10 18:06:56.0386 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:06:56.0386 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:06:56.0386 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:06:56.0386 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:07:41.8358 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 18:07:41.8387 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 18:07:41.8387 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 18:07:41.8387 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 18:07:41.8387 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/ExportCompanyWiseJobListingToExcel does not match a supported file type
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)' with route pattern 'api/CLCMP01/ExportCompanyWiseJobListingToExcel' is valid for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)'
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 18:07:44.6436 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 18:07:51.3536 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:07:51.3645 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:07:51.3645 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:07:51.3645 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' using the name 'companyId' in request data ...
+2024-05-10 18:07:51.3645 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:07:51.3645 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:07:51.3645 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:07:51.3645 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:07:58.6747 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 18:07:58.6747 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 18:07:58.6747 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 18:07:58.6747 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 18:07:58.6747 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/ExportCompanyWiseJobListingToExcel does not match a supported file type
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)' with route pattern 'api/CLCMP01/ExportCompanyWiseJobListingToExcel' is valid for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)'
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 18:08:01.9808 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 18:08:06.5542 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:08:06.8419 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:08:06.8419 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:08:06.8419 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' using the name 'companyId' in request data ...
+2024-05-10 18:08:06.8419 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:08:06.8419 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:08:06.8419 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:08:06.8419 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:08:50.0847 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-10 18:08:50.0847 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| No information found on request to perform content negotiation.
+2024-05-10 18:08:50.0847 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-10 18:08:50.0847 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-10 18:08:50.0847 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector| Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-10 18:08:50.7164 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTMG9TQTM" received FIN.
+2024-05-10 18:08:50.7164 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GTMG9TQTM" is closed. The last processed stream ID was 5.
+2024-05-10 18:08:50.7164 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTMG9TQTM" sending FIN because: "The client closed the connection."
+2024-05-10 18:08:50.7164 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTM" stopped.
+2024-05-10 18:08:52.9681 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTN" accepted.
+2024-05-10 18:08:52.9869 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTMG9TQTN" started.
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTMG9TQTN established using the following protocol: Tls12
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/ExportCompanyWiseJobListingToExcel does not match a supported file type
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)' with route pattern 'api/CLCMP01/ExportCompanyWiseJobListingToExcel' is valid for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)'
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 18:08:52.9977 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 18:08:59.2113 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:08:59.2175 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:08:59.2175 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:08:59.2175 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' using the name 'companyId' in request data ...
+2024-05-10 18:08:59.2175 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:08:59.2175 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:08:59.2175 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:08:59.2175 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:12:13.4918 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 18:12:30.2901 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 18:12:34.4597 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 18:12:38.9324 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 18:12:38.9324 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 18:12:38.9324 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 18:12:38.9324 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 18:12:40.1814 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTQMUB8FE" received FIN.
+2024-05-10 18:12:40.4370 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FE" accepted.
+2024-05-10 18:12:40.4576 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FE" started.
+2024-05-10 18:12:40.5085 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FF" accepted.
+2024-05-10 18:12:40.5085 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FF" started.
+2024-05-10 18:12:40.9550 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTQMUB8FF established using the following protocol: Tls12
+2024-05-10 18:12:41.1018 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 18:12:41.1142 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FE" stopped.
+2024-05-10 18:12:41.6425 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTQMUB8FE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 18:12:42.3503 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 18:12:44.7536 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 18:12:49.5940 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 18:12:51.3531 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTQMUB8FF" received FIN.
+2024-05-10 18:12:51.3860 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GTQMUB8FF" is closed. The last processed stream ID was 5.
+2024-05-10 18:12:51.4007 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTQMUB8FF" sending FIN because: "The client closed the connection."
+2024-05-10 18:12:51.4007 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FF" stopped.
+2024-05-10 18:12:51.4288 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FG" accepted.
+2024-05-10 18:12:51.8075 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FG" started.
+2024-05-10 18:12:52.1292 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTQMUB8FG established using the following protocol: Tls12
+2024-05-10 18:13:01.3500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTQMUB8FG" received FIN.
+2024-05-10 18:13:01.3500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GTQMUB8FG" is closed. The last processed stream ID was 1.
+2024-05-10 18:13:01.3500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTQMUB8FG" sending FIN because: "The client closed the connection."
+2024-05-10 18:13:01.3500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FG" stopped.
+2024-05-10 18:13:13.3976 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FH" accepted.
+2024-05-10 18:13:13.3976 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTQMUB8FH" started.
+2024-05-10 18:13:13.4085 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTQMUB8FH established using the following protocol: Tls12
+2024-05-10 18:13:13.4948 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 18:13:13.4948 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/ExportCompanyWiseJobListingToExcel does not match a supported file type
+2024-05-10 18:13:13.7722 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:13:13.7722 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)' with route pattern 'api/CLCMP01/ExportCompanyWiseJobListingToExcel' is valid for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:13:13.7722 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)'
+2024-05-10 18:13:14.1321 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 18:13:14.1321 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 18:13:14.1321 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 18:13:14.1321 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 18:13:14.1321 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 18:13:36.0318 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:13:36.1234 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:13:37.7426 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:13:37.7426 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' using the name 'companyId' in request data ...
+2024-05-10 18:13:37.7685 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:13:37.7685 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:13:37.7685 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:13:37.7685 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:19:13.4369 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting starting
+2024-05-10 18:19:25.2840 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory| Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-10 18:19:25.7841 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer| Using development certificate: CN=localhost (Thumbprint: 7DEE7EC727DF6BEC80C1C5EBFF30DBAF6882E8DF)
+2024-05-10 18:19:25.8192 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Hosting started
+2024-05-10 18:19:25.8288 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Job_Finder
+2024-05-10 18:19:25.8288 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-10 18:19:25.8288 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics| Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-10 18:19:25.9808 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTUFSBM9L" received FIN.
+2024-05-10 18:19:25.9808 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9L" accepted.
+2024-05-10 18:19:25.9808 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9L" started.
+2024-05-10 18:19:26.0277 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Failed to authenticate HTTPS connection.
+2024-05-10 18:19:26.0277 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9L" stopped.
+2024-05-10 18:19:26.0387 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTUFSBM9L" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-10 18:19:26.2802 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9M" accepted.
+2024-05-10 18:19:26.2802 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9M" started.
+2024-05-10 18:19:26.3386 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTUFSBM9M established using the following protocol: Tls12
+2024-05-10 18:19:26.4929 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware| Wildcard detected, all requests with hosts will be allowed.
+2024-05-10 18:19:27.1664 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup is scheduled to include browser refresh script injection.
+2024-05-10 18:19:27.7526 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware| Response markup was updated to include browser refresh script injection.
+2024-05-10 18:19:31.9716 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTUFSBM9M" received FIN.
+2024-05-10 18:19:31.9819 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GTUFSBM9M" is closed. The last processed stream ID was 7.
+2024-05-10 18:19:31.9819 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTUFSBM9M" sending FIN because: "The client closed the connection."
+2024-05-10 18:19:31.9819 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9M" stopped.
+2024-05-10 18:19:50.0988 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9N" accepted.
+2024-05-10 18:19:50.0988 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9N" started.
+2024-05-10 18:19:50.1156 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware| Connection 0HN3GTUFSBM9N established using the following protocol: Tls12
+2024-05-10 18:19:50.1167 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path  does not match the path filter
+2024-05-10 18:19:50.1167 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware| The request path /api/CLCMP01/ExportCompanyWiseJobListingToExcel does not match a supported file type
+2024-05-10 18:19:50.2089 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| 1 candidate(s) found for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:19:50.2139 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher| Endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)' with route pattern 'api/CLCMP01/ExportCompanyWiseJobListingToExcel' is valid for the request path '/api/CLCMP01/ExportCompanyWiseJobListingToExcel'
+2024-05-10 18:19:50.2139 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware| Request matched endpoint 'Job_Finder.Controllers.CLCMP01Controller.ExportCompanyWiseJobListingToExcel (Job_Finder)'
+2024-05-10 18:19:50.3294 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of authorization filters (in the following order): Job_Finder.Filters.AuthenticationFilter
+2024-05-10 18:19:50.3294 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of resource filters (in the following order): None
+2024-05-10 18:19:50.3294 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-10 18:19:50.3294 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of exception filters (in the following order): None
+2024-05-10 18:19:50.3294 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-10 18:20:01.2891 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executing controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:20:01.2891 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker| Executed controller factory for controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder)
+2024-05-10 18:20:01.3535 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:20:01.3535 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Attempting to bind parameter 'companyId' of type 'System.Int32' using the name 'companyId' in request data ...
+2024-05-10 18:20:01.3535 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:20:01.3535 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to bind parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:20:01.3535 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Attempting to validate the bound parameter 'companyId' of type 'System.Int32' ...
+2024-05-10 18:20:01.3705 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder| Done attempting to validate the bound parameter 'companyId' of type 'System.Int32'.
+2024-05-10 18:20:17.7638 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor| The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2024-05-10 18:20:27.0525 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTUFSBM9N" received FIN.
+2024-05-10 18:20:27.0525 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets| Connection id "0HN3GTUFSBM9N" sending FIN because: "The client closed the connection."
+2024-05-10 18:20:27.0525 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2| Connection id "0HN3GTUFSBM9N" is closed. The last processed stream ID was 1.
+2024-05-10 18:20:27.0525 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections| Connection id "0HN3GTUFSBM9N" stopped.

@@ -1,0 +1,72 @@
+2024-05-08 11:27:15.6215 | INFO | Job_Finder.Program | Hello 
+2024-05-08 11:27:18.3776 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-08 11:27:18.6169 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 245.9512ms 
+2024-05-08 11:27:18.6343 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-08 11:27:18.6343 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.5939ms 
+2024-05-08 11:27:18.7526 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-08 11:27:19.5261 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 774.9952ms 
+2024-05-08 17:42:59.5058 | INFO | Job_Finder.Program | Hello 
+2024-05-08 17:44:38.5255 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-08 17:44:43.1375 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 4619.6206ms 
+2024-05-08 17:44:43.5263 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-08 17:44:43.5263 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-08 17:44:43.7111 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 177.8219ms 
+2024-05-08 17:44:44.2702 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 738.8660ms 
+2024-05-08 17:44:44.6541 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-08 17:44:45.7726 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1119.4530ms 
+2024-05-08 17:45:35.8376 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - 
+2024-05-08 17:45:35.9458 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-08 17:45:36.3207 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCompany(Int32) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-08 17:47:18.2028 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder) in 101863.5076ms 
+2024-05-08 17:47:18.2310 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-08 17:47:18.5578 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - - 500 - text/plain;+charset=utf-8 102727.6555ms 
+2024-05-08 17:48:53.3538 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLUSR01/AddUser application/json 102 
+2024-05-08 17:48:53.3686 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder)' 
+2024-05-08 17:48:53.3840 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddUser", controller = "CLUSR01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddUser(Job_Finder.Model.DTO.DtoUSR01) on controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder). 
+2024-05-08 17:49:13.8274 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder) in 20442.4126ms 
+2024-05-08 17:49:13.8411 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder)' 
+2024-05-08 17:49:13.8713 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLUSR01/AddUser application/json 102 - 500 - text/plain;+charset=utf-8 20515.7117ms 
+2024-05-08 17:50:02.3389 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLUSR01/AddUser application/json 102 
+2024-05-08 17:50:02.3389 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder)' 
+2024-05-08 17:50:02.3389 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddUser", controller = "CLUSR01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddUser(Job_Finder.Model.DTO.DtoUSR01) on controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder). 
+2024-05-08 17:50:44.7458 | INFO | Job_Finder.Program | Hello 
+2024-05-08 17:51:35.6681 | INFO | Job_Finder.Program | Hello 
+2024-05-08 17:51:45.8969 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-08 17:51:46.9680 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-08 17:51:47.0268 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-08 17:51:47.0551 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 1142.9227ms 
+2024-05-08 17:51:47.2047 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 178.5259ms 
+2024-05-08 17:51:47.8086 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 842.3889ms 
+2024-05-08 17:51:47.9086 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-08 17:51:48.4148 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 507.3102ms 
+2024-05-08 17:52:20.9270 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLUSR01/AddUser application/json 102 
+2024-05-08 17:52:21.0754 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder)' 
+2024-05-08 17:52:21.1491 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddUser", controller = "CLUSR01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddUser(Job_Finder.Model.DTO.DtoUSR01) on controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder). 
+2024-05-08 17:52:21.3600 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder) - Validation state: Valid 
+2024-05-08 17:53:10.4958 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder) in 49334.4509ms 
+2024-05-08 17:53:10.5109 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder)' 
+2024-05-08 17:53:10.9296 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLUSR01/AddUser application/json 102 - 500 - text/plain;+charset=utf-8 49998.4101ms 
+2024-05-08 17:53:16.2367 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLUSR01/AddUser application/json 102 
+2024-05-08 17:53:16.2496 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder)' 
+2024-05-08 17:53:16.2496 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddUser", controller = "CLUSR01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddUser(Job_Finder.Model.DTO.DtoUSR01) on controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder). 
+2024-05-08 17:53:16.3109 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder) - Validation state: Valid 
+2024-05-08 17:53:24.4843 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8165.5447ms. 
+2024-05-08 17:53:24.7945 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-08 17:53:24.9204 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder) in 8671.2023ms 
+2024-05-08 17:53:24.9204 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLUSR01Controller.AddUser (Job_Finder)' 
+2024-05-08 17:53:24.9204 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLUSR01/AddUser application/json 102 - 200 - application/json;+charset=utf-8 8685.3295ms 
+2024-05-08 17:54:09.1703 | INFO | Job_Finder.Program | Hello 
+2024-05-08 17:54:13.9616 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-08 17:54:14.9112 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 960.8115ms 
+2024-05-08 17:54:14.9983 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-08 17:54:14.9983 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-08 17:54:15.7289 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 730.9337ms 
+2024-05-08 17:54:15.8127 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 807.8229ms 
+2024-05-08 17:54:15.8802 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-08 17:54:16.1866 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 303.5240ms 
+2024-05-08 17:54:39.9380 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - 
+2024-05-08 17:54:40.0809 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-08 17:54:40.7452 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCompany(Int32) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-08 18:02:05.9317 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder) in 445168.8176ms 
+2024-05-08 18:02:05.9782 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-08 18:02:06.5255 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - - 500 - text/plain;+charset=utf-8 446577.4193ms 

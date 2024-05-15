@@ -1,0 +1,105 @@
+2024-05-09 16:32:39.3524 | INFO | Job_Finder.Program | Hello 
+2024-05-09 16:32:48.5143 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-09 16:32:49.5957 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-09 16:32:49.5957 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-09 16:32:49.6402 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 35.1585ms 
+2024-05-09 16:32:49.6402 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 1131.5010ms 
+2024-05-09 16:32:49.7441 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 146.5142ms 
+2024-05-09 16:32:49.8089 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-09 16:32:50.3399 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 525.3916ms 
+2024-05-09 16:33:15.8255 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - 
+2024-05-09 16:33:15.8871 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 16:33:16.1572 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCompany(Int32) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 16:56:52.5251 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder) in 1416291.3669ms 
+2024-05-09 16:56:52.5579 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 16:56:53.1898 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - - 500 - text/plain;+charset=utf-8 1417347.6274ms 
+2024-05-09 16:59:51.8294 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLCMP01/AddCompany application/json 129 
+2024-05-09 16:59:51.8454 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder)' 
+2024-05-09 16:59:52.5633 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddCompany(Job_Finder.Model.DTO.DtoCMP01) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:10:06.1359 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder) in 613560.3028ms 
+2024-05-09 17:10:06.1433 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder)' 
+2024-05-09 17:10:06.1872 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLCMP01/AddCompany application/json 129 - 500 - text/plain;+charset=utf-8 614346.2033ms 
+2024-05-09 17:10:12.3165 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLCMP01/AddCompany application/json 129 
+2024-05-09 17:10:12.3165 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder)' 
+2024-05-09 17:10:12.3165 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddCompany(Job_Finder.Model.DTO.DtoCMP01) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:18:39.7415 | INFO | Job_Finder.Program | Hello 
+2024-05-09 17:18:47.8278 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-09 17:18:48.4487 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-09 17:18:48.4487 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-09 17:18:48.4796 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 29.0624ms 
+2024-05-09 17:18:48.4796 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 658.9220ms 
+2024-05-09 17:18:48.5540 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 109.0448ms 
+2024-05-09 17:18:48.7304 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-09 17:18:49.0728 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 343.2272ms 
+2024-05-09 17:19:04.4615 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - 
+2024-05-09 17:19:04.5238 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 17:19:04.5742 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCompany(Int32) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:28:01.5983 | INFO | Job_Finder.Program | Hello 
+2024-05-09 17:28:16.5605 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-09 17:28:18.7246 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-09 17:28:18.7246 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-09 17:28:18.8164 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 93.3639ms 
+2024-05-09 17:28:18.9222 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 2364.3507ms 
+2024-05-09 17:28:19.2540 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 540.6623ms 
+2024-05-09 17:28:19.3490 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-09 17:28:19.9311 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 582.9890ms 
+2024-05-09 17:28:36.7074 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - 
+2024-05-09 17:28:36.7690 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 17:28:36.8378 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCompany(Int32) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:38:33.4809 | INFO | Job_Finder.Program | Hello 
+2024-05-09 17:38:44.4548 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-09 17:38:45.6701 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-09 17:38:45.6843 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-09 17:38:45.6843 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 1245.0166ms 
+2024-05-09 17:38:45.7332 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 55.4681ms 
+2024-05-09 17:38:45.8883 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 204.0442ms 
+2024-05-09 17:38:45.9903 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-09 17:38:46.4337 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 438.6588ms 
+2024-05-09 17:39:10.1483 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - 
+2024-05-09 17:39:10.2322 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 17:39:10.3579 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCompany(Int32) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:39:22.8403 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder) in 12459.9512ms 
+2024-05-09 17:39:22.8403 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 17:39:23.2377 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - - 500 - text/plain;+charset=utf-8 13086.9621ms 
+2024-05-09 17:39:37.8581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - 
+2024-05-09 17:39:37.8581 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 17:39:37.8581 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCompany(Int32) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:41:47.1128 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder) in 129239.839ms 
+2024-05-09 17:41:47.1128 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 17:41:47.1398 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - - 500 - text/plain;+charset=utf-8 129283.3562ms 
+2024-05-09 17:44:43.0423 | INFO | Job_Finder.Program | Hello 
+2024-05-09 17:45:13.3576 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-09 17:45:14.5834 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 1239.2486ms 
+2024-05-09 17:45:14.7172 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-09 17:45:14.8127 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-09 17:45:14.8708 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 153.4279ms 
+2024-05-09 17:45:15.1552 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 345.6174ms 
+2024-05-09 17:45:15.2237 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-09 17:45:15.6867 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 464.2011ms 
+2024-05-09 17:46:35.8010 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - 
+2024-05-09 17:46:35.9454 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 17:46:36.0303 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCompany(Int32) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:46:58.2086 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder) - Validation state: Valid 
+2024-05-09 17:47:13.5799 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15351.5588ms. 
+2024-05-09 17:47:13.6152 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-09 17:47:13.6367 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder) in 37604.6187ms 
+2024-05-09 17:47:13.6367 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.DeleteCompany (Job_Finder)' 
+2024-05-09 17:47:13.6367 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7170/api/CLCMP01/DeleteCompany?id=3 - - - 200 - application/json;+charset=utf-8 37834.0322ms 
+2024-05-09 17:48:33.8065 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLCMP01/AddCompany application/json 139 
+2024-05-09 17:48:33.8065 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder)' 
+2024-05-09 17:48:33.8219 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddCompany", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddCompany(Job_Finder.Model.DTO.DtoCMP01) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:48:39.7925 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder) - Validation state: Valid 
+2024-05-09 17:48:46.5253 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6732.234ms. 
+2024-05-09 17:48:46.5253 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-09 17:48:46.5253 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder) in 12700.99ms 
+2024-05-09 17:48:46.5253 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.AddCompany (Job_Finder)' 
+2024-05-09 17:48:46.5253 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLCMP01/AddCompany application/json 139 - 200 - application/json;+charset=utf-8 12719.5034ms 
+2024-05-09 17:49:58.2148 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLCMP01/GetAllCompanies - - 
+2024-05-09 17:49:58.2148 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)' 
+2024-05-09 17:49:58.2148 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllCompanies", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompanies() on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-09 17:50:20.3287 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder) - Validation state: Valid 
+2024-05-09 17:50:24.9382 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4606.4332ms. 
+2024-05-09 17:50:24.9382 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-09 17:50:25.0725 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder) in 26855.9534ms 
+2024-05-09 17:50:25.0725 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)' 
+2024-05-09 17:50:25.3390 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLCMP01/GetAllCompanies - - - 500 - text/plain;+charset=utf-8 27130.0826ms 
