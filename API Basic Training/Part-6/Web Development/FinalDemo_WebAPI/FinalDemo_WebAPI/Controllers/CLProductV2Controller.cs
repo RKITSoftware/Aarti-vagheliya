@@ -12,7 +12,7 @@ namespace FinalDemo_WebAPI.Controllers
     /// <summary>
     /// Controller for managing products with version 2.
     /// </summary>
-    [EnableCorsAttribute(origins: "https://localhost:44331", headers: "*", methods: "DeleteProduct,UpdateProduct,AddProduct")]
+    [EnableCorsAttribute(origins: "https://localhost:44331", headers: "*", methods: "POST,PUT,DELETE")]
     [BearerAuthentication] // Performs bearer token authentication
     [RoutePrefix("api/CLProductV2")]
     public class CLProductV2Controller : ApiController
