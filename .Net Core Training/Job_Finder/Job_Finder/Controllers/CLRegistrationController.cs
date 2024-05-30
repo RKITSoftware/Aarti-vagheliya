@@ -96,3 +96,4 @@ namespace Job_Finder.Controllers
         #endregion
     }
 }
+ 
