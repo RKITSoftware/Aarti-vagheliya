@@ -1,16 +1,16 @@
 ﻿using Job_Finder.Model.POCO;
-using Microsoft.AspNetCore.DataProtection;
-//using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
+using System.Runtime.Caching;
 using System.Security.Claims;
 using System.Text;
-using System.Runtime.Caching;
-using NHibernate.Cache;
 
 namespace Job_Finder.BusinessLogic
 {
+    /// <summary>
+    /// Manages JSON Web Tokens (JWT) for user authentication and authorization.
+    /// </summary>
     public class BLTokenManager
     {
         #region Private member
@@ -21,15 +21,28 @@ namespace Job_Finder.BusinessLogic
         private static readonly string _secretKey = "ERMN05OPLoDvbTTa/QkqLNMI7cPLguaRyHzyg7n5qNBVjQmtBhz4SzYh4NBVCXi3KJHlSXKP+oi2+bXr6CUYTR==";
 
         #endregion
-        //public readonly IMemoryCache Cache; // Injected instance of IMemoryCache
+
+        #region Public Member
+
+        /// <summary>
+        /// In-memory cache instance.
+        /// </summary>
         public MemoryCache cache = MemoryCache.Default;
 
+        /// <summary>
+        /// Prefix for cache keys used for storing JWT tokens.
+        /// </summary>
         public const string CachePrefix = "JWTToken_";
 
+        #endregion
 
         #region Public Methods
 
-        public void GenerateToken(USR01 user)
+        /// <summary>
+        /// Generates a JWT token for the specified user and stores it in the cache.
+        /// </summary>
+        /// <param name="user">The user for whom the token is generated.</param>
+        public string GenerateToken(USR01 user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes(_secretKey);
@@ -50,8 +63,15 @@ namespace Job_Finder.BusinessLogic
             string cacheKey = CachePrefix + user.R01F02;
 
             cache.Set(cacheKey, tokenString, new CacheItemPolicy { AbsoluteExpiration = DateTime.UtcNow.AddMinutes(20) });
+
+            return tokenString; 
         }
 
+        /// <summary>
+        /// Refreshes the JWT token for the specified user if it exists in the cache.
+        /// </summary>
+        /// <param name="user">The user for whom the token is refreshed.</param>
+        /// <returns>The new JWT token if the refresh is successful; otherwise, null.</returns>
         public string RefreshToken(USR01 user)
         {
             // Check if token exists in cache
@@ -88,6 +108,11 @@ namespace Job_Finder.BusinessLogic
             return null;
         }
 
+        /// <summary>
+        /// Gets the principal (user) from the specified JWT token.
+        /// </summary>
+        /// <param name="token">The JWT token.</param>
+        /// <returns>The claims principal extracted from the token; otherwise, null.</returns>
         public ClaimsPrincipal GetPrincipal(string token)
         {
             try
@@ -121,7 +146,11 @@ namespace Job_Finder.BusinessLogic
             }
         }
 
-
+        /// <summary>
+        /// Validates the specified JWT token.
+        /// </summary>
+        /// <param name="token">The JWT token to validate.</param>
+        /// <returns>True if the token is valid; otherwise, false.</returns>
         public bool ValidateToken(string token)
         {
             ClaimsPrincipal principal = GetPrincipal(token); // Get the claims principal from the token
@@ -130,7 +159,11 @@ namespace Job_Finder.BusinessLogic
             return true; // Return true otherwise
         }
 
-
+        /// <summary>
+        /// Checks if the specified JWT token has expired.
+        /// </summary>
+        /// <param name="token">The JWT token to check.</param>
+        /// <returns>True if the token has expired; otherwise, false.</returns>
         public bool IsTokenExpired(string token)
         {
             JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();

@@ -2,8 +2,13 @@
 
 namespace Job_Finder.Model
 {
+    /// <summary>
+    /// Represents the response of an operation.
+    /// </summary>
     public class Response
     {
+        #region Public Properties
+
         /// <summary>
         /// Indicates whether the operation resulted in an error.
         /// </summary>
@@ -17,6 +22,8 @@ namespace Job_Finder.Model
         /// <summary>
         /// Contains the response data in the form of a DataTable, if applicable.
         /// </summary>
-        public dynamic response { get; set; }
+        public DataTable response { get; set; }
+
+        #endregion
     }
 }

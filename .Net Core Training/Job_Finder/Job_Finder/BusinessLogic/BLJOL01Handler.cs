@@ -1,4 +1,5 @@
-﻿using Job_Finder.Enum;
+﻿using Job_Finder.DataBase;
+using Job_Finder.Enum;
 using Job_Finder.Interface;
 using Job_Finder.Model;
 using Job_Finder.Model.DTO;
@@ -6,24 +7,66 @@ using Job_Finder.Model.POCO;
 
 namespace Job_Finder.BusinessLogic
 {
+    /// <summary>
+    /// Handles business logic operations related to JOL01 entity.
+    /// </summary>
     public class BLJOL01Handler
     {
+        #region Private Members
+
+        /// <summary>
+        /// Instance of Response class.
+        /// </summary>
         private Response _objResponse;
 
+        /// <summary>
+        /// Instance of JOL01 class.
+        /// </summary>
         private JOL01 _objJOL01 = new JOL01();
 
+        /// <summary>
+        /// Instance of BLHelper class.
+        /// </summary>
         private readonly BLHelper _objBLHelper = new BLHelper();
 
+        /// <summary>
+        /// Provides database context for database operations.
+        /// </summary>
+        private DBContext _objDBContext = new DBContext();
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets the operation type.
+        /// </summary>
         public enmOperationType OperationType { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CRUD service for JOL01.
+        /// </summary>
         public ICRUDService<JOL01> objCRUDJOL01;
 
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Initializes a new instance of the BLJOL01Handler class.
+        /// </summary>
         public BLJOL01Handler(ICRUDService<JOL01> objCRUDJOL01)
         {
             this.objCRUDJOL01 = objCRUDJOL01;
         }
 
+        #endregion
 
+        #region Public Methods
+
+        /// <summary>
+        /// Pre-saves data before performing an operation.
+        /// </summary>
         public void PreSave(DtoJOL01 objDtoJOL01)
         {
             _objJOL01 = _objBLHelper.Map<DtoJOL01, JOL01>(objDtoJOL01);
@@ -31,6 +74,9 @@ namespace Job_Finder.BusinessLogic
             objCRUDJOL01.objOperation = OperationType;
         }
 
+        /// <summary>
+        /// Validates data before performing an operation.
+        /// </summary>
         public Response Validation()
         {
             _objResponse = new Response();
@@ -54,7 +100,9 @@ namespace Job_Finder.BusinessLogic
             return _objResponse;
         }
 
-
+        /// <summary>
+        /// Validates data before deleting a record.
+        /// </summary>
         public Response ValidationDelete(int id)
         {
             _objResponse = new Response();
@@ -67,5 +115,22 @@ namespace Job_Finder.BusinessLogic
             return _objResponse;
         }
 
+        /// <summary>
+        /// Retrieves job listings based on the specified location, job type, and company ID.
+        /// </summary>
+        /// <param name="location">The location to filter job listings by.</param>
+        /// <param name="type">The job type to filter job listings by.</param>
+        /// <param name="companyId">The company ID to filter job listings by.</param>
+        /// <returns>A response object containing the list of job listings that match the specified criteria.</returns>
+        public Response GetJobListings(string location, string type, int companyId)
+        {
+            _objResponse = new Response();
+
+            _objResponse.response = _objDBContext.GetJobListings(location, type, companyId);
+
+            return _objResponse;
+        }
+
+        #endregion
     }
 }

@@ -1,49 +1,49 @@
 ﻿using Job_Finder.Enum;
-using System.ComponentModel.DataAnnotations;
 
 namespace Job_Finder.Model.POCO
 {
+    /// <summary>
+    /// Represents a job seeker entity.
+    /// </summary>
     public class JOS01
     {
+        #region Public Properties
+
         /// <summary>
-        /// Job seeker ID.
+        /// Gets or sets the job seeker ID.
         /// </summary>
         public int S01F01 { get; set; }
 
         /// <summary>
-        /// Name
+        /// Gets or sets the name of the job seeker.
         /// </summary>
         public string S01F02 { get; set; }
 
         /// <summary>
-        /// Qualification
+        /// Gets or sets the qualification of the job seeker.
         /// </summary>
         public string S01F03 { get; set; }
 
         /// <summary>
-        /// Experiance
+        /// Gets or sets the experience of the job seeker.
         /// </summary>
         public string S01F04 { get; set; }
 
         /// <summary>
-        /// Resume  
-        /// </summary>
-       // [DataType(DataType.Upload)]
-        public IFormFile S01F05 { get; set; }
-
-        /// <summary>
-        /// Contact Details.
+        /// Gets or sets the contact details of the job seeker.
         /// </summary>
         public string S01F06 { get; set; }
 
         /// <summary>
-        /// Gender(M, F).
+        /// Gets or sets the gender of the job seeker (Male or Female).
         /// </summary>
         public enmGender S01F07 { get; set; }
 
         /// <summary>
-        /// EmailID
+        /// Gets or sets the email ID of the job seeker.
         /// </summary>
         public string S01F08 { get; set; }
+
+        #endregion
     }
 }

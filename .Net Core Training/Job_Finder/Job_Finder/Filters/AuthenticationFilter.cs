@@ -4,25 +4,30 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.Extensions.Caching.Memory;
-using NHibernate.Linq.Functions;
 using System.Diagnostics.Contracts;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Text;
-using System.Web.Http.Controllers;
-using System.Web.Http.Results;
 
 namespace Job_Finder.Filters
 {
+    /// <summary>
+    /// Filter for authentication and authorization.
+    /// </summary>
     public class AuthenticationFilter : IAuthorizationFilter
     {
+        #region Private Member
+
+        /// <summary>
+        /// Helper class instance for business logic operations.
+        /// </summary>
         private BLLogin _objBLLogin = new BLLogin();
 
+        /// <summary>
+        /// Token manager class instance for managing JWT tokens.
+        /// </summary>
         private BLTokenManager _objBLTokenManager = new();
-
-        public static USR01 objUSR01 = new USR01();
 
         /// <summary>
         /// Defines flag indicating whether token is generated or not
@@ -30,92 +35,124 @@ namespace Job_Finder.Filters
         /// </summary>
         private static bool _isTokenGenerated = false;
 
-       
+        #endregion
 
+        #region Public  Member
+
+        /// <summary>
+        /// Business logic class instance for user login operations.
+        /// </summary>
+        public static USR01 objUSR01 = new USR01();
+
+        #endregion
+
+        #region Public Method
+
+        /// <summary>
+        /// Performs authorization by validating the user credentials.
+        /// </summary>
+        /// <param name="context">The authorization filter context.</param>
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-           if (SkipAuthorization(context)) return;
+            // Retrieve the endpoint information
+            var endpoint = context.HttpContext.GetEndpoint();
 
+            // Check if the endpoint is excluded from authentication
+            if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null)
+            {
+                return; // Skip authentication for this endpoint
+            }
+
+            // Retrieve the Authorization header from the HTTP request
             string authHeader = context.HttpContext.Request.Headers["Authorization"];
 
+            // Check if the Authorization header is present and starts with "Basic "
             if (authHeader != null && authHeader.StartsWith("Basic "))
             {
+                // Parse the Authorization header value as an AuthenticationHeaderValue
                 var authHeaderVal = AuthenticationHeaderValue.Parse(authHeader);
 
                 try
                 {
+                    // Decode the Base64-encoded credentials from the header
                     string credentials = Encoding.UTF8.GetString(Convert.FromBase64String(authHeaderVal.Parameter));
 
+                    // Split the decoded credentials into username and password
                     string[] userInfo = credentials.Split(':');
                     string username = userInfo[0];
                     string password = userInfo[1];
 
+                    // Validate the user using the provided username and password
                     var user = _objBLLogin.ValidateUser(username, password);
 
                     if (user != null)
                     {
-                        objUSR01 = user; // Sets current logged in user
+                        // Generates token
+                        var token = _objBLTokenManager.GenerateToken(user);
 
-                        var identity = new GenericIdentity(username);
-                        identity.AddClaim(new Claim(ClaimTypes.Name, objUSR01.R01F02));
-                        identity.AddClaim(new Claim("Id", Convert.ToString(objUSR01.R01F01)));
+                        // Attaches principal to token
+                        var principal = _objBLTokenManager.GetPrincipal(token);
 
-                        IPrincipal principal = new GenericPrincipal(identity, objUSR01.R01F05.ToString().Split(','));
+                        if (principal == null)
+                        {
+                            context.Result = new StatusCodeResult(StatusCodes.Status401Unauthorized);
+                            return;
+                        }
 
+                        //Set the current principal for the request
                         Thread.CurrentPrincipal = principal;
 
-                        context.HttpContext.User = (ClaimsPrincipal)principal;
-
-                        // Checks if token is generated before
-                        if (_isTokenGenerated == false)
+                        // Set the token as the result (if needed)
+                        context.Result = new ContentResult
                         {
-                            _objBLTokenManager.GenerateToken(objUSR01);
-
-                            _isTokenGenerated = true;
-
-                            return;
-                        }
-
-
-                        var token = _objBLTokenManager.cache.Get("JWTToken_" + objUSR01.R01F02);
-
-                        if (token != null)
-                        {
-                            token = _objBLTokenManager.RefreshToken(objUSR01);
-
-                            if (token == null)
-                            {
-                                context.Result = new ObjectResult("Token is null")
-                                {
-                                    StatusCode = StatusCodes.Status500InternalServerError
-                                };
-
-                            }
-                            return;
-                        }
-                        else
-                        {
-                            context.Result = new ObjectResult(StatusCodes.Status500InternalServerError);
-                            _isTokenGenerated = false;
-                        }
+                            Content = token,
+                            ContentType = "text/plain",
+                            StatusCode = StatusCodes.Status200OK
+                        };
+                        return;
                     }
                     else
                     {
-                        context.Result = new ObjectResult(StatusCodes.Status406NotAcceptable);
+                        // User validation failed
+                        context.Result = new ContentResult
+                        {
+                            Content = "Invalid username or password.",
+                            ContentType = "text/plain",
+                            StatusCode = StatusCodes.Status401Unauthorized
+                        };
+                        return;
                     }
                 }
                 catch (FormatException)
                 {
                     // Credentials were not formatted correctly.
-                    context.HttpContext.Response.StatusCode = 401;
+                    context.Result = new ContentResult
+                    {
+                        Content = "Invalid Authorization header format.",
+                        ContentType = "text/plain",
+                        StatusCode = StatusCodes.Status401Unauthorized
+                    };
+                    return;
                 }
             }
             else
             {
-                context.Result = new ObjectResult(StatusCodes.Status400BadRequest);
+                // No or invalid authorization header
+                context.Result = new ContentResult
+                {
+                    Content = "Authorization header is missing or not in the correct format.",
+                    ContentType = "text/plain",
+                    StatusCode = StatusCodes.Status400BadRequest
+                };
+                return;
             }
         }
 
+        /// <summary>
+        /// Determines whether authorization should be skipped based on the presence of AllowAnonymous attribute.
+        /// </summary>
+        /// <param name="context">The authorization filter context.</param>
+        /// <returns>True if authorization should be skipped, otherwise false.</returns>
         public static bool SkipAuthorization(AuthorizationFilterContext context)
         {
             Contract.Assert(context != null);
@@ -127,5 +164,7 @@ namespace Job_Finder.Filters
             }
             return false;
         }
+
+        #endregion
     }
 }

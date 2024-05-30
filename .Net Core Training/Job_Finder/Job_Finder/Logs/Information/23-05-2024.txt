@@ -1,0 +1,479 @@
+2024-05-23 11:21:34.1734 | INFO | Job_Finder.Program | Hello 
+2024-05-23 11:21:40.2161 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:21:40.6713 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 459.3430ms 
+2024-05-23 11:21:40.6713 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:21:40.6713 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:21:40.6889 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 11.1941ms 
+2024-05-23 11:21:40.7942 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 122.1116ms 
+2024-05-23 11:21:40.9237 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:21:41.3756 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 446.0497ms 
+2024-05-23 11:23:39.9368 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:23:39.9534 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 15.2096ms 
+2024-05-23 11:23:39.9716 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:23:39.9716 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:23:39.9716 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.7505ms 
+2024-05-23 11:23:39.9836 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.9399ms 
+2024-05-23 11:23:40.0871 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:23:40.1295 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 42.8755ms 
+2024-05-23 11:23:48.5532 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:23:48.5644 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 12.3691ms 
+2024-05-23 11:23:48.5858 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:23:48.5858 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:23:48.5858 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.4585ms 
+2024-05-23 11:23:48.5928 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.0377ms 
+2024-05-23 11:23:48.6908 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:23:48.7310 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 40.2265ms 
+2024-05-23 11:24:00.3002 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:24:00.3164 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 14.4627ms 
+2024-05-23 11:24:00.3305 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:24:00.3305 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:24:00.3305 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.3611ms 
+2024-05-23 11:24:00.3305 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.9963ms 
+2024-05-23 11:24:00.4276 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:24:00.4694 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 41.8663ms 
+2024-05-23 11:24:03.3322 | INFO | Job_Finder.Program | Hello 
+2024-05-23 11:24:05.1016 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:24:05.4734 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:24:05.4844 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 383.8824ms 
+2024-05-23 11:24:05.4844 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:24:05.4844 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.8899ms 
+2024-05-23 11:24:05.5154 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.9695ms 
+2024-05-23 11:24:05.5654 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:24:05.8008 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 231.4916ms 
+2024-05-23 11:25:36.0812 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 62 
+2024-05-23 11:25:36.1105 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:25:36.1601 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddJobApplication(Job_Finder.Model.DTO.DtoJOA01) on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 11:25:37.3879 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization failed for the request at filter 'Job_Finder.Filters.AuthorizationFilter'. 
+2024-05-23 11:25:37.3933 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2024-05-23 11:25:37.4232 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder) in 1258.4867ms 
+2024-05-23 11:25:37.4232 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:25:37.4232 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 62 - 403 - application/problem+json;+charset=utf-8 1339.2663ms 
+2024-05-23 11:26:05.4551 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 62 
+2024-05-23 11:26:05.4551 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:26:05.4551 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddJobApplication(Job_Finder.Model.DTO.DtoJOA01) on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 11:26:05.4795 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization failed for the request at filter 'Job_Finder.Filters.AuthorizationFilter'. 
+2024-05-23 11:26:05.4795 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2024-05-23 11:26:05.4795 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder) in 22.1523ms 
+2024-05-23 11:26:05.4795 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:26:05.4795 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 62 - 403 - application/problem+json;+charset=utf-8 27.1770ms 
+2024-05-23 11:27:13.6283 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 62 
+2024-05-23 11:27:13.6283 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:27:13.6283 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddJobApplication(Job_Finder.Model.DTO.DtoJOA01) on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 11:27:13.6630 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization failed for the request at filter 'Job_Finder.Filters.AuthorizationFilter'. 
+2024-05-23 11:27:13.6630 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2024-05-23 11:27:13.6630 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder) in 37.3556ms 
+2024-05-23 11:27:13.6630 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:27:13.6630 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 62 - 403 - application/problem+json;+charset=utf-8 38.6124ms 
+2024-05-23 11:27:54.6498 | INFO | Job_Finder.Program | Hello 
+2024-05-23 11:28:13.4909 | INFO | Job_Finder.Program | Hello 
+2024-05-23 11:28:15.3400 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:28:15.6294 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:28:15.6294 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:28:15.6294 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 303.2256ms 
+2024-05-23 11:28:15.6448 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.3639ms 
+2024-05-23 11:28:15.6753 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.3413ms 
+2024-05-23 11:28:15.7891 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:28:16.0489 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 256.2781ms 
+2024-05-23 11:28:44.8663 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 62 
+2024-05-23 11:28:44.9116 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:28:44.9470 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddJobApplication(Job_Finder.Model.DTO.DtoJOA01) on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 11:28:45.2711 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder) - Validation state: Valid 
+2024-05-23 11:28:45.4149 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 131.945ms. 
+2024-05-23 11:28:45.4149 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:28:45.4475 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder) in 482.1969ms 
+2024-05-23 11:28:45.4475 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:28:45.4475 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 62 - 200 - application/json;+charset=utf-8 580.2942ms 
+2024-05-23 11:29:29.9613 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOS01/GetStatus?jobSeekerId=1 - - 
+2024-05-23 11:29:29.9613 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder)' 
+2024-05-23 11:29:30.0446 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetStatus", controller = "CLJOS01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetStatus(Int32) on controller Job_Finder.Controllers.CLJOS01Controller (Job_Finder). 
+2024-05-23 11:29:30.7907 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder) - Validation state: Valid 
+2024-05-23 11:29:30.8191 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.4705ms. 
+2024-05-23 11:29:30.8191 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:29:30.8191 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder) in 777.8647ms 
+2024-05-23 11:29:30.8191 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder)' 
+2024-05-23 11:29:30.8191 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOS01/GetStatus?jobSeekerId=1 - - - 200 - application/json;+charset=utf-8 864.7485ms 
+2024-05-23 11:30:05.0722 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 PATCH https://localhost:7170/api/CLCMP01/UpdateJobApplicationStatus?applicationId=4&newStatus=2 - - 
+2024-05-23 11:30:05.0722 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder)' 
+2024-05-23 11:30:05.0722 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "UpdateJobApplicationStatus", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateJobApplicationStatus(Int32, Job_Finder.Enum.enmJobApplicationStatus) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-23 11:30:05.0890 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder) - Validation state: Valid 
+2024-05-23 11:30:05.3365 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder) in 262.0777ms 
+2024-05-23 11:30:05.3365 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder)' 
+2024-05-23 11:30:05.6409 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 PATCH https://localhost:7170/api/CLCMP01/UpdateJobApplicationStatus?applicationId=4&newStatus=2 - - - 500 - text/plain;+charset=utf-8 568.7097ms 
+2024-05-23 11:31:13.2411 | INFO | Job_Finder.Program | Hello 
+2024-05-23 11:31:18.2555 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:31:19.3353 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 1078.7119ms 
+2024-05-23 11:31:19.4194 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:31:19.4194 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:31:19.4292 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 16.5849ms 
+2024-05-23 11:31:19.5245 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 110.7248ms 
+2024-05-23 11:31:19.6204 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:31:20.0409 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 421.2263ms 
+2024-05-23 11:31:42.8556 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 PATCH https://localhost:7170/api/CLCMP01/UpdateJobApplicationStatus?applicationId=4&newStatus=2 - - 
+2024-05-23 11:31:42.9452 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder)' 
+2024-05-23 11:31:43.0291 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "UpdateJobApplicationStatus", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateJobApplicationStatus(Int32, Job_Finder.Enum.enmJobApplicationStatus) on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-23 11:31:43.5587 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder) - Validation state: Valid 
+2024-05-23 11:32:59.8092 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 76242.7454ms. 
+2024-05-23 11:32:59.8549 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:32:59.8857 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder) in 76850.4908ms 
+2024-05-23 11:32:59.8857 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.UpdateJobApplicationStatus (Job_Finder)' 
+2024-05-23 11:32:59.8857 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 PATCH https://localhost:7170/api/CLCMP01/UpdateJobApplicationStatus?applicationId=4&newStatus=2 - - - 200 - application/json;+charset=utf-8 77032.0432ms 
+2024-05-23 11:33:18.2363 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOS01/GetStatus?jobSeekerId=1 - - 
+2024-05-23 11:33:18.2363 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder)' 
+2024-05-23 11:33:18.2447 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetStatus", controller = "CLJOS01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetStatus(Int32) on controller Job_Finder.Controllers.CLJOS01Controller (Job_Finder). 
+2024-05-23 11:33:19.4159 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder) - Validation state: Valid 
+2024-05-23 11:33:22.3339 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2902.9412ms. 
+2024-05-23 11:33:22.3339 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:33:22.3475 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder) in 4102.8367ms 
+2024-05-23 11:33:22.3475 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOS01Controller.GetStatus (Job_Finder)' 
+2024-05-23 11:33:22.3475 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOS01/GetStatus?jobSeekerId=1 - - - 200 - application/json;+charset=utf-8 4108.5762ms 
+2024-05-23 11:35:47.1761 | INFO | Job_Finder.Program | Hello 
+2024-05-23 11:35:50.5475 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:35:51.1517 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 609.2028ms 
+2024-05-23 11:35:51.1698 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:35:51.1698 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:35:51.1698 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.1286ms 
+2024-05-23 11:35:51.2171 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.9594ms 
+2024-05-23 11:35:51.4677 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:35:51.7571 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 286.0258ms 
+2024-05-23 11:36:09.7783 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOL01/GetAllJobs - - 
+2024-05-23 11:36:09.8263 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder)' 
+2024-05-23 11:36:09.8444 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllJobs", controller = "CLJOL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllJobs() on controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder). 
+2024-05-23 11:36:10.0959 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder) - Validation state: Valid 
+2024-05-23 11:36:10.1484 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 45.1846ms. 
+2024-05-23 11:36:10.1519 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:36:10.1852 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder) in 340.0738ms 
+2024-05-23 11:36:10.1852 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder)' 
+2024-05-23 11:36:10.1852 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOL01/GetAllJobs - - - 200 - application/json;+charset=utf-8 409.1685ms 
+2024-05-23 11:37:23.8774 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=m&type=f&compnyId=4 - - 
+2024-05-23 11:37:23.8774 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:37:23.8975 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobListings", controller = "CLJOL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetJobListings(System.String, System.String, Int32) on controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder). 
+2024-05-23 11:37:24.0470 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) - Validation state: Valid 
+2024-05-23 11:37:24.0890 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.7278ms. 
+2024-05-23 11:37:24.0890 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:37:24.0890 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) in 187.9583ms 
+2024-05-23 11:37:24.0890 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:37:24.0890 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=m&type=f&compnyId=4 - - - 200 - application/json;+charset=utf-8 211.0206ms 
+2024-05-23 11:37:56.5651 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=Mumbai&type=ft&compnyId=4 - - 
+2024-05-23 11:37:56.5651 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:37:56.5651 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobListings", controller = "CLJOL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetJobListings(System.String, System.String, Int32) on controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder). 
+2024-05-23 11:37:56.5767 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) - Validation state: Valid 
+2024-05-23 11:37:56.5767 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.6378ms. 
+2024-05-23 11:37:56.5767 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:37:56.5767 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) in 19.7529ms 
+2024-05-23 11:37:56.5767 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:37:56.5767 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=Mumbai&type=ft&compnyId=4 - - - 200 - application/json;+charset=utf-8 20.5784ms 
+2024-05-23 11:38:07.8082 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=G&type=ft&compnyId=4 - - 
+2024-05-23 11:38:07.8154 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:38:07.8154 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobListings", controller = "CLJOL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetJobListings(System.String, System.String, Int32) on controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder). 
+2024-05-23 11:38:07.8154 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) - Validation state: Valid 
+2024-05-23 11:38:07.8264 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.1824ms. 
+2024-05-23 11:38:07.8264 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:38:07.8264 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) in 23.0147ms 
+2024-05-23 11:38:07.8264 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:38:07.8264 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=G&type=ft&compnyId=4 - - - 200 - application/json;+charset=utf-8 30.3142ms 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=m&type=f&compnyId=1 - - 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobListings", controller = "CLJOL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetJobListings(System.String, System.String, Int32) on controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder). 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) - Validation state: Valid 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.9497ms. 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) in 12.1138ms 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:38:52.2030 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=m&type=f&compnyId=1 - - - 200 - application/json;+charset=utf-8 13.3194ms 
+2024-05-23 11:39:03.7635 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=m&type=t&compnyId=1 - - 
+2024-05-23 11:39:03.7635 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:39:03.7635 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobListings", controller = "CLJOL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetJobListings(System.String, System.String, Int32) on controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder). 
+2024-05-23 11:39:03.7682 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) - Validation state: Valid 
+2024-05-23 11:39:03.7682 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4571ms. 
+2024-05-23 11:39:03.7682 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:39:03.7682 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder) in 10.0735ms 
+2024-05-23 11:39:03.7682 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetJobListings (Job_Finder)' 
+2024-05-23 11:39:03.7682 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOL01/GetJobListings?location=m&type=t&compnyId=1 - - - 200 - application/json;+charset=utf-8 11.0355ms 
+2024-05-23 11:43:40.5938 | INFO | Job_Finder.Program | Hello 
+2024-05-23 11:43:46.7928 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:43:47.3808 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 590.0490ms 
+2024-05-23 11:43:47.4733 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:43:47.4733 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:43:47.4733 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.9295ms 
+2024-05-23 11:43:47.5507 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 80.2614ms 
+2024-05-23 11:43:47.7565 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:43:48.2105 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 454.0509ms 
+2024-05-23 11:43:55.9014 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 11:43:55.9014 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 7.5124ms 
+2024-05-23 11:43:55.9098 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 11:43:55.9098 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 11:43:55.9098 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.7485ms 
+2024-05-23 11:43:55.9261 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.4150ms 
+2024-05-23 11:43:56.0107 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 11:43:56.0442 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 33.6588ms 
+2024-05-23 11:45:06.4171 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 47 
+2024-05-23 11:45:06.4424 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:45:06.4749 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddJobApplication(Job_Finder.Model.DTO.DtoJOA01) on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 11:45:06.6655 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder) - Validation state: Valid 
+2024-05-23 11:45:06.7522 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 78.0699ms. 
+2024-05-23 11:45:06.7552 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 11:45:06.7716 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder) in 286.8579ms 
+2024-05-23 11:45:06.7716 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:45:06.7716 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 47 - 200 - application/json;+charset=utf-8 357.1550ms 
+2024-05-23 11:45:59.1742 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 34 
+2024-05-23 11:45:59.1798 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:45:59.1798 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddJobApplication(Job_Finder.Model.DTO.DtoJOA01) on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 11:45:59.2443 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+2024-05-23 11:45:59.2443 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder) in 74.2443ms 
+2024-05-23 11:45:59.2443 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.AddJobApplication (Job_Finder)' 
+2024-05-23 11:45:59.2443 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7170/api/CLJOA01/AddJobApplication application/json 34 - 400 - application/problem+json;+charset=utf-8 79.7061ms 
+2024-05-23 12:02:45.4354 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 12:02:45.4482 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 18.0582ms 
+2024-05-23 12:02:45.4758 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 12:02:45.4758 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 12:02:45.4758 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.2378ms 
+2024-05-23 12:02:45.4972 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.0125ms 
+2024-05-23 12:02:45.7662 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 12:02:45.8003 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 34.2268ms 
+2024-05-23 12:17:34.8822 | INFO | Job_Finder.Program | Hello 
+2024-05-23 12:17:41.7410 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 12:17:42.5705 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 831.3227ms 
+2024-05-23 12:17:42.7306 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 12:17:42.7306 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.7485ms 
+2024-05-23 12:17:42.8121 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 12:17:42.9532 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 146.1987ms 
+2024-05-23 12:17:43.6673 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 12:17:44.2276 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 563.4318ms 
+2024-05-23 12:21:27.7201 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOA01/GetAllJobApplication - - 
+2024-05-23 12:21:27.8155 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder)' 
+2024-05-23 12:21:27.8537 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllJobApplication() on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 12:21:27.9354 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization failed for the request at filter 'Job_Finder.Filters.AuthenticationFilter'. 
+2024-05-23 12:21:27.9481 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing ObjectResult, writing value of type 'System.Int32'. 
+2024-05-23 12:21:27.9715 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder) in 115.8534ms 
+2024-05-23 12:21:27.9715 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder)' 
+2024-05-23 12:21:27.9715 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOA01/GetAllJobApplication - - - 200 - application/json;+charset=utf-8 255.1924ms 
+2024-05-23 12:22:17.3942 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOA01/GetAllJobApplication - - 
+2024-05-23 12:22:17.3942 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder)' 
+2024-05-23 12:22:17.4085 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllJobApplication() on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 12:22:18.0438 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder) - Validation state: Valid 
+2024-05-23 12:22:18.0739 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12.2578ms. 
+2024-05-23 12:22:18.0739 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 12:22:18.0739 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder) in 678.4898ms 
+2024-05-23 12:22:18.0739 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder)' 
+2024-05-23 12:22:18.0739 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOA01/GetAllJobApplication - - - 200 - application/json;+charset=utf-8 693.2608ms 
+2024-05-23 12:23:04.8595 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLCMP01/GetJobApplication - - 
+2024-05-23 12:23:04.8595 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder)' 
+2024-05-23 12:23:04.8745 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobApplication", controller = "CLCMP01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJobApplication() on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-23 12:23:04.8895 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder) - Validation state: Valid 
+2024-05-23 12:23:04.9760 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 86.219ms. 
+2024-05-23 12:23:04.9760 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing ObjectResult, writing value of type 'System.String'. 
+2024-05-23 12:23:04.9760 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder) in 102.1244ms 
+2024-05-23 12:23:04.9760 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder)' 
+2024-05-23 12:23:04.9760 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLCMP01/GetJobApplication - - - 500 - text/plain;+charset=utf-8 116.9950ms 
+2024-05-23 12:33:46.2319 | INFO | Job_Finder.Program | Hello 
+2024-05-23 12:33:48.0551 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 12:33:48.3538 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 12:33:48.3538 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 12:33:48.3538 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 302.9791ms 
+2024-05-23 12:33:48.3538 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.5235ms 
+2024-05-23 12:33:48.3837 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.7036ms 
+2024-05-23 12:33:48.6181 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 12:33:48.8366 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 215.7496ms 
+2024-05-23 12:34:26.4093 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLCMP01/GetJobApplication - - 
+2024-05-23 12:34:26.4455 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder)' 
+2024-05-23 12:34:26.4766 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobApplication", controller = "CLCMP01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJobApplication() on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-23 12:34:26.5562 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder) - Validation state: Valid 
+2024-05-23 12:34:27.3374 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder), returned result Microsoft.AspNetCore.Mvc.FileContentResult in 774.6495ms. 
+2024-05-23 12:34:27.3374 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor | Executing FileContentResult, sending file with download name 'JobApplication_23-05-2024.xlsx' ... 
+2024-05-23 12:34:27.3515 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder) in 872.1187ms 
+2024-05-23 12:34:27.3515 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder)' 
+2024-05-23 12:34:27.3515 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLCMP01/GetJobApplication - - - 200 2881 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet 945.9109ms 
+2024-05-23 12:51:15.8867 | INFO | Job_Finder.Program | Hello 
+2024-05-23 12:51:18.0632 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 12:51:18.4686 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 409.3270ms 
+2024-05-23 12:51:18.5152 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 12:51:18.5152 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 12:51:18.5254 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.3009ms 
+2024-05-23 12:51:18.7120 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 192.1562ms 
+2024-05-23 12:51:19.5937 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 12:51:20.1577 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 564.2926ms 
+2024-05-23 12:52:06.7328 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLCMP01/GetJobApplication - - 
+2024-05-23 12:52:06.7916 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder)' 
+2024-05-23 12:52:06.8306 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobApplication", controller = "CLCMP01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJobApplication() on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-23 12:52:06.9475 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder) - Validation state: Valid 
+2024-05-23 12:52:07.0110 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 59.2286ms. 
+2024-05-23 12:52:07.0254 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing ObjectResult, writing value of type 'System.String'. 
+2024-05-23 12:52:07.0254 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder) in 195.6768ms 
+2024-05-23 12:52:07.0254 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder)' 
+2024-05-23 12:52:07.0254 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLCMP01/GetJobApplication - - - 500 - text/plain;+charset=utf-8 303.3517ms 
+2024-05-23 12:53:41.5406 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 12:53:41.5497 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 14.5341ms 
+2024-05-23 12:53:41.5700 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 12:53:41.5700 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 12:53:41.5700 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.5043ms 
+2024-05-23 12:53:41.5741 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.2841ms 
+2024-05-23 12:53:41.8897 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 12:53:41.9212 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 31.5407ms 
+2024-05-23 12:53:44.0811 | INFO | Job_Finder.Program | Hello 
+2024-05-23 12:53:46.2508 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 12:53:46.6533 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 407.5359ms 
+2024-05-23 12:53:46.6999 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 12:53:46.6999 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 12:53:46.6999 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.0296ms 
+2024-05-23 12:53:46.7479 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.3309ms 
+2024-05-23 12:53:46.8737 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 12:53:47.1322 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 258.7986ms 
+2024-05-23 12:54:12.2302 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLCMP01/GetJobApplication - - 
+2024-05-23 12:54:12.2672 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder)' 
+2024-05-23 12:54:12.3039 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetJobApplication", controller = "CLCMP01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJobApplication() on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-23 12:54:12.4040 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder) - Validation state: Valid 
+2024-05-23 12:54:13.0645 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder), returned result Microsoft.AspNetCore.Mvc.FileContentResult in 651.471ms. 
+2024-05-23 12:54:13.0645 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor | Executing FileContentResult, sending file with download name 'JobApplication_23-05-2024.xlsx' ... 
+2024-05-23 12:54:13.0740 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder) in 770.2539ms 
+2024-05-23 12:54:13.0740 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetJobApplication (Job_Finder)' 
+2024-05-23 12:54:13.0740 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLCMP01/GetJobApplication - - - 200 2881 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet 851.2907ms 
+2024-05-23 15:02:39.2979 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:02:39.3379 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 41.0130ms 
+2024-05-23 15:02:39.3597 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:02:39.3597 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:02:39.3597 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.3909ms 
+2024-05-23 15:02:39.4230 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 63.7456ms 
+2024-05-23 15:02:39.8707 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:02:39.9210 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 50.5464ms 
+2024-05-23 15:24:59.2353 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:24:59.2861 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 50.6338ms 
+2024-05-23 15:24:59.3620 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:24:59.3694 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:24:59.4085 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 41.6696ms 
+2024-05-23 15:24:59.4319 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.9177ms 
+2024-05-23 15:25:00.2196 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:25:00.2738 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 54.3053ms 
+2024-05-23 15:27:10.3356 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:27:10.3645 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 29.3457ms 
+2024-05-23 15:27:10.3839 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:27:10.3839 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.6324ms 
+2024-05-23 15:27:10.3839 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:27:10.4046 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.2438ms 
+2024-05-23 15:27:10.5746 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:27:10.6146 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 39.7159ms 
+2024-05-23 15:29:55.6086 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:29:55.6295 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 19.3095ms 
+2024-05-23 15:29:55.6446 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:29:55.6446 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:29:55.6446 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.4747ms 
+2024-05-23 15:29:55.6547 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.2670ms 
+2024-05-23 15:29:55.7885 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:29:55.8321 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 43.3779ms 
+2024-05-23 15:30:11.4067 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:30:11.4359 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 29.0621ms 
+2024-05-23 15:30:11.4799 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:30:11.4799 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:30:11.4799 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.3925ms 
+2024-05-23 15:30:11.4989 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.3927ms 
+2024-05-23 15:30:11.6616 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:30:11.7840 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 122.5987ms 
+2024-05-23 15:33:41.7881 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:33:41.9310 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 143.2524ms 
+2024-05-23 15:33:42.0752 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:33:42.0752 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.3934ms 
+2024-05-23 15:33:42.1013 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:33:42.1424 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.6613ms 
+2024-05-23 15:33:42.3601 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:33:42.4595 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 99.4822ms 
+2024-05-23 15:34:26.0962 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:34:26.1156 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 20.6455ms 
+2024-05-23 15:34:26.2175 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:34:26.2175 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:34:26.2175 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.8386ms 
+2024-05-23 15:34:26.2377 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.1845ms 
+2024-05-23 15:34:26.3962 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:34:26.4433 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 46.3803ms 
+2024-05-23 15:35:37.9299 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:35:37.9501 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 24.0537ms 
+2024-05-23 15:35:38.0098 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:35:38.0098 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.3834ms 
+2024-05-23 15:35:38.0098 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:35:38.1633 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 158.1026ms 
+2024-05-23 15:35:38.3260 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:35:38.3567 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 30.2104ms 
+2024-05-23 15:38:36.4221 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:38:36.4333 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 16.8182ms 
+2024-05-23 15:38:36.4804 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:38:36.4804 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.3034ms 
+2024-05-23 15:38:36.4804 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:38:36.4949 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.3491ms 
+2024-05-23 15:38:36.7184 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:38:36.7789 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 60.6638ms 
+2024-05-23 15:39:56.8630 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:39:56.8740 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 17.3324ms 
+2024-05-23 15:39:56.9194 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:39:56.9194 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:39:56.9194 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.3656ms 
+2024-05-23 15:39:56.9615 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.1041ms 
+2024-05-23 15:39:57.1392 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:39:57.1721 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 33.6012ms 
+2024-05-23 15:41:00.0772 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 15:41:00.3060 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 229.6654ms 
+2024-05-23 15:41:00.4942 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 15:41:00.4942 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.4024ms 
+2024-05-23 15:41:00.4942 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 15:41:00.6964 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 208.4680ms 
+2024-05-23 15:41:01.0663 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 15:41:01.1097 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 43.4916ms 
+2024-05-23 18:05:34.6873 | INFO | Job_Finder.Program | Hello 
+2024-05-23 18:05:43.3818 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 18:05:44.2407 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 869.0308ms 
+2024-05-23 18:05:44.2522 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 18:05:44.4379 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 18:05:44.4570 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 200.1632ms 
+2024-05-23 18:05:44.7070 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 262.6472ms 
+2024-05-23 18:05:44.8204 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 18:05:46.2217 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1402.5441ms 
+2024-05-23 18:06:01.3998 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLCMP01/GetAllCompanies - - 
+2024-05-23 18:06:01.5322 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)' 
+2024-05-23 18:06:01.6391 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllCompanies", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompanies() on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-05-23 18:06:01.6865 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder) - Validation state: Valid 
+2024-05-23 18:06:01.7643 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 62.1893ms. 
+2024-05-23 18:06:01.7990 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 18:06:01.9265 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder) in 285.9806ms 
+2024-05-23 18:06:01.9265 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)' 
+2024-05-23 18:06:01.9265 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLCMP01/GetAllCompanies - - - 200 266 application/json;+charset=utf-8 534.3588ms 
+2024-05-23 18:06:14.7868 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOA01/GetAllJobApplication - - 
+2024-05-23 18:06:14.7868 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder)' 
+2024-05-23 18:06:14.7868 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllJobApplication", controller = "CLJOA01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllJobApplication() on controller Job_Finder.Controllers.CLJOA01Controller (Job_Finder). 
+2024-05-23 18:06:16.1867 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder) - Validation state: Valid 
+2024-05-23 18:06:16.1867 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.4714ms. 
+2024-05-23 18:06:16.1867 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 18:06:16.1867 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder) in 1399.1295ms 
+2024-05-23 18:06:16.1867 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOA01Controller.GetAllJobApplication (Job_Finder)' 
+2024-05-23 18:06:16.1867 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOA01/GetAllJobApplication - - - 200 143 application/json;+charset=utf-8 1405.1686ms 
+2024-05-23 18:06:21.6278 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLJOL01/GetAllJobs - - 
+2024-05-23 18:06:21.6278 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder)' 
+2024-05-23 18:06:21.6278 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllJobs", controller = "CLJOL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllJobs() on controller Job_Finder.Controllers.CLJOL01Controller (Job_Finder). 
+2024-05-23 18:06:21.6608 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder) - Validation state: Valid 
+2024-05-23 18:06:21.6738 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.4203ms. 
+2024-05-23 18:06:21.6738 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 18:06:21.6738 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder) in 43.032ms 
+2024-05-23 18:06:21.6738 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLJOL01Controller.GetAllJobs (Job_Finder)' 
+2024-05-23 18:06:21.6738 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLJOL01/GetAllJobs - - - 200 561 application/json;+charset=utf-8 46.8614ms 
+2024-05-23 18:06:27.3663 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLUSR01/GetAllUsers - - 
+2024-05-23 18:06:27.3663 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder)' 
+2024-05-23 18:06:27.3663 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllUsers", controller = "CLUSR01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder). 
+2024-05-23 18:06:27.3757 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder) - Validation state: Valid 
+2024-05-23 18:06:27.3757 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2323ms. 
+2024-05-23 18:06:27.3757 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 18:06:27.3757 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder) in 13.0556ms 
+2024-05-23 18:06:27.3757 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder)' 
+2024-05-23 18:06:27.3757 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLUSR01/GetAllUsers - - - 200 48 application/json;+charset=utf-8 15.1453ms 
+2024-05-23 18:12:44.4956 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-05-23 18:12:44.5286 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 32.8530ms 
+2024-05-23 18:12:44.5418 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-05-23 18:12:44.5418 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-05-23 18:12:44.5418 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.3861ms 
+2024-05-23 18:12:44.9005 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 358.1915ms 
+2024-05-23 18:12:44.9781 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-05-23 18:12:45.0468 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 65.0284ms 
+2024-05-23 18:13:00.9913 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLUSR01/GetAllUsers - - 
+2024-05-23 18:13:00.9913 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder)' 
+2024-05-23 18:13:00.9913 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllUsers", controller = "CLUSR01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller Job_Finder.Controllers.CLUSR01Controller (Job_Finder). 
+2024-05-23 18:13:01.0060 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder) - Validation state: Valid 
+2024-05-23 18:13:01.0060 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.0214ms. 
+2024-05-23 18:13:01.0060 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-05-23 18:13:01.0060 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder) in 16.9174ms 
+2024-05-23 18:13:01.0060 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLUSR01Controller.GetAllUsers (Job_Finder)' 
+2024-05-23 18:13:01.0060 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLUSR01/GetAllUsers - - - 200 127 application/json;+charset=utf-8 19.1999ms 

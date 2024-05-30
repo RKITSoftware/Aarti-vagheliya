@@ -5,30 +5,72 @@ using Job_Finder.Model;
 using Job_Finder.Model.DTO;
 using Job_Finder.Model.POCO;
 using OfficeOpenXml;
-using System.ComponentModel.Design;
 using System.Data;
 
 namespace Job_Finder.BusinessLogic
 {
+    /// <summary>
+    /// Handles business logic related to CMP01 entities.
+    /// </summary>
     public class BLCMP01Handler
     {
+        #region Private Member
+
+        /// <summary>
+        /// Instance of DBContext class.
+        /// </summary>
         private DBContext _objDBContext = new DBContext();
 
+        /// <summary>
+        /// Instance of Response class.
+        /// </summary>
         private Response _objResponse;
 
+        /// <summary>
+        /// Instance of CMP01 class.
+        /// </summary>
         private CMP01 _objCMP01 = new CMP01();
 
+        /// <summary>
+        /// Instance of BLHelper class.
+        /// </summary>
         private readonly BLHelper _objBLHelper = new BLHelper();
 
+        #endregion
+
+        #region Public member
+
+        /// <summary>
+        /// Gets or sets the operation type.
+        /// </summary>
         public enmOperationType OperationType { get; set; }
 
+        /// <summary>
+        /// Represents the CRUD service for CMP01 entities.
+        /// </summary>
         public ICRUDService<CMP01> objCRUDCMP01;
 
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BLCMP01Handler"/> class.
+        /// </summary>
+        /// <param name="objCRUDCMP01">The CRUD service for CMP01 entities.</param>
         public BLCMP01Handler(ICRUDService<CMP01> objCRUDCMP01)
         {
             this.objCRUDCMP01 = objCRUDCMP01;
         }
 
+        #endregion
+
+        #region Public Method
+
+        /// <summary>
+        /// Sets the CMP01 object based on the DTO object.
+        /// </summary>
+        /// <param name="objDtoCMP01">The DTO object to map to CMP01.</param>
         public void PreSave(DtoCMP01 objDtoCMP01)
         {
             _objCMP01 = _objBLHelper.Map<DtoCMP01, CMP01>(objDtoCMP01);
@@ -36,6 +78,10 @@ namespace Job_Finder.BusinessLogic
             objCRUDCMP01.objOperation = OperationType;
         }
 
+        /// <summary>
+        /// Validates the CMP01 object based on the operation type.
+        /// </summary>
+        /// <returns>The validation result.</returns>
         public Response Validation()
         {
             _objResponse = new Response();
@@ -59,7 +105,11 @@ namespace Job_Finder.BusinessLogic
             return _objResponse;
         }
 
-
+        /// <summary>
+        /// Validates the deletion of a CMP01 object.
+        /// </summary>
+        /// <param name="id">The ID of the CMP01 object to delete.</param>
+        /// <returns>The validation result for deletion.</returns>
         public Response ValidationDelete(int id)
         {
             _objResponse = new Response();
@@ -72,6 +122,11 @@ namespace Job_Finder.BusinessLogic
             return _objResponse;
         }
 
+        /// <summary>
+        /// Retrieves job listings for a specific company.
+        /// </summary>
+        /// <param name="companyid">The ID of the company.</param>
+        /// <returns>The response containing job listing information.</returns>
         public Response GetCompanyWiseJobListing(int companyid)
         {
             _objResponse = new Response();
@@ -81,6 +136,11 @@ namespace Job_Finder.BusinessLogic
             return _objResponse;
         }
 
+        /// <summary>
+        /// Exports job listing data for a specific company to an Excel file.
+        /// </summary>
+        /// <param name="companyId">The ID of the company.</param>
+        /// <returns>The file path of the exported Excel file.</returns>
         public async Task<string> ExportDataTableToExcel(int companyId)
         {
             // Retrieve the DataTable using the company ID
@@ -132,7 +192,10 @@ namespace Job_Finder.BusinessLogic
             return filePath;
         }
 
-
+        /// <summary>
+        /// Retrieves job application data and exports it to an Excel file.
+        /// </summary>
+        /// <returns>The file path of the exported Excel file.</returns>
         public async Task<string> GetJobApplicationData()
         {
             // Retrieve the DataTable using the company ID
@@ -180,5 +243,34 @@ namespace Job_Finder.BusinessLogic
             // Return the file path
             return filePath;
         }
+
+        /// <summary>
+        /// Updates the status of a job application and returns a response indicating the result.
+        /// </summary>
+        /// <param name="applicationId">The ID of the application to update.</param>
+        /// <param name="newStatus">The new status to set for the application.</param>
+        /// <returns>A response object containing the result of the update operation.</returns>
+        public Response UpdateStatus(int applicationId, enmJobApplicationStatus newStatus)
+        {
+            _objResponse = new();
+
+            string result = _objDBContext.UpdateJobApplicationStatus(applicationId, newStatus);
+
+            if(result == "Success")
+            {
+                _objResponse.Message = result;
+                return _objResponse;
+            }
+            else
+            {
+                _objResponse.isError = true;
+                _objResponse.Message = result;
+                return _objResponse;
+            }
+
+
+        }
+
+        #endregion
     }
 }

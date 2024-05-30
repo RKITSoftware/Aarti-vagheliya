@@ -3,19 +3,40 @@ using Job_Finder.Model;
 using Job_Finder.Model.DTO;
 using Job_Finder.Model.POCO;
 using Job_Finder.Services;
-using Microsoft.OpenApi.Models;
 using ServiceStack.OrmLite;
 
 namespace Job_Finder.BusinessLogic
 {
+    /// <summary>
+    /// Business logic handler for USR01 operations.
+    /// </summary>
     public class BLUSR01Handler : CRUDImplementation<USR01>
     {
+        #region Private Members
+
+        /// <summary>
+        /// Response object used to store the result of operations.
+        /// </summary>
         private Response _objResponse;
 
+        /// <summary>
+        /// USR01 object representing the user data.
+        /// </summary>
         private USR01 _objUSR01 = new USR01();
 
+        /// <summary>
+        /// Helper class instance for business logic operations.
+        /// </summary>
         private readonly BLHelper _objBLHelper = new BLHelper();
 
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Prepares the user data for saving by mapping the DTO to the POCO and encrypting the password.
+        /// </summary>
+        /// <param name="objDtoUSR01">Data transfer object containing user data.</param>
         public void PreSave(DtoUSR01 objDtoUSR01)
         {
             _objUSR01 = _objBLHelper.Map<DtoUSR01, USR01>(objDtoUSR01);
@@ -23,6 +44,10 @@ namespace Job_Finder.BusinessLogic
             obj = _objUSR01;
         }
 
+        /// <summary>
+        /// Validates the user data based on the operation type.
+        /// </summary>
+        /// <returns>Response object indicating the validation result.</returns>
         public Response Validation()
         {
             _objResponse = new Response();
@@ -46,6 +71,11 @@ namespace Job_Finder.BusinessLogic
             return _objResponse;
         }
 
+        /// <summary>
+        /// Validates the deletion of user data based on the user ID.
+        /// </summary>
+        /// <param name="id">User ID to validate.</param>
+        /// <returns>Response object indicating the validation result.</returns>
         public Response ValidationDelete(int id)
         {
             _objResponse = new Response();
@@ -58,6 +88,10 @@ namespace Job_Finder.BusinessLogic
             return _objResponse;
         }
 
+        /// <summary>
+        /// Retrieves all users from the database, decrypting their passwords.
+        /// </summary>
+        /// <returns>List of USR01 objects representing all users.</returns>
         public List<USR01> GetAllUsers()
         {
             using (var db = _dbFactory.OpenDbConnection())
@@ -79,5 +113,7 @@ namespace Job_Finder.BusinessLogic
             }
 
         }
+
+        #endregion
     }
 }

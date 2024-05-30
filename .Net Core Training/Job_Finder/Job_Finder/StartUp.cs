@@ -1,12 +1,9 @@
 ﻿using Job_Finder.BusinessLogic;
-using Job_Finder.Filters;
 using Job_Finder.Interface;
 using Job_Finder.Middleware;
 using Job_Finder.Model.POCO;
 using Job_Finder.Services;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.OpenApi.Models;
-using MySql.Data.MySqlClient;
 using OfficeOpenXml;
 using ServiceStack;
 
@@ -37,24 +34,38 @@ namespace Job_Finder
             //service.AddControllers();
             service.AddControllers(config =>
             {
-                config.Filters.Add(new AuthenticationFilter());
-            });
+                //config.Filters.Add(new AuthenticationFilter());
+                
+            }).AddNewtonsoftJson();
+
+            service.AddSwaggerGenNewtonsoftSupport();
 
             service.AddSwaggerGen(c =>
             {
-                //c.SwaggerDoc("v1", new OpenApiInfo { Title = "Job_Finder", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Job Finder API", Version = "v1" });
 
-                // Add security definition for basic authentication
-                c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                //// Add security definition for Basic authentication
+                //c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                //{
+                //    Name = "Authorization",
+                //    In = ParameterLocation.Header,
+                //    Scheme = "basic",
+                //    Type = SecuritySchemeType.Http,
+                //    Description = "Basic Authentication using the basic scheme"
+                //});
+
+                // Bearer Authentication
+                c.AddSecurityDefinition("bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
-                    In = ParameterLocation.Header,
-                    Scheme = "basic",
                     Type = SecuritySchemeType.Http,
-                    Description = "Basic Authentication using the basic scheme"
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme."
                 });
 
-                // Add security requirement for basic authentication
+                // Security Requirements
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
@@ -63,20 +74,23 @@ namespace Job_Finder
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "basic"
+                                Id = "bearer"
                             }
                         },
-                        new string[] { }
+                        new string[] {}
                     }
                 });
             });
 
+
+            //string connectionString = _configuration.GetConnectionString("DefaultConnection");
+            // service.AddScoped<DBContext>(provider => new DBContext(_configuration.GetConnectionString("DefaultConnection")));
             service.AddTransient<ICRUDService<CMP01>, CRUDImplementation<CMP01>>();
             service.AddTransient<ICRUDService<JOL01>, CRUDImplementation<JOL01>>();
             service.AddTransient<ICRUDService<JOS01>, CRUDImplementation<JOS01>>();
             service.AddTransient<ICRUDService<JOA01>, CRUDImplementation<JOA01>>();
             service.AddSingleton<IFileService, BLFileServiceHandler>();
-
+           
         }
 
         /// <summary>

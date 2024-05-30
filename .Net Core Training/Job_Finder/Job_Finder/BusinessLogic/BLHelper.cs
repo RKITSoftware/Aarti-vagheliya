@@ -1,19 +1,28 @@
-﻿using System.Security.Cryptography;
+﻿using System.Data;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Job_Finder.BusinessLogic
 {
+    /// <summary>
+    /// Helper class providing various utility methods.
+    /// </summary>
     public class BLHelper
     {
         #region Private member
 
+        // Encryption key and IV
         private static readonly byte[] Key = Encoding.UTF8.GetBytes("ThisIsASecretKey1234567890123456"); // 256-bit key
         private static readonly byte[] IV = Encoding.UTF8.GetBytes("1234567890123456"); // 128-bit IV
 
         #endregion
 
+        #region Public Method
 
-        public Tpoco Map<Tdto, Tpoco>( Tdto source) where Tpoco : new()
+        /// <summary>
+        /// Maps properties from a DTO to a POCO object.
+        /// </summary>
+        public Tpoco Map<Tdto, Tpoco>(Tdto source) where Tpoco : new()
         {
             var target = new Tpoco();
 
@@ -45,6 +54,9 @@ namespace Job_Finder.BusinessLogic
             return target;
         }
 
+        /// <summary>
+        /// Retrieves the connection string from the appsettings.json file.
+        /// </summary>
         public string GetConnectionString()
         {
             var builder = new ConfigurationBuilder()
@@ -129,5 +141,42 @@ namespace Job_Finder.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Converts a list of objects to a DataTable.
+        /// </summary>
+        /// <typeparam name="T">Type of objects in the list.</typeparam>
+        /// <param name="list">List of objects to convert.</param>
+        /// <returns>A DataTable containing the data from the list.</returns>
+        public DataTable ToDataTable<T>(List<T> list) where T : class
+        {
+            DataTable dataTable = new DataTable();
+
+            if (list.Count == 0)
+                return dataTable; // Return an empty DataTable if list is empty
+
+            // Get all properties of the type T
+            var properties = typeof(T).GetProperties();
+
+            // Create columns in DataTable based on properties of T
+            foreach (var prop in properties)
+            {
+                dataTable.Columns.Add(prop.Name, prop.PropertyType);
+            }
+
+            // Fill DataTable with data from list
+            foreach (var item in list)
+            {
+                DataRow row = dataTable.NewRow();
+                foreach (var prop in properties)
+                {
+                    row[prop.Name] = prop.GetValue(item);
+                }
+                dataTable.Rows.Add(row);
+            }
+
+            return dataTable;
+        }
+
+        #endregion
     }
 }
