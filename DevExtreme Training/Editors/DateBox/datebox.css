@@ -1,0 +1,79 @@
+/* Basic reset to remove default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting up the body to have some margin */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Styles for each datebox container */
+.container > div {
+    margin-bottom: 20px;
+}
+
+/* Center the viewport and add some padding */
+.dx-viewport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons container styles */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Button styles */
+.buttons button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Adding labels for each date box */
+.container label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Aligning labels and elements in one row */
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Ensuring the input fields have some padding */
+.dx-viewport .dx-texteditor-input {
+    padding: 10px;
+}

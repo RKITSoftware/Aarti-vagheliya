@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "description": "A high-performance laptop with 16GB RAM and 512GB SSD.",
+        "price": 1200.00,
+        "category": "Electronics",
+        "stock": 25,
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "name": "Smartphone",
+        "description": "Latest model smartphone with a stunning display and excellent camera.",
+        "price": 999.99,
+        "category": "Electronics",
+        "stock": 50,
+        "rating": 4.7
+    },
+    {
+        "id": 3,
+        "name": "Headphones",
+        "description": "Noise-cancelling headphones with deep bass and clear sound.",
+        "price": 199.99,
+        "category": "Accessories",
+        "stock": 100,
+        "rating": 4.3
+    },
+    {
+        "id": 4,
+        "name": "Electric Kettle",
+        "description": "1.7L electric kettle with rapid boiling and automatic shut-off.",
+        "price": 49.99,
+        "category": "Home Appliances",
+        "stock": 75,
+        "rating": 4.2
+    },
+    {
+        "id": 5,
+        "name": "Office Chair",
+        "description": "Ergonomic office chair with lumbar support and adjustable height.",
+        "price": 149.99,
+        "category": "Furniture",
+        "stock": 20,
+        "rating": 4.6
+    },
+    {
+        "id": 6,
+        "name": "Coffee Maker",
+        "description": "12-cup programmable coffee maker with a built-in grinder.",
+        "price": 89.99,
+        "category": "Home Appliances",
+        "stock": 60,
+        "rating": 4.4
+    },
+    {
+        "id": 7,
+        "name": "Running Shoes",
+        "description": "Lightweight running shoes with breathable mesh and cushioned sole.",
+        "price": 79.99,
+        "category": "Footwear",
+        "stock": 150,
+        "rating": 4.8
+    },
+    {
+        "id": 8,
+        "name": "Wristwatch",
+        "description": "Stylish wristwatch with a leather band and waterproof design.",
+        "price": 149.99,
+        "category": "Accessories",
+        "stock": 40,
+        "rating": 4.1
+    },
+    {
+        "id": 9,
+        "name": "Backpack",
+        "description": "Durable backpack with multiple compartments and padded straps.",
+        "price": 59.99,
+        "category": "Bags",
+        "stock": 80,
+        "rating": 4.3
+    },
+    {
+        "id": 10,
+        "name": "Wireless Mouse",
+        "description": "Ergonomic wireless mouse with high precision and long battery life.",
+        "price": 29.99,
+        "category": "Accessories",
+        "stock": 200,
+        "rating": 4.5
+    }
+]

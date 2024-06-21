@@ -1,0 +1,30 @@
+
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* NumberBox container styling for horizontal alignment */
+.numberbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the label and the NumberBox */
+    margin-bottom: 15px; /* Space between each row of NumberBox */
+}
+
+/* Label styling */
+.numberbox-container label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    min-width: 150px; /* Minimum width for labels to align neatly */
+}
+
+/* NumberBox styling */
+.numberbox-container div[id^="numberBox"] {
+    width: 200px;
+}

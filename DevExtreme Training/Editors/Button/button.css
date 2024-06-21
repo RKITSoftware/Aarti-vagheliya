@@ -1,0 +1,14 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+.row {
+    margin-bottom: 20px;
+}
+#displayData {
+    margin-top: 20px;
+}

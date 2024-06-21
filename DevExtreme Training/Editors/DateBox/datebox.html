@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <!-- ... -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     
+        <!-- DevExtreme theme -->
+        <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.1.11/css/dx.light.css">
+     
+        <!-- DevExtreme library -->
+        <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.11/js/dx.all.js"></script>
+        <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.11/js/dx.web.js"></script> -->
+        <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.11/js/dx.viz.js"></script> -->
+
+        <link rel="stylesheet" href="datebox.css">
+        
+        <script type="module" src="datebox.js"></script>
+        
+
+
+    </head>
+    <body>
+        <div class="dx-viewport">
+            <div class="container">
+                <div class="row">
+                    <label for="datebox">DateBox:</label>
+                    <div id="datebox"></div>
+                </div>
+                <div class="row">
+                    <label for="date">Date:</label>
+                    <div id="date"></div>
+                </div>
+                <div class="row">
+                    <label for="date1">Date 1:</label>
+                    <div id="date1"></div>
+                </div>
+                <div class="row">
+                    <label for="disable">Disable:</label>
+                    <div id="disable"></div>
+                </div>
+                <div class="row">
+                    <label for="date2">Date 2:</label>
+                    <div id="date2"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="triggerMethod('beginUpdate')">Begin Update</button>
+                <button onclick="triggerMethod('blur')">Blur</button>
+                <button onclick="triggerMethod('close')">Close</button>
+                <button onclick="triggerMethod('content')">Content</button>
+                <button onclick="triggerMethod('dispose')">Dispose</button>
+                <button onclick="triggerMethod('element')">Element</button>
+                <button onclick="triggerMethod('endUpdate')">End Update</button>
+                <button onclick="triggerMethod('field')">Field</button>
+                <button onclick="triggerMethod('focus')">Focus</button>
+                <button onclick="triggerMethod('getButton', 'clear')">Get Button (Clear)</button>
+                <button onclick="triggerMethod('instance')">Instance</button>
+                <button onclick="triggerMethod('open')">Open</button>
+                <button onclick="triggerMethod('option')">Option</button>
+                <button onclick="triggerMethod('repaint')">Repaint</button>
+                <button onclick="triggerMethod('reset')">Reset</button>
+                <button onclick="triggerMethod('resetOption', 'type')">Reset Option (type)</button>
+            </div>
+        </div>
+    </body>
+</html>

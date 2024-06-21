@@ -1,0 +1,22 @@
+/* Container for aligning elements */
+.container {
+    max-width: 600px; 
+    margin: 20px auto; 
+}
+
+/* Each row containing label and dropdown */
+.row {
+    display: flex; 
+    margin-bottom: 10px;
+}
+
+/* Labels for the dropdowns */
+label {
+    margin-right: 10px; 
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f5f5f5; 
+}

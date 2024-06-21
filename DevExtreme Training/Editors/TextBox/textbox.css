@@ -1,0 +1,55 @@
+/* Apply general styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Style for the container holding the rows */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows */
+}
+
+/* Style for each row to align items horizontally */
+.row {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+/* Style for labels to ensure they align nicely with the input elements */
+.row label {
+    width: 150px; /* Fixed width for labels */
+    margin-right: 10px; /* Space between label and the input area */
+    text-align: right; /* Right-align text within the label */
+}
+
+/* Style for the input area to stretch and fill available space */
+.row div {
+    flex-grow: 1; /* Allow input area to grow and fill remaining space */
+    min-width: 200px; /* Minimum width for input area */
+    max-width: 1000px; /* Maximum width for input area */
+}
+
+/* Style for the buttons container to organize buttons in rows */
+.buttons {
+    margin-top: 20px; /* Space above the buttons */
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Style for individual buttons */
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff; /* Button background color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.buttons button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

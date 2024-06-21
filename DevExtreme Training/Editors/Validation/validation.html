@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Demo</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- DevExtreme theme -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.1.11/css/dx.light.css">
+
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.11/js/dx.all.js"></script>
+
+    <script type="module" src="validation.js"></script>
+  
+</head>
+<body>
+    <div class="container">
+        <div class="editor-container">
+            <label for="text-box">Name (Required):</label>
+            <div id="text-box"></div>
+        </div>
+        <div class="editor-container">
+            <label for="email-box">Email (Pattern):</label>
+            <div id="email-box"></div>
+        </div>
+        <div class="editor-container">
+            <label for="date-box">Date of Birth (Range):</label>
+            <div id="date-box"></div>
+        </div>
+        <div class="editor-container">
+            <label for="number-box">Age (Range & Required):</label>
+            <div id="number-box"></div>
+        </div>
+        <div class="editor-container">
+            <label for="select-box">Country (Required):</label>
+            <div id="select-box"></div>
+        </div>
+        <div class="editor-container">
+            <label for="check-box">Agree to Terms (Custom):</label>
+            <div id="check-box"></div>
+        </div>
+        <div>
+            <button id="validate-button">Validate All</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ 
+    <!-- DevExtreme theme -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.1.11/css/dx.light.css">
+ 
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.11/js/dx.all.js"></script>
+
+    <script type="module" src="query.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .query-result {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .query-result pre {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <p>Query : </p>
+            <div id="query"></div>
+        </div>
+    </div>
+  
+
+    <h1>DevExtreme Query API Visual Demo</h1>
+    <div id="query-results">
+        <h2>Results will be displayed here</h2>
+    </div>
+
+    <script>
+        // Sample dataset of products
+        const products = [
+            { ID: 1, Name: "Apple", Category: "Fruits", Price: 1.2, Quantity: 100 },
+            { ID: 2, Name: "Banana", Category: "Fruits", Price: 0.5, Quantity: 150 },
+            { ID: 3, Name: "Carrot", Category: "Vegetables", Price: 0.8, Quantity: 200 },
+            { ID: 4, Name: "Broccoli", Category: "Vegetables", Price: 1.5, Quantity: 80 },
+            { ID: 5, Name: "Orange", Category: "Fruits", Price: 1.0, Quantity: 120 },
+            { ID: 6, Name: "Cucumber", Category: "Vegetables", Price: 0.6, Quantity: 90 },
+            { ID: 7, Name: "Grapes", Category: "Fruits", Price: 2.0, Quantity: 60 },
+            { ID: 8, Name: "Tomato", Category: "Vegetables", Price: 1.2, Quantity: 70 }
+        ];
+
+        // Initialize DevExtreme Query
+        const query = DevExpress.data.query(products);
+
+        // Utility function to display results
+        function displayResult(title, data) {
+            const container = $('#query-results');
+            const result = $('<div>').addClass('query-result');
+            const heading = $('<h3>').text(title);
+            const pre = $('<pre>').text(JSON.stringify(data, null, 2));
+            result.append(heading).append(pre);
+            container.append(result);
+        }
+
+        // Execute various query operations and display the results
+        displayResult("1. Fruits", query.filter(["Category", "=", "Fruits"]).toArray());
+        displayResult("2. Sorted by Price (Asc)", query.sortBy("Price").toArray());
+        displayResult("3. Sorted by Price (Desc)", query.sortBy("Price", true).toArray());
+        displayResult("4. Product Names", query.select("Name").toArray());
+        displayResult("5. Grouped by Category", query.groupBy("Category").toArray());
+        displayResult("6. Total Quantity", query.aggregate(0, (sum, item) => sum + item.Quantity));
+        displayResult("7. Average Price", query.avg("Price"));
+        displayResult("8. Product Count", query.count());
+        displayResult("9. Max Price", query.max("Price"));
+        displayResult("10. Min Price", query.min("Price"));
+        displayResult("11. First Three Products", query.slice(0, 3).toArray());
+        displayResult("12. Expensive Products (Price > 1.0)", query.filter(product => product.Price > 1.0).toArray());
+        displayResult("13. Sorted Vegetables by Price (Desc)", query.filter(["Category", "=", "Vegetables"]).sortBy("Price", true).toArray());
+        displayResult("14. Total Price", query.sum("Price"));
+        displayResult("15. Product Names and Prices", query.select(item => ({ Name: item.Name, Price: item.Price })).toArray());
+        displayResult("16. Sorted by Category then Price", query.sortBy("Category").thenBy("Price").toArray());
+        displayResult("17. Category Summary", query.groupBy("Category").aggregate({
+            totalQuantity: (sum, item) => sum + item.Quantity,
+            totalPrice: (sum, item) => sum + item.Price
+        }));
+    </script>
+</body>
+</html>
