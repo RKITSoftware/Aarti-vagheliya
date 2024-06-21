@@ -17,22 +17,22 @@ namespace Job_Finder.Model.POCO
         /// <summary>
         /// Gets or sets the name of the job seeker.
         /// </summary>
-        public string S01F02 { get; set; }
+        public string S01F02 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the qualification of the job seeker.
         /// </summary>
-        public string S01F03 { get; set; }
+        public string S01F03 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the experience of the job seeker.
         /// </summary>
-        public string S01F04 { get; set; }
+        public string S01F04 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the contact details of the job seeker.
         /// </summary>
-        public string S01F06 { get; set; }
+        public string S01F06 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the gender of the job seeker (Male or Female).
@@ -42,7 +42,7 @@ namespace Job_Finder.Model.POCO
         /// <summary>
         /// Gets or sets the email ID of the job seeker.
         /// </summary>
-        public string S01F08 { get; set; }
+        public string S01F08 { get; set; } = string.Empty;
 
         #endregion
     }

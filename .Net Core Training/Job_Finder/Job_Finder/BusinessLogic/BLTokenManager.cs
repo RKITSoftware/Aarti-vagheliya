@@ -105,7 +105,7 @@ namespace Job_Finder.BusinessLogic
             }
 
             // Token not found in cache
-            return null;
+            return "Token not found in cache."; 
         }
 
         /// <summary>

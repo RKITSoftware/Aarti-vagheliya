@@ -128,7 +128,7 @@ namespace Job_Finder.Services
         {
             _objResponse = new Response();
 
-            _objResponse.response = _objDBCommomContext.Select();
+            _objResponse.response = _objDBCommomContext.GetData();
 
             return _objResponse;
         }

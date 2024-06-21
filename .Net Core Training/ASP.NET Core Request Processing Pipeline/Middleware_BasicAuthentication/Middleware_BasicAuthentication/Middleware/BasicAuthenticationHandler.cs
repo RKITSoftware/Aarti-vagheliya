@@ -5,7 +5,7 @@ namespace Middleware_BasicAuthentication.Middleware
     /// <summary>
     /// Middleware for basic authentication.
     /// </summary>
-    public class BasicAuthenticationHandler
+    public class BasicAuthenticationHandler 
     {
         private readonly RequestDelegate _next;
 
@@ -30,7 +30,7 @@ namespace Middleware_BasicAuthentication.Middleware
             if (!context.Request.Headers.ContainsKey("Authorization"))
             {
                 // Respond with unauthorized status code if Authorization header is missing
-                context.Response.StatusCode = 401;
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized; 
                 await context.Response.WriteAsJsonAsync(new
                 {
                     Message = "Unauthorized."
@@ -49,7 +49,7 @@ namespace Middleware_BasicAuthentication.Middleware
             if (username != "Arti" || password != "123")
             {
                 // Respond with unauthorized status code if credentials are invalid
-                context.Response.StatusCode = 401;
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized; 
                 await context.Response.WriteAsJsonAsync(new
                 {
                     Message = "Invalid Credentials."

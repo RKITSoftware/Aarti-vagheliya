@@ -1,5 +1,8 @@
 namespace WebApplication1
 {
+    /// <summary>
+    /// The main entry point for the application.
+    /// </summary>
     public class Program
     { 
         /// <summary>

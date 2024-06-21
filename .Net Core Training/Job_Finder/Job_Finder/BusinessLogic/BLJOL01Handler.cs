@@ -67,9 +67,9 @@ namespace Job_Finder.BusinessLogic
         /// <summary>
         /// Pre-saves data before performing an operation.
         /// </summary>
-        public void PreSave(DtoJOL01 objDtoJOL01)
+        public void PreSave(DTOJOL01 objDtoJOL01)
         {
-            _objJOL01 = _objBLHelper.Map<DtoJOL01, JOL01>(objDtoJOL01);
+            _objJOL01 = _objBLHelper.Map<DTOJOL01, JOL01>(objDtoJOL01);
             objCRUDJOL01.obj = _objJOL01;
             objCRUDJOL01.objOperation = OperationType;
         }
@@ -83,7 +83,7 @@ namespace Job_Finder.BusinessLogic
 
             if (OperationType == enmOperationType.I)
             {
-                if (_objJOL01.L01F04 <= 9999 && _objJOL01 == null )
+                if (_objJOL01.L01F04 <= 9999)
                 {
                     _objResponse.isError = true;
                     _objResponse.Message = "Enter valid data.";
@@ -118,15 +118,14 @@ namespace Job_Finder.BusinessLogic
         /// <summary>
         /// Retrieves job listings based on the specified location, job type, and company ID.
         /// </summary>
-        /// <param name="location">The location to filter job listings by.</param>
-        /// <param name="type">The job type to filter job listings by.</param>
-        /// <param name="companyId">The company ID to filter job listings by.</param>
+        /// <param name="P01F04">The location to filter job listings by.</param>
+        /// <param name="L01F05">The job type to filter job listings by.</param>
         /// <returns>A response object containing the list of job listings that match the specified criteria.</returns>
-        public Response GetJobListings(string location, string type, int companyId)
+        public Response GetJobListings(string? P01F04 = null, string? L01F05 = null)
         {
             _objResponse = new Response();
 
-            _objResponse.response = _objDBContext.GetJobListings(location, type, companyId);
+            _objResponse.response = _objBLHelper.ConvertListOfObjectToDataTable(_objDBContext.GetJobListings(P01F04, L01F05));
 
             return _objResponse;
         }

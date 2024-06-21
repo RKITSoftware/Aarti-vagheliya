@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -175,6 +176,46 @@ namespace Job_Finder.BusinessLogic
             }
 
             return dataTable;
+        }
+
+        /// <summary>
+        /// Converts a list of objects to a DataTable.
+        /// </summary>
+        /// <param name="list">The list of objects to convert.</param>
+        /// <returns>A DataTable containing the properties of the objects in the list as columns.</returns>
+        public DataTable ConvertListOfObjectToDataTable(List<object> list)
+        {
+            DataTable table = new DataTable();
+
+            // If the list is empty, return an empty DataTable
+            if (list.Count == 0)
+            {
+                return table;
+            }
+
+            // Get the properties of the first object in the list
+            PropertyInfo[] properties = list[0].GetType().GetProperties();
+
+            // Create columns in the DataTable for each property
+            foreach (PropertyInfo property in properties)
+            {
+                table.Columns.Add(property.Name, Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType);
+            }
+
+            // Add rows to the DataTable from the list
+            foreach (object item in list)
+            {
+                DataRow row = table.NewRow();
+
+                foreach (PropertyInfo property in properties)
+                {
+                    row[property.Name] = property.GetValue(item) ?? DBNull.Value;
+                }
+
+                table.Rows.Add(row);
+            }
+
+            return table;
         }
 
         #endregion

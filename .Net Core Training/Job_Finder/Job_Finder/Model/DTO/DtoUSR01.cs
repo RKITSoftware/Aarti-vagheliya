@@ -7,13 +7,14 @@ namespace Job_Finder.Model.DTO
     /// <summary>
     /// Data Transfer Object (DTO) for representing user details.
     /// </summary>
-    public class DtoUSR01
+    public class DTOUSR01
     {
         #region Public Properties
 
         /// <summary>
         /// Gets or sets the User ID.
         /// </summary>
+        [Required]
         [JsonProperty("R01101")]
         public int R01F01 { get; set; }
 
@@ -29,6 +30,7 @@ namespace Job_Finder.Model.DTO
         /// </summary>
         [JsonProperty("R01103")]
         [Required(ErrorMessage = "Password is required.")]
+        [StringLength(3, MinimumLength = 3, ErrorMessage = "Password must be at least 3 characters long.")]
         public string R01F03 { get; set; }
 
         /// <summary>

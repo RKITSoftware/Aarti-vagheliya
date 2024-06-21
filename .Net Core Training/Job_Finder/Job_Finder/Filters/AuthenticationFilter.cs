@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Diagnostics.Contracts;
 using System.Net.Http.Headers;
-using System.Security.Claims;
-using System.Security.Principal;
 using System.Text;
 
 namespace Job_Finder.Filters
@@ -33,7 +31,7 @@ namespace Job_Finder.Filters
         /// Defines flag indicating whether token is generated or not
         /// Checks if token is being generating for first time or already generated
         /// </summary>
-        private static bool _isTokenGenerated = false;
+       // private static bool _isTokenGenerated = false;
 
         #endregion
 

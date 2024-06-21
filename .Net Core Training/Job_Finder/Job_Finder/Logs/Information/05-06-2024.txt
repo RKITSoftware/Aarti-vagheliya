@@ -1,0 +1,9 @@
+2024-06-05 16:41:16.1241 | INFO | Job_Finder.Program | Hello 
+2024-06-05 16:41:26.8068 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-06-05 16:41:27.4337 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-05 16:41:27.4521 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-06-05 16:41:27.4677 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 664.6605ms 
+2024-06-05 16:41:27.4677 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 22.3123ms 
+2024-06-05 16:41:27.8094 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 359.9192ms 
+2024-06-05 16:41:27.8724 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-06-05 16:41:28.6428 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 771.2509ms 

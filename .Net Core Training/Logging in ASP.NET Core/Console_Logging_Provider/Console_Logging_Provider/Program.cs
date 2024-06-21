@@ -3,8 +3,15 @@ using Microsoft.Extensions.Logging;
 
 namespace Console_Logging_Provider
 {
+    /// <summary>
+    /// Main class for the console logging example.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Main entry point of the application.
+        /// </summary>
+        /// <param name="args">Command-line arguments.</param>r
         static void Main(string[] args)
         {
             // Create a logger factory

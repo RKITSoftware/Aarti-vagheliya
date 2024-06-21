@@ -4,6 +4,7 @@ using Job_Finder.Model.DTO;
 using Job_Finder.Model.POCO;
 using Job_Finder.Services;
 using ServiceStack.OrmLite;
+using System.Text.RegularExpressions;
 
 namespace Job_Finder.BusinessLogic
 {
@@ -37,9 +38,9 @@ namespace Job_Finder.BusinessLogic
         /// Prepares the user data for saving by mapping the DTO to the POCO and encrypting the password.
         /// </summary>
         /// <param name="objDtoUSR01">Data transfer object containing user data.</param>
-        public void PreSave(DtoUSR01 objDtoUSR01)
+        public void PreSave(DTOUSR01 objDtoUSR01)
         {
-            _objUSR01 = _objBLHelper.Map<DtoUSR01, USR01>(objDtoUSR01);
+            _objUSR01 = _objBLHelper.Map<DTOUSR01, USR01>(objDtoUSR01);
             _objUSR01.R01F03 = _objBLHelper.Encrypt(_objUSR01.R01F03);
             obj = _objUSR01;
         }
@@ -52,9 +53,12 @@ namespace Job_Finder.BusinessLogic
         {
             _objResponse = new Response();
 
+            string emailPattern = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+            Regex regex = new Regex(emailPattern);
+
             if (objOperation == enmOperationType.I)
             {
-                if (_objUSR01.R01F03.Length < 3 || _objUSR01 == null)
+                if (!regex.IsMatch(_objUSR01.R01F04))
                 {
                     _objResponse.isError = true;
                     _objResponse.Message = "Enter valid data.";

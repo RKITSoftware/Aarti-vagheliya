@@ -107,7 +107,7 @@ namespace Job_Finder.DataBase
         /// Selects all records from the database table corresponding to the type T.
         /// </summary>
         /// <returns>A DataTable containing all the records.</returns>
-        public DataTable Select()
+        public DataTable GetData()
         {
             // Create a new DataTable to hold the data
             DataTable dataTable = new DataTable();

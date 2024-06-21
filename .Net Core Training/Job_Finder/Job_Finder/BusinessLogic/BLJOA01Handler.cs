@@ -61,9 +61,9 @@ namespace Job_Finder.BusinessLogic
         /// <summary>
         /// Pre-saves data before performing an operation.
         /// </summary>
-        public void PreSave(DtoJOA01 objDtoJOA01)
+        public void PreSave(DTOJOA01 objDtoJOA01)
         {
-            _objJOA01 = _objBLHelper.Map<DtoJOA01, JOA01>(objDtoJOA01);
+            _objJOA01 = _objBLHelper.Map<DTOJOA01, JOA01>(objDtoJOA01);
             objCRUDJOA01.obj = _objJOA01;
             objCRUDJOA01.objOperation = OperationType;
         }

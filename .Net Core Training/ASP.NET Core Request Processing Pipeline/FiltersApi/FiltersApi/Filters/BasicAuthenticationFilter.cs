@@ -15,10 +15,16 @@ namespace FiltersApi.Filters
     /// </summary>
     public class BasicAuthenticationFilter :Attribute, IAuthorizationFilter
     {
+        #region Private Member
+
         /// <summary>
         /// Private instace of BLUser class
         /// </summary>
         private BLUser _objBLUser = new BLUser();
+
+        #endregion 
+
+        #region Public Method
 
         /// <summary>
         /// Performs basic authentication.
@@ -77,7 +83,7 @@ namespace FiltersApi.Filters
                     catch (FormatException)
                     {
                         // Credentials were not formatted correctly.
-                        context.HttpContext.Response.StatusCode = 401;
+                        context.HttpContext.Response.StatusCode = StatusCodes.Status401Unauthorized;
                     }
                 }
             }
@@ -87,6 +93,10 @@ namespace FiltersApi.Filters
                 context.Result = new UnauthorizedResult();
             }
         }
+
+        #endregion
+
+        #region Private Method
 
         /// <summary>
         /// Checks if the user exists.
@@ -113,6 +123,7 @@ namespace FiltersApi.Filters
         {
             return _objBLUser.GetUsers().FirstOrDefault(u => u.R01F02 == userName && u.R01F03 == passWord);
         }
-        
+
+        #endregion
     }
 }

@@ -2,7 +2,9 @@
 using LogLevel_Demo.Interface;
 using LogLevel_Demo.Model;
 using NLog;
-using NLog.Web;
+using NLog.Config;
+using NLog.Targets;
+using LogLevel = NLog.LogLevel;
 
 namespace LogLevel_Demo.BusinessLogic
 {
@@ -16,7 +18,7 @@ namespace LogLevel_Demo.BusinessLogic
         /// <summary>
         /// Declare instance of Logger
         /// </summary>
-        private readonly Logger _logger;
+        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// static list to strore data.
@@ -28,6 +30,8 @@ namespace LogLevel_Demo.BusinessLogic
         /// </summary>
         private static Random _random = new Random();
 
+        //private FileTarget _fileTarget = new FileTarget();
+
         #endregion
 
         #region Constructor
@@ -36,10 +40,14 @@ namespace LogLevel_Demo.BusinessLogic
         /// Constructor for initializing the BLOrderService.
         /// </summary>
         /// <param name="logger">The logger instance.</param>
-        public BLOrderService(ILogger<BLOrderService> logger)
+        public BLOrderService()
         {
-        
-            _logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            // Configure NLog to use a dynamic FileTarget
+            ConfigureDynamicFileTarget();
+
+            // Log a trace message indicating that the BLOrderService has been initialized
+            _logger.Trace("BLOrderService initialized.");
+
         }
 
         #endregion
@@ -52,7 +60,11 @@ namespace LogLevel_Demo.BusinessLogic
         /// <returns>List of ORD01 objects representing the orders.</returns>
         public List<ORD01> GetAllOrder()
         {
+            // Trace logging when fetching all orders
+            _logger.Trace("Fetching all orders.");
+
             return _lstOrders;
+        
         }
 
         /// <summary>
@@ -152,6 +164,39 @@ namespace LogLevel_Demo.BusinessLogic
         {
             // Generate a random order ID
             return _random.Next(1000, 9999);
+        }
+
+        /// <summary>
+        /// Configures a dynamic FileTarget for NLog.
+        /// </summary>
+        private void ConfigureDynamicFileTarget()
+        {
+            // Create a new FileTarget
+            var fileTarget = new FileTarget("dynamicFileTarget")
+            {
+                FileName = "${basedir}/logs/Trace/dynamic-log-${shortdate}.txt", // Log file path with date-based naming
+                Layout = "${longdate} | ${level:uppercase=true} | ${logger} | ${message} ${exception:format=tostring}", // Log message layout
+                ArchiveFileName = "${basedir}/logs/archives/dynamic-log-{#}.txt", // Archived log file naming
+                ArchiveEvery = FileArchivePeriod.Day, // Archive daily
+                ArchiveNumbering = ArchiveNumberingMode.Rolling, // Rolling numbering for archived files
+                MaxArchiveFiles = 7, // Keep up to 7 archived files
+                EnableFileDelete = true, // Allow file deletion
+            };
+
+            // Get the current NLog configuration or create a new one if not present
+            var config = LogManager.Configuration;
+
+            // Add the FileTarget to the configuration
+            config.AddTarget(fileTarget);
+
+            // Define a rule to write logs to the FileTarget for all levels from Trace to Fatal
+            var rule = new LoggingRule("*", LogLevel.Trace, fileTarget);
+            config.LoggingRules.Add(rule);
+
+            LogManager.ReconfigExistingLoggers();
+
+            // Apply the configuration
+           // LogManager.Configuration = config;
         }
 
         #endregion

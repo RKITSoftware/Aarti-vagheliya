@@ -44,9 +44,8 @@ namespace Job_Finder.Controllers
         /// Gets all job listings.
         /// </summary>
         /// <returns>A list of all jobs.</returns>
-        [HttpGet]
+        [HttpGet("GetAllJobs")]
         [AuthorizationFilter("A")]
-        [Route("GetAllJobs")]
         public IActionResult GetAllJobs()
         {
             Response response = _objBLJOL01Handler.objCRUDJOL01.Select();
@@ -59,10 +58,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoJOL01">The DTO containing job details.</param>
         /// <returns>The response after adding the job.</returns>
-        [HttpPost]
+        [HttpPost("AddJob")]
         [AuthorizationFilter("R")]
-        [Route("AddJob")]
-        public IActionResult AddJob(DtoJOL01 dtoJOL01)
+        public IActionResult AddJob(DTOJOL01 dtoJOL01)
         {
             _objBLJOL01Handler.OperationType = Enum.enmOperationType.I;
 
@@ -81,10 +79,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoJOL01">The DTO containing updated job details.</param>
         /// <returns>The response after updating the job.</returns>
-        [HttpPut]
+        [HttpPut("UpdateJob")]
         [AuthorizationFilter("R")]
-        [Route("UpdateJob")]
-        public IActionResult UpdateJob(DtoJOL01 dtoJOL01)
+        public IActionResult UpdateJob(DTOJOL01 dtoJOL01)
         {
             _objBLJOL01Handler.OperationType = Enum.enmOperationType.U;
 
@@ -103,9 +100,8 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="id">The ID of the job to delete.</param>
         /// <returns>The response after deleting the job.</returns>
-        [HttpDelete]
+        [HttpDelete("DeleteJob")]
         [AuthorizationFilter("R")]
-        [Route("DeleteJob")]
         public IActionResult DeleteJob(int id)
         {
             _objBLJOL01Handler.OperationType = Enum.enmOperationType.D;
@@ -121,16 +117,14 @@ namespace Job_Finder.Controllers
         /// <summary>
         /// Retrieves job listings based on the provided location, type, and company ID.
         /// </summary>
-        /// <param name="location">The location to filter job listings.</param>
-        /// <param name="type">The type of job to filter listings.</param>
-        /// <param name="compnyId">The company ID to filter job listings.</param>
+        /// <param name="P01104">The location to filter job listings.</param>
+        /// <param name="L01105">The type of job to filter listings.</param>
         /// <returns>An IActionResult containing the response with the job listings.</returns>
-        [HttpGet]
+        [HttpGet("GetJobListings")]
         [AllowAnonymous]
-        [Route("GetJobListings")]
-        public IActionResult GetJobListings(string location, string type, int compnyId)
+        public IActionResult GetJobListings(string? P01104 = null, string? L01105 = null)
         {
-            Response response = _objBLJOL01Handler.GetJobListings(location, type, compnyId);
+            Response response = _objBLJOL01Handler.GetJobListings(P01104, L01105);
 
             return Ok(response);
         }

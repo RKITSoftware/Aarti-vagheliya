@@ -7,7 +7,7 @@ namespace Job_Finder.Model.DTO
     /// <summary>
     /// Data Transfer Object (DTO) for representing job listing details.
     /// </summary>
-    public class DtoJOL01
+    public class DTOJOL01
     {
         #region Public Properties
 
@@ -39,7 +39,7 @@ namespace Job_Finder.Model.DTO
         public decimal L01F04 { get; set; }
 
         /// <summary>
-        /// Gets or sets the Job Type (e.g., Ft, Pt, Rm, Fl).
+        /// Gets or sets the Job Type (e.g., FT, PT, RM, FL).
         /// </summary>
         [JsonProperty("L01105")]
         [Required(ErrorMessage = "Job Type is required.")]

@@ -53,7 +53,7 @@ namespace Job_Finder.DataBase
                 using (MySqlCommand command = connection.CreateCommand())
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.CommandText = "GetCompanyWiseJobListing";
+                    command.CommandText = "GetCompanyWiseJobListing"; // Stored procedure
 
                     // Add input parameter
                     command.Parameters.AddWithValue("@company_id", companyId);
@@ -67,7 +67,7 @@ namespace Job_Finder.DataBase
                     catch (Exception ex)
                     {
                         // Handle exceptions
-                        throw ex;
+                        throw new Exception("Error: " + ex.Message);
                     }
                 }
             }
@@ -85,7 +85,18 @@ namespace Job_Finder.DataBase
 
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                string query = @"SELECT * FROM ApplicationData;"; // Select data from the view
+                string query = @"SELECT 
+                                    Name,
+                                    Qualification,
+                                    Experience,
+                                    Gender,
+                                    EmailID,
+                                    Contact,
+                                    JobTitle,
+                                    ComapanyName,
+                                    Status
+                                 FROM 
+                                    vws_applicationdata;"; // Select data from the view
 
                 MySqlCommand command = new MySqlCommand(query, connection);
                 try
@@ -97,7 +108,7 @@ namespace Job_Finder.DataBase
                 catch (Exception ex)
                 {
                     // Handle exceptions
-                    throw ex;
+                    throw new Exception("Error: " + ex.Message);
                 }
             }
 
@@ -115,7 +126,18 @@ namespace Job_Finder.DataBase
 
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                string query = @"SELECT * FROM cmp01 WHERE P01F04 LIKE @CityName";
+                string query = @"SELECT
+                                     P01F01,
+                                     P01F02,
+                                     P01F03,
+                                     P01F04,
+                                     P01F05,
+                                     P01F06,
+                                     P01F07
+                                FROM 
+                                     cmp01 
+                                WHERE 
+                                     P01F04 LIKE @CityName";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@CityName", "%" + cityName + "%");
@@ -144,7 +166,7 @@ namespace Job_Finder.DataBase
                     catch (Exception ex)
                     {
                         // Handle exceptions
-                        Console.WriteLine("Error: " + ex.Message);
+                        throw new Exception("Error: " + ex.Message);
                     }
                 }
             }
@@ -164,7 +186,17 @@ namespace Job_Finder.DataBase
 
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                string query = "SELECT * FROM cmp01 WHERE ";
+                string query = @"SELECT 
+                                     P01F01,
+                                     P01F02,
+                                     P01F03,
+                                     P01F04,
+                                     P01F05,
+                                     P01F06,
+                                     P01F07 
+                                FROM 
+                                     cmp01
+                                WHERE ";
                 string whereClause = "";
 
                 if (!string.IsNullOrEmpty(companyName))
@@ -219,7 +251,7 @@ namespace Job_Finder.DataBase
                         catch (Exception ex)
                         {
                             // Handle exceptions
-                            Console.WriteLine("Error: " + ex.Message);
+                            throw new Exception("Error: " + ex.Message);
                         }
                     }
                 }
@@ -235,7 +267,7 @@ namespace Job_Finder.DataBase
         /// <param name="type">The job type to filter job listings by.</param>
         /// <param name="companyId">The company ID to filter job listings by.</param>
         /// <returns>A list of job listings matching the specified criteria.</returns>
-        public dynamic GetJobListings(string location, string type, int companyId)
+        public dynamic GetJobListings(string? location = null, string? type = null)
         {
             List<object> lstJobListings = new List<object>();
 
@@ -254,14 +286,14 @@ namespace Job_Finder.DataBase
 	                                                cmp01 p01 ON l01.L01F03 = p01.P01F01
                                                 WHERE 
 	                                                (@Location IS NULL OR  p01.P01F04 LIKE @Location)
-                                                AND (@Type IS NULL OR l01.L01F05 LIKE @Type)
-                                                AND (@CompanyId IS NULL OR l01.L01F03 = @CompanyId)");
+                                                AND (@Type IS NULL OR l01.L01F05 LIKE @Type)");
 
+                // AND (@CompanyId IS NULL OR l01.L01F03 = @CompanyId)");
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Location", "%" + location + "%");
                     command.Parameters.AddWithValue("@Type", "%" + type + "%");
-                    command.Parameters.AddWithValue("@CompanyId", companyId);
+                    //command.Parameters.AddWithValue("@CompanyId", companyId);
 
                     try
                     {
@@ -284,7 +316,7 @@ namespace Job_Finder.DataBase
                     catch (Exception ex)
                     {
                         // Handle exceptions
-                        Console.WriteLine("Error: " + ex.Message);
+                        throw new Exception("Error: " + ex.Message);
                     }
                 }
                 return lstJobListings;
@@ -308,12 +340,12 @@ namespace Job_Finder.DataBase
 	                                                p01.P01F02 AS CompanyName, 
                                                 CASE 
 	                                                a01.A01F04 
-		                                                WHEN 'Ap' THEN 'Applied' 
-		                                                WHEN 'Sh' THEN 'Shortlisted' 
-		                                                WHEN 'Is' THEN 'Interview Scheduled' 
-                                                        WHEN 'Pd' THEN 'Pending' 
-                                                        WHEN 'Sl' THEN 'Selected' 
-                                                        WHEN 'Rj' THEN 'Rejected' 
+		                                                WHEN 'AP' THEN 'Applied' 
+		                                                WHEN 'SH' THEN 'Shortlisted' 
+		                                                WHEN 'IS' THEN 'Interview Scheduled' 
+                                                        WHEN 'PD' THEN 'Pending' 
+                                                        WHEN 'SL' THEN 'Selected' 
+                                                        WHEN 'RJ' THEN 'Rejected' 
                                                 END AS Status
                                                 FROM 
 	                                                joa01 a01
@@ -344,7 +376,7 @@ namespace Job_Finder.DataBase
                     catch (Exception ex)
                     {
                         // Handle exceptions
-                        Console.WriteLine("Error: " + ex.Message);
+                        throw new Exception("Error: " + ex.Message);
                     }
                 }
                 return lstApplicationStatus;
@@ -361,7 +393,12 @@ namespace Job_Finder.DataBase
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
-                string query = string.Format(@"UPDATE joa01 SET A01F04 = '{0}' WHERE A01F01 = {1}" , newStatus.ToString(), applicationId);
+                string query = string.Format(@"UPDATE 
+                                                    joa01 
+                                               SET
+                                                    A01F04 = '{0}'
+                                               WHERE 
+                                                    A01F01 = {1}" , newStatus.ToString(), applicationId);
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 { 

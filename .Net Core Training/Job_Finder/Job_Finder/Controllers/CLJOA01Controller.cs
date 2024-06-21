@@ -43,9 +43,8 @@ namespace Job_Finder.Controllers
         /// Retrieves all job applications.
         /// </summary>
         /// <returns>List of all job applications.</returns>
-        [HttpGet]
+        [HttpGet("GetAllJobApplication")]
         [AuthorizationFilter("A")]
-        [Route("GetAllJobApplication")]
         public IActionResult GetAllJobApplication()
         {
             Response response = _objBLJOA01Handler.objCRUDJOA01.Select();
@@ -58,10 +57,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoJOA01">DTO containing job application data.</param>
         /// <returns>Response indicating success or failure.</returns>
-        [HttpPost]
+        [HttpPost("AddJobApplication")]
         [AuthorizationFilter("J")]
-        [Route("AddJobApplication")]
-        public IActionResult AddJobApplication(DtoJOA01 dtoJOA01)
+        public IActionResult AddJobApplication(DTOJOA01 dtoJOA01)
         {
             _objBLJOA01Handler.OperationType = Enum.enmOperationType.I;
 
@@ -80,10 +78,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoJOA01">DTO containing updated job application data.</param>
         /// <returns>Response indicating success or failure.</returns>
-        [HttpPut]
+        [HttpPut("UpdateDetails")]
         [AuthorizationFilter("J")]
-        [Route("UpdateDetails")]
-        public IActionResult UpdateDetails(DtoJOA01 dtoJOA01)
+        public IActionResult UpdateDetails(DTOJOA01 dtoJOA01)
         {
             _objBLJOA01Handler.OperationType = Enum.enmOperationType.U;
 
@@ -102,9 +99,8 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="id">ID of the job application to delete.</param>
         /// <returns>Response indicating success or failure.</returns>
-        [HttpDelete]
+        [HttpDelete("DeleteJobApplication")]
         [AuthorizationFilter("J,A")]
-        [Route("DeleteJobApplication")]
         public IActionResult DeleteJobApplication(int id)
         {
             _objBLJOA01Handler.OperationType = Enum.enmOperationType.D;

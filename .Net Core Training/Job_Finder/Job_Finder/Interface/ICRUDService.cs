@@ -45,8 +45,6 @@ namespace Job_Finder.Interface
         /// <returns>A response indicating the result of the operation.</returns>
         Response Delete(int id);
 
-
-       // Response Delete(int id);
        // Response Validation();
     }
 }

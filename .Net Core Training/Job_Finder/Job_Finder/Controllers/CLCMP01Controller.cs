@@ -46,9 +46,8 @@ namespace Job_Finder.Controllers
         /// Retrieves all companies.
         /// </summary>
         /// <returns>List of all companies.</returns>
-        [HttpGet]
+        [HttpGet("GetAllCompanies")]
         [AuthorizationFilter("A")]
-        [Route("GetAllCompanies")]
         public IActionResult GetAllCompanies()
         {
             Response response = _objBLCMP01Handler.objCRUDCMP01.Select();
@@ -61,10 +60,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoCMP01">DTO containing company data.</param>
         /// <returns>Response indicating success or failure.</returns>
-        [HttpPost]
+        [HttpPost("AddCompany")]
         [AuthorizationFilter("R")]
-        [Route("AddCompany")]
-        public IActionResult AddCompany(DtoCMP01 dtoCMP01)
+        public IActionResult AddCompany(DTOCMP01 dtoCMP01)
         {
             _objBLCMP01Handler.OperationType = Enum.enmOperationType.I;
 
@@ -83,10 +81,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoCMP01">DTO containing company data.</param>
         /// <returns>Response indicating success or failure.</returns>
-        [HttpPut]
+        [HttpPut("UpdateCompany")]
         [AuthorizationFilter("R,A")]
-        [Route("UpdateCompany")]
-        public IActionResult UpdateCompany(DtoCMP01 dtoCMP01)
+        public IActionResult UpdateCompany(DTOCMP01 dtoCMP01)
         {
             _objBLCMP01Handler.OperationType = Enum.enmOperationType.U;
 
@@ -105,9 +102,8 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="id">ID of the company to delete.</param>
         /// <returns>Response indicating success or failure.</returns>
-        [HttpDelete]
+        [HttpDelete("DeleteCompany")]
         [AuthorizationFilter("A")]
-        [Route("DeleteCompany")]
         public IActionResult DeleteCompany(int id)
         {
             _objBLCMP01Handler.OperationType = Enum.enmOperationType.D;
@@ -125,12 +121,11 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="companyId">ID of the company.</param>
         /// <returns>List of job listings for the company.</returns>
-        [HttpGet]
+        [HttpGet("GetComapanyWiseJobListing")]
         [AllowAnonymous]
-        [Route("GetComapanyWiseJobListing")]
-        public IActionResult GetComapanyWiseJobListing(int comapanyId)
+        public IActionResult GetComapanyWiseJobListing(int companyId)
         {
-            Response response = _objBLCMP01Handler.GetCompanyWiseJobListing(comapanyId);
+            Response response = _objBLCMP01Handler.GetCompanyWiseJobListing(companyId);
 
             return Ok(response);
         }
@@ -140,9 +135,8 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="companyId">ID of the company.</param>
         /// <returns>Excel file containing job listings.</returns>
-        [HttpGet]
+        [HttpGet("ExportCompanyWiseJobListingToExcel")]
         [AuthorizationFilter("R")]
-        [Route("ExportCompanyWiseJobListingToExcel")]
         public async Task<IActionResult> ExportCompanyWiseJobListingToExcel(int companyId)
         {
             try
@@ -150,7 +144,7 @@ namespace Job_Finder.Controllers
                 string filePath = await _objBLCMP01Handler.ExportDataTableToExcel(companyId);
                 return File(System.IO.File.ReadAllBytes(filePath), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Path.GetFileName(filePath));
             }
-            catch (Exception ex)
+            catch 
             {
                 // Handle other exceptions
                 return StatusCode(500, "An error occurred while exporting the data to Excel.");
@@ -162,9 +156,8 @@ namespace Job_Finder.Controllers
         /// Exports job application data to an Excel file.
         /// </summary>
         /// <returns>Excel file containing job application data.</returns>
-        [HttpGet]
+        [HttpGet("GetJobApplication")]
         [AuthorizationFilter("R")]
-        [Route("GetJobApplication")]
         public async Task<IActionResult> GetJobApplication()
         {
             try
@@ -172,7 +165,7 @@ namespace Job_Finder.Controllers
                 string filePath = await _objBLCMP01Handler.GetJobApplicationData();
                 return File(System.IO.File.ReadAllBytes(filePath), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Path.GetFileName(filePath));
             }
-            catch (Exception ex)
+            catch 
             {
                 // Handle other exceptions
                 return StatusCode(500, "An error occurred while exporting the data to Excel.");
@@ -186,9 +179,8 @@ namespace Job_Finder.Controllers
         /// <param name="applicationId">The ID of the application to update.</param>
         /// <param name="newStatus">The new status to set for the application.</param>
         /// <returns>An IActionResult containing the response message.</returns>
-        [HttpPatch]
+        [HttpPatch("UpdateJobApplicationStatus")]
         [AuthorizationFilter("R")]
-        [Route("UpdateJobApplicationStatus")]
         public IActionResult UpdateJobApplicationStatus(int applicationId, enmJobApplicationStatus newStatus)
         {
             Response response = _objBLCMP01Handler.UpdateStatus(applicationId, newStatus);

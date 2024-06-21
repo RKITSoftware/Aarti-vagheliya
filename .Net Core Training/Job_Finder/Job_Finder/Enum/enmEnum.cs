@@ -59,65 +59,65 @@
     }
 
     /// <summary>
-    /// Represents the type of job (Ft: Full Time, Pt: Part Time, Rm: Remote, Fl: Freelance).
+    /// Represents the type of job (FT: Full Time, PT: Part Time, RM: Remote, FL: Freelance).
     /// </summary>
     public enum enmJobType
     {
         /// <summary>
         /// Full Time
         /// </summary>
-        Ft,
+        FT,
 
         /// <summary>
         /// Part time
         /// </summary>
-        Pt,
+        PT,
 
         /// <summary>
         /// Remote
         /// </summary>
-        Rm,
+        RM,
 
         /// <summary>
         /// Freelance
         /// </summary>
-        Fl
+        FL
     }
 
     /// <summary>
-    /// Represents the status of a job application (Ap: Applied, Sh: Shortlisted, Is: Interview Scheduled, Pd: Pending, Sl: Selected, Rj: Rejected).
+    /// Represents the status of a job application (AP: Applied, SH: Shortlisted, IS: Interview Scheduled, PD: Pending, SL: Selected, RJ: Rejected).
     /// </summary>
     public enum enmJobApplicationStatus
     {
         /// <summary>
         /// Applied
         /// </summary>
-        Ap,
+        AP,
 
         /// <summary>
         /// Shortlisted
         /// </summary>
-        Sh,
+        SH,
 
         /// <summary>
         /// Interview Scheduled
         /// </summary>
-        Is,
+        IS,
 
         /// <summary>
         /// Pending
         /// </summary>
-        Pd,
+        PD,
 
         /// <summary>
         /// Selected
         /// </summary>
-        Sl,
+        SL,
 
         /// <summary>
         /// Rejected
         /// </summary>
-        Rj
+        RJ
     }
 
     /// <summary>

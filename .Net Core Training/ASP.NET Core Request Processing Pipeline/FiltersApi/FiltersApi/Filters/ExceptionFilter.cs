@@ -8,10 +8,16 @@ namespace FiltersApi.Filters
     /// </summary>
     public class ExceptionFilter : IExceptionFilter
     {
+        #region private Member
+
         /// <summary>
         /// Create instance of Ilogger interface
         /// </summary>
         private readonly ILogger<ExceptionFilter> _logger;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExceptionFilter"/> class.
@@ -21,6 +27,10 @@ namespace FiltersApi.Filters
         {
             _logger = logger;
         }
+
+        #endregion
+
+        #region Public Method
 
         /// <summary>
         /// Executes when an exception occurs during the execution of an action.
@@ -36,9 +46,13 @@ namespace FiltersApi.Filters
             // Return an error response
             context.Result = new ObjectResult("An error occurred while processing your request.")
             {
-                StatusCode = 500 // Internal Server Error
+                StatusCode = StatusCodes.Status500InternalServerError // Internal Server Error
             };
         }
+
+        #endregion
+
+        #region Private Method
 
         /// <summary>
         /// Logs the exception details to a file.
@@ -48,9 +62,7 @@ namespace FiltersApi.Filters
         private void LogExceptionToFile(Exception exception, string actionName)
         {
             // Log exception details to a file
-            string logDirectory = "logs";
-            string logFile = $"log-{DateTime.Today:yyyy-MM-dd}.txt";
-            string logPath = Path.Combine(logDirectory, logFile);
+            string logDirectory = "logs",  logFile = $"log-{DateTime.Today:yyyy-MM-dd}.txt",   logPath = Path.Combine(logDirectory, logFile);
 
             Directory.CreateDirectory(logDirectory); // Create directory if it doesn't exist
 
@@ -67,6 +79,8 @@ namespace FiltersApi.Filters
             // Log to console (optional)
             _logger.LogError(exception, $"Exception occurred in action '{actionName}'");
         }
+
+        #endregion
     }
 
 

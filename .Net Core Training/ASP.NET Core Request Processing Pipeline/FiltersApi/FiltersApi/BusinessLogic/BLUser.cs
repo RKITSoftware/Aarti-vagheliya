@@ -27,10 +27,6 @@ namespace FiltersApi.BusinessLogic
 
         #region Public Methods
 
-        /// <summary>
-        /// Retrieves all users.
-        /// </summary>
-        /// <returns>A list of all users.</returns>
         public List<USR01> GetUsers()
         {
             return _lstuser.ToList();

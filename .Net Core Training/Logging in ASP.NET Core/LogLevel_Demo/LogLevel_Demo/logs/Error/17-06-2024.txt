@@ -1,0 +1,10 @@
+2024-06-17 15:11:31.9735 | ERROR | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN4ELQIGOGHR", Request id "0HN4ELQIGOGHR:00000019": An unhandled exception was thrown by the application. System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at Microsoft.WebTools.BrowserLink.Net.TaskHelpers.WaitWithCancellationAsync[ResultType](Task`1 task, CancellationToken cancellationToken, ResultType resultIfCancelled)
+   at Microsoft.WebTools.BrowserLink.Net.SocketReader.ReceiveMoreBytesAsync(CancellationToken cancellationToken)
+   at Microsoft.WebTools.BrowserLink.Net.SocketReader.ReadBytesIntoResponseHandlerAsync(Int64 totalBytesToRead, ResponseHandler handler, CancellationToken cancellationToken)
+   at Microsoft.WebTools.BrowserLink.Net.HttpSocketAdapter.ResponseReader.ReadBytesIntoResponseAsync(Int64 bytesToRead)
+   at Microsoft.WebTools.BrowserLink.Net.HttpSocketAdapter.ResponseReader.ReadChunkedContentAsync()
+   at Microsoft.WebTools.BrowserLink.Net.HttpSocketAdapter.ResponseReader.ReadResponseAsync()
+   at Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware.GetVsContentAsync(HttpContext context, String contentPath)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)

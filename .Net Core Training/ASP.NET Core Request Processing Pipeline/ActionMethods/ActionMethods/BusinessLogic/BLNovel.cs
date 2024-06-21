@@ -1,4 +1,5 @@
 ﻿using ActionMethods.Model;
+using OfficeOpenXml;
 
 namespace ActionMethods.BusinessLogic
 {
@@ -7,6 +8,8 @@ namespace ActionMethods.BusinessLogic
     /// </summary>
     public class BLNovel
     {
+        #region Private Member
+
         //Static count for unique id
         private static int _count = 0;
 
@@ -19,6 +22,10 @@ namespace ActionMethods.BusinessLogic
             new NVL01 { L01F01 = Counter(), L01F02 = "Pride and Prejudice", L01F03 = "Jane Austen", L01F04 = 12.75m },
             new NVL01 { L01F01 = Counter(), L01F02 = "The Great Gatsby", L01F03 = "F. Scott Fitzgerald", L01F04 = 20.00m }
         };
+
+        #endregion
+
+        #region public Method
 
         /// <summary>
         /// Retrieves all novels.
@@ -101,12 +108,68 @@ namespace ActionMethods.BusinessLogic
         public bool Validation(NVL01 objNVL01)
         {
             // Validate that the title, author, and price are not null or empty, and the price is greater than 0
-            if (objNVL01.L01F02 != null && objNVL01.L01F03 != null && objNVL01.L01F04 > 0)
+            if (!string.IsNullOrWhiteSpace(objNVL01.L01F02) &&
+                !string.IsNullOrWhiteSpace(objNVL01.L01F03) &&
+                objNVL01.L01F04 > 0)
             {
                 return true;
             }
             return false;
         }
+
+        /// <summary>
+        /// Generates an Excel file containing the list of novels and returns it as a MemoryStream.
+        /// </summary>
+        public MemoryStream GenerateNovelsExcel()
+        {
+            var novels = GetNovels();
+
+            using (var package = new ExcelPackage())
+            {
+                var worksheet = package.Workbook.Worksheets.Add("Novels");
+                worksheet.Cells["A1"].Value = "ID";
+                worksheet.Cells["B1"].Value = "Title";
+                worksheet.Cells["C1"].Value = "Author";
+                worksheet.Cells["D1"].Value = "Price";
+
+                int row = 2;
+                foreach (var novel in novels)
+                {
+                    worksheet.Cells[row, 1].Value = novel.L01F01;
+                    worksheet.Cells[row, 2].Value = novel.L01F02;
+                    worksheet.Cells[row, 3].Value = novel.L01F03;
+                    worksheet.Cells[row, 4].Value = novel.L01F04;
+                    row++;
+                }
+
+                var stream = new MemoryStream();
+                package.SaveAs(stream);
+                stream.Position = 0;
+
+                return stream;
+            }
+        }
+
+        /// <summary>
+        /// Reads the JavaScript file content and returns it as a byte array.
+        /// </summary>
+        public byte[] GetJavaScriptFileContent()
+        {
+            // Assuming you have a "Files" directory at the root of your project
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "File", "novels.js");
+
+            if (File.Exists(filePath))
+            {
+                return File.ReadAllBytes(filePath);
+            }
+            else
+            {
+                throw new FileNotFoundException("JavaScript file not found.");
+            }
+        }
+
+
+        #endregion
 
         #region Private Method
 

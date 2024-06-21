@@ -53,9 +53,8 @@ namespace Job_Finder.Controllers
         /// Gets all job seekers.
         /// </summary>
         /// <returns>A list of all job seekers.</returns>
-        [HttpGet]
+        [HttpGet("GetAllJobSeeker")]
         [AuthorizationFilter("A")]
-        [Route("GetAllJobSeeker")]
         public IActionResult GetAllJobSeeker()
         {
             Response response = _objBLJOS01Handler.objCRUDJOS01.Select();
@@ -68,10 +67,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoJOS01">The DTO containing job seeker details.</param>
         /// <returns>The response after adding the job seeker.</returns>
-        [HttpPost]
+        [HttpPost("AddJobSeeker")]
         [AuthorizationFilter("J")]
-        [Route("AddJobSeeker")]
-        public IActionResult AddJobSeeker([FromForm] DtoJOS01 dtoJOS01)
+        public IActionResult AddJobSeeker([FromForm] DTOJOS01 dtoJOS01)
         {
             _logger.Info("AddJobeeker Method Called.");
 
@@ -93,10 +91,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoJOS01">The DTO containing updated job seeker details.</param>
         /// <returns>The response after updating the job seeker.</returns>
-        [HttpPut]
+        [HttpPut("UpdateDetails")]
         [AuthorizationFilter("J")]
-        [Route("UpdateDetails")]
-        public IActionResult UpdateDetails(DtoJOS01 dtoJOS01)
+        public IActionResult UpdateDetails(DTOJOS01 dtoJOS01)
         {
             _objBLJOS01Handler.OperationType = Enum.enmOperationType.U;
 
@@ -115,9 +112,8 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="id">The ID of the job seeker to delete.</param>
         /// <returns>The response after deleting the job seeker.</returns>
-        [HttpDelete]
+        [HttpDelete("DeleteJobSeeker")]
         [AuthorizationFilter("J")]
-        [Route("DeleteJobSeeker")]
         public IActionResult DeleteJobSeeker(int id)
         {
             _objBLJOS01Handler.OperationType = Enum.enmOperationType.D;
@@ -135,12 +131,11 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="cityName">The name of the city to search for job seekers.</param>
         /// <returns>A list of job seekers in the specified city.</returns>
-        [HttpGet]
+        [HttpGet("SearchByCityName")]
         [AllowAnonymous]
-        [Route("SearchByCityName")]
-        public IActionResult SearchByCityName(string cityName)
+        public IActionResult SearchByCityName(string P01104)
         {
-            Response response = _objBLJOS01Handler.SearchByCityName(cityName);
+            Response response = _objBLJOS01Handler.SearchByCityName(P01104);
 
             return Ok(response);
         }
@@ -150,9 +145,8 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="jobSeekerId">The ID of the job seeker whose application status is to be retrieved.</param>
         /// <returns>An IActionResult containing the response with the application status.</returns>
-        [HttpGet]
+        [HttpGet("GetStatus")]
         [AuthorizationFilter("J,R")]
-        [Route("GetStatus")]
         public IActionResult GetStatus(int jobSeekerId)
         {
             Response response = _objBLJOS01Handler.GetStatus(jobSeekerId);

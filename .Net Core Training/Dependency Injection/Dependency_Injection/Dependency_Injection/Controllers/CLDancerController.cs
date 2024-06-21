@@ -1,5 +1,6 @@
 ﻿using Dependency_Injection.Interface;
 using Dependency_Injection.Model;
+using Dependency_Injection.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dependency_Injection.Controllers
@@ -46,6 +47,20 @@ namespace Dependency_Injection.Controllers
         #endregion
 
         #region Public Methods
+
+        /// <summary>
+        /// for Testing constructor parameterized and deault.
+        /// </summary>
+        /// <returns></returns>
+        [Route("get")]
+        [HttpGet]
+        public IActionResult get()
+        {
+            DancerService dancer = new DancerService();
+            //return list of dancers.
+            return Ok("Hello");
+
+        }
 
         /// <summary>
         /// Retrieves the list of dancers.

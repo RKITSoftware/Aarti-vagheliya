@@ -1,5 +1,6 @@
 ﻿using Dependency_Injection.Interface;
 using Dependency_Injection.Service;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Dependency_Injection
 {
@@ -22,6 +23,7 @@ namespace Dependency_Injection
             services.AddSingleton<ISingleton, ServiceLifeTime>();
             services.AddTransient<ITransient, ServiceLifeTime>();
             services.AddScoped<IScoped, ServiceLifeTime>();
+           // services.TryAddSingleton<ISingleton, ServiceLifeTime>();
 
             // Configure Swagger for Basic Authentication
             services.AddSwaggerGen();

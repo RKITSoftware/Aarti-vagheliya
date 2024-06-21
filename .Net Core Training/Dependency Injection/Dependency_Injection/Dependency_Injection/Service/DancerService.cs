@@ -20,6 +20,32 @@ namespace Dependency_Injection.Service
         /// </summary>
         private static List<DCR01> _lstDancer = new List<DCR01>();
 
+        /// <summary>
+        /// For demo purpose
+        /// </summary>
+        private IHttpContextAccessor _context { get; set; }
+
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        public DancerService()
+        {
+            
+        }
+
+        /// <summary>
+        /// Parameterized constructor.
+        /// </summary>
+        /// <param name="context"></param>
+        public DancerService(IHttpContextAccessor context)
+        {
+            _context = context;
+        }
+
         #endregion
 
         #region Public Method

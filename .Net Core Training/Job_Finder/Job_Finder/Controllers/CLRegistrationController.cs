@@ -1,4 +1,5 @@
 ﻿using Job_Finder.BusinessLogic;
+using Job_Finder.Interface;
 using Job_Finder.Model;
 using Job_Finder.Model.DTO;
 using Job_Finder.Model.POCO;
@@ -31,6 +32,11 @@ namespace Job_Finder.Controllers
         /// </summary>
         private BLTokenManager _objBLTokenManager = new();
 
+        /// <summary>
+        /// Represents the service responsible for handling email operations.
+        /// </summary>
+        private readonly IEmailService _emailService;
+
         #endregion
 
         #region Constructor
@@ -38,9 +44,10 @@ namespace Job_Finder.Controllers
         /// <summary>
         /// Initializes a new instance of the <see cref="CLRegistrationController"/> class.
         /// </summary>
-        public CLRegistrationController()
+        public CLRegistrationController(IEmailService emailService)
         {
             _objBLUSR01Handler = new();
+            _emailService = emailService;
 
         }
 
@@ -53,10 +60,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="Userdata">The user data for registration.</param>
         /// <returns>An IActionResult containing the response of the registration process.</returns>
-        [HttpPost]
+        [HttpPost("Registration")]
         [AllowAnonymous]
-        [Route("Registration")]
-        public IActionResult Registration(DtoUSR01 Userdata)
+        public IActionResult Registration(DTOUSR01 Userdata)
         {
             _objBLUSR01Handler.objOperation = Enum.enmOperationType.I;
 
@@ -66,6 +72,7 @@ namespace Job_Finder.Controllers
             if (!response.isError)
             {
                 response = _objBLUSR01Handler.Save();
+                _emailService.SendEmail(Userdata.R01F04, "User Registered.");
             }
             return Ok(response);
         }
@@ -76,14 +83,13 @@ namespace Job_Finder.Controllers
         /// <param name="userName">The username of the user.</param>
         /// <param name="password">The password of the user.</param>
         /// <returns>An IActionResult containing the authentication token.</returns>
-        [HttpGet]
+        [HttpGet("Login")]
         [AllowAnonymous]
-        [Route("Login")]
         public IActionResult Login(string userName, string password)
         {
             USR01 user = _objBLogin.ValidateUser(userName, password);
 
-            var token = _objBLTokenManager.GenerateToken(user);
+            string token = _objBLTokenManager.GenerateToken(user);
 
             if (string.IsNullOrEmpty(token))
             {

@@ -76,7 +76,7 @@ namespace LogLevel_Demo.Controllers
         /// <param name="orderId">The ID of the order to update.</param>
         /// <param name="status">The new status of the order.</param>
         [HttpPut("updateOrderStatus/{orderId}/{status}")]
-        public async Task<IActionResult> UpdateOrderStatus(int orderId, enmOrderStatus status)
+        public async Task<IActionResult> UpdateOrderStatus(int orderId, enmOrderStatus status) //// enum value
         {
             try
             {
@@ -87,6 +87,7 @@ namespace LogLevel_Demo.Controllers
             {
                 _logger.LogWarning($"Order with ID {orderId} not found.");
                 return NotFound($"Order with ID {orderId} not found.");
+                ////  ex
             }
             catch (Exception ex)
             {

@@ -6,6 +6,7 @@ using Job_Finder.Model.DTO;
 using Job_Finder.Model.POCO;
 using NLog;
 using NLog.Web;
+using System.Text.RegularExpressions;
 
 namespace Job_Finder.BusinessLogic
 {
@@ -84,9 +85,9 @@ namespace Job_Finder.BusinessLogic
         /// Prepares data before performing an operation.
         /// </summary>
         /// <param name="objDtoJOS01">The DTO object for JOS01.</param>
-        public void PreSave(DtoJOS01 objDtoJOS01)
+        public void PreSave(DTOJOS01 objDtoJOS01)
         {
-            _objJOS01 = _objBLHelper.Map<DtoJOS01, JOS01>(objDtoJOS01);
+            _objJOS01 = _objBLHelper.Map<DTOJOS01, JOS01>(objDtoJOS01);
             SaveFile(objDtoJOS01.S01F05);
             objCRUDJOS01.obj = _objJOS01;
             objCRUDJOS01.objOperation = OperationType;
@@ -100,9 +101,13 @@ namespace Job_Finder.BusinessLogic
         {
             _objResponse = new Response();
 
+            // Regex pattern for Indian phone numbers with country code and space separators
+            string pattern = @"^\+?91\s\d{5}\s\d{5}$";
+            Regex regex = new Regex(pattern);
+
             if (OperationType == enmOperationType.I)
             {
-                if (_objJOS01 == null && _objJOS01.S01F06.Length != 14)
+                if (!regex.IsMatch(_objJOS01.S01F06)) 
                 {
                     _objResponse.isError = true;
                     _objResponse.Message = "Enter valid data.";
@@ -139,13 +144,13 @@ namespace Job_Finder.BusinessLogic
         /// <summary>
         /// Searches records by city name.
         /// </summary>
-        /// <param name="cityName">The city name to search by.</param>
+        /// <param name="P01F04">The city name to search by.</param>
         /// <returns>The response object containing the search results.</returns>
-        public Response SearchByCityName(string cityName)
+        public Response SearchByCityName(string P01F04)
         {
             _objResponse = new Response();
 
-            _objResponse.response = _objBLHelper.ToDataTable(_objDBContext.SearchByCityName(cityName)); //_objDBContext.SearchByCityName(cityName);
+            _objResponse.response = _objBLHelper.ToDataTable(_objDBContext.SearchByCityName(P01F04)); //_objDBContext.SearchByCityName(cityName);
 
             return _objResponse;
         }

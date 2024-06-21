@@ -5,10 +5,16 @@
     /// </summary>
     public class CORSMiddleware
     {
+        #region Private Member
+
         /// <summary>
         /// Represents the delegate representing the next middleware in the pipeline.
         /// </summary>
         private readonly RequestDelegate _next;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the CORSMiddleware class.
@@ -18,6 +24,10 @@
         {
             _next = next;
         }
+
+        #endregion
+
+        #region Public Method
 
         /// <summary>
         /// Adds CORS headers to the HTTP response.
@@ -34,6 +44,8 @@
 
             return _next(httpContext);
         }
+
+        #endregion
     }
 
     /// <summary>

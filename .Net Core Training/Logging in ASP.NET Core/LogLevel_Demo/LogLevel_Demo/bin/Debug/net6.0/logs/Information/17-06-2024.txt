@@ -1,0 +1,70 @@
+2024-06-17 14:49:46.8568 | INFO | LogLevel_Demo.Program | Hello 
+2024-06-17 14:49:53.1877 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/index.html - - 
+2024-06-17 14:49:54.0165 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-17 14:49:54.0374 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_vs/browserLink - - 
+2024-06-17 14:49:54.0933 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 85.6046ms 
+2024-06-17 14:49:54.1151 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/index.html - - - 200 - text/html;charset=utf-8 870.6749ms 
+2024-06-17 14:49:55.1526 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1122.6782ms 
+2024-06-17 14:49:55.3001 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - 
+2024-06-17 14:49:55.3569 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/favicon-32x32.png - - 
+2024-06-17 14:49:55.3885 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2024-06-17 14:49:55.3885 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/favicon-32x32.png - - - 200 628 image/png 33.8511ms 
+2024-06-17 14:49:55.6828 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 383.3065ms 
+2024-06-17 14:51:23.8369 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/index.html - - 
+2024-06-17 14:51:23.8575 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/index.html - - - 200 - text/html;charset=utf-8 21.2409ms 
+2024-06-17 14:51:23.8927 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-17 14:51:23.8927 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_vs/browserLink - - 
+2024-06-17 14:51:23.8927 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.8542ms 
+2024-06-17 14:51:23.9259 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.0670ms 
+2024-06-17 14:51:23.9689 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - 
+2024-06-17 14:51:23.9689 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.2983ms 
+2024-06-17 14:51:58.4549 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/api/CLOrderService/GetAllOrderDetails - - 
+2024-06-17 14:51:58.5338 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo)' 
+2024-06-17 14:51:58.5544 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllOrderDetails", controller = "CLOrderService"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllOrderDetails() on controller LogLevel_Demo.Controllers.CLOrderServiceController (LogLevel_Demo). 
+2024-06-17 14:53:25.5581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/index.html - - 
+2024-06-17 14:53:27.6050 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/index.html - - - 200 - text/html;charset=utf-8 2048.3347ms 
+2024-06-17 14:53:27.7659 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-17 14:53:27.7659 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.6133ms 
+2024-06-17 14:53:27.9368 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_vs/browserLink - - 
+2024-06-17 15:11:32.6367 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/index.html - - 
+2024-06-17 15:11:32.7025 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/index.html - - - 200 - text/html;charset=utf-8 67.1185ms 
+2024-06-17 15:11:32.7182 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-17 15:11:32.7182 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_vs/browserLink - - 
+2024-06-17 15:11:32.7182 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 1.8210ms 
+2024-06-17 15:11:32.8547 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 143.5439ms 
+2024-06-17 15:11:32.9544 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - 
+2024-06-17 15:11:32.9648 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.6006ms 
+2024-06-17 15:11:33.6729 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1085715.5501ms 
+2024-06-17 15:11:34.7853 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo) - Validation state: Valid 
+2024-06-17 15:11:41.7235 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6925.5106ms. 
+2024-06-17 15:11:41.7404 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LogLevel_Demo.Model.ORD01, LogLevel_Demo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-06-17 15:11:41.7737 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo) in 1183196.3333ms 
+2024-06-17 15:11:41.7737 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo)' 
+2024-06-17 15:11:41.7737 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/api/CLOrderService/GetAllOrderDetails - - - 0 - application/json;+charset=utf-8 1183290.9513ms 
+2024-06-17 15:11:48.5691 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/api/CLOrderService/GetAllOrderDetails - - 
+2024-06-17 15:11:48.5691 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo)' 
+2024-06-17 15:11:48.5691 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllOrderDetails", controller = "CLOrderService"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllOrderDetails() on controller LogLevel_Demo.Controllers.CLOrderServiceController (LogLevel_Demo). 
+2024-06-17 15:12:09.7284 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo) - Validation state: Valid 
+2024-06-17 15:12:14.7984 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5067.1335ms. 
+2024-06-17 15:12:14.7984 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LogLevel_Demo.Model.ORD01, LogLevel_Demo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-06-17 15:12:14.7984 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo) in 26226.2479ms 
+2024-06-17 15:12:14.7984 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo)' 
+2024-06-17 15:12:14.7984 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/api/CLOrderService/GetAllOrderDetails - - - 200 - application/json;+charset=utf-8 26230.0707ms 
+2024-06-17 15:46:02.1523 | INFO | LogLevel_Demo.Program | Hello 
+2024-06-17 15:46:05.1753 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/index.html - - 
+2024-06-17 15:46:05.6825 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-17 15:46:05.6825 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/_vs/browserLink - - 
+2024-06-17 15:46:05.7132 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/index.html - - - 200 - text/html;charset=utf-8 546.0901ms 
+2024-06-17 15:46:05.7132 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 25.6649ms 
+2024-06-17 15:46:05.7433 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.9964ms 
+2024-06-17 15:46:05.9313 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - 
+2024-06-17 15:46:06.1266 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 196.5494ms 
+2024-06-17 15:46:30.6834 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7054/api/CLOrderService/GetAllOrderDetails - - 
+2024-06-17 15:46:30.7446 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo)' 
+2024-06-17 15:46:30.7628 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllOrderDetails", controller = "CLOrderService"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllOrderDetails() on controller LogLevel_Demo.Controllers.CLOrderServiceController (LogLevel_Demo). 
+2024-06-17 15:46:46.1350 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo) - Validation state: Valid 
+2024-06-17 15:46:51.7612 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5619.9311ms. 
+2024-06-17 15:46:51.7612 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LogLevel_Demo.Model.ORD01, LogLevel_Demo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-06-17 15:46:51.7950 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo) in 21031.5725ms 
+2024-06-17 15:46:51.7950 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'LogLevel_Demo.Controllers.CLOrderServiceController.GetAllOrderDetails (LogLevel_Demo)' 
+2024-06-17 15:46:51.7950 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7054/api/CLOrderService/GetAllOrderDetails - - - 200 - application/json;+charset=utf-8 21118.2944ms 

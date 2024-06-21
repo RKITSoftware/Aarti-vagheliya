@@ -13,10 +13,16 @@ namespace ActionMethods.Controllers
     [ApiController]
     public class CLNovelController : ControllerBase
     {
+        #region Private Member
+
         /// <summary>
         /// Declare instance of BLNovel class
         /// </summary>
         private BLNovel _objNovel;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initialize instance of BLNovel class
@@ -25,6 +31,10 @@ namespace ActionMethods.Controllers
         {
             _objNovel = new BLNovel();
         }
+
+        #endregion
+
+        #region Public Method
 
         /// <summary>
         /// Retrieves novels asynchronously after a delay of 5 seconds.
@@ -108,6 +118,52 @@ namespace ActionMethods.Controllers
         }
 
         /// <summary>
+        /// Returns an Excel file containing the list of novels.
+        /// </summary>
+        [HttpGet]
+        [Route("GetNovelsExcel")]
+        public IActionResult GetNovelsExcel()
+        {
+            var stream = _objNovel.GenerateNovelsExcel();
+            var contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+            var fileName = "Novels.xlsx";
+            return File(stream, contentType, fileName);
+        }
+
+        /// <summary>
+        /// Returns a JavaScript file containing novel-related functions.
+        /// </summary>
+        [HttpGet]
+        [Route("GetJavaScriptFile")]
+        public IActionResult GetJavaScriptFile()
+        {
+            try
+            {
+                var fileContent = _objNovel.GetJavaScriptFileContent();
+                var contentType = "application/javascript";
+                var fileName = "novels.js";
+                return File(fileContent, contentType, fileName);
+            }
+            catch (FileNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Retrieves the content of the "novels.js" script file and returns it as a JavaScript result.
+        /// </summary>
+        /// <returns>A JavaScriptResult containing the content of the "novels.js" script file.</returns>
+        [HttpGet]
+        [Route("GetNovelScript")]
+        public JavaScriptResult GetNovelScript()
+        {
+            string scriptPath = Path.Combine(Directory.GetCurrentDirectory(), "File", "novels.js");
+            string scriptContent = System.IO.File.ReadAllText(scriptPath);
+            return new JavaScriptResult(scriptContent);
+        }
+
+        /// <summary>
         /// Retrieves a list of novels.
         /// </summary>
         [HttpGet]
@@ -115,6 +171,13 @@ namespace ActionMethods.Controllers
         public IActionResult GetNovels()
         {
             return Ok(_objNovel.GetNovels());
+        }
+
+        [HttpGet]
+        [Route("GetNovelById")]
+        public IActionResult GetNovelsById(int id)
+        {
+            return Ok(_objNovel.GetNovelById(id));
         }
 
         /// <summary>
@@ -173,5 +236,7 @@ namespace ActionMethods.Controllers
                 return Ok(result);
             }
         }
+
+        #endregion
     }
 }

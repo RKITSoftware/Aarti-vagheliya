@@ -17,7 +17,7 @@ namespace Job_Finder.Model.POCO
         /// <summary>
         /// Gets or sets the job title.
         /// </summary>
-        public string L01F02 { get; set; }
+        public string L01F02 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the company ID.

@@ -44,6 +44,7 @@ namespace FiltersApi.Filters
                 {
                     // Add the custom header
                     context.HttpContext.Response.Headers.Add(_headerName, _headerValue);
+
                     // Update the context.Result with the modified value
                     context.Result = new ObjectResult(listOfObjects);
                 }

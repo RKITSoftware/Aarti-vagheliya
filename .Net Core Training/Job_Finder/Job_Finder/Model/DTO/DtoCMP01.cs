@@ -7,7 +7,7 @@ namespace Job_Finder.Model.DTO
     /// <summary>
     /// Data Transfer Object (DTO) for representing company details.
     /// </summary>
-    public class DtoCMP01
+    public class DTOCMP01
     {
         #region Public Properties
 

@@ -12,8 +12,17 @@ namespace Exception_Handling.Controllers
         /// <summary>
         /// Generates a NullReferenceException by accessing a property of a null object.
         /// </summary>
-        [HttpGet("nullreference")]
+        [HttpGet("nullreference" , Order = 5)]
         public IActionResult GenerateNullReferenceException()
+        {
+            string nullString = null;
+
+            // This line will throw a NullReferenceException
+            return Ok(nullString.Length);
+        }
+
+        [HttpGet("nullreference", Order = 6)]
+        public IActionResult GenerateNullReferenceExceptio()
         {
             string nullString = null;
 

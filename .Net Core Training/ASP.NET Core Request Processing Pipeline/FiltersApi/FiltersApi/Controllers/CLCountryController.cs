@@ -46,7 +46,7 @@ namespace FiltersApi.Controllers
         [Route("GetAllCountries")]  
         public IActionResult GetAllCountries()
         {
-           // throw new Exception("Error occured.");
+            //throw new Exception("Error occured.");
             return Ok(_objBLCountry.GetCountries());
         }
 

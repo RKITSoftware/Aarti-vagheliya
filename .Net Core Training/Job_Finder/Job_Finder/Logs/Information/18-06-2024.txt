@@ -1,0 +1,27 @@
+2024-06-18 16:54:28.3791 | INFO | Job_Finder.Program | Hello 
+2024-06-18 16:54:34.2463 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/index.html - - 
+2024-06-18 16:54:34.5926 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/index.html - - - 200 - text/html;charset=utf-8 359.8982ms 
+2024-06-18 16:54:34.5926 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-18 16:54:34.6088 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.2651ms 
+2024-06-18 16:54:34.6088 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/_vs/browserLink - - 
+2024-06-18 16:54:34.8258 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 214.3953ms 
+2024-06-18 16:54:34.9133 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - 
+2024-06-18 16:54:35.5085 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 595.9734ms 
+2024-06-18 16:55:10.2325 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLRegistration/Login?userName=Arti&password=arti - - 
+2024-06-18 16:55:10.2802 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLRegistrationController.Login (Job_Finder)' 
+2024-06-18 16:55:10.3331 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "Login", controller = "CLRegistration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String, System.String) on controller Job_Finder.Controllers.CLRegistrationController (Job_Finder). 
+2024-06-18 16:55:10.3607 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLRegistrationController.Login (Job_Finder) - Validation state: Valid 
+2024-06-18 16:55:11.4739 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLRegistrationController.Login (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1103.5262ms. 
+2024-06-18 16:55:11.4836 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2024-06-18 16:55:11.5184 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLRegistrationController.Login (Job_Finder) in 1184.3502ms 
+2024-06-18 16:55:11.5184 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLRegistrationController.Login (Job_Finder)' 
+2024-06-18 16:55:11.5184 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLRegistration/Login?userName=Arti&password=arti - - - 200 205 application/json;+charset=utf-8 1289.1313ms 
+2024-06-18 16:55:30.4814 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7170/api/CLCMP01/GetAllCompanies - - 
+2024-06-18 16:55:30.4836 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)' 
+2024-06-18 16:55:30.4836 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetAllCompanies", controller = "CLCMP01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompanies() on controller Job_Finder.Controllers.CLCMP01Controller (Job_Finder). 
+2024-06-18 16:55:30.5964 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder) - Validation state: Valid 
+2024-06-18 16:55:30.6429 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 40.7112ms. 
+2024-06-18 16:55:30.6429 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Job_Finder.Model.Response'. 
+2024-06-18 16:55:30.6586 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder) in 173.5106ms 
+2024-06-18 16:55:30.6586 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Job_Finder.Controllers.CLCMP01Controller.GetAllCompanies (Job_Finder)' 
+2024-06-18 16:55:30.6586 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7170/api/CLCMP01/GetAllCompanies - - - 200 266 application/json;+charset=utf-8 177.4630ms 

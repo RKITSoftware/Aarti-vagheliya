@@ -32,6 +32,13 @@ namespace Routing.Controllers
             return Ok(_objBLMovie.GetMovies());
         }
 
+        // Not work
+        //[HttpGet("GetList")]
+        //public IActionResult Get()
+        //{
+        //    return Ok("Hello");
+        //}
+
         /// <summary>
         /// Retrieves a single movie by its ID.
         /// </summary>
@@ -86,7 +93,7 @@ namespace Routing.Controllers
         /// </summary>
         /// <param name="id">The ID of the movie to delete.</param>
         /// <returns>Ok if the movie was successfully deleted, otherwise returns NotFound.</returns>
-        [HttpDelete]
+        [HttpDelete("DeleteMovie")]
         public IActionResult Delete(int id)
         {
             if (_objBLMovie.Delete(id))

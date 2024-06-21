@@ -27,7 +27,7 @@ namespace Job_Finder.Model.POCO
         /// <summary>
         /// Gets or sets the job application status.
         /// </summary>
-        public enmJobApplicationStatus A01F04 { get; set; } = enmJobApplicationStatus.Ap;
+        public enmJobApplicationStatus A01F04 { get; set; } = enmJobApplicationStatus.AP;
 
         #endregion
     }

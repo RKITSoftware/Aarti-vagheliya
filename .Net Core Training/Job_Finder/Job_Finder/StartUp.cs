@@ -14,13 +14,29 @@ namespace Job_Finder
     /// </summary>
     public class StartUp
     {
+        #region Private Fields
+
+        /// <summary>
+        /// Configuration object to access application settings.
+        /// </summary>
         private readonly IConfiguration _configuration;
 
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StartUp"/> class.
+        /// </summary>
+        /// <param name="configuration">The configuration settings for the application.</param>
         public StartUp(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Configures the services for the application.
@@ -35,7 +51,8 @@ namespace Job_Finder
             service.AddControllers(config =>
             {
                 //config.Filters.Add(new AuthenticationFilter());
-                
+                //config.Filters.Add<ExceptionFilter>();  // Register the exception filter globally without middleware.
+
             }).AddNewtonsoftJson();
 
             service.AddSwaggerGenNewtonsoftSupport();
@@ -90,6 +107,7 @@ namespace Job_Finder
             service.AddTransient<ICRUDService<JOS01>, CRUDImplementation<JOS01>>();
             service.AddTransient<ICRUDService<JOA01>, CRUDImplementation<JOA01>>();
             service.AddSingleton<IFileService, BLFileServiceHandler>();
+            service.AddTransient<IEmailService, BLEmailServiceHandler>();
            
         }
 
@@ -112,9 +130,14 @@ namespace Job_Finder
             // Add CORS middleware
             app.UseCORSMiddleware();
 
+            // Add Exception Filter through Middleware.
+            app.UseExceptionMiddleware();
+
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints => endpoints.MapControllers());
         }
+
+        #endregion
     }
 }

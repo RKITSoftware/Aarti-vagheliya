@@ -1,5 +1,8 @@
 ﻿namespace Controller_Initialization.Model
 {
+    /// <summary>
+    /// managing properties for state class.
+    /// </summary>
     public class STT01
     {
         /// <summary>

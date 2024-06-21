@@ -71,9 +71,9 @@ namespace Job_Finder.BusinessLogic
         /// Sets the CMP01 object based on the DTO object.
         /// </summary>
         /// <param name="objDtoCMP01">The DTO object to map to CMP01.</param>
-        public void PreSave(DtoCMP01 objDtoCMP01)
+        public void PreSave(DTOCMP01 objDtoCMP01)
         {
-            _objCMP01 = _objBLHelper.Map<DtoCMP01, CMP01>(objDtoCMP01);
+            _objCMP01 = _objBLHelper.Map<DTOCMP01, CMP01>(objDtoCMP01);
             objCRUDCMP01.obj = _objCMP01;
             objCRUDCMP01.objOperation = OperationType;
         }
@@ -88,7 +88,7 @@ namespace Job_Finder.BusinessLogic
 
             if (OperationType == enmOperationType.I)
             {
-                if (_objCMP01 == null && _objCMP01.P01F05 <= 10)
+                if (_objCMP01.P01F05 <= 10)
                 {
                     _objResponse.isError = true;
                     _objResponse.Message = "Enter valid data.";
@@ -169,8 +169,7 @@ namespace Job_Finder.BusinessLogic
             }
 
             // Generate a unique file name for the Excel file
-            string fileName = $"{companyName}_JobListing_{DateTime.Now:dd-MM-yyyy}.xlsx";
-            string filePath = Path.Combine(jobListingDirectory, fileName);
+            string fileName = $"{companyName}_JobListing_{DateTime.Now:dd-MM-yyyy}.xlsx", filePath = Path.Combine(jobListingDirectory, fileName);
 
             // Create a new Excel package
             using (var package = new ExcelPackage())

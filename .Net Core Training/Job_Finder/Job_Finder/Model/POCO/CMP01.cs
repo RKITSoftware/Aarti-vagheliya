@@ -17,17 +17,17 @@ namespace Job_Finder.Model.POCO
         /// <summary>
         /// Gets or sets the company name.
         /// </summary>
-        public string P01F02 { get; set; }
+        public string P01F02 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the company website URL.
         /// </summary>
-        public string P01F03 { get; set; }
+        public string P01F03 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the company location.
         /// </summary>
-        public string P01F04 { get; set; }
+        public string P01F04 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the company capacity.

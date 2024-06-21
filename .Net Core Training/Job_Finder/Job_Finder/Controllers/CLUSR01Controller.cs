@@ -45,9 +45,8 @@ namespace Job_Finder.Controllers
         /// Gets all users.
         /// </summary>
         /// <returns>A list of all users.</returns>
-        [HttpGet]
+        [HttpGet("GetAllUsers")]
         [AuthorizationFilter("A")]
-        [Route("GetAllUsers")]
         public IActionResult GetAllUsers()
         {
             Response response = new Response();
@@ -61,9 +60,8 @@ namespace Job_Finder.Controllers
         ///// </summary>
         ///// <param name="dtoUSR01">The DTO containing user details.</param>
         ///// <returns>The response after adding the user.</returns>
-        //[HttpPost]
-        //[Route("AddUser")]
-        //public IActionResult AddUser(DtoUSR01 dtoUSR01)
+        //[HttpPost("AddUser]
+        //public IActionResult AddUser(DTOUSR01 dtoUSR01)
         //{
         //    _objBLUSR01Handler.objOperation = Enum.enmOperationType.I;
 
@@ -82,10 +80,9 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="dtoUSR01">The DTO containing updated user details.</param>
         /// <returns>The response after updating the user.</returns>
-        [HttpPut]
+        [HttpPut("UpdateUser")]
         [AuthorizationFilter("A")]
-        [Route("UpdateUser")]
-        public IActionResult UpdateUser(DtoUSR01 dtoUSR01)
+        public IActionResult UpdateUser(DTOUSR01 dtoUSR01)
         {
             _objBLUSR01Handler.objOperation = Enum.enmOperationType.U;
 
@@ -104,9 +101,8 @@ namespace Job_Finder.Controllers
         /// </summary>
         /// <param name="id">The ID of the user to delete.</param>
         /// <returns>The response after deleting the user.</returns>
-        [HttpDelete]
+        [HttpDelete("DeleteUser")]
         [AuthorizationFilter("A")]
-        [Route("DeleteUser")]
         public IActionResult DeleteUser(int id)
         {
             _objBLUSR01Handler.objOperation = Enum.enmOperationType.D;

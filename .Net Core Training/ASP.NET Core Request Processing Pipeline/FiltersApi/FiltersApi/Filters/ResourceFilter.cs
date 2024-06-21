@@ -37,7 +37,7 @@ namespace FiltersApi.Filters
 
                 await next();
                 var result = _objCache.Get("ResultAsync");
-                Console.WriteLine(result);
+                //Console.WriteLine(result);
                 context.Result = new ObjectResult(result);
             }
             catch (Exception ex)

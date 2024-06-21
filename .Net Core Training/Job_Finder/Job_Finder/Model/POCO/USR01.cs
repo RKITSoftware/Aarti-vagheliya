@@ -17,17 +17,17 @@ namespace Job_Finder.Model.POCO
         /// <summary>
         /// Gets or sets the username.
         /// </summary>
-        public string R01F02 { get; set; }
+        public string R01F02 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the password.
         /// </summary>
-        public string R01F03 { get; set; }
+        public string R01F03 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the email address.
         /// </summary>
-        public string R01F04 { get; set; }
+        public string R01F04 { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the user role.

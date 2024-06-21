@@ -14,6 +14,16 @@
             service.AddControllers();
             service.AddEndpointsApiExplorer();
             service.AddSwaggerGen();
+            service.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
         }
 
         /// <summary>
@@ -32,6 +42,9 @@
 
             app.UseStaticFiles();
             app.UseRouting();
+
+            app.UseCors("AllowAllOrigins");
+
             app.UseAuthorization();
             app.UseEndpoints(endpoints => endpoints.MapControllers());
         }
