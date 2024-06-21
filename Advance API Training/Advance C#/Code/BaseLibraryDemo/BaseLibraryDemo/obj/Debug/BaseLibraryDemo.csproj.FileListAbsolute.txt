@@ -6,3 +6,11 @@ F:\Arti-368\New folder\Advance API\Advance C#\Code\BaseLibraryDemo\BaseLibraryDe
 F:\Arti-368\New folder\Advance API\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\obj\Debug\BaseLibraryDemo.csproj.CoreCompileInputs.cache
 F:\Arti-368\New folder\Advance API\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\obj\Debug\BaseLibraryDemo.exe
 F:\Arti-368\New folder\Advance API\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\obj\Debug\BaseLibraryDemo.pdb
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\bin\Debug\BaseLibraryDemo.exe.config
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\bin\Debug\BaseLibraryDemo.exe
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\bin\Debug\BaseLibraryDemo.pdb
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\obj\Debug\BaseLibraryDemo.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\obj\Debug\BaseLibraryDemo.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\obj\Debug\BaseLibraryDemo.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\obj\Debug\BaseLibraryDemo.exe
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\BaseLibraryDemo\BaseLibraryDemo\obj\Debug\BaseLibraryDemo.pdb

@@ -13,7 +13,7 @@ namespace Security_Cryptography.BL
         /// </summary>
         /// <param name="data">Data for which to generate the signature.</param>
         /// <returns>Generated digital signature.</returns>
-        public static byte[] GenerateSignature(string data)
+        public byte[] GenerateSignature(string data)
         {
             // Create a new instance of RSACryptoServiceProvider
             using (var rsa = new RSACryptoServiceProvider())
@@ -38,7 +38,7 @@ namespace Security_Cryptography.BL
         /// <param name="data">Data for which to verify the signature.</param>
         /// <param name="signature">Digital signature to be verified.</param>
         /// <returns>True if the signature is valid, otherwise false.</returns>
-        public static bool VerifySignature(string data, byte[] signature)
+        public bool VerifySignature(string data, byte[] signature)
         {
             // Create a new instance of RSACryptoServiceProvider
             using (var rsa = new RSACryptoServiceProvider())

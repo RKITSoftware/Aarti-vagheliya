@@ -70,7 +70,9 @@ namespace FinalDemo_Advance_C_
                                          .Description("Bearer Token Authentication")
                                          .Name("Authorization")
                                          .In("header");
+
                         c.OperationFilter<AssignOAuth2SecurityRequirements>();
+
                         // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")

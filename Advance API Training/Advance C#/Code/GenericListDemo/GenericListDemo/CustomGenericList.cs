@@ -8,24 +8,46 @@ namespace GenericListDemo
     /// <typeparam name="T">The type of elements in the list.</typeparam>
     class CustomGenericList<T> 
     {
-        #region Node Class
-        // Inner class representing a node in the list
+        #region Private Node Class
+        
+        /// <summary>
+        /// Inner class representing a node in the list
+        /// </summary>
         private class Node
         {
+            #region Constructor
+
+            /// <summary>
+            /// Constructor initialize Node, data and null pointer.
+            /// </summary>
+            /// <param name="data"></param>
             public Node(T data)
             {
                 Data = data;
                 Next = null;
             }
+            #endregion
 
+            #region Public Member
+
+            /// <summary>
+            /// Represents the data stored in the node.
+            /// </summary>
             public T Data { get; }
+
+            /// <summary>
+            /// Represents the reference to the next node in the linked list.
+            /// </summary>
             public Node Next { get; set; }
+
+            #endregion
         }
 
         #endregion
 
-        #region   Fields
-        // Fields
+        #region  Private Member
+
+        // Private instance of Node class.
         private Node head;
 
         #endregion
@@ -43,11 +65,10 @@ namespace GenericListDemo
 
         #endregion
 
-        #region Methods
+        #region Public Methods
 
         #region AddFirst
 
-        // Method to add an element to the beginning of the list
         /// <summary>
         /// Adds an element to the beginning of the list.
         /// </summary>
@@ -63,7 +84,6 @@ namespace GenericListDemo
 
         #region AddLast
 
-        // Method to add an element to the end of the list
         /// <summary>
         /// Adds an element to the end of the list.
         /// </summary>
@@ -90,7 +110,6 @@ namespace GenericListDemo
 
         #region RemoveFirst
 
-        // Method to remove the first element from the list
         /// <summary>
         /// Removes the first element from the list.
         /// </summary>
@@ -106,7 +125,6 @@ namespace GenericListDemo
 
         #region RemoveLast
 
-        // Method to remove the last element from the list
         /// <summary>
         /// Removes the last element from the list.
         /// </summary>
@@ -135,7 +153,6 @@ namespace GenericListDemo
 
         #region Traverse
 
-        // Method to traverse the list and print its elements
         /// <summary>
         /// Traverses the list and prints its elements.
         /// </summary>
@@ -153,7 +170,6 @@ namespace GenericListDemo
 
         #region AddPosition
 
-        // Method to add an element at a specific position in the list
         /// <summary>
         /// Adds an element at a specific position in the list.
         /// </summary>
@@ -205,7 +221,6 @@ namespace GenericListDemo
 
         #region RemoveAt
 
-        // Method to remove an element at a specific position from the list
         /// <summary>
         /// Removes an element at a specific position from the list.
         /// </summary>

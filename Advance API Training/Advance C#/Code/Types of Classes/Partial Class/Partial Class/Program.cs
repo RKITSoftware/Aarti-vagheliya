@@ -14,14 +14,14 @@ namespace Partial_Class
         static void Main(string[] args)
         {
             // Create an instance of User
-            User user = new User();
+            User objUser = new User();
 
             // Take input for registration
             Console.WriteLine("Enter username for registration:");
             string username = Console.ReadLine();
 
             // Register the user
-            user.Register(username);
+            objUser.Register(username);
 
             Console.WriteLine();
 
@@ -30,7 +30,7 @@ namespace Partial_Class
             string loginUsername = Console.ReadLine();
 
             // Login the user
-            user.Login(loginUsername);
+            objUser.Login(loginUsername);
 
             Console.ReadLine();
 

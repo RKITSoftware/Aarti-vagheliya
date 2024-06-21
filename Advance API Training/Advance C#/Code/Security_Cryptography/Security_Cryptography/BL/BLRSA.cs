@@ -16,7 +16,7 @@ namespace Security_Cryptography.BL
         /// </summary>
         /// <param name="data">Input data to be encrypted</param>
         /// <returns>Encrypted data as a Base64-encoded string</returns>
-        public static string EncryptedByRSA(string data)
+        public string EncryptedByRSA(string data)
         {
             // Convert input data to bytes
             byte[] bytes = Encoding.UTF8.GetBytes(data);
@@ -33,7 +33,7 @@ namespace Security_Cryptography.BL
         /// </summary>
         /// <param name="data">Encrypted data as a Base64-encoded string</param>
         /// <returns>Decrypted data as a UTF-8 encoded string</returns>
-        public static string DecryptByRSA(string data)
+        public string DecryptByRSA(string data)
         {
             // Convert Base64-encoded string to bytes
             byte[] bytes = Convert.FromBase64String(data);

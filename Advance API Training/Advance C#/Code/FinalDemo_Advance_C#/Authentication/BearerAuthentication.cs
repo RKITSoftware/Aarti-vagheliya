@@ -1,5 +1,5 @@
 ﻿using FinalDemo_Advance_C_.Bussiness_Logic;
-using FinalDemo_Advance_C_.Models;
+using FinalDemo_Advance_C_.Models.POCO;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
@@ -22,8 +22,10 @@ namespace FinalDemo_Advance_C_.Authentication
     {
         #region Private member
 
-        // Instance of BLUser class for user authentication
-        private BLUser _objBLUser = new BLUser();
+        /// <summary>
+        /// Instance of BLUSR01Handler class for user authentication
+        /// </summary>
+        private BLUSR01Handler _objBLUSR01Handler = new BLUSR01Handler();
 
         #endregion
 
@@ -67,7 +69,7 @@ namespace FinalDemo_Advance_C_.Authentication
 
                 JObject json = JObject.Parse(decodedPayload); // Parsing the payload as JSON object
 
-                USR01 user = _objBLUser.GetAllUsers().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString()); // Getting user details from the payload
+                USR01 user = _objBLUSR01Handler.GetUsers().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString()); // Getting user details from the payload
 
                 // create an identity => i.e., attach username which is used to identify the user
                 GenericIdentity identity = new GenericIdentity(user.R01F02); // Creating a generic identity for the user

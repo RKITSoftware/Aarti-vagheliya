@@ -20,7 +20,7 @@ namespace FinalDemo_Advance_C_
             );
 
             //for enum configuration for serialization
-            BLUser.Configure();
+            BLUSR01Handler.Configure();
 
             // Register the global exception filter
             config.Filters.Add(new GlobalExceptionFilterAttribute());

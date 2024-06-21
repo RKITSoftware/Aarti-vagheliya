@@ -6,3 +6,11 @@ F:\Arti-368\New folder\Advance API\Advance C#\Code\FileSystemDemo\FileSystemDemo
 F:\Arti-368\New folder\Advance API\Advance C#\Code\FileSystemDemo\FileSystemDemo\obj\Debug\FileSystemDemo.csproj.CoreCompileInputs.cache
 F:\Arti-368\New folder\Advance API\Advance C#\Code\FileSystemDemo\FileSystemDemo\obj\Debug\FileSystemDemo.exe
 F:\Arti-368\New folder\Advance API\Advance C#\Code\FileSystemDemo\FileSystemDemo\obj\Debug\FileSystemDemo.pdb
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FileSystemDemo\FileSystemDemo\bin\Debug\FileSystemDemo.exe.config
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FileSystemDemo\FileSystemDemo\bin\Debug\FileSystemDemo.exe
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FileSystemDemo\FileSystemDemo\bin\Debug\FileSystemDemo.pdb
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FileSystemDemo\FileSystemDemo\obj\Debug\FileSystemDemo.csproj.AssemblyReference.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FileSystemDemo\FileSystemDemo\obj\Debug\FileSystemDemo.csproj.SuggestedBindingRedirects.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FileSystemDemo\FileSystemDemo\obj\Debug\FileSystemDemo.csproj.CoreCompileInputs.cache
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FileSystemDemo\FileSystemDemo\obj\Debug\FileSystemDemo.exe
+F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FileSystemDemo\FileSystemDemo\obj\Debug\FileSystemDemo.pdb

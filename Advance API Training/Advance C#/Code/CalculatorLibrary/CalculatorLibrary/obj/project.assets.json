@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Arti-368\\New folder\\Advance API\\Advance C#\\Code\\CalculatorLibrary\\CalculatorLibrary\\CalculatorLibrary.csproj",
+      "projectUniqueName": "F:\\Arti-368\\New folder\\Advance API Training\\Advance C#\\Code\\CalculatorLibrary\\CalculatorLibrary\\CalculatorLibrary.csproj",
       "projectName": "CalculatorLibrary",
-      "projectPath": "F:\\Arti-368\\New folder\\Advance API\\Advance C#\\Code\\CalculatorLibrary\\CalculatorLibrary\\CalculatorLibrary.csproj",
+      "projectPath": "F:\\Arti-368\\New folder\\Advance API Training\\Advance C#\\Code\\CalculatorLibrary\\CalculatorLibrary\\CalculatorLibrary.csproj",
       "packagesPath": "C:\\Users\\aarti.v\\.nuget\\packages\\",
-      "outputPath": "F:\\Arti-368\\New folder\\Advance API\\Advance C#\\Code\\CalculatorLibrary\\CalculatorLibrary\\obj\\",
+      "outputPath": "F:\\Arti-368\\New folder\\Advance API Training\\Advance C#\\Code\\CalculatorLibrary\\CalculatorLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aarti.v\\AppData\\Roaming\\NuGet\\NuGet.Config",

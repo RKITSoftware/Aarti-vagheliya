@@ -15,6 +15,7 @@ namespace BaseLibraryDemo
         static void Main(string[] args)
         {
             #region Integer Stack Implemetation
+
             // Create an instance of CustomStack for integers
             CustomStack<int> intStack = new CustomStack<int>();
 
@@ -36,6 +37,7 @@ namespace BaseLibraryDemo
             #endregion
 
             #region String Stack Implemetation
+
             // Create an instance of CustomStack for strings
             CustomStack<string> stringStack = new CustomStack<string>();
 

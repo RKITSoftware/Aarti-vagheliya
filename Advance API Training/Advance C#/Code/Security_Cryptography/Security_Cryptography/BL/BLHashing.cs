@@ -13,7 +13,7 @@ namespace Security_Cryptography.BL
         /// </summary>
         /// <param name="input">The input string to compute the hash value for.</param>
         /// <returns>The SHA256 hash value as a hexadecimal string.</returns>
-        public static string ComputeSHA256Hash(string input)
+        public string ComputeSHA256Hash(string input)
         {
              // Create an instance of the SHA256 hashing algorithm
             using (var sha256 = SHA256.Create())

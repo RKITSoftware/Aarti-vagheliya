@@ -1,52 +1,62 @@
 [
   {
-    "TransactionID": 7,
-    "ProductName": "KitKat",
-    "TransactionDate": "2024-02-23T10:12:22",
-    "TransactionType": "Sale",
-    "PartyName": "Oreo",
-    "Quantity": 2,
-    "NetPrice": 50.00,
-    "Description": "string"
+    "TransactionID": 1,
+    "ProductName": "File",
+    "TransactionDate": "2024-04-23T11:15:10",
+    "TransactionType": "S",
+    "PartyName": "Shreeji Stationary",
+    "Quantity": 10,
+    "NetPrice": 1000.00,
+    "Description": "Sale File"
   },
   {
-    "TransactionID": 8,
-    "ProductName": "KitKat",
-    "TransactionDate": "2024-02-23T10:32:46",
-    "TransactionType": "Sale",
-    "PartyName": "Oreo",
-    "Quantity": 5,
-    "NetPrice": 125.00,
-    "Description": "stringll"
-  },
-  {
-    "TransactionID": 10,
-    "ProductName": "KitKat",
-    "TransactionDate": "2024-02-23T11:09:38",
-    "TransactionType": "Purchase",
-    "PartyName": "Keshav Enterprise",
-    "Quantity": 2,
-    "NetPrice": 20.00,
-    "Description": "string"
-  },
-  {
-    "TransactionID": 11,
+    "TransactionID": 2,
     "ProductName": "Cargo jeans",
-    "TransactionDate": "2024-02-24T07:36:56",
-    "TransactionType": "Purchase",
-    "PartyName": "Om Fashion",
+    "TransactionDate": "2024-04-23T11:15:10",
+    "TransactionType": "P",
+    "PartyName": "Om Enterprise",
     "Quantity": 10,
     "NetPrice": 50000.00,
     "Description": "Purchase jeanse"
   },
   {
-    "TransactionID": 12,
-    "ProductName": "Chair",
-    "TransactionDate": "2024-02-24T07:36:56",
-    "TransactionType": "Sale",
-    "PartyName": "Royal Enterprise",
+    "TransactionID": 3,
+    "ProductName": "LEd TV",
+    "TransactionDate": "2024-04-29T05:09:09",
+    "TransactionType": "P",
+    "PartyName": "Renuz cafe",
     "Quantity": 10,
-    "NetPrice": 40000.00,
-    "Description": "Sale Chair"
+    "NetPrice": 500000.00,
+    "Description": "LED TV Purchase"
+  },
+  {
+    "TransactionID": 4,
+    "ProductName": "LEd TV",
+    "TransactionDate": "2024-04-29T05:09:09",
+    "TransactionType": "P",
+    "PartyName": "Konvoz",
+    "Quantity": 10,
+    "NetPrice": 500000.00,
+    "Description": "LED TV Purchase"
+  },
+  {
+    "TransactionID": 5,
+    "ProductName": "Chair",
+    "TransactionDate": "2024-05-28T09:58:20",
+    "TransactionType": "S",
+    "PartyName": "Marvels",
+    "Quantity": 5,
+    "NetPrice": 20000.00,
+    "Description": "string"
+  },
+  {
+    "TransactionID": 6,
+    "ProductName": "Chair",
+    "TransactionDate": "2024-05-29T10:04:48",
+    "TransactionType": "S",
+    "PartyName": "Marvels",
+    "Quantity": 2,
+    "NetPrice": 8000.00,
+    "Description": "string"
   }
 ]

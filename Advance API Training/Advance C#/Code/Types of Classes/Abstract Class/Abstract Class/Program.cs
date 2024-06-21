@@ -134,24 +134,29 @@ namespace Abstract_Class
     }
     #endregion
 
-
+    /// <summary>
+    /// Main class of the program.
+    /// </summary>
     class Program
     {
-
+        /// <summary>
+        /// Main method of the program.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             // Creating instances of derived classes
-            Car myCar = new Car("Civic", "Honda");
-            Motorcycle myMotorcycle = new Motorcycle("Ninja", "Kawasaki");
+            Car objMyCar = new Car("Civic", "Honda");
+            Motorcycle objMyMotorcycle = new Motorcycle("Ninja", "Kawasaki");
 
             // Calling abstract method and non-abstract method
-            myCar.Start();
-            myCar.DisplayInfo();
+            objMyCar.Start();
+            objMyCar.DisplayInfo();
 
             Console.WriteLine();
 
-            myMotorcycle.Start();
-            myMotorcycle.DisplayInfo();
+            objMyMotorcycle.Start();
+            objMyMotorcycle.DisplayInfo();
 
             // Note: Destructors are automatically called by the garbage collector, so we don't explicitly call them here.
 

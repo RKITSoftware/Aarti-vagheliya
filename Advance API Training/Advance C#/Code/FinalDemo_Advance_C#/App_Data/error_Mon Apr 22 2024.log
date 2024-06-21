@@ -1,0 +1,55 @@
+[DateTime: 22-04-2024 17:49:46] Exception Details:
+Exception Type: System.ArgumentException
+Exception Message: Requested value 'Admin' was not found.
+Stack Trace:    at System.Enum.TryParseEnum(Type enumType, String value, Boolean ignoreCase, EnumResult& parseResult)
+   at System.Enum.Parse(Type enumType, String value, Boolean ignoreCase)
+   at ServiceStack.Text.EnumInfo.Parse(String serializedValue) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.Text/src/ServiceStack.Text/CachedTypeInfo.cs:line 101
+   at ServiceStack.Text.Common.JsReader`1.<>c__DisplayClass4_0`1.<GetCoreParseStringSpanFn>b__1(ReadOnlySpan`1 x) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.Text/src/ServiceStack.Text/Common/JsReader.cs:line 50
+   at ServiceStack.Text.Jsv.JsvReader.<>c__DisplayClass2_0.<GetParseFn>b__0(String v) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.Text/src/ServiceStack.Text/Jsv/JsvReader.Generic.cs:line 18
+   at ServiceStack.OrmLite.Converters.EnumConverter.FromDbValue(Type fieldType, Object value) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/Converters/SpecialConverters.cs:line 189
+   at ServiceStack.OrmLite.OrmLiteWriteCommandExtensions.PopulateObjectWithSqlReader[T](IOrmLiteDialectProvider dialectProvider, Object objWithProperties, IDataReader reader, Tuple`3[] indexCache, Object[] values) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteWriteCommandExtensions.cs:line 386
+   at ServiceStack.OrmLite.OrmLiteWriteCommandExtensions.PopulateWithSqlReader[T](T objWithProperties, IOrmLiteDialectProvider dialectProvider, IDataReader reader, Tuple`3[] indexCache, Object[] values) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteWriteCommandExtensions.cs:line 331
+   at ServiceStack.OrmLite.OrmLiteUtils.ConvertToList[T](IDataReader reader, IOrmLiteDialectProvider dialectProvider, HashSet`1 onlyFields) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteUtils.cs:line 267
+   at ServiceStack.OrmLite.OrmLiteResultsFilterExtensions.ConvertToList[T](IDbCommand dbCmd, String sql) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteResultsFilterExtensions.cs:line 99
+   at ServiceStack.OrmLite.OrmLiteReadCommandExtensions.Select[T](IDbCommand dbCmd, String sql, Object anonType) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteReadCommandExtensions.cs:line 487
+   at ServiceStack.OrmLite.OrmLiteExecFilter.Exec[T](IDbConnection dbConn, Func`2 filter) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteExecFilter.cs:line 75
+   at FinalDemo_Advance_C_.Bussiness_Logic.BLUSR01Handler.GetUsers() in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Bussiness_Logic\BLUSR01Handler.cs:line 223
+   at FinalDemo_Advance_C_.Authentication.BasicAuthentication.OnActionExecuting(HttpActionContext actionContext) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Authentication\BasicAuthentication.cs:line 56
+   at System.Web.Http.Filters.ActionFilterAttribute.OnActionExecutingAsync(HttpActionContext actionContext, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+----------------------------------------------------------------
+
+[DateTime: 22-04-2024 17:58:13] Exception Details:
+Exception Type: System.NullReferenceException
+Exception Message: Object reference not set to an instance of an object.
+Stack Trace:    at FinalDemo_Advance_C_.DataBase.DBCAT01Context.AddCategory(CAT01 objCAT01) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\DataBase\DBCAT01Context.cs:line 69
+   at FinalDemo_Advance_C_.Bussiness_Logic.BLCAT01Handler.Save() in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Bussiness_Logic\BLCAT01Handler.cs:line 77
+   at FinalDemo_Advance_C_.Controllers.CLCAT01Controller.AddCategory(DtoCAT01 Category) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Controllers\CLCAT01Controller.cs:line 66
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+----------------------------------------------------------------
+

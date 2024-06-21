@@ -39,5 +39,10 @@ namespace ORMDemo.Models
         /// Gets or sets the student's email ID.
         /// </summary>
         public string D01F06 { get; set; }
+
+        /// <summary>
+        /// Faculty Id.
+        /// </summary>
+        public int D01F07 { get; set; }
     }
 }

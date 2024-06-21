@@ -10,7 +10,7 @@ namespace ORMDemo.BL
     /// </summary>
     public class BLSTD01
     {
-        #region Select Method
+        #region Public Method
 
         /// <summary>
         /// Selects all records from table STD01
@@ -33,9 +33,6 @@ namespace ORMDemo.BL
             }
         }
 
-        #endregion
-
-        #region Insert Method
 
         /// <summary>
         /// Inserts a new record into table STD01
@@ -59,9 +56,6 @@ namespace ORMDemo.BL
             }
         }
 
-        #endregion
-
-        #region Update Method
 
         /// <summary>
         /// Updates a record in table STD01
@@ -92,9 +86,6 @@ namespace ORMDemo.BL
             }
         }
 
-        #endregion
-
-        #region Delete Method
 
         /// <summary>
         /// Deletes a record from table STD01

@@ -10,18 +10,26 @@ namespace ORMDemo.Controllers
     [RoutePrefix("api/Student")]
     public class CLSTD01Controller : ApiController
     {
+        #region Private Member
+
         //Create instance of BLStudent class
-        private readonly BLSTD01 objBLStudent;
+        private readonly BLSTD01 _objBLStudent;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initialize object of BLSTD01
         /// </summary>
         public CLSTD01Controller()
         {
-            objBLStudent = new BLSTD01();
+            _objBLStudent = new BLSTD01();
         }
 
-        #region GetAll
+        #endregion
+
+        #region Public methods
 
         /// <summary>
         /// Gets all data of students
@@ -31,12 +39,9 @@ namespace ORMDemo.Controllers
         [Route("GetAll")]
         public IHttpActionResult GetAll()
         {
-            return Ok(objBLStudent.Select());
+            return Ok(_objBLStudent.Select());
         }
 
-        #endregion
-
-        #region AddStudent
 
         /// <summary>
         /// Adds student into the list
@@ -47,12 +52,9 @@ namespace ORMDemo.Controllers
         [Route("AddStudent")]
         public IHttpActionResult AddStudent(STD01 objSTD01)
         {
-            return Ok(objBLStudent.Insert(objSTD01));
+            return Ok(_objBLStudent.Insert(objSTD01));
         }
 
-        #endregion
-
-        #region EditStudent
 
         /// <summary>
         /// Edits student in the list
@@ -63,12 +65,9 @@ namespace ORMDemo.Controllers
         [Route("EditStudent")]
         public IHttpActionResult EditStudent(STD01 objSTD01)
         {
-            return Ok(objBLStudent.Update(objSTD01));
+            return Ok(_objBLStudent.Update(objSTD01));
         }
 
-        #endregion
-
-        #region DeleteStudent
 
         /// <summary>
         /// Deletes student from the list
@@ -79,7 +78,7 @@ namespace ORMDemo.Controllers
         [Route("DeleteStudent")]
         public IHttpActionResult DeleteStudent(int id)
         {
-            return Ok(objBLStudent.Delete(id));
+            return Ok(_objBLStudent.Delete(id));
         }
 
         #endregion

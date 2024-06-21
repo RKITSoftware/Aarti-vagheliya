@@ -8,6 +8,10 @@ namespace DynamicType
     /// </summary>
     public class Program
     {
+        /// <summary>
+        /// main method of the program class.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             // Creating a dynamic variable
@@ -46,7 +50,10 @@ namespace DynamicType
             }
         }
 
-        // Sample class for dynamic method invocation
+       
+        /// <summary>
+        /// Sample class for dynamic method invocation
+        /// </summary>
         public class Calculator
         {
             public int Add(int a, int b) => a + b;

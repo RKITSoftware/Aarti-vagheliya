@@ -146,12 +146,17 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="BL\BLFruit.cs" />
-    <Compile Include="Controllers\CLFruitController.cs" />
+    <Compile Include="BL\BLConvertor.cs" />
+    <Compile Include="BL\BLFRT01.cs" />
+    <Compile Include="BL\BLMapper.cs" />
+    <Compile Include="Controllers\CLFRT01Controller.cs" />
+    <Compile Include="DataBase\DBFRT01.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\FRT01.cs" />
+    <Compile Include="Models\DTO\DtoFRT01.cs" />
+    <Compile Include="Models\POCO\FRT01.cs" />
+    <Compile Include="Models\RES01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -196,7 +196,8 @@ namespace ORMDemo.BL
         {
             using (var db = BLConnection.dbFactory.OpenDbConnection())
             {
-                db.Update<FAC01>(ObjFAC01, x => x.C01F01 == id);
+                ObjFAC01.C01F01 = id;
+                db.Update<FAC01>(ObjFAC01);
 
                 ObjRES01.isError = false;
                 ObjRES01.Message = "Success";
@@ -443,6 +444,27 @@ namespace ORMDemo.BL
                 ObjRES01.isError = false;
                 ObjRES01.Message = "Success";
                 ObjRES01.Response = objBLConvertor.ListToDataTable(lookupResults);
+
+                return ObjRES01;
+            }
+        }
+
+        /// <summary>
+        /// Performs a join operation.
+        /// </summary>
+        /// <returns>Return List of data.</returns>
+        public RES01 Join()
+        {
+            using( var db = BLConnection.dbFactory.OpenDbConnection())
+            {
+                var q = db.From<FAC01>()
+                          .Join<FAC01, STD01>((fac, std) => fac.C01F01 == std.D01F07);
+
+                var dbCustomers = db.Select<STD01>(q);
+
+                ObjRES01.isError = false;
+                ObjRES01.Message = "success";
+                ObjRES01.Response = objBLConvertor.ListToDataTable(dbCustomers);
 
                 return ObjRES01;
             }

@@ -12,8 +12,14 @@ namespace ORMDemo.Controllers
     [RoutePrefix("api/CLFAC01")]
     public class CLFAC01Controller : ApiController
     {
-        //Private object of BLFac01 Class
+        #region Private Member
+
+        //Private instance of BLFac01 Class.
         private BLFAC01 _objBLFAC01;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Constructor initialize the object
@@ -22,6 +28,11 @@ namespace ORMDemo.Controllers
         {
             _objBLFAC01 = new BLFAC01();
         }
+
+
+        #endregion
+
+        #region Public Method
 
         /// <summary>
         /// Retrieves all records of FAC01 entity.
@@ -208,5 +219,18 @@ namespace ORMDemo.Controllers
             var result = _objBLFAC01.LookupQuery<FAC01>();
             return Ok(result);
         }
+
+        /// <summary>
+        /// Performs join operation.
+        /// </summary>
+        /// <returns>Data of Joined table.</returns>
+        [HttpGet]
+        [Route("Join")]
+        public IHttpActionResult Join()
+        {
+            return Ok(_objBLFAC01.Join());
+        }
+
+        #endregion
     }
 }

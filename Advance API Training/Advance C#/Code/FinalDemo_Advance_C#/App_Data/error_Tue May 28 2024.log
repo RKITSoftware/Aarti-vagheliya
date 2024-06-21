@@ -1,0 +1,65 @@
+[DateTime: 28-05-2024 14:55:14] Exception Details:
+Exception Type: System.Exception
+Exception Message: Error updating product: Cannot add or update a child row: a foreign key constraint fails (`inventory_management`.`prd01`, CONSTRAINT `FK_D01F03_T01F01` FOREIGN KEY (`D01F03`) REFERENCES `cat01` (`T01F01`))
+Stack Trace:    at FinalDemo_Advance_C_.DataBase.DBPRD01Context.UpdateProduct(PRD01 objPRD01) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\DataBase\DBPRD01Context.cs:line 159
+   at FinalDemo_Advance_C_.Bussiness_Logic.BLPRD01Handler.Save() in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Bussiness_Logic\BLPRD01Handler.cs:line 97
+   at FinalDemo_Advance_C_.Controllers.CLPRD01Controller.UpdateProduct(DtoPRD01 Product) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Controllers\CLPRD01Controller.cs:line 113
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+----------------------------------------------------------------
+
+[DateTime: 28-05-2024 15:27:32] Exception Details:
+Exception Type: System.Exception
+Exception Message: Error in Get Principal : IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28-05-2024 09:43:44', Current time (UTC): '28-05-2024 09:57:32'.
+Stack Trace:    at FinalDemo_Advance_C_.Bussiness_Logic.BLTokenManager.GetPrincipal(String token) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Bussiness_Logic\BLTokenManager.cs:line 86
+   at FinalDemo_Advance_C_.Bussiness_Logic.BLTokenManager.ValidateToken(String token) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Bussiness_Logic\BLTokenManager.cs:line 98
+   at FinalDemo_Advance_C_.Authentication.BearerAuthentication.OnAuthorization(HttpActionContext actionContext) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Authentication\BearerAuthentication.cs:line 42
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.OnAuthorizationAsync(HttpActionContext actionContext, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+----------------------------------------------------------------
+
+[DateTime: 28-05-2024 15:27:56] Exception Details:
+Exception Type: System.Exception
+Exception Message: Error in Get Principal : IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28-05-2024 09:43:44', Current time (UTC): '28-05-2024 09:57:56'.
+Stack Trace:    at FinalDemo_Advance_C_.Bussiness_Logic.BLTokenManager.GetPrincipal(String token) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Bussiness_Logic\BLTokenManager.cs:line 86
+   at FinalDemo_Advance_C_.Bussiness_Logic.BLTokenManager.ValidateToken(String token) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Bussiness_Logic\BLTokenManager.cs:line 98
+   at FinalDemo_Advance_C_.Authentication.BearerAuthentication.OnAuthorization(HttpActionContext actionContext) in F:\Arti-368\New folder\Advance API Training\Advance C#\Code\FinalDemo_Advance_C#\Authentication\BearerAuthentication.cs:line 42
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.OnAuthorizationAsync(HttpActionContext actionContext, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+----------------------------------------------------------------
+

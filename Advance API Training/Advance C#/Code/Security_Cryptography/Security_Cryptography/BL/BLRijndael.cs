@@ -19,7 +19,7 @@ namespace Security_Cryptography.BL
         /// </summary>
         /// <param name="plainText">The plain text to be encrypted.</param>
         /// <returns>The Base64-encoded ciphertext.</returns>
-        public static string Encrypt(string plainText)
+        public string Encrypt(string plainText)
         {
             // Create a Rijndael object
             using (var rijAlg = Rijndael.Create())
@@ -54,7 +54,7 @@ namespace Security_Cryptography.BL
         /// </summary>
         /// <param name="cipherText">The Base64-encoded ciphertext to be decrypted.</param>
         /// <returns>The decrypted plain text.</returns>
-        public static string Decrypt(string cipherText)
+        public string Decrypt(string cipherText)
         {
             // Convert Base64-encoded cipher text to bytes
             byte[] cipherBytes = Convert.FromBase64String(cipherText);

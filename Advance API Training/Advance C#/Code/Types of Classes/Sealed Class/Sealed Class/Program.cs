@@ -59,6 +59,15 @@ namespace Sealed_Class
     }
 
     /// <summary>
+    /// Transaction class inherited from BankAccount
+    /// </summary>
+    // This gives error : Error	CS0509	'Transaction': cannot derive from sealed type 'BankAccount'
+    //public class Transaction : BankAccount
+    //{
+
+    //}
+
+    /// <summary>
     /// Class containing the Main method, serving as the entry point of the program.
     /// </summary>
     class Program

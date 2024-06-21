@@ -14,8 +14,10 @@ namespace FinalDemo_Advance_C_.Controllers
     {
         #region Private member
 
-        // Instance of the user business logic class
-        private BLUser _objBLUser = new BLUser();
+        /// <summary>
+        /// Instance of the BLUSR01Handler class.
+        /// </summary>
+        private BLUSR01Handler _objBLUSR01Handler = new BLUSR01Handler();
 
         #endregion
 
@@ -36,7 +38,7 @@ namespace FinalDemo_Advance_C_.Controllers
             string[] usernamepassword = authToken.Split(':'); // Splits the username and password
             string username = usernamepassword[0]; // Retrieves the username
             string password = usernamepassword[1]; // Retrieves the password
-            var user = _objBLUser.GetAllUsers().FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password); // Retrieves the user from the database based on the provided credentials
+            var user = _objBLUSR01Handler.GetUsers().FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password); // Retrieves the user from the database based on the provided credentials
 
             if (user != null) // Checks if the user exists
             {

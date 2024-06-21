@@ -9,96 +9,81 @@ namespace CustomStackLibrary
     /// <typeparam name="T">The type of elements in the stack.</typeparam>
     public class CustomStack<T>
     {
-        #region Fields
+        #region Private member
 
-        private List<T> stack;
+        //Private instance of List<T>
+        private List<T> _stack;
 
         #endregion
 
         #region Constructors
 
-            /// <summary>
-            /// Initializes a new instance of the <see cref="CustomStack{T}"/> class.
-            /// </summary>  
-            public CustomStack()
-            {
-                stack = new List<T>();
-            }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomStack{T}"/> class.
+        /// </summary>  
+        public CustomStack()
+        {
+            _stack = new List<T>();
+        }
 
-            #endregion
+        #endregion
 
         #region Public Methods
 
-            #region Push
+        /// <summary>
+        /// Pushes an item onto the stack.
+        /// </summary>
+        /// <param name="item">The item to push onto the stack.</param> 
+        public void Push(T item)
+        {
+            _stack.Add(item);
+        }
 
-            /// <summary>
-            /// Pushes an item onto the stack.
-            /// </summary>
-            /// <param name="item">The item to push onto the stack.</param> 
-            public void Push(T item)
+        /// <summary>
+        /// Removes and returns the item at the top of the stack.
+        /// </summary>
+        /// <returns>The item at the top of the stack.</returns>
+        public T Pop()
+        {
+            if (_stack.Count == 0)
             {
-                stack.Add(item);
+                throw new InvalidOperationException("The stack is empty.");
             }
 
-             #endregion
+            T item = _stack[_stack.Count - 1];
+            _stack.RemoveAt(_stack.Count - 1);
+            return item;
+        }
 
-            #region Pop
-
-            /// <summary>
-            /// Removes and returns the item at the top of the stack.
-            /// </summary>
-            /// <returns>The item at the top of the stack.</returns>
-            public T Pop()
+        /// <summary>
+        /// Returns the item at the top of the stack without removing it.
+        /// </summary>
+        /// <returns>The item at the top of the stack.</returns>
+        public T Peek()
+        {
+            if (_stack.Count == 0)
             {
-                if (stack.Count == 0)
-                {
-                    throw new InvalidOperationException("The stack is empty.");
-                }
-
-                T item = stack[stack.Count - 1];
-                stack.RemoveAt(stack.Count - 1);
-                return item;
-            }
-            #endregion
-
-            #region Peek
-
-            /// <summary>
-            /// Returns the item at the top of the stack without removing it.
-            /// </summary>
-            /// <returns>The item at the top of the stack.</returns>
-            public T Peek()
-            {
-                if (stack.Count == 0)
-                {
-                    throw new InvalidOperationException("The stack is empty.");
-                }
-
-                return stack[stack.Count - 1];
+                throw new InvalidOperationException("The stack is empty.");
             }
 
-            #endregion
+            return _stack[_stack.Count - 1];
+        }
 
-            #region Count
-            /// <summary>
-            /// Gets the number of elements contained in the stack.
-            /// </summary>
-            public int Count
-            {
-                get { return stack.Count; }
-            }
-             #endregion
+        /// <summary>
+        /// Gets the number of elements contained in the stack.
+        /// </summary>
+        public int Count
+        {
+            get { return _stack.Count; }
+        }
 
-            #region Clear
-            /// <summary>
-            /// Removes all elements from the stack.
-            /// </summary>
-            public void Clear()
-            {
-                stack.Clear();
-            }
-
-            #endregion
+        /// <summary>
+        /// Removes all elements from the stack.
+        /// </summary>
+        public void Clear()
+        {
+            _stack.Clear();
+        }
 
         #endregion
     }

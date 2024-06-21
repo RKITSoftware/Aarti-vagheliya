@@ -12,6 +12,8 @@ namespace ORMDemo.BL
     /// </summary>
     public class BLConvertor
     {
+        #region Public Method
+
         /// <summary>
         /// Converts a single object to a DataTable.
         /// </summary>
@@ -122,5 +124,7 @@ namespace ORMDemo.BL
 
             return dataTable;
         }
+
+        #endregion
     }
 }

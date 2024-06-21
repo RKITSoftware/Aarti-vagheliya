@@ -86,7 +86,6 @@ namespace FinalDemo_Advance_C_.Bussiness_Logic
                 throw new Exception($"Error in Get Principal : {ex.Message}");
             }
         }
-
        
         /// <summary>
             /// Validates a JWT token.

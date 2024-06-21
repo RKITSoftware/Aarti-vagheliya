@@ -4,35 +4,6 @@ using System.Linq;
 
 namespace ListDemo
 {
-    /// <summary>
-    /// Represents a flower.
-    /// </summary>
-    class Flower
-    {
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the ID of the flower.
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Gets or sets the name of the flower.
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Gets or sets the color of the flower.
-        /// </summary>
-        public string Color { get; set; }
-
-        /// <summary>
-        /// Gets or sets the price of the flower.
-        /// </summary>
-        public int Price { get; set; }
-
-        #endregion
-    }
 
     /// <summary>
     /// The main class of the program.
@@ -45,7 +16,7 @@ namespace ListDemo
         /// <param name="args">The command-line arguments.</param>
         static void Main(string[] args)
         {
-            #region list of Flower objects
+
 
             // Create a list of Flower objects
             List<Flower> flowers = new List<Flower>
@@ -56,7 +27,6 @@ namespace ListDemo
                 new Flower { Id = 4, Name = "Sunflower", Color = "Yellow", Price = 7 }
             };
 
-            #endregion
 
             // Perform different LINQ queries on the list of Flower objects
             QueryFlowers(flowers);
@@ -69,7 +39,7 @@ namespace ListDemo
         /// <param name="flowers">The list of flowers.</param>
         static void QueryFlowers(List<Flower> flowers)
         {
-            #region Select all flowers
+           
 
             // Query 1: Select all flowers
             var allFlowers = from flower in flowers
@@ -81,9 +51,7 @@ namespace ListDemo
             }
             Console.WriteLine();
 
-            #endregion
 
-            #region Select flowers with price less than 10
 
             // Query 2: Select flowers with price less than 10
             var cheapFlowers = from flower in flowers
@@ -96,9 +64,7 @@ namespace ListDemo
             }
             Console.WriteLine();
 
-            #endregion
 
-            #region Select flowers with yellow color
 
             // Query 3: Select flowers with yellow color
             var yellowFlowers = from flower in flowers
@@ -111,16 +77,45 @@ namespace ListDemo
             }
             Console.WriteLine();
 
-            #endregion
 
-            #region Select the most expensive flower
 
             // Query 4: Select the most expensive flower
-            var mostExpensiveFlower = flowers.OrderByDescending(flower => flower.Price).First();
+            var mostExpensiveFlower = flowers.OrderByDescending(flower => flower.Price).FirstOrDefault();
             Console.WriteLine("Most Expensive Flower:");
             Console.WriteLine($"ID: {mostExpensiveFlower.Id}, Name: {mostExpensiveFlower.Name}, Color: {mostExpensiveFlower.Color}, Price: {mostExpensiveFlower.Price}");
+            Console.WriteLine();
 
-            #endregion
+
+            // Query 5: Count the number of flowers
+            var flowerCount = flowers.Count();
+            Console.WriteLine($"Total Number of Flowers: {flowerCount}");
+            Console.WriteLine();
+
+
+
+            // Query 6: Check if any flower is of color 'Purple'
+            var hasPurpleFlower = flowers.Any(flower => flower.Color == "Purple");
+            Console.WriteLine($"Does the list contain a purple flower? {(hasPurpleFlower ? "Yes" : "No")}");
+            Console.WriteLine();
+
+
+
+            // Query 7: Find the average price of all flowers
+            var averagePrice = flowers.Average(flower => flower.Price);
+            Console.WriteLine($"Average Price of Flowers: ${averagePrice}");
+            Console.WriteLine();
+  
+
+
+            // Query 8: Select flower names only
+            var flowerNames = flowers.Select(flower => flower.Name);
+            Console.WriteLine("Flower Names Only:");
+            foreach (var name in flowerNames)
+            {
+                Console.WriteLine(name);
+            }
+            Console.WriteLine();
+
         }
     }
 }

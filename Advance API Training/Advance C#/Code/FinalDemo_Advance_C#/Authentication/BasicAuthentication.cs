@@ -17,8 +17,10 @@ namespace FinalDemo_Advance_C_.Authentication
     {
         #region Private Member
 
-        // Instance of BLUser class for user authentication
-        private BLUser _objBLUser = new BLUser();
+        /// <summary>
+        /// Instance of BLUSR01Handler class for user authentication
+        /// </summary>
+        private BLUSR01Handler _objBLUSR01Handler = new BLUSR01Handler();
 
         #endregion
 
@@ -53,7 +55,7 @@ namespace FinalDemo_Advance_C_.Authentication
                 string password = usernamePassword[1];
 
                 // Checking if the user exists and credentials match
-                var user = _objBLUser.GetAllUsers().Any(u => u.R01F02 == username && u.R01F03 == password);
+                var user = _objBLUSR01Handler.GetUsers().Any(u => u.R01F02 == username && u.R01F03 == password);
 
                 if (user) // If user exists and credentials match
                 {
